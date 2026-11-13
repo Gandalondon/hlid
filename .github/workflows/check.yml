@@ -22,4 +22,5 @@ jobs:
           gradle :app:assembleRelease --no-daemon 2>&1 | tee build.log
       - name: Report errors
         if: failure()
-        run: grep -E "^e: |error:|What went wrong" -A3 build.log | head -40 | sed 's/^/::error::/' || true
+        run: |
+          grep -E "^e: |error:|What went wrong" -A3 build.log | head -40 | sed 's/^/::error::/' || true
