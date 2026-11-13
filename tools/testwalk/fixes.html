@@ -1,0 +1,42 @@
+<!-- ===== Build 4 fixes (13 Nov, 21:30, Tony's phone feedback). Applies to the framed prototype and the APK. ===== -->
+<style>
+/* picked option: 3px ink edge (was 2px), drawn inside so the pill keeps its size */
+.opt[aria-pressed="true"],.chip[aria-pressed="true"]{box-shadow:inset 0 0 0 2px #1A1A1A!important}
+/* notes ("Google Maps would open here", "Saved to Photos") sit in the middle of the screen on a dimmed page,
+   not as a black pill over the black buttons */
+.toast{top:50%!important;bottom:auto!important;transform:translate(-50%,-50%)!important;background:#FFFFFF!important;color:#1A1A1A!important;
+  font:500 16px/1.35 "Inter",sans-serif!important;padding:24px 32px!important;border-radius:28px!important;white-space:normal!important;
+  text-align:center;width:max-content;max-width:280px;box-shadow:0 0 0 2000px rgba(26,26,26,.4)}
+/* body copy to button is 40px on every screen; pictures and maps take up whatever height is left */
+.w4-grow{flex:1 1 auto!important;min-height:0!important;height:auto!important}
+.w4-grow > svg{width:100%!important;height:100%!important;display:block}
+</style>
+<script>
+(function(){
+  var view=document.getElementById("view");
+  function scr(id){ return view.querySelector('.scr[data-id="'+id+'"] > div'); }
+  function firstBtn(col){ return col.querySelector(":scope > button"); }
+  function spacer(col){ var s=null; col.querySelectorAll(":scope > div").forEach(function(d){ if(d.style.flex==="1 1 0%"||d.style.flex==="1") s=d; }); return s; }
+  /* Today 1 to 4 and You're here: the words sit 40px above the buttons; the extra space goes under the map */
+  /* You're here: the map grows to fill down to the words (no white band under it) */
+  (function(){ var root=scr("carpark"); if(!root) return; var m=root.querySelector(":scope > svg"); if(!m) return;
+    m.style.flex="1 1 auto"; m.style.minHeight="0"; m.setAttribute("height","100%"); m.setAttribute("preserveAspectRatio","xMidYMid slice");
+    var col=m.nextElementSibling; if(col){ col.style.flex="none"; var sp=spacer(col); if(sp) sp.remove(); var b=firstBtn(col); if(b) b.style.marginTop="28px"; } })();
+  ["today-1","today-2","today-3","today-4"].forEach(function(id){ var root=scr(id); if(!root) return;
+    var col=root.querySelector(":scope > div[style*='flex-direction: column']"); if(!col) return;
+    var sp=spacer(col), b=firstBtn(col); if(!sp||!b) return;
+    col.insertBefore(sp,col.firstChild); b.style.marginTop="28px"; });          /* 12px column gap + 28 = 40 */
+  /* End of walk: the picture grows, caption 16px under it, 40px to Drive home */
+  (function(){ var root=scr("done"); if(!root) return; var pic=root.children[0], col=root.children[1];
+    pic.classList.add("w4-grow"); root.style.paddingTop="48px";   /* same 48px top as every other screen (was 56) */ var sp=spacer(col); if(sp) sp.remove(); col.style.flex="none";
+    var b=firstBtn(col); if(b) b.style.marginTop="28px"; })();
+  /* Find a pub: the map grows, 40px from the drive line to Drive there */
+  (function(){ var root=scr("pub"); if(!root) return; var map=root.querySelector("#pubmap"); if(!map) return;
+    map.parentNode.classList.add("w4-grow"); map.parentNode.style.background="#F0F0EE"; map.setAttribute("preserveAspectRatio","xMidYMid meet");
+    var sp=spacer(root); if(sp) sp.remove(); var b=firstBtn(root); if(b) b.style.marginTop="40px"; })();
+  /* A walk on its own: the picture grows, 40px from its line to Download */
+  (function(){ var d=view.querySelector(".detail"); if(!d) return; var big=d.querySelector(".big"); big.classList.add("w4-grow"); big.style.width="auto";
+    d.querySelectorAll(":scope > div").forEach(function(x){ if(x.style.flex==="1 1 0%"||x.style.flex==="1") x.remove(); });
+    var dl=d.querySelector(".dl"); dl.style.marginTop="40px"; })();
+})();
+</script>

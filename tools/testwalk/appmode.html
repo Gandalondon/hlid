@@ -1,0 +1,51 @@
+<!-- ===== Android app mode (woden repo only). Build 4: laid out between the status bar and the gesture bar like Sniff and Relay.
+     The native shell pads the WebView by both bars. The 390 wide screen is scaled to the phone's width and made as tall as the
+     space between the bars. The design's 48px top band is trimmed to 24px under the status bar (Relay's 24px), and its 32px bottom
+     padding to 24px above the gesture bar (Sniff's 24px). ===== -->
+<style>
+html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
+.stage{display:block!important;padding:0!important;min-height:0!important;height:100%}
+.under,#num{display:none!important}
+.phone{overflow:hidden}
+.frame{width:390px!important;border-radius:0!important;background:#FFFFFF!important}
+.view{left:0!important;top:-24px!important;border-radius:0!important;height:var(--H)!important}
+.scr > div{height:var(--H)!important}
+.scr[data-id="walks"] > div{height:auto!important;min-height:var(--H)!important}
+.perm{display:none!important}   /* Android's own location prompt shows instead */
+</style>
+<script>
+(function(){
+  var view=document.getElementById("view");
+  function fit(){ var p=document.querySelector(".phone"), f=document.querySelector(".frame"), s=window.innerWidth/390, H=window.innerHeight/s+24+8;
+    p.style.setProperty("--s",s); p.style.width=window.innerWidth+"px"; p.style.height=window.innerHeight+"px";
+    f.style.height=H+"px"; view.style.setProperty("--H",H+"px"); document.documentElement.style.setProperty("--H",H+"px"); }
+  addEventListener("resize",fit); fit();
+  var N=window.WodenNative;
+  if(!N) return;
+  /* the real location prompt on first open; Don't allow opens Setting off from, as in the prototype */
+  window.wodenPerm=function(ok){ if(window.wodenPermHook) window.wodenPermHook(ok); };
+  setTimeout(function(){ N.requestLocation(); },300);
+  /* Android back: close a sheet, else the screen's own back arrow, else leave the app */
+  window.wodenBack=function(){
+    if(window.wodenTestBack&&window.wodenTestBack()) return true;
+    var sh=document.getElementById("sheet"); if(sh.classList.contains("on")){ sh.querySelector(".dim").click(); return true; }
+    var b=view.querySelector(".scr.on .back, .scr.on [aria-label^='Back']"); if(b){ b.click(); return true; }
+    return false; };
+  /* Download: a real PNG of the picture into Photos (Pictures/Woden), phone-wallpaper sized */
+  function note(t,ms){ var x=document.getElementById("toast"); x.textContent=t; x.classList.add("on"); setTimeout(function(){ x.classList.remove("on"); },ms||1200); }
+  window.wodenNote=note;
+  function savePic(svg,name){
+    var c=svg.cloneNode(true); c.setAttribute("xmlns","http://www.w3.org/2000/svg"); c.setAttribute("width",1080); c.setAttribute("height",2400);
+    c.setAttribute("preserveAspectRatio","xMidYMid slice");
+    var img=new Image(); img.onload=function(){ var cv=document.createElement("canvas"); cv.width=1080; cv.height=2400;
+      var g=cv.getContext("2d"); g.drawImage(img,0,0,1080,2400);
+      var ok=false; try{ ok=N.savePng(cv.toDataURL("image/png").split(",")[1], name); }catch(e){}
+      note(ok?"Saved to Photos":"Couldn’t save the picture"); };
+    img.onerror=function(){ note("Couldn’t save the picture"); };
+    img.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(new XMLSerializer().serializeToString(c)); }
+  view.addEventListener("click",function(e){ var b=e.target.closest("button"); if(!b||b.textContent.trim()!=="Download") return;
+    var svg=view.querySelector("#bigcard svg"); if(!svg) return; e.stopPropagation();
+    var nm=(document.getElementById("bigname").textContent||"Woden walk").trim();
+    savePic(svg,"woden-"+nm.toLowerCase().replace(/[^a-z0-9]+/g,"-")+"-"+Date.now()); },true);
+})();
+</script>
