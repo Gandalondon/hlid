@@ -5,7 +5,7 @@
   var N=window.WodenNative, SIM=!N&&/[?&]test/.test(location.search);
   if(!N&&!SIM) return;
   var D=JSON.parse(document.getElementById("w4walk").textContent);
-  var view=document.getElementById("view"), INK="#1A1A1A", LAND="#F0F0EE", WALKED="#8C8C88", NS="http://www.w3.org/2000/svg";
+  var view=document.getElementById("view"), INK="#1A1A1A", LAND="#F0F0F0", WALKED="#8C8C8C", NS="http://www.w3.org/2000/svg";
   var LOOP=D.loop, CUM=[0]; for(var i=1;i<LOOP.length;i++) CUM.push(CUM[i-1]+Math.hypot(LOOP[i][0]-LOOP[i-1][0],LOOP[i][1]-LOOP[i-1][1]));
   var LEN=CUM[CUM.length-1];
   var st={me:null,acc:null,head:null,perm:null,prog:0,walking:false,t0:0,trace:[],arrived:false,back:false,file:""};

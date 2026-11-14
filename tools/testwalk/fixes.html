@@ -32,7 +32,7 @@
     var b=firstBtn(col); if(b) b.style.marginTop="28px"; })();
   /* Find a pub: the map grows, 40px from the drive line to Drive there */
   (function(){ var root=scr("pub"); if(!root) return; var map=root.querySelector("#pubmap"); if(!map) return;
-    map.parentNode.classList.add("w4-grow"); map.parentNode.style.background="#F0F0EE"; map.setAttribute("preserveAspectRatio","xMidYMid meet");
+    map.parentNode.classList.add("w4-grow"); map.parentNode.style.background="#F0F0F0"; map.setAttribute("preserveAspectRatio","xMidYMid meet");
     var sp=spacer(root); if(sp) sp.remove(); var b=firstBtn(root); if(b) b.style.marginTop="40px"; })();
   /* A walk on its own: the picture grows, 40px from its line to Download */
   (function(){ var d=view.querySelector(".detail"); if(!d) return; var big=d.querySelector(".big"); big.classList.add("w4-grow"); big.style.width="auto";
