@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Hlid icon: Tony's Bignor Hill loop, smoothed (Figma "hlid-icon-master — Version 2"), white on ink. Same as app/icon/ic_launcher_foreground.svg on the Mac. -->
+<!-- Hlid icon B (14 Nov, Tony): the home ring, the dot every route starts from, white on ink. Same proportions as the site favicon. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp" android:height="108dp"
     android:viewportWidth="108" android:viewportHeight="108">
-    <group android:translateX="17.998" android:translateY="17.998" android:scaleX="0.070316" android:scaleY="0.070316">
-        <path android:fillColor="#00000000" android:strokeColor="#FFFFFF" android:strokeWidth="66.3704"
-            android:strokeLineCap="round" android:strokeLineJoin="round"
-            android:pathData="M550.17 246.519C662.17 246.519 753.17 258.519 753.17 327.519C753.17 403.519 585.17 467.519 585.17 557.519C585.17 636.519 668.17 702.519 668.17 745.519C668.17 767.519 644.17 777.519 610.17 777.519C422.17 777.519 271.17 571.519 271.17 409.519C271.17 288.519 383.17 246.519 550.17 246.519Z" />
-    </group>
+    <path android:fillColor="#00000000" android:strokeColor="#FFFFFF" android:strokeWidth="4.4"
+        android:pathData="M40,54 A14,14 0 1,0 68,54 A14,14 0 1,0 40,54" />
 </vector>
