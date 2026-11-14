@@ -29,7 +29,7 @@ html,body{margin:0;height:100%;background:#F0F0F0;font-family:"Inter",sans-serif
 .scr .lab{font-size:16px}
 /* selectors: pill rows, picked = ink fill */
 .opt{display:flex;justify-content:space-between;align-items:center;height:56px;padding:0 20px 0 24px;border:1px solid #1A1A1A;border-radius:28px;background:#FFFFFF;color:#1A1A1A;font:400 18px/1 "Inter",sans-serif;text-align:left;cursor:pointer}
-.opt[aria-pressed="true"]{border-color:#1A1A1A;box-shadow:inset 0 0 0 1px #1A1A1A}  /* on = a 2px ink stroke, drawn inside so the pill keeps its size */
+.opt[aria-pressed="true"]{border-color:#1A1A1A;box-shadow:none}  /* no picked edge (14 Nov) */
 /* Your walks scrolls; a tapped walk opens on its own */
 .scr[data-id="walks"]{overflow-y:auto;scrollbar-width:none}
 .scr[data-id="walks"]::-webkit-scrollbar{display:none}
@@ -65,7 +65,7 @@ html,body{margin:0;height:100%;background:#F0F0F0;font-family:"Inter",sans-serif
 .cchip{height:40px;padding:0 16px;border-radius:20px;border:1px solid #1A1A1A;background:#FFFFFF;color:#1A1A1A;font:500 14px/1 "Inter",sans-serif!important;white-space:nowrap;cursor:pointer}
 .cbar .sp{flex:1}
 .chip{height:48px;padding:0 20px;border-radius:24px;border:1px solid #1A1A1A;background:#FFFFFF;color:#1A1A1A;font:500 16px/1 "Inter",sans-serif!important;cursor:pointer}
-.chip[aria-pressed="true"]{border-color:#1A1A1A;box-shadow:inset 0 0 0 1px #1A1A1A}
+.chip[aria-pressed="true"]{border-color:#1A1A1A;box-shadow:none}
 .sheet .chips{display:flex;flex-wrap:wrap;gap:8px}
 .sheet.pick .save{display:none}
 .perm{position:absolute;inset:0;z-index:5;display:none;background:rgba(26,26,26,.4);align-items:center;justify-content:center;padding:0 32px}
@@ -257,7 +257,7 @@ html,body{margin:0;height:100%;background:#F0F0F0;font-family:"Inter",sans-serif
     sheet.classList.add("on"); };
   saveSheet=function(){ var v=document.getElementById("cFrom").value.trim(); if(v&&v!==CV.from){ CV.from=v; cAgain(); } else closeSheet(); };
   view.addEventListener("click",function(e){ var c=e.target.closest(".cchip"); if(c){ openSheet(c.dataset.k); e.stopPropagation(); } },true);
-  sheet.addEventListener("click",function(e){ var b=e.target.closest(".chip"); if(b){ CV[sheetKey]=b.dataset.v; cAgain(); e.stopPropagation(); return; }
+  sheet.addEventListener("click",function(e){ var b=e.target.closest(".chip"); if(b){ if(b.dataset.v===CV[sheetKey]){ closeSheet(); } else { CV[sheetKey]=b.dataset.v; cAgain(); } e.stopPropagation(); return; }  /* the option you already have just closes the sheet (Tony, 13 Nov) */
     if(e.target.closest(".cloc")){ document.getElementById("cFrom").value="SW20"; e.stopPropagation(); } },true);
   view.addEventListener("click",function(e){ var p=e.target.closest(".pb"); if(!p) return; e.stopPropagation();
     document.getElementById("perm").classList.remove("on"); if(p.dataset.deny) openSheet("from"); },true);
@@ -271,7 +271,7 @@ html,body{margin:0;height:100%;background:#F0F0F0;font-family:"Inter",sans-serif
 <!-- ===== Build 4 fixes (13 Nov, 21:30, Tony's phone feedback). Applies to the framed prototype and the APK. ===== -->
 <style>
 /* picked option: 3px ink edge (was 2px), drawn inside so the pill keeps its size */
-.opt[aria-pressed="true"],.chip[aria-pressed="true"]{box-shadow:inset 0 0 0 2px #1A1A1A!important}
+.opt[aria-pressed="true"],.chip[aria-pressed="true"]{box-shadow:none!important}  /* 14 Nov: no picked edge at all (Tony) */
 /* notes ("Google Maps would open here", "Saved to Photos") sit in the middle of the screen on a dimmed page,
    not as a black pill over the black buttons */
 .toast{top:50%!important;bottom:auto!important;transform:translate(-50%,-50%)!important;background:#FFFFFF!important;color:#1A1A1A!important;
