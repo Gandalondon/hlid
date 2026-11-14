@@ -23,7 +23,7 @@
    Was version C (14 Nov, local only). Hero like Tony's Tilde mock-up: one full-height colour block, headline at the top,
    intro and route art sharing a baseline at the bottom. Then the steps scroll with the page and swap sides, like
    getsniff.app, on one centred row (text 520, gap 136, phone 337 at 1440) so the mirrored rows line up.
-   Copy fades up 8px (phones stay put, as on getsniff.app) as they arrive (Sniff's reveal: .6s ease-out, 15% in view). */
+   No scroll fades (14 Nov): copy is just there. */
 @font-face{font-family:"Inter";font-weight:100 900;font-display:block;src:url(fonts/inter-latin-opsz-wght.woff2) format("woff2")}
 @font-face{font-family:"Zalando Sans Expanded";font-weight:200 900;font-display:block;src:url(fonts/zalando-sans-expanded-latin-wght.woff2) format("woff2")}
 :root{--ink:#1A1A1A;--font:"Inter","Helvetica Neue",Arial,system-ui,sans-serif;--display:"Zalando Sans Expanded","Inter",sans-serif;
@@ -104,7 +104,7 @@ html.menu-open .menu i:last-child{top:23px;transform:rotate(-45deg)}
 /* D desktop (Tony): every route starts from the same home dot, a couple turned about it so none crosses the headline; which sits under the s of How it works; the longest route
    (Bignor) ends on the intro's last baseline. Phones keep the centred map. */
 .hmap{display:none}
-.hmap{visibility:hidden;opacity:0;transition:opacity .4s}.hmap.placed{visibility:visible;opacity:1}  /* hidden until placed with the real fonts: no flash on load */
+.hmap{visibility:hidden}.hmap.placed{visibility:visible}  /* hidden until placed with the real fonts: no flash on load, then just there (no fade) */
 @media (min-width:901px){
   .sph{display:none}
   .hmap{display:block;position:absolute;inset:0}
@@ -137,10 +137,7 @@ html.menu-open .menu i:last-child{top:23px;transform:rotate(-45deg)}
 .ftop a{white-space:nowrap;text-decoration:none}
 .ftop a:hover,.topnav:hover{opacity:.75}
 @media (max-width:600px){.ftop{flex-direction:column;align-items:flex-start;gap:24px}.ftop nav{flex-direction:column;gap:12px}.ftop .credit{order:2}}
-/* Sniff's reveal: only once the script runs, so nothing hides without it */
-.rv .reveal{opacity:0;transform:translateY(8px);transition:opacity .6s ease-out,transform .6s ease-out}
-.rv .reveal.in{opacity:1;transform:none}
-.rv .reveal.now{transition:none}
+/* No scroll fades on Hlid (Tony, 14 Nov): copy is just there. Motion is the route line only. */
 /* phones: one column, text then phone; same fade */
 /* menu: at 600 and below, the same breakpoint as the other pages */
 @media (max-width:600px){
@@ -169,7 +166,7 @@ html.menu-open .menu i:last-child{top:23px;transform:rotate(-45deg)}
   .copy,.flip .copy{order:1;justify-self:stretch}.phone,.flip .phone{order:2}
 }
 @media (prefers-reduced-motion:reduce){.hero,.wash,.hdr .btn,.art img,.cyc img,.sph img{animation:none}.wash{background:#456985}.sph img:first-child{opacity:1}.art img:first-child,.cyc img:first-child{opacity:1}
-  .rv .reveal{opacity:1;transform:none;transition:none}}
+}
 </style>
 </head>
 <body>
@@ -260,15 +257,6 @@ p.addEventListener("click",function(e){if(e.target.tagName==="A")set(false);});}
 /* D: the hero map is 1.5x the phone size on desktop (1.15x on phones), fixed */
 document.documentElement.style.setProperty("--sc",innerWidth>900?1.5:1.15);
 addEventListener("resize",function(){document.documentElement.style.setProperty("--sc",innerWidth>900?1.5:1.15);});
-</script>
-<script>
-/* Sniff's reveal: anything already on screen shows at once, the rest fades up as it arrives */
-(function(){ var root=document.querySelector('.site'); if(!root||!('IntersectionObserver' in window)) return;
-  var vh=innerHeight||800; root.querySelectorAll('.reveal').forEach(function(el){ if(el.getBoundingClientRect().top<vh) el.classList.add('in','now'); });
-  root.classList.add('rv');
-  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{rootMargin:'0px 0px -10% 0px',threshold:.15});
-  root.querySelectorAll('.reveal:not(.in)').forEach(function(el){ io.observe(el); });
-})();
 </script>
 </body>
 </html>
