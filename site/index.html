@@ -102,7 +102,7 @@ html.clear .step .btn{background:var(--ink);color:#FFFFFF}
 .walls img:nth-child(5){animation-delay:calc(var(--cyc) * .76)}
 @keyframes wl{0%,2%{opacity:0}4%,20%{opacity:1}22%,100%{opacity:0}}  /* 22:05 each line fades out in the first half of the colour change and the next fades in over the second half: no overlap, and no faint line on a settled colour */
 .mphone{display:none}
-.ftr{position:relative;z-index:1;padding:96px 0 calc(48px + env(safe-area-inset-bottom,0px));font-size:16px;line-height:24px}
+.ftr{position:relative;z-index:1;padding:96px 0 calc(40px + env(safe-area-inset-bottom,0px));font-size:16px;line-height:24px}
 
 @media (max-width:900px){
   :root{--hdr:72px}
@@ -195,7 +195,7 @@ html.menu-open .menu i:last-child{top:23px;transform:rotate(-45deg)}
   .park{height:100svh!important;--k:1!important;--shift:0px!important}
   .track .step.last{min-height:100svh!important}
   /* the footer waits at the bottom of the window and fades in with the last step */
-  .ftr{position:fixed;left:0;right:0;bottom:0;padding:0 0 calc(48px + env(safe-area-inset-bottom,0px));opacity:0;pointer-events:none;transition:opacity .45s ease,color .4s ease;z-index:3}
+  .ftr{position:fixed;left:0;right:0;bottom:0;padding:0 0 calc(40px + env(safe-area-inset-bottom,0px));opacity:0;pointer-events:none;transition:opacity .45s ease,color .4s ease;z-index:3}
   html.at-end .ftr{opacity:1;pointer-events:auto}
 }
 @media (min-width:901px) and (prefers-reduced-motion:reduce){ .tstage .tx{transition:none} }
