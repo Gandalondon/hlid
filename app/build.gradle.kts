@@ -5,12 +5,14 @@ plugins {
 
 android {
     namespace = "com.gandalondon.woden"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.gandalondon.woden"
+        // The Obtainium APK keeps its own id so it can sit beside the Play install.
+        // The Play AAB is built with -PplayId=app.gethlid (the Play Console app).
+        applicationId = (findProperty("playId") as String?) ?: "com.gandalondon.woden"
         minSdk = 29
-        targetSdk = 35
+        targetSdk = 36
         versionCode = (System.getenv("GITHUB_RUN_NUMBER") ?: "1").toInt()
         versionName = "0.1.${System.getenv("GITHUB_RUN_NUMBER") ?: "0"}"
     }

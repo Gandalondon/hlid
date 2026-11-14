@@ -52,6 +52,23 @@ jobs:
       - name: Name the APK
         run: cp app/build/outputs/apk/release/app-release.apk Hlid.apk
 
+      # Play bundle: same key (the Play upload key), Play package id. Kept off the public release.
+      - name: Build the Play bundle
+        if: env.SIGNING_KEYSTORE_PATH != ''
+        env:
+          SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
+        run: |
+          set -o pipefail
+          gradle :app:bundleRelease -PplayId=app.gethlid --no-daemon 2>&1 | tee -a build.log
+          cp app/build/outputs/bundle/release/app-release.aab Hlid-play.aab
+
+      - name: Keep the Play bundle
+        if: env.SIGNING_KEYSTORE_PATH != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: Hlid-play-${{ github.run_number }}
+          path: Hlid-play.aab
+
       - name: Publish release
         uses: softprops/action-gh-release@v2
         with:
