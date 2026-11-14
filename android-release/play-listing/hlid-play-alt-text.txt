@@ -1,0 +1,5 @@
+hlid-play-screenshot-1-today.png: "No set-up. Just go." above Hlid's Today screen on a phone: the drive and the Chanctonbury Ring loop as one line, "1h 13 drive. 4.7 km walk. Clear, 22°." and a Drive button.
+hlid-play-screenshot-2-drive.png: "Google gets you there." above the car park screen: the whole loop on a black and white map with shaded hills, "You're here. 4.7 km loop, about 1h 25." and a Start walk button.
+hlid-play-screenshot-3-walk.png: "You'll hardly need a map." above the walking screen: the map turned so the way ahead is up, an arrow on the path, "4.3 km to go. About 120 m still to climb." and the height of the walk ahead.
+hlid-play-screenshot-4-day.png: "Keep the day you had." above the end of the walk: the day's drive and walk as one white line on orange, "Chanctonbury Ring, 13 Jul", with Drive home and Find a pub.
+hlid-play-feature-graphic.png: "More walk. Less app." in large white type on blue beside a phone, turned at an angle, showing today's walk.

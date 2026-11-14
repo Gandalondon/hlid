@@ -1,0 +1,31 @@
+<!doctype html>
+<!-- Hlid Play listing art (14 Nov 2026), Relay format: four 1080 x 1920 screenshots (#s1 to #s4) and the 1024 x 500 feature graphic (#fg).
+     Full-bleed day colours: 1 blue 456985, 2 4E685F, 3 618993, 4 orange D87F30 so the orange day card sits on its own colour (Tony 19:31); white Zalando Sans Expanded 600 headlines on two lines,
+     the real app screens (site captures, cap-*.webp) in an off-black phone frame. No gradients. Rendered by render.py. -->
+<meta charset="utf-8">
+<style>
+@font-face{font-family:Z;font-weight:200 900;src:url(zalando-sans-expanded-latin-wght.woff2)}
+html,body{margin:0;background:#888;color:#FFFFFF;font-family:Z}
+.s{position:relative;width:1080px;height:1920px;overflow:hidden;margin-bottom:40px}
+.s h1{position:absolute;left:96px;right:96px;top:136px;margin:0;font:600 var(--h,104px)/1.02 Z;letter-spacing:.01em;white-space:pre-line}
+.ph{--pw:640px;position:absolute;left:50%;top:440px;width:var(--pw);aspect-ratio:390/844;transform:translateX(-50%);box-sizing:border-box;padding:calc(var(--pw) * .0333);border-radius:calc(var(--pw) * .1467);background:#1A1A1A}
+.ph img{display:block;width:100%;height:100%;border-radius:calc(var(--pw) * .1133);object-fit:cover;object-position:top}
+.fg{position:relative;width:1024px;height:500px;overflow:hidden;display:flex;align-items:center}
+.fg h2{margin:0 0 0 80px;font:600 72px/1.02 Z;letter-spacing:.01em;white-space:pre-line}
+.fg .stage{position:absolute;left:800px;top:50%;perspective:1400px;transform:translate(-50%,-50%)}
+.p3{--pw:196px;--d:23px;position:relative;width:var(--pw);aspect-ratio:390/844;border-radius:calc(var(--pw) * .1467);transform-style:preserve-3d;transform:rotateX(22deg) rotateY(34deg) rotateZ(-10deg)}
+.p3 i{position:absolute;inset:0;border-radius:inherit;background:#1A1A1A;transform:translateZ(calc(var(--k) * var(--d) / -12))}
+.p3 i.rim{background:#333333}
+.p3 .scr{position:absolute;inset:calc(var(--pw) * .0333);border-radius:calc(var(--pw) * .1133);overflow:hidden;transform:translateZ(.5px)}
+.p3 .scr img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+</style>
+<div class="s" id="s1" style="background:#456985"><h1>No set-up.
+Just go.</h1><div class="ph"><img src="cap-today.webp" alt=""></div></div>
+<div class="s" id="s2" style="background:#4E685F"><h1>Google gets
+you there.</h1><div class="ph"><img src="cap-carpark.webp" alt=""></div></div>
+<div class="s" id="s3" style="background:#618993"><h1>You’ll hardly
+need a map.</h1><div class="ph"><img src="cap-walk.webp" alt=""></div></div>
+<div class="s" id="s4" style="background:#D87F30"><h1>Keep the day
+you had.</h1><div class="ph"><img src="cap-done.webp" alt=""></div></div>
+<div class="fg" id="fg" style="background:#456985"><h2>More walk.
+Less app.</h2><div class="stage"><div class="p3"><i style="--k:12"></i><i style="--k:11"></i><i style="--k:10"></i><i style="--k:9"></i><i style="--k:8"></i><i style="--k:7"></i><i style="--k:6"></i><i style="--k:5"></i><i style="--k:4"></i><i style="--k:3"></i><i style="--k:2"></i><i class="rim" style="--k:1"></i><div class="scr"><img src="cap-today.webp" alt=""></div></div></div></div>
