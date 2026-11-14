@@ -349,7 +349,14 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
   window.wodenNote=note;
   function savePic(svg,name){
     var c=svg.cloneNode(true); c.setAttribute("xmlns","http://www.w3.org/2000/svg"); c.setAttribute("width",1080); c.setAttribute("height",2400);
-    c.setAttribute("preserveAspectRatio","xMidYMid slice");
+    /* frame the whole route (home ring included) in the phone shape, centred with room round it, instead of cropping the card's sides */
+    var x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;
+    Array.prototype.forEach.call(svg.children,function(el){ if(el.tagName.toLowerCase()==="rect") return; try{ var b=el.getBBox(); if(!b.width&&!b.height) return;
+      x0=Math.min(x0,b.x); y0=Math.min(y0,b.y); x1=Math.max(x1,b.x+b.width); y1=Math.max(y1,b.y+b.height); }catch(e){} });
+    if(x1>x0){ var R=1080/2400, w=x1-x0+12, h=y1-y0+12, vw=Math.max(w/0.72,h/0.5*R), vh=vw/R, cx=(x0+x1)/2, cy=(y0+y1)/2;
+      var vb=[cx-vw/2,cy-vh/2,vw,vh]; c.setAttribute("viewBox",vb.join(" "));
+      var bg=c.querySelector("rect"); if(bg){ bg.setAttribute("x",vb[0]-1); bg.setAttribute("y",vb[1]-1); bg.setAttribute("width",vw+2); bg.setAttribute("height",vh+2); } }
+    c.setAttribute("preserveAspectRatio","xMidYMid meet");
     var img=new Image(); img.onload=function(){ var cv=document.createElement("canvas"); cv.width=1080; cv.height=2400;
       var g=cv.getContext("2d"); g.drawImage(img,0,0,1080,2400);
       var ok=false; try{ ok=N.savePng(cv.toDataURL("image/png").split(",")[1], name); }catch(e){}
