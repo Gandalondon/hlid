@@ -1,6 +1,6 @@
-Hlid: Country Day Walks
+Hlid: Country Walk Planner
 ---
-More walk. Less app. One country walk, picked for today, from a free car park.
+One country walk, picked for you, with a car park at the start. No clutter.
 ---
 More walk. Less app.
 

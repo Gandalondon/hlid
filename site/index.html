@@ -49,7 +49,7 @@ p{margin:0;text-wrap:pretty}
 .hdr{position:absolute;inset:0 0 auto;z-index:5;color:#FFFFFF}
 .hdr .btn{transition:none}
 .hdr .wrap{height:var(--hdr);display:flex;align-items:center;justify-content:space-between}
-.logo{font:600 25px/1 var(--display)}
+.logo{--mk:32px;display:inline-flex;align-items:baseline;font:600 calc(var(--mk) * .866 * 65 / 72)/1 var(--display);color:inherit;text-decoration:none}  /* same logo rule as the other pages */
 .hright{display:flex;align-items:center;gap:32px}
 .topnav{font:600 16px/1 var(--display)}
 .topnav:hover{opacity:.75}
@@ -140,7 +140,8 @@ html.menu-open .menu i:last-child{top:23px;transform:rotate(-45deg)}
 .rv .reveal.in{opacity:1;transform:none}
 .rv .reveal.now{transition:none}
 /* phones: one column, text then phone; same fade */
-@media (max-width:900px){
+/* menu: at 600 and below, the same breakpoint as the other pages */
+@media (max-width:600px){
   .topnav{display:none}
   .menu{display:inline-block}
   .hright{gap:16px}
@@ -151,6 +152,9 @@ html.menu-open .menu i:last-child{top:23px;transform:rotate(-45deg)}
   html.menu-open .hdr .btn{background:var(--ink);color:#FFFFFF;animation:none}
   .mnav a{font:600 40px/1.1 var(--display);color:var(--ink)}
   .mnav a + a{margin-top:16px}
+}
+@media (max-width:900px){
+  :root{--hdr:72px}  /* same header as About, How it works and Privacy, so the logo never jumps */
   .sph{--w:min(62vw,260px,calc((100svh - 64px) / 2.045));left:calc(50% - var(--w) / 2);
     top:calc((100svh - var(--w) * 2.045) / 2 + 12px * (1 - var(--p,0)))}
     .hero .wrap{padding-top:calc(var(--hdr) + 8px);padding-bottom:calc(32px + env(safe-area-inset-bottom,0px))}
