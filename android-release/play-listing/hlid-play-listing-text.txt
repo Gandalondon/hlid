@@ -6,6 +6,9 @@ More walk. Less app.
 
 Choosing a walk shouldn't take longer than the walk. Hlid picks one you've never done, so all you have to do is go.
 
+Early days
+Walks start with day trips from south-west London, with more areas to come. If a walk sends you somewhere it shouldn't, let us know and we'll fix it.
+
 No set-up. Just go.
 Open it and today's walk is already there. Change where you set off from, how long you want to drive or how long you want to walk, and it finds another.
 
@@ -26,8 +29,5 @@ Cold days come out blue, warm days gold, and cloud or rain makes it darker. Ever
 
 Nothing to unlock. One price.
 Offline maps, the off-path buzz and every walk are included. No account needed.
-
-Early days
-Walks start with day trips from south-west London, with more areas to come. If a walk sends you somewhere it shouldn't, let us know and we'll fix it.
 
 Maps and paths from OpenStreetMap (© OpenStreetMap contributors). Heights from Ordnance Survey (contains OS data © Crown copyright and database right).
