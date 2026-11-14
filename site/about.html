@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<meta name="robots" content="noindex">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://gethlid.app/about">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2218 18 72 72%22%3E%3Ccircle cx=%2254%22 cy=%2254%22 r=%2236%22 fill=%22%231A1A1A%22/%3E%3Cg transform=%22translate(54 54) scale(0.6667) translate(-54 -54) scale(0.10547)%22%3E%3Cpath d=%22M550.17 246.519C662.17 246.519 753.17 258.519 753.17 327.519C753.17 403.519 585.17 467.519 585.17 557.519C585.17 636.519 668.17 702.519 668.17 745.519C668.17 767.519 644.17 777.519 610.17 777.519C422.17 777.519 271.17 571.519 271.17 409.519C271.17 288.519 383.17 246.519 550.17 246.519Z%22 fill=%22none%22 stroke=%22%23FFFFFF%22 stroke-width=%2266.37%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/g%3E%3C/svg%3E">
-<title>Privacy and credits | Hlid</title>
+<title>About | Hlid</title>
 <link rel="preload" href="fonts/zalando-sans-expanded-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-latin-opsz-wght.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -41,7 +41,7 @@ h1{font-size:var(--h1p);line-height:.94}
 .list{display:flex;flex-direction:column;gap:40px;min-width:0}
 h3 + p{margin-top:8px}
 /* privacy: small headings left, text right, tighter rhythm */
-.pol .sec{margin-top:96px}
+.pol .sec{margin-top:64px}
 .pol .sec.first{margin-top:120px}
 .pol .list{gap:16px}
 .pol ul{padding-left:24px}
@@ -55,7 +55,7 @@ h3 + p{margin-top:8px}
 .ftop a{font-weight:400;white-space:nowrap}
 .ftop a:hover{opacity:.6}
 @media (max-width:900px){:root{--hdr:72px}.head{padding-top:48px}.lede{margin-top:24px;font-size:21px;line-height:31px}
-  .sec{grid-template-columns:minmax(0,1fr);margin-top:96px}.pol .sec{margin-top:72px;gap:24px}.pol .sec.first{margin-top:72px}.ftr{padding-top:112px}}
+  .sec{grid-template-columns:minmax(0,1fr);margin-top:96px}.pol .sec{margin-top:48px;gap:8px}.pol .sec.first{margin-top:72px}.ftr{padding-top:112px}}
 @media (max-width:600px){.ftop{flex-direction:column;align-items:flex-start;gap:24px}.ftop nav{flex-direction:column;gap:12px}.ftop .credit{order:2}}
 
 /* v3 (12:03): Sniff's FAQ layout. One centred 752px column, left-aligned inside. Sizes: page title, section title (inner), small heading 24, body 20, footer 16 */
@@ -64,12 +64,10 @@ h3 + p{margin-top:8px}
 .col3 .sec{display:block;margin-top:96px}
 .col3 .sec h2{margin-bottom:40px}
 .col3 .list{gap:40px}
-.col3 .pol .list{gap:16px}
 .col3 .pol .sec,.col3 .pol .sec.first{margin-top:56px}
 .col3 .pol .sec.first{margin-top:72px}
-.col3 .sec > h3 + .list{margin-top:12px}
+.col3 .pol .sec h2{margin-bottom:12px}
 @media (max-width:900px){.col3 .sec{margin-top:72px}.col3 .sec h2{margin-bottom:24px}.col3 .pol .sec{margin-top:48px}}
-.upd{margin-top:72px}
 .btn{display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 32px;border-radius:999px;background:var(--ink);color:#FFFFFF;font:600 18px/1 var(--display);white-space:nowrap}
 .btn.sm{height:40px;padding:0 20px;font-size:16px}
 .hdr .wrap{justify-content:space-between}
@@ -77,6 +75,18 @@ h3 + p{margin-top:8px}
 .hright{display:flex;align-items:center;gap:32px}
 .topnav{font:600 16px/1 var(--display);color:inherit;text-decoration:none;white-space:nowrap}
 @media (max-width:420px){.hright{gap:20px}}
+/* about: story in the centred column, then a wider grid of square photos (photos/01.jpg to 18.jpg, square, 1200px) */
+.story{margin-top:56px}
+.story p + p{margin-top:24px}
+.photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:1120px;margin:96px auto 0}
+.ph{aspect-ratio:1;border-radius:12px;background:#F0F0F0 center/cover no-repeat}
+@media (max-width:900px){.photos{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:64px}.ph{border-radius:8px}}
+/* v2: one real day per row, the photo left and the day picture Hlid made of it right; bigger squares than the photo grid mark the change */
+.pairs{display:grid;gap:48px;max-width:1120px;margin:120px auto 0}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+.pair figure{margin:0}
+.pair figcaption{margin-top:16px;font-size:16px;line-height:24px}
+@media (max-width:900px){.pairs{gap:32px;margin-top:96px}.pair{gap:8px}.pair figcaption{margin-top:8px}}
 @media (max-width:600px){.topnav{display:none}}  /* phones: text links live in the footer */
 /* mobile menu (13:36): two-line icon far right that turns into an X (exception to the text-Menu rule: the header also holds the button). Phones only; desktop keeps the two links */
 .menu{display:none;position:relative;width:48px;height:48px;margin-right:-12px;padding:0;border:0;background:none;color:inherit;cursor:pointer}
@@ -100,26 +110,17 @@ html.menu-open .menu i:last-child{top:23px;transform:rotate(-45deg)}
 </style>
 </head>
 <body>
-<header class="hdr"><div class="wrap"><a class="logo" href="index.html" aria-label="Hlid"><span>Hlid</span></a><div class="hright"><a class="topnav" href="how-it-works.html">How it works</a><a class="topnav" href="about.html">About</a><a class="btn sm soon" href="mailto:hello@gethlid.app?subject=Try%20Hlid%20early&body=The%20email%20I%20use%20on%20Google%20Play%3A%20%0AWhere%20I%20live%20%28town%20or%20postcode%29%3A%20%0A">Try it early</a><button class="menu" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Menu"><i></i><i></i></button></div></div></header>
+<header class="hdr"><div class="wrap"><a class="logo" href="index.html" aria-label="Hlid"><span>Hlid</span></a><div class="hright"><a class="topnav" href="how-it-works.html">How it works</a><a class="topnav" href="about.html" aria-current="page">About</a><a class="btn sm soon" href="mailto:hello@gethlid.app?subject=Try%20Hlid%20early&body=The%20email%20I%20use%20on%20Google%20Play%3A%20%0AWhere%20I%20live%20%28town%20or%20postcode%29%3A%20%0A">Try it early</a><button class="menu" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Menu"><i></i><i></i></button></div></div></header>
 <nav class="mnav" id="mnav" aria-label="Menu"><a href="how-it-works.html">How it works</a><a href="about.html">About</a><a href="privacy.html">Privacy and credits</a></nav>
 
 <main><div class="wrap col3">
-<section class="head"><h1>Privacy and<br>credits</h1></section>
-<div class="pol">
-<section class="sec first"><h3>Who we are</h3><div class="list"><p>Hlid is made by Tony Goff-Yu and run by Goff &amp; Associates Limited, which is responsible for your personal information.</p></div></section>
-<section class="sec"><h3>Your location</h3><div class="list"><p>Hlid uses your location on your phone to find walks and guide you round them. It's never sent to us. You can say no and type where you're starting from instead.</p></div></section>
-<section class="sec"><h3>On your phone</h3><div class="list"><p>Your walks, routes, day pictures and settings stay on your phone. No account, no cookies, no analytics, no adverts.</p></div></section>
-<section class="sec"><h3>Other services</h3><div class="list"><p>For the forecast, Hlid sends the walk's car park position, not yours, to <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a>.</p><p>Tapping Drive opens Google Maps, which works under Google's own privacy policy.</p><p>Maps and walks download from our host, Vercel, which keeps standard logs such as IP address and time, possibly outside the UK under standard safeguards.</p></div></section>
-<section class="sec"><h3>Deleting your data</h3><div class="list"><p>Settings, then Delete everything. Uninstalling Hlid does the same.</p></div></section>
-<section class="sec"><h3>Feedback</h3><div class="list"><p>If you email us, we use your message and address only to reply.</p></div></section>
-<section class="sec"><h3>Credits</h3><div class="list"><p>Map data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors. Contains OS data &copy; Crown copyright and database right 2026. Weather from <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a>.</p></div></section>
-<p class="upd">Last updated 14 November 2026</p>
+<section class="head"><h1>Why I made<br>this app</h1></section>
+<section class="story"><p>For years my weekends were National Trust days. Drive out, look round a house, then a walk. Eventually I ran out of houses, and the walks became the point.</p><p>Planning them took longer than doing them. I asked an AI for ideas, then checked Google Maps, the parking, AllTrails and somewhere for lunch. By the time I decided, half the morning had gone.</p><p>On the walk, I spent too long looking at my phone: photos, reviews, stats. I wanted the opposite. A rough direction, a quiet path, and the feeling that I found it myself.</p><p>I'm a product designer, so I made the app I wanted. It picks one walk, sends me there and stays out of the way. At the end it gives me a picture of the day, which I keep.</p><p>These are some of those days, and what Hlid kept of them.</p></section>
 </div>
-
-</div></main>
+<div class="wrap"><div class="pairs"><div class="pair"><div class="ph" style="background-image:url(pairs/chanctonbury-photo.jpg)" role="img" aria-label="A photo from the walk at Chanctonbury Ring"></div><figure><div class="ph" style="background-image:url(pairs/chanctonbury-day.jpg)" role="img" aria-label="The day picture Hlid made of Chanctonbury Ring"></div></figure></div><div class="pair"><div class="ph" style="background-image:url(pairs/ranmore-photo.jpg)" role="img" aria-label="A photo from the walk at Ranmore Common"></div><figure><div class="ph" style="background-image:url(pairs/ranmore-day.jpg)" role="img" aria-label="The day picture Hlid made of Ranmore Common"></div></figure></div><div class="pair"><div class="ph" style="background-image:url(pairs/kithurst-hill-photo.jpg)" role="img" aria-label="A photo from the walk at Kithurst Hill"></div><figure><div class="ph" style="background-image:url(pairs/kithurst-hill-day.jpg)" role="img" aria-label="The day picture Hlid made of Kithurst Hill"></div></figure></div><div class="pair"><div class="ph" style="background-image:url(pairs/woolbeding-photo.jpg)" role="img" aria-label="A photo from the walk at Woolbeding Common"></div><figure><div class="ph" style="background-image:url(pairs/woolbeding-day.jpg)" role="img" aria-label="The day picture Hlid made of Woolbeding Common"></div></figure></div><div class="pair"><div class="ph" style="background-image:url(pairs/old-winchester-hill-photo.jpg)" role="img" aria-label="A photo from the walk at Old Winchester Hill"></div><figure><div class="ph" style="background-image:url(pairs/old-winchester-hill-day.jpg)" role="img" aria-label="The day picture Hlid made of Old Winchester Hill"></div></figure></div><div class="pair"><div class="ph" style="background-image:url(pairs/headley-photo.jpg)" role="img" aria-label="A photo from the walk at Headley Heath"></div><figure><div class="ph" style="background-image:url(pairs/headley-day.jpg)" role="img" aria-label="The day picture Hlid made of Headley Heath"></div></figure></div></div></div></main>
 <footer class="ftr"><div class="wrap"><div class="ftop">
   <p class="credit">&copy; 2026 Hlid. Made in London by <a href="https://gandalondon.com" target="_blank" rel="noopener">Tony Goff-Yu</a>.</p>
-  <nav aria-label="Footer"><a href="about.html">About</a><a href="how-it-works.html">How it works</a><a href="privacy.html" aria-current="page">Privacy and credits</a></nav>
+  <nav aria-label="Footer"><a href="about.html" aria-current="page">About</a><a href="how-it-works.html">How it works</a><a href="privacy.html">Privacy and credits</a></nav>
 </div></div></footer>
 <script>
 /* mobile menu: Menu opens a full-screen panel and becomes Close; Escape or a link closes it */
