@@ -50,12 +50,12 @@ jobs:
           grep -E "^e: |error:|What went wrong" -A3 build.log | head -40 | sed 's/^/::error::/' || true
 
       - name: Name the APK
-        run: cp app/build/outputs/apk/release/app-release.apk Woden.apk
+        run: cp app/build/outputs/apk/release/app-release.apk Hlid.apk
 
       - name: Publish release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: build-${{ github.run_number }}
-          name: Woden ${{ github.run_number }}
+          name: Hlid ${{ github.run_number }}
           make_latest: true
-          files: Woden.apk
+          files: Hlid.apk

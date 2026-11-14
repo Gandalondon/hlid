@@ -13,7 +13,7 @@
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher"
-        android:label="Woden"
+        android:label="Hlid"
         android:theme="@style/Theme.Woden">
 
         <activity

@@ -32,7 +32,7 @@ class TrackService : Service(), LocationListener {
         var listener: ((Double, Double, Float, Long) -> Unit)? = null
         @Volatile var recording = false
         private val points = mutableListOf<DoubleArray>()   // lat, lon, alt, acc, time
-        private var traceName = "Woden walk"
+        private var traceName = "Hlid walk"
         private var started = 0L
         private var appDir: File? = null
 
@@ -45,17 +45,17 @@ class TrackService : Service(), LocationListener {
             if (points.isEmpty()) return ""
             val gpx = gpx()
             val stamp = SimpleDateFormat("yyyy-MM-dd-HHmm", Locale.UK).format(Date(started))
-            val file = "woden-$stamp.gpx"
+            val file = "hlid-$stamp.gpx"
             return try {
                 val cv = ContentValues().apply {
                     put(MediaStore.Downloads.DISPLAY_NAME, file)
                     put(MediaStore.Downloads.MIME_TYPE, "application/gpx+xml")
-                    put(MediaStore.Downloads.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS + "/Woden")
+                    put(MediaStore.Downloads.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS + "/Hlid")
                 }
                 val uri = ctx.contentResolver.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, cv)!!
                 ctx.contentResolver.openOutputStream(uri)!!.use { it.write(gpx.toByteArray()) }
                 File(ctx.filesDir, "trace-latest.gpx").writeText(gpx)
-                "Downloads/Woden/$file"
+                "Downloads/Hlid/$file"
             } catch (e: Exception) {
                 File(ctx.filesDir, "trace-latest.gpx").writeText(gpx); ""
             }
@@ -65,7 +65,7 @@ class TrackService : Service(), LocationListener {
             val iso = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.UK).apply { timeZone = TimeZone.getTimeZone("UTC") }
             val sb = StringBuilder()
             sb.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n")
-            sb.append("<gpx version=\"1.1\" creator=\"Woden test build\" xmlns=\"http://www.topografix.com/GPX/1/1\">\n")
+            sb.append("<gpx version=\"1.1\" creator=\"Hlid test build\" xmlns=\"http://www.topografix.com/GPX/1/1\">\n")
             sb.append("<trk><name>").append(traceName).append("</name><trkseg>\n")
             for (p in points) {
                 sb.append("<trkpt lat=\"%.7f\" lon=\"%.7f\"><ele>%.1f</ele><time>%s</time><hdop>%.1f</hdop></trkpt>\n"
@@ -87,7 +87,7 @@ class TrackService : Service(), LocationListener {
         nm.createNotificationChannel(NotificationChannel("walk", "Walk tracking", NotificationManager.IMPORTANCE_LOW))
         val open = PendingIntent.getActivity(this, 0, Intent(this, MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), PendingIntent.FLAG_IMMUTABLE)
         val n = Notification.Builder(this, "walk")
-            .setContentTitle("Woden")
+            .setContentTitle("Hlid")
             .setContentText("Following your walk")
             .setSmallIcon(R.drawable.ic_launcher_foreground)
             .setContentIntent(open)

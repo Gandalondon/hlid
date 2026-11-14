@@ -188,13 +188,13 @@ class MainActivity : Activity(), SensorEventListener {
             v.vibrate(VibrationEffect.createOneShot(ms.toLong(), VibrationEffect.DEFAULT_AMPLITUDE))
         }
 
-        // a PNG (base64, no data: prefix) into Photos, in Pictures/Woden
+        // a PNG (base64, no data: prefix) into Photos, in Pictures/Hlid
         @JavascriptInterface fun savePng(b64: String, name: String): Boolean = try {
             val bytes = Base64.decode(b64, Base64.DEFAULT)
             val cv = ContentValues().apply {
                 put(MediaStore.Images.Media.DISPLAY_NAME, "$name.png")
                 put(MediaStore.Images.Media.MIME_TYPE, "image/png")
-                put(MediaStore.Images.Media.RELATIVE_PATH, Environment.DIRECTORY_PICTURES + "/Woden")
+                put(MediaStore.Images.Media.RELATIVE_PATH, Environment.DIRECTORY_PICTURES + "/Hlid")
             }
             val uri = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, cv)!!
             contentResolver.openOutputStream(uri)!!.use { it.write(bytes) }
