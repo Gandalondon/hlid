@@ -19,291 +19,230 @@
 <link rel="preload" href="fonts/zalando-sans-expanded-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-latin-opsz-wght.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-/* Hlid concept page, version B (13 Nov): the day's colours fill the whole hero, the line art sits where the phone will be.
-   On scroll the colour drains away and a front-on phone frame appears round the art. No angled phone. */
-@font-face{font-family:"Inter";font-weight:100 900;font-display:block;src:url(fonts/inter-latin-opsz-wght.woff2) format("woff2-variations"),url(fonts/inter-latin-opsz-wght.woff2) format("woff2")}
-@font-face{font-family:"Zalando Sans Expanded";font-weight:200 900;font-display:block;src:url(fonts/zalando-sans-expanded-latin-wght.woff2) format("woff2-variations"),url(fonts/zalando-sans-expanded-latin-wght.woff2) format("woff2")}
-:root{--nudge:max(0px,min(132px,calc((100vw - 2 * var(--edge) - 520px - 1.114 * var(--pw)) / 2 - 24px)));
-  --ink:#1A1A1A; --bg:#FFFFFF;
-  --font:"Inter","Helvetica Neue",Arial,system-ui,sans-serif;
-  --display:"Zalando Sans Expanded","Inter",sans-serif;
-  --h1:min(calc((100vw - 2 * var(--edge)) / 9.2), 18.5svh);  /* 19:50 midpoint size (same as the flip): about 113px in a 1167 x 606 window, 139px at 1440. The headline runs past its column but stops short of the route art */ --h2:clamp(32px,3.7vw,52px);
-  --body:20px; --body-lh:32px; --lede:24px; --lede-lh:34px;
-  --edge:24px; --hdr:88px;
-  --pw:clamp(220px,min(21vw,calc((100svh - 176px) * 0.462)),340px);  /* phone width: fits the window height */
-  --cyc:12s;  /* one full round of the five days (12s from 14 Nov: first fade at about 2s) */
-  color-scheme:light;
-}
-@media (min-width:1024px){ :root{ --edge:64px } }
-@media (min-width:1440px){ :root{ --edge:80px } }
+/* Home (14 Nov, from version D): version C without the map-into-phone stage. The colour hero just scrolls away, like Tilde.
+   Was version C (14 Nov, local only). Hero like Tony's Tilde mock-up: one full-height colour block, headline at the top,
+   intro and route art sharing a baseline at the bottom. Then the steps scroll with the page and swap sides, like
+   getsniff.app, on one centred row (text 520, gap 136, phone 337 at 1440) so the mirrored rows line up.
+   Copy fades up 8px (phones stay put, as on getsniff.app) as they arrive (Sniff's reveal: .6s ease-out, 15% in view). */
+@font-face{font-family:"Inter";font-weight:100 900;font-display:block;src:url(fonts/inter-latin-opsz-wght.woff2) format("woff2")}
+@font-face{font-family:"Zalando Sans Expanded";font-weight:200 900;font-display:block;src:url(fonts/zalando-sans-expanded-latin-wght.woff2) format("woff2")}
+:root{--ink:#1A1A1A;--font:"Inter","Helvetica Neue",Arial,system-ui,sans-serif;--display:"Zalando Sans Expanded","Inter",sans-serif;
+  --edge:24px;--hdr:88px;--cyc:12s;
+  --h1:min(11.6vw,22svh);                          /* bigger: 167px at 1440 */
+  --art:min(25vw,calc((100svh - 340px) * .62));    /* route art box width, 358 x 404 at 1440 x 900 */
+  --pw:clamp(240px,23.4vw,337px);                  /* phone */
+  --gap:clamp(48px,13.5vw,232px);                   /* text to phone */
+  --h2:clamp(32px,3.7vw,52px);
+  --rl:max(var(--edge),(100% - 1120px) / 2)}                      /* left and right edge of the 1120 content block */
+@media (min-width:1024px){:root{--edge:64px}}
+@media (min-width:1440px){:root{--edge:80px}}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--body)/var(--body-lh) var(--font);font-optical-sizing:auto;overflow-x:hidden}
+body{margin:0;color:var(--ink);font:400 20px/32px var(--font);font-optical-sizing:auto;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 h1,h2{margin:0;font-family:var(--display);font-weight:600;letter-spacing:0;text-wrap:balance}
 p{margin:0;text-wrap:pretty}
-.nw{white-space:nowrap}
 .wrap{padding-left:var(--edge);padding-right:var(--edge)}
-:focus-visible{outline:3px solid currentColor;outline-offset:3px}
-.btn{display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 32px;border-radius:999px;background:var(--ink);color:#FFFFFF;font:600 18px/1 var(--display);white-space:nowrap;transition:background .3s ease,color .3s ease}
-.btn:hover{background:#333333}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 32px;border-radius:999px;background:var(--ink);color:#FFFFFF;font:600 18px/1 var(--display);white-space:nowrap}
 .btn.sm{height:40px;padding:0 20px;font-size:16px}
-
-/* the weather wash: the day's colour, full window, cycling with the art (same timing, so the edges never show) */
-.wash{position:fixed;top:-25vh;left:0;right:0;height:150vh;top:-25lvh;height:150lvh;z-index:0;  /* 22:10 overscan: Android Chrome lags fixed layers on a fast flick, which uncovered a white band at the bottom; a quarter screen spare above and below covers it */
-    /* 20:17 lvh: as tall as the screen with the address bar hidden, so no white strip when it slides away on phones */
-  pointer-events:none;background:#D87F30;animation:wash var(--cyc) linear infinite;opacity:var(--wash,1)}
-@keyframes wash{
-  0%,16%{background:#D87F30} 20%,36%{background:#618993} 40%,56%{background:#4E685F} 60%,76%{background:#C68832} 80%,96%{background:#456985} 100%{background:#D87F30}
-}
-
-/* header: white on the colour, ink once the colour has gone */
-.hdr{position:absolute;inset:0 0 auto;z-index:20;color:#FFFFFF}  /* 20:22 no background or colour switch: the header scrolls away, so the old sticky-header swap only caused a flash */
-.hdr .wrap{height:var(--hdr);display:flex;align-items:center}  /* logo left, static, alone (19:49): everything else on the page is left-aligned */
-.logo{--mk:32px;display:inline-flex;align-items:baseline;font:600 calc(var(--mk) * .866 * 65 / 72)/1 var(--display);letter-spacing:0;color:inherit}
-.logo svg{width:1.1774em;height:0.714em;margin:0 -.01em 0 0;flex:none}
-.logo path{fill:currentColor}
-@media (max-width:600px){ .logo{--mk:22px} }
-
-/* one stage: text on the left, the phone parked on the right for the whole story */
-.stage{position:relative;z-index:1}
-.stage .wrap{display:grid;grid-template-columns:minmax(0,520px) minmax(0,1fr);gap:0}
-@media (min-width:901px){.step h2{white-space:nowrap}}  /* headings set their own breaks and may run past the 520px text column */  /* 12:46 phone centred between the end of the text and the right margin, like Relay */
-.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:var(--hdr);color:#FFFFFF}
-.hero h1{position:relative;z-index:2;font-size:min(var(--h1),calc((520px + var(--nudge) + (100vw - 2 * var(--edge) - 520px - 1.114 * var(--pw)) / 2 - 24px) / 6.2));line-height:.94;margin-left:-.03em;white-space:nowrap}  /* never runs into the parked phone */
-.hero .lede{margin-top:40px;max-width:24em;font-size:var(--lede);line-height:var(--lede-lh)}
-.step{min-height:100svh;display:flex;align-items:center}  /* full window, so each step's text centres with the phone */
-.step h2{font-size:var(--h2);line-height:1}
-.step p{margin-top:24px;max-width:26em}
-.step .btn{margin-top:40px}
-.step.fin h2{font-size:clamp(44px,4.8vw,76px);line-height:.94}
-/* after the hero the page stays white to the end: ink text, black buttons. The finale keeps the phone and plays the coloured maps in it. */
-.step,.ftr{color:#FFFFFF;transition:color .4s ease}
-html.clear .step,html.clear .ftr{color:var(--ink)}
-.step .btn{background:#FFFFFF;color:var(--ink)}
-html.clear .step .btn{background:var(--ink);color:#FFFFFF}
-
-.park{position:sticky;top:0;height:100svh;display:flex;align-items:center;justify-content:center;padding-left:calc(2 * var(--nudge));--pw:clamp(120px,calc(min(21vw,calc((var(--avail,100svh) - 176px) * 0.462)) * var(--k,1)),340px)}  /* 11:58: centred on the window (no header offset); --avail is the space above the footer, set by the script below, so the phone shrinks to fit as the footer comes in */
-/* the phone: straight on. In the hero only its screen shows, the same colour as the wash, so the art looks loose on the page */
-.phone{position:relative;width:var(--pw);aspect-ratio:390/844}
-.park .phone{transform:translateY(var(--shift,0px))}  /* at the end the phone also uses the footer's empty top padding */
-.frame{position:absolute;inset:calc(var(--pw) * -.0571);border-radius:calc(var(--pw) * .1714);background:#1A1A1A;opacity:var(--frame,0)}  /* Sniff proportions: 16px bezel, 48px outer and 32px screen radius on a 280px screen */
-.screen{position:absolute;inset:0;border-radius:calc(var(--pw) * .1143 * var(--frame,0));overflow:hidden;opacity:0;transition:opacity .45s ease}
-.screen.on{opacity:1}
-.screen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-/* the walls: white lines on transparent, over a background running the wash's own animation, so colour and wash never drift apart.
-   Each line fades in while the colour changes, holds, then fades out as the next comes in. */
-.walls{animation:wash var(--cyc) linear infinite}
-.walls img{opacity:0;animation:wl var(--cyc) linear infinite}
-.walls img:nth-child(1){animation-delay:calc(var(--cyc) * -.04)}
-.walls img:nth-child(2){animation-delay:calc(var(--cyc) * .16)}
-.walls img:nth-child(3){animation-delay:calc(var(--cyc) * .36)}
-.walls img:nth-child(4){animation-delay:calc(var(--cyc) * .56)}
-.walls img:nth-child(5){animation-delay:calc(var(--cyc) * .76)}
-@keyframes wl{0%,2%{opacity:0}4%,20%{opacity:1}22%,100%{opacity:0}}  /* 22:05 each line fades out in the first half of the colour change and the next fades in over the second half: no overlap, and no faint line on a settled colour */
-.mphone{display:none}
-.ftr{position:relative;z-index:1;padding:96px 0 calc(40px + env(safe-area-inset-bottom,0px));font-size:16px;line-height:24px}
-
-@media (max-width:900px){
-  :root{--hdr:72px}
-  .hero{padding-bottom:64px}
-  .hero .art.walls{animation:none;background:transparent;opacity:var(--wash,1)}  /* lines sit straight on the wash and fade out with it as you scroll (22:10: they stayed white, so white on cream) */
-  .stage .wrap{display:block}
-  .park{display:none}
-  .hero{min-height:100svh;padding-top:calc(var(--hdr) + 48px)}
-  .hero h1{font-size:calc((100vw - 2 * var(--edge)) / 6.3)}
-  .hero .lede{margin-top:24px;font-size:21px;line-height:31px}
-  /* phones (20:05): the route fills the space left under the lede, cropped to the route so there is no empty canvas above it */
-  .hero{justify-content:flex-start}
-  .hero .art{flex:1 1 0;min-height:200px;max-height:440px;width:100%;margin:32px 0 0;aspect-ratio:auto}
-  .hero .art img{inset:auto;left:50%;top:50%;width:140.3%;height:189.6%;transform:translate(-50%,-50%);object-fit:contain}  /* the route is the middle 71% x 53% of each picture: this makes that part fit the box */
-  .step,.step.fin{min-height:0;display:block;padding-block:64px}
-  .step.fin h2{font-size:9.6vw}
-  .mphone{display:flex;justify-content:center;margin-top:56px}
-  .mphone .phone{--pw:min(300px,78vw)}
-  .mphone .frame{opacity:1}
-  .mphone .screen{opacity:1;border-radius:calc(var(--pw) * .1143)}
-  .step.fin{padding-top:96px}
-}
-@media (min-width:901px){ .hero .art{display:none} }
-.art{position:relative;aspect-ratio:390/844}
-.art img{position:absolute;inset:0;width:100%;height:100%}
-@media (prefers-reduced-motion:reduce){
-  .wash,.walls,.walls img,.hero,.step.fin,.ftr{animation:none}
-  .walls{background:#D87F30}.walls img{opacity:0}.walls img:first-child{opacity:1}
-  .screen{transition:none}
-}
-.ftop{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:16px 32px}.ftop .credit{flex:1 1 0;min-width:16em}.ftop nav{display:flex;flex-wrap:wrap;gap:8px 32px}.ftop a{white-space:nowrap;text-decoration:none}.ftop a:hover,.topnav:hover{opacity:.75}@media (max-width:600px){.ftop{flex-direction:column;align-items:flex-start;gap:24px}.ftop nav{flex-direction:column;gap:12px}.ftop .credit{order:2}}
-.hdr .wrap{justify-content:space-between}
-.btn.soon{cursor:default}
-.step .btn.soon:hover{background:var(--ink)}  /* Relay: the button is not a link until the app is out */
-.hdr .btn.soon{background:#FFFFFF;color:#D87F30;animation:washink var(--cyc) linear infinite}  /* text takes the hero colour, in step with the wash */
-@keyframes washink{0%,16%{color:#D87F30} 20%,36%{color:#618993} 40%,56%{color:#4E685F} 60%,76%{color:#C68832} 80%,96%{color:#456985} 100%{color:#D87F30}}
-@media (prefers-reduced-motion:reduce){.hdr .btn.soon{animation:none}}
-.hdr .btn.soon:hover{background:#FFFFFF}
-/* USP list (Sniff's why-list, no icons): small heading, one line under it */
-.usp{margin:24px 0 0;padding:0;list-style:none}  /* short list: plain stacked lines, no bullets */
-.usp li{margin:0}
+.btn:hover{background:#333333}
+/* header on the hero */
+.hdr{position:absolute;inset:0 0 auto;z-index:5;color:#FFFFFF}
+.hdr .btn{transition:none}
+.hdr .wrap{height:var(--hdr);display:flex;align-items:center;justify-content:space-between}
+.logo{font:600 25px/1 var(--display)}
 .hright{display:flex;align-items:center;gap:32px}
-.topnav{font:600 16px/1 var(--display);color:inherit;text-decoration:none;white-space:nowrap}
-@media (max-width:420px){.hright{gap:20px}}
-/* gallery (12:50): the day pictures in the text column, so the phone stays parked on the right */
-.days{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;margin-top:40px;max-width:640px}
-.days figure{margin:0}
-.days img{display:block;width:100%;aspect-ratio:390/844;object-fit:cover;border-radius:12px}
-.days figcaption{margin-top:8px;font-size:16px;line-height:24px;text-wrap:balance}
-@media (max-width:900px){.days{grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}.days img{border-radius:8px}.days figcaption{font-size:12px;line-height:16px}}  /* phones: one small row, not a big stack */
-@media (max-width:600px){.topnav{display:none}}  /* phones: text links live in the footer */
-/* mobile menu (13:36): two-line icon far right that turns into an X (exception to the text-Menu rule: the header also holds the button). Phones only; desktop keeps the two links */
+.topnav{font:600 16px/1 var(--display)}
+.topnav:hover{opacity:.75}
+.hdr .btn,.hdr .btn:hover{background:#FFFFFF;color:#D87F30;animation:inkc var(--cyc) linear infinite}
+.btn.soon{cursor:default}
+/* hero: full window, headline top, intro + art on one baseline at the bottom */
+/* menu: two-line icon that turns into an X, as on the live site; at 900 and below */
 .menu{display:none;position:relative;width:48px;height:48px;margin-right:-12px;padding:0;border:0;background:none;color:inherit;cursor:pointer}
 .menu i{position:absolute;left:12px;width:24px;height:2px;border-radius:1px;background:currentColor;transition:transform .2s ease,top .2s ease}
 .menu i:first-child{top:19px}.menu i:last-child{top:27px}
 html.menu-open .menu i:first-child{top:23px;transform:rotate(45deg)}
 html.menu-open .menu i:last-child{top:23px;transform:rotate(-45deg)}
-@media (prefers-reduced-motion:reduce){.menu i{transition:none}}
 .mnav{display:none}
-@media (max-width:600px){
+/* stage: the hero sits over a sticky layer with the day's colour and a phone; as you scroll the colour drains away
+   and the route art gains a phone frame and fills with the coloured day picture. Then the page scrolls on to the rows. */
+.stage{position:relative;height:100svh;min-height:560px;overflow:hidden}  /* D: one screen, scrolls away like any block */
+.stick{position:absolute;inset:0}
+.wash{position:absolute;inset:0;animation:wash var(--cyc) linear infinite;opacity:calc(1 - var(--p,0))}
+.sph{--w:min(var(--pw),calc((100svh - 64px) / 2.045));position:absolute;left:calc(100% - var(--rl) - var(--w));  /* right edge on the rows' right edge, even when a short window makes the phone smaller */
+  top:calc((100svh - 64px - var(--w) * 1.542) * (1 - var(--p,0)) + (100svh - var(--w) * 2.045) / 2 * var(--p,0));
+  width:var(--w);aspect-ratio:337/689;padding:calc(var(--w) * .05);border-radius:calc(var(--w) * .154);
+  transform:scale(var(--sc,1.8));transform-origin:50% calc(var(--w) * 1.542)}  /* map 1.5x bigger in the hero, shrinking into the phone */
+.sph::before{content:"";position:absolute;inset:0;border-radius:inherit;background:var(--ink);opacity:var(--f,0)}
+.sph .scr{position:absolute;inset:calc(var(--w) * .05);border-radius:calc(var(--w) * .104);overflow:hidden}
+.sph .scr img{position:absolute;inset:0;width:100%;height:100%;opacity:0;animation:artc var(--cyc) linear infinite}
+.sph .lines{position:absolute;inset:0;opacity:calc(1 - var(--f,0))}
+/* every route's lowest point sits on the intro's last baseline (the art is centred in its frame, so lift each one) */
+.sph .lines img:nth-child(1){transform:translateY(calc(7.29% * (1 - var(--a,0))))}.sph .lines img:nth-child(2){transform:translateY(calc(16.47% * (1 - var(--a,0))))}.sph .lines img:nth-child(3){transform:translateY(calc(13.21% * (1 - var(--a,0))))}.sph .lines img:nth-child(4){transform:translateY(calc(13.8% * (1 - var(--a,0))))}
+.sph .days{position:absolute;inset:0;opacity:var(--f,0)}  /* as on the live site: the route fills the phone as the day picture */
+.sph .app{position:absolute;inset:0;opacity:var(--q,0)}  /* then the app screen arrives with its copy */
+.sph .app img{opacity:1;animation:none;object-fit:cover}
+.sph img:nth-child(2){animation-delay:calc(var(--cyc) * -.8)}.sph img:nth-child(3){animation-delay:calc(var(--cyc) * -.6)}
+.sph img:nth-child(4){animation-delay:calc(var(--cyc) * -.4)}.sph img:nth-child(5){animation-delay:calc(var(--cyc) * -.2)}
+.hero{position:absolute;inset:0 0 auto;height:100svh;min-height:560px;color:#FFFFFF;z-index:2}
+.hero .wrap{height:100%;display:flex;flex-direction:column;padding-top:calc(var(--hdr) + 16px);padding-bottom:104px}  /* D: more colour under the intro */
+.hero h1{font-size:var(--h1);line-height:.814;margin-left:-.06em;white-space:nowrap}
+.low{position:relative;margin-top:auto}
+.lede{max-width:520px;font-size:24px;line-height:34px}
+@media (max-width:900px){.lede{font-size:20px;line-height:30px}}
+.art{display:none;position:relative;width:min(60vw,280px);height:calc(min(60vw,280px) * 1.128)}  /* phones only: desktop uses the stage phone */
+.art img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:left bottom;opacity:0;animation:artc var(--cyc) linear infinite}
+.art img:nth-child(2){animation-delay:calc(var(--cyc) * -.8)}.art img:nth-child(3){animation-delay:calc(var(--cyc) * -.6)}
+.art img:nth-child(4){animation-delay:calc(var(--cyc) * -.4)}.art img:nth-child(5){animation-delay:calc(var(--cyc) * -.2)}
+@keyframes wash{0%,16%{background:#D87F30}20%,36%{background:#618993}40%,56%{background:#4E685F}60%,76%{background:#C68832}80%,96%{background:#456985}100%{background:#D87F30}}
+@keyframes inkc{0%,16%{color:#D87F30}20%,36%{color:#618993}40%,56%{color:#4E685F}60%,76%{color:#C68832}80%,96%{color:#456985}100%{color:#D87F30}}
+@keyframes artc{0%{opacity:0}2%,20%{opacity:1}22%,100%{opacity:0}}
+/* stage copy: sits left of the parked phone on the same centred row as the steps, fades in once the phone has settled */
+.scopy{position:absolute;top:50%;left:var(--rl);width:520px;transform:translateY(calc(-50% + 8px * (1 - var(--q,0))));opacity:var(--q,0);color:var(--ink)}
+.scopy h2{font-size:var(--h2);line-height:1}
+.scopy p{margin-top:24px}
+/* D desktop (Tony): every route starts from the same home dot, a couple turned about it so none crosses the headline; which sits under the s of How it works; the longest route
+   (Bignor) ends on the intro's last baseline. Phones keep the centred map. */
+.hmap{display:none}
+@media (min-width:901px){
+  .sph{display:none}
+  .hmap{display:block;position:absolute;inset:0}
+  .hmap img{position:absolute;opacity:0;animation:artc var(--cyc) linear infinite}
+  .hdot{position:absolute;border:solid #FFFFFF;border-radius:50%;box-sizing:border-box}  /* home: always there, the routes change around it */
+  .hmap img:nth-child(2){animation-delay:calc(var(--cyc) * -.8)}.hmap img:nth-child(3){animation-delay:calc(var(--cyc) * -.6)}
+  .hmap img:nth-child(4){animation-delay:calc(var(--cyc) * -.4)}.hmap img:nth-child(5){animation-delay:calc(var(--cyc) * -.2)}
+}
+@media (prefers-reduced-motion:reduce){.hmap img{animation:none}.hmap img:first-child{opacity:1}}
+/* steps: one centred row, sides swap every other step */
+.step{padding:104px 0}
+.step:last-of-type{padding-bottom:64px}
+.step.first{padding-top:208px}  /* hero to first phone = phone to phone (104 + 104) */
+.row{display:grid;grid-template-columns:minmax(0,600px) var(--pw);column-gap:48px;justify-content:space-between;align-items:center;max-width:calc(1120px + 2 * var(--edge));margin:0 auto}  /* same 1120 block as the About page: text left, phone right, the gap takes the rest */
+.flip .row{grid-template-columns:var(--pw) minmax(0,600px)}
+.flip .phone{order:1}.flip .copy{order:2}
+.copy h2{font-size:var(--h2);line-height:1;white-space:nowrap}  /* two lines, broken where the copy says (600 column fits the longest) */
+.copy p{max-width:520px}
+.copy p{margin-top:24px}
+.copy .btn{margin-top:40px}
+.phone{position:relative;width:var(--pw);aspect-ratio:337/689;padding:calc(var(--pw) * .05);border-radius:calc(var(--pw) * .154);background:var(--ink)}
+.phone img{display:block;width:100%;height:100%;border-radius:calc(var(--pw) * .104);object-fit:cover}
+.cyc img{position:absolute;inset:calc(var(--pw) * .05);width:calc(100% - var(--pw) * .1);height:calc(100% - var(--pw) * .1);opacity:0;animation:artc var(--cyc) linear infinite}
+.cyc img:nth-child(2){animation-delay:calc(var(--cyc) * -.8)}.cyc img:nth-child(3){animation-delay:calc(var(--cyc) * -.6)}
+.cyc img:nth-child(4){animation-delay:calc(var(--cyc) * -.4)}.cyc img:nth-child(5){animation-delay:calc(var(--cyc) * -.2)}
+.ftr{padding:32px 0 calc(40px + env(safe-area-inset-bottom,0px));font-size:16px;line-height:24px}
+.ftop{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:16px 32px}
+.ftop .credit{flex:1 1 0;min-width:16em}
+.ftop nav{display:flex;flex-wrap:wrap;gap:8px 32px}
+.ftop a{white-space:nowrap;text-decoration:none}
+.ftop a:hover,.topnav:hover{opacity:.75}
+@media (max-width:600px){.ftop{flex-direction:column;align-items:flex-start;gap:24px}.ftop nav{flex-direction:column;gap:12px}.ftop .credit{order:2}}
+/* Sniff's reveal: only once the script runs, so nothing hides without it */
+.rv .reveal{opacity:0;transform:translateY(8px);transition:opacity .6s ease-out,transform .6s ease-out}
+.rv .reveal.in{opacity:1;transform:none}
+.rv .reveal.now{transition:none}
+/* phones: one column, text then phone; same fade */
+@media (max-width:900px){
+  .topnav{display:none}
   .menu{display:inline-block}
   .hright{gap:16px}
   .mnav{position:fixed;inset:0;z-index:15;background:#FFFFFF;color:var(--ink);padding:calc(var(--hdr) + 48px) var(--edge) calc(48px + env(safe-area-inset-bottom,0px));flex-direction:column}
   html.menu-open .mnav{display:flex}
   html.menu-open{overflow:hidden}
   html.menu-open .hdr{position:fixed;inset:0 0 auto;z-index:30;color:var(--ink)}
-  html.menu-open .hdr .btn.soon{background:var(--ink);color:#FFFFFF;animation:none}
-  .mnav a{font:600 40px/1.1 var(--display);color:var(--ink);text-decoration:none}
+  html.menu-open .hdr .btn{background:var(--ink);color:#FFFFFF;animation:none}
+  .mnav a{font:600 40px/1.1 var(--display);color:var(--ink)}
   .mnav a + a{margin-top:16px}
+  .sph{--w:min(62vw,260px,calc((100svh - 64px) / 2.045));left:calc(50% - var(--w) / 2);
+    top:calc((100svh - var(--w) * 2.045) / 2 + 12px * (1 - var(--p,0)))}
+    .hero .wrap{padding-top:calc(var(--hdr) + 8px);padding-bottom:calc(32px + env(safe-area-inset-bottom,0px))}
+  .hero{--h1:clamp(40px,calc((100vw - 48px) / 6.3),96px)}
+  .step{padding:64px 0}
+  .step:last-of-type .phone{display:none}  /* phones: the page ends on the text, as before */
+  .copy h2{white-space:normal}
+  .step.first{padding-top:128px}
+  .row,.flip .row{grid-template-columns:1fr;row-gap:48px;justify-items:center}
+  .copy,.flip .copy{order:1;justify-self:stretch}.phone,.flip .phone{order:2}
 }
-</style>
-<style id="pinned-text">
-/* 14 Nov 17:30 (Tony): desktop keeps the parked phone, and the text parks too. Past the hero, nothing scrolls:
-   each step's text cross-fades in place, in step with the phone's screen. Mobile unchanged. */
-@media (min-width:901px){
-  .track{position:relative}
-  .tstage{position:sticky;top:0;height:100svh;margin-bottom:-100svh;z-index:2;pointer-events:none}
-  .tstage .tx{position:absolute;left:0;top:50%;transform:translateY(-50%);width:100%;opacity:0;transition:opacity .45s ease;pointer-events:none}
-  .tstage .tx.on{opacity:1;pointer-events:auto}
-  .tstage{color:#FFFFFF;transition:color .4s ease}
-  html.clear .tstage{color:var(--ink)}
-  .tstage .tx h2{font-size:var(--h2);line-height:1;white-space:nowrap}
-  .tstage .btn{background:#FFFFFF;color:var(--ink)}
-  html.clear .tstage .btn{background:var(--ink);color:#FFFFFF}
-  .tstage .tx p{margin-top:24px;max-width:26em}
-  .tstage .tx .btn{margin-top:40px}
-  .track .step > div:not(.mphone){opacity:0}          /* the scrolling copies stay for screen readers and links, unseen */
-  .track .step.last > div{visibility:hidden}
-  /* the phone never shrinks: it always fits the window, and the page ends on the last step */
-  .park{height:100svh!important;--k:1!important;--shift:0px!important}
-  .track .step.last{min-height:100svh!important}
-  /* the footer waits at the bottom of the window and fades in with the last step */
-  .ftr{position:fixed;left:0;right:0;bottom:0;padding:0 0 calc(40px + env(safe-area-inset-bottom,0px));opacity:0;pointer-events:none;transition:opacity .45s ease,color .4s ease;z-index:3}
-  html.at-end .ftr{opacity:1;pointer-events:auto}
-}
-@media (min-width:901px) and (prefers-reduced-motion:reduce){ .tstage .tx{transition:none} }
+@media (prefers-reduced-motion:reduce){.hero,.wash,.hdr .btn,.art img,.cyc img,.sph img{animation:none}.wash{background:#456985}.sph img:first-child{opacity:1}.art img:first-child,.cyc img:first-child{opacity:1}
+  .rv .reveal{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
-<div class="wash" aria-hidden="true"></div>
 <header class="hdr"><div class="wrap">
   <a class="logo" href="index.html" id="logo" aria-label="Hlid"><span>Hlid</span>
   </a><div class="hright"><a class="topnav" href="about.html">About</a><a class="topnav" href="how-it-works.html">How it works</a><a class="btn sm soon" href="mailto:hello@gethlid.app?subject=Try%20Hlid%20early&body=The%20email%20I%20use%20on%20Google%20Play%3A%20%0AWhere%20I%20live%20%28town%20or%20postcode%29%3A%20%0A">Try it early</a><button class="menu" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Menu"><i></i><i></i></button></div>
 </div></header>
 <nav class="mnav" id="mnav" aria-label="Menu"><a href="about.html">About</a><a href="how-it-works.html">How it works</a><a href="privacy.html">Privacy and credits</a></nav>
-
-<main class="stage"><div class="wrap">
-  <div class="steps">
-    <section class="hero">
-      <h1>More walk.<br>Less app.</h1>
-      <p class="lede">Choosing a walk shouldn’t take longer than the walk. Hlid picks one you’ve never done, so all you have to do is go.</p>
-      <div class="art walls" aria-hidden="true"><img src="screens/line-0.webp" alt=""><img src="screens/line-1.webp" alt=""><img src="screens/line-2.webp" alt=""><img src="screens/line-3.webp" alt=""><img src="screens/line-4.webp" alt=""></div>
-    </section>
-    <section class="step" data-i="0">
-      <div><h2>No set-up.<br>Just go.</h2>
-        <p>Open it and today’s walk is already there. Change where you set off from, how long you want to drive or how long you want to walk, and it finds another.</p></div>
-      <div class="mphone"><div class="phone"><i class="frame"></i><div class="screen"><img src="screens/set.webp" alt="Today, with the drive length open: up to 30 min, 1 hour, 1h 30 or 2 hours." loading="lazy"></div></div></div>
-    </section>
-    <section class="step" data-i="1">
-      <div><h2>Somewhere you’ve<br>never been</h2>
-        <p>Not a list of 400 trails to scroll through, just one walk, picked for the day and its weather.</p></div>
-      <div class="mphone"><div class="phone"><i class="frame"></i><div class="screen"><img src="screens/today.webp" alt="Today's walk: Chanctonbury Ring, 1h 13 drive, 4.7 km walk." loading="lazy"></div></div></div>
-    </section>
-    <section class="step" data-i="2">
-      <div><h2>Google gets<br>you there</h2>
-        <p>Hlid sends the route to Google Maps and always ends it at a free car park at the start of the walk, so you don’t have to work out where to park.</p></div>
-      <div class="mphone"><div class="phone"><i class="frame"></i><div class="screen"><img src="screens/carpark.webp" alt="At the car park: You're here, the loop on a grey map with hills shaded, Start walk." loading="lazy"></div></div></div>
-    </section>
-    <section class="step" data-i="3">
-      <div><h2>You’ll hardly<br>need a map</h2>
-        <p>Once you’re walking, the map turns with you, so the way ahead is always up. It’s black and white, with the hills shaded the way Ordnance Survey used to. Glance at it if you’re unsure. Otherwise follow the signs and look up.</p></div>
-      <div class="mphone"><div class="phone"><i class="frame"></i><div class="screen"><img src="screens/walk.webp" alt="Walking: a black and white map turned to the way you’re going, hills shaded in grey, the route in black." loading="lazy"></div></div></div>
-    </section>
-    <section class="step" data-i="-1">
-      <div><h2>Keep the day<br>you had</h2>
-        <p>No questions at the end, just one picture of your day: the drive and the walk as a single line. Its colour comes from the weather on the walk. Cold days come out blue, warm days gold, and cloud or rain makes it darker. Keep it as a wallpaper, then head home or let Hlid pick a pub nearby.</p>
-        <div class="days"><figure><img src="screens/wall-0.webp" alt="Chanctonbury Ring: the day as one white line on its weather colour" loading="lazy"></figure><figure><img src="screens/wall-1.webp" alt="Old Winchester Hill: the day as one white line on its weather colour" loading="lazy"></figure><figure><img src="screens/wall-2.webp" alt="Kithurst Hill: the day as one white line on its weather colour" loading="lazy"></figure><figure><img src="screens/wall-3.webp" alt="Harting Down: the day as one white line on its weather colour" loading="lazy"></figure><figure><img src="screens/wall-4.webp" alt="Bignor Hill: the day as one white line on its weather colour" loading="lazy"></figure></div></div>
-      <div class="mphone"><div class="phone"><i class="frame"></i><div class="screen"><img src="screens/wall-0.webp" alt="A day picture: the drive and the walk as one white line on the weather colour." loading="lazy"></div></div></div>
-    </section>
-    <section class="step last" data-i="-1">
-      <div><h2>Nothing to unlock.<br>One price.</h2>
-        <p>Offline maps, the off-path buzz and every walk are included. No account needed. It’s on Android first, and in testing now.</p>
-        <a class="btn soon" href="mailto:hello@gethlid.app?subject=Try%20Hlid%20early&body=The%20email%20I%20use%20on%20Google%20Play%3A%20%0AWhere%20I%20live%20%28town%20or%20postcode%29%3A%20%0A">Try it early</a></div>
-    </section>
-  </div>
-  <div class="park" aria-hidden="true"><div class="phone" id="ph">
-    <i class="frame"></i>
-    <div class="screen walls on" data-i="-1"><img src="screens/line-0.webp" alt=""><img src="screens/line-1.webp" alt=""><img src="screens/line-2.webp" alt=""><img src="screens/line-3.webp" alt=""><img src="screens/line-4.webp" alt=""></div>
-    <div class="screen" data-i="0"><img src="screens/set.webp" alt=""></div>
-    <div class="screen" data-i="1"><img src="screens/today.webp" alt=""></div>
-    <div class="screen" data-i="2"><img src="screens/carpark.webp" alt=""></div>
-    <div class="screen" data-i="3"><img src="screens/walk.webp" alt=""></div>
-    <div class="screen" data-i="4"><img src="screens/walks.webp" alt=""></div>
+<main class="site">
+<div class="stage">
+<div class="stick"><div class="wash" aria-hidden="true"></div>
+  <div class="hmap" aria-hidden="true"><img src="screens/route-0.svg" alt="" data-c="668,524.2" data-r="-14"><img src="screens/route-1.svg" alt="" data-c="668,681" data-r="-44"><img src="screens/route-2.svg" alt="" data-c="668,626.1" data-r="-26"><img src="screens/route-3.svg" alt="" data-c="668,636.7" data-r="-64"><img src="screens/route-4.svg" alt="" data-c="494.6,401.9" data-r="0" data-s=".85"><i class="hdot"></i></div>
+  <div class="sph" aria-hidden="true"><div class="scr">
+    <div class="lines"><img src="screens/line-0.svg" alt=""><img src="screens/line-1.svg" alt=""><img src="screens/line-2.svg" alt=""><img src="screens/line-3.svg" alt=""><img src="screens/line-4.svg" alt=""></div>
   </div></div>
-</div></main>
+</div>
+<section class="hero"><div class="wrap">
+  <h1>More walk.<br>Less app.</h1>
+  <div class="low">
+    <p class="lede">Choosing a walk shouldn’t take longer than the walk. Hlid picks one you’ve never done, so all you have to do is go.</p>
+  </div>
+</div></section>
+</div>
+<section class="step first"><div class="wrap row">
+  <div class="copy reveal"><h2>No set-up.<br>Just go.</h2><p>Open it and today’s walk is already there. Change where you set off from, how long you want to drive or how long you want to walk, and it finds another.</p></div>
+  <div class="phone"><img src="screens/set.webp" alt="Today, with the drive time sheet open"></div>
+</div></section>
+<section class="step flip"><div class="wrap row">
+  <div class="copy reveal"><h2>Somewhere you’ve<br>never been</h2><p>Not a list of 400 trails to scroll through, just one walk, picked for the day and its weather.</p></div>
+  <div class="phone"><img src="screens/today.webp" alt="Today: Chanctonbury Ring"></div>
+</div></section>
+<section class="step"><div class="wrap row">
+  <div class="copy reveal"><h2>Google gets<br>you there</h2><p>Hlid sends the route to Google Maps and always ends it at a free car park at the start of the walk, so you don’t have to work out where to park.</p></div>
+  <div class="phone"><img src="screens/carpark.webp" alt="At the car park: the loop on the map"></div>
+</div></section>
+<section class="step flip"><div class="wrap row">
+  <div class="copy reveal"><h2>You’ll hardly<br>need a map</h2><p>Once you’re walking, the map turns with you, so the way ahead is always up. It’s black and white, with the hills shaded the way Ordnance Survey used to. Glance at it if you’re unsure. Otherwise follow the signs and look up.</p></div>
+  <div class="phone"><img src="screens/walk.webp" alt="Walking: the map turned so the way ahead is up"></div>
+</div></section>
+<section class="step"><div class="wrap row">
+  <div class="copy reveal"><h2>Keep the day<br>you had</h2><p>When you finish, you get one picture of your day: the drive and the walk as a single line. Then drive home, or let Hlid find a pub nearby.</p></div>
+  <div class="phone"><img src="screens/done.webp" alt="The end of the walk: the day picture, Drive home and Find a pub"></div>
+</div></section>
+<section class="step flip"><div class="wrap row">
+  <div class="copy reveal"><h2>Coloured by<br>the weather</h2><p>Cold days come out blue, warm days gold, and cloud or rain makes it darker. Every walk you’ve done, in one place.</p></div>
+  <div class="phone"><img src="screens/walks.webp" alt="Your walks: each day's picture"></div>
+</div></section>
+<section class="step"><div class="wrap row">
+  <div class="copy reveal"><h2>Nothing to unlock.<br>One price.</h2><p>Offline maps, the off-path buzz and every walk are included. No account needed. It’s on Android first, and in testing now.</p><a class="btn" href="mailto:hello@gethlid.app?subject=Try%20Hlid%20early&amp;body=The%20email%20I%20use%20on%20Google%20Play%3A%20%0AWhere%20I%20live%20%28town%20or%20postcode%29%3A%20%0A">Try it early</a></div>
+  <div class="phone cyc" aria-hidden="true"><img src="screens/wall-0.svg" alt=""><img src="screens/wall-1.svg" alt=""><img src="screens/wall-2.svg" alt=""><img src="screens/wall-3.svg" alt=""><img src="screens/wall-4.svg" alt=""></div>
+</div></section>
+</main>
 <footer class="ftr"><div class="wrap"><div class="ftop">
   <p class="credit">&copy; 2026 Hlid. Made in London by <a href="https://gandalondon.com" target="_blank" rel="noopener">Tony Goff-Yu</a>.</p>
   <nav aria-label="Footer"><a href="about.html">About</a><a href="how-it-works.html">How it works</a><a href="privacy.html">Privacy and credits</a></nav>
 </div></div></footer>
 <script src="site.js"></script>
 <script>
-/* scroll: over the first 60% of a screen the wash fades out and the phone frame fades in round the art; then the screens follow the story */
-(function(){
-  var root=document.documentElement, steps=[].slice.call(document.querySelectorAll(".step")), ph=document.getElementById("ph"), fin=document.querySelector(".fin"), hero=document.querySelector(".hero"),
-      scr=[].slice.call(ph.querySelectorAll(".screen")), mq=matchMedia("(max-width:900px)"), cur=-1, q=false;
-  function show(i){ if(i===cur) return; cur=i; scr.forEach(function(s){ s.classList.toggle("on", +s.dataset.i===i); }); }
-  function f(){ q=false;
-    var vh=innerHeight, m=mq.matches, h0=m ? Math.max(0,hero.offsetHeight-vh) : 0,
-        p=Math.max(0,Math.min(1,(scrollY-h0)/(vh*(m?.5:.6)))), e=p*p*(3-2*p);  /* phones: the fade starts once the whole hero has been seen */
-    /* the tail: as the finale comes up, the phone switches back to the coloured maps (no colour wash on the page) */
-    var ft=fin?fin.getBoundingClientRect().top:1e9, r=Math.max(0,Math.min(1,(vh-ft)/(vh*.6))), t=r*r*(3-2*r);
-    if(m){ root.style.setProperty("--wash",(1-e).toFixed(3)); root.style.removeProperty("--frame"); root.classList.toggle("clear", e>.5); return; }
-    root.style.setProperty("--wash",(1-e).toFixed(3));
-    root.style.setProperty("--frame",e.toFixed(3));
-    root.classList.toggle("clear", e>.5);
-    var best=-1, bd=1e9, mid=vh/2;
-    if(scrollY>vh*.5 && t<.5) steps.forEach(function(el){ var r=el.getBoundingClientRect(), d=Math.abs(r.top+r.height/2-mid); if(d<bd){ bd=d; best=+el.dataset.i; } });
-    show(best);
-  }
-  /* 14 Nov: the page wash and the phone's colour are separate CSS animations and can drift apart after scrolling away and back
-     (Chrome throttles layers it can't see). Re-lock every colour animation to the same start whenever the hero comes back. */
-  var locked=false, NAMES={wash:1,wl:1,washink:1};
-  function lock(){ if(!document.getAnimations) return; document.getAnimations().forEach(function(a){ if(NAMES[a.animationName]) a.startTime=0; }); }
-  addEventListener("scroll",function(){ if(!q){ q=true; requestAnimationFrame(function(){ f(); var away=scrollY>innerHeight*1.2; if(away) locked=false; else if(!locked){ lock(); locked=true; } }); } },{passive:true});
+/* colour lock (from the previous home, 14 Nov): the wash, the header button text and the route art are separate CSS animations
+   and can drift apart after scrolling away and back; re-lock them to one start whenever the hero comes back */
+(function(){ if(!document.getAnimations) return; var N={wash:1,inkc:1,artc:1},locked=true;
+  function lock(){ document.getAnimations().forEach(function(a){ if(N[a.animationName]) a.startTime=0; }); }
+  addEventListener("scroll",function(){ var away=scrollY>innerHeight*1.2; if(away) locked=false; else if(!locked){ lock(); locked=true; } },{passive:true});
   addEventListener("visibilitychange",function(){ if(!document.hidden) lock(); });
-  /* 14 Nov (Tony, mobile): any colour animation that restarts (e.g. the header button after opening and closing the menu) re-locks to the page */
-  document.addEventListener("animationstart",function(e){ if(NAMES[e.animationName]) lock(); });
-  /* Chrome address bar: plain white (14 Nov, Tony: following the colour lagged) */
-  addEventListener("resize",f); f(); lock(); locked=true;
-})();
+  document.addEventListener("animationstart",function(e){ if(N[e.animationName]) lock(); }); lock(); })();
 </script>
 <script>
-/* 11:58: the parked phone fits the space above the footer, so it never runs off the top at the end */
-(function(){var park=document.querySelector(".park"),ft=document.querySelector(".ftr"),q=false;if(!park||!ft)return;
-function fit(){q=false;var t=Math.max(0,ft.getBoundingClientRect().top),pad=parseFloat(getComputedStyle(ft).paddingTop)||0,h=Math.min(innerHeight,t),a=Math.min(innerHeight,t+pad);park.style.height=h+"px";park.style.setProperty("--avail",a+"px");park.style.setProperty("--shift",((a-h)/2)+"px");var F=ft.offsetHeight,k=1-.15*Math.min(1,Math.max(0,(innerHeight-h)/F));park.style.setProperty("--k",k);}
-var fin=document.querySelector(".step.last"),mq2=matchMedia("(max-width:900px)");function size(){if(!fin)return;if(mq2.matches){fin.style.minHeight="";return;}var pad=parseFloat(getComputedStyle(ft).paddingTop)||0;fin.style.minHeight=Math.max(320,innerHeight-ft.offsetHeight-pad)+"px";}
-function ask(){if(!q){q=true;requestAnimationFrame(fit);}}
-addEventListener("scroll",ask,{passive:true});addEventListener("resize",function(){size();ask();});size();fit();})();
+/* D: pin each route's home dot to the s of How it works */
+(function(){ var m=document.querySelector(".hmap"),nav=document.querySelectorAll(".topnav")[1]; if(!m||!nav) return;
+  function place(){ if(innerWidth<=901) return;
+    var t=nav.firstChild,r=document.createRange(); r.setStart(t,t.length-1); r.setEnd(t,t.length); var sb=r.getBoundingClientRect();
+    var ax=sb.left+sb.width/2, pw=Math.min(337,Math.max(240,innerWidth*.234)), w=Math.min(pw,(innerHeight-64)/2.045), k=1.35*w/780;
+    var ay=Math.max(innerHeight,560)-112-760*k;   /* the deepest route, after turning, ends on the intro's last baseline */
+    m.querySelectorAll("img").forEach(function(im){ var c=im.dataset.c.split(","); im.style.width=(780*k)+"px"; im.style.left=(ax-c[0]*k)+"px"; im.style.top=(ay-c[1]*k)+"px"; im.style.transformOrigin=(c[0]*k)+"px "+(c[1]*k)+"px"; im.style.transform="rotate("+(im.dataset.r||0)+"deg) scale("+(im.dataset.s||1)+")"; });
+    var d=m.querySelector(".hdot"),R=(22+3)*k; d.style.width=d.style.height=(2*R)+"px"; d.style.left=(ax-R)+"px"; d.style.top=(ay-R)+"px"; d.style.borderWidth=(6*k)+"px";  /* turned about the dot where a route would run into the headline */ }
+  place(); addEventListener("resize",place); if(document.fonts) document.fonts.ready.then(place); })();
 </script>
 <script>
-/* mobile menu: Menu opens a full-screen panel and becomes Close; Escape or a link closes it */
+/* menu: opens a full-screen panel; Escape or a link closes it (as on the live site) */
 (function(){var b=document.querySelector(".menu"),p=document.getElementById("mnav"),r=document.documentElement;if(!b||!p)return;
 function set(o){r.classList.toggle("menu-open",o);b.setAttribute("aria-label",o?"Close menu":"Menu");b.setAttribute("aria-expanded",o);}
 b.addEventListener("click",function(){set(!r.classList.contains("menu-open"));});
@@ -311,20 +250,17 @@ addEventListener("keydown",function(e){if(e.key==="Escape")set(false);});
 p.addEventListener("click",function(e){if(e.target.tagName==="A")set(false);});})();
 </script>
 <script>
-/* pinned text (desktop): copies of each step's text sit in one sticky layer; the step nearest the middle of the window shows */
-(function(){
-  if(!matchMedia("(min-width:901px)").matches) return;
-  var steps=[].slice.call(document.querySelectorAll(".steps .step")); if(!steps.length) return;
-  var track=document.createElement("div"); track.className="track"; steps[0].parentNode.insertBefore(track,steps[0]);
-  var stage=document.createElement("div"); stage.className="tstage"; track.appendChild(stage);
-  var tx=steps.map(function(s){ track.appendChild(s); var c=s.querySelector(":scope > div:not(.mphone)").cloneNode(true); c.className="tx"; c.setAttribute("aria-hidden","true");
-    [].forEach.call(c.querySelectorAll("a,button"),function(a){ a.tabIndex=-1; }); stage.appendChild(c); return c; });
-  var cur=-2, q=false;
-  function f(){ q=false; var vh=innerHeight, mid=vh/2, best=-1, bd=1e9;
-    if(scrollY>vh*.5) steps.forEach(function(el,i){ var r=el.getBoundingClientRect(), d=Math.abs(r.top+r.height/2-mid); if(d<bd){ bd=d; best=i; } });
-    if(best===cur) return; cur=best; tx.forEach(function(t,i){ t.classList.toggle("on",i===best); });
-    document.documentElement.classList.toggle("at-end", best===steps.length-1); }
-  addEventListener("scroll",function(){ if(!q){ q=true; requestAnimationFrame(f); } },{passive:true}); addEventListener("resize",f); f();
+/* D: the hero map is 1.5x the phone size on desktop (1.15x on phones), fixed */
+document.documentElement.style.setProperty("--sc",innerWidth>900?1.5:1.15);
+addEventListener("resize",function(){document.documentElement.style.setProperty("--sc",innerWidth>900?1.5:1.15);});
+</script>
+<script>
+/* Sniff's reveal: anything already on screen shows at once, the rest fades up as it arrives */
+(function(){ var root=document.querySelector('.site'); if(!root||!('IntersectionObserver' in window)) return;
+  var vh=innerHeight||800; root.querySelectorAll('.reveal').forEach(function(el){ if(el.getBoundingClientRect().top<vh) el.classList.add('in','now'); });
+  root.classList.add('rv');
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{rootMargin:'0px 0px -10% 0px',threshold:.15});
+  root.querySelectorAll('.reveal:not(.in)').forEach(function(el){ io.observe(el); });
 })();
 </script>
 </body>
