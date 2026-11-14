@@ -256,6 +256,12 @@ html.menu-open .menu i:last-child{top:23px;transform:rotate(-45deg)}
   function lock(){ if(!document.getAnimations) return; document.getAnimations().forEach(function(a){ if(NAMES[a.animationName]) a.startTime=0; }); }
   addEventListener("scroll",function(){ if(!q){ q=true; requestAnimationFrame(function(){ f(); var away=scrollY>innerHeight*1.2; if(away) locked=false; else if(!locked){ lock(); locked=true; } }); } },{passive:true});
   addEventListener("visibilitychange",function(){ if(!document.hidden) lock(); });
+  /* 14 Nov (Tony, mobile): any colour animation that restarts (e.g. the header button after opening and closing the menu) re-locks to the page */
+  document.addEventListener("animationstart",function(e){ if(NAMES[e.animationName]) lock(); });
+  /* and Chrome's address bar follows the page colour: the wash while it shows, white once it has gone */
+  var meta=document.querySelector('meta[name="theme-color"]'), washEl=document.querySelector(".wash"), lastTC="";
+  function tc(){ if(!meta||!washEl) return; var c=root.classList.contains("clear")? "#FFFFFF" : getComputedStyle(washEl).backgroundColor; if(c!==lastTC){ meta.setAttribute("content",c); lastTC=c; } }
+  setInterval(function(){ if(!document.hidden) tc(); },250); tc();
   addEventListener("resize",f); f(); lock(); locked=true;
 })();
 </script>
