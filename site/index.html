@@ -174,6 +174,32 @@ html.menu-open .menu i:last-child{top:23px;transform:rotate(-45deg)}
   .mnav a + a{margin-top:16px}
 }
 </style>
+<style id="pinned-text">
+/* 14 Nov 17:30 (Tony): desktop keeps the parked phone, and the text parks too. Past the hero, nothing scrolls:
+   each step's text cross-fades in place, in step with the phone's screen. Mobile unchanged. */
+@media (min-width:901px){
+  .track{position:relative}
+  .tstage{position:sticky;top:0;height:100svh;margin-bottom:-100svh;z-index:2;pointer-events:none}
+  .tstage .tx{position:absolute;left:0;top:50%;transform:translateY(-50%);width:100%;opacity:0;transition:opacity .45s ease;pointer-events:none}
+  .tstage .tx.on{opacity:1;pointer-events:auto}
+  .tstage{color:#FFFFFF;transition:color .4s ease}
+  html.clear .tstage{color:var(--ink)}
+  .tstage .tx h2{font-size:var(--h2);line-height:1;white-space:nowrap}
+  .tstage .btn{background:#FFFFFF;color:var(--ink)}
+  html.clear .tstage .btn{background:var(--ink);color:#FFFFFF}
+  .tstage .tx p{margin-top:24px;max-width:26em}
+  .tstage .tx .btn{margin-top:40px}
+  .track .step > div:not(.mphone){opacity:0}          /* the scrolling copies stay for screen readers and links, unseen */
+  .track .step.last > div{visibility:hidden}
+  /* the phone never shrinks: it always fits the window, and the page ends on the last step */
+  .park{height:100svh!important;--k:1!important;--shift:0px!important}
+  .track .step.last{min-height:100svh!important}
+  /* the footer waits at the bottom of the window and fades in with the last step */
+  .ftr{position:fixed;left:0;right:0;bottom:0;padding:0 0 calc(32px + env(safe-area-inset-bottom,0px));opacity:0;pointer-events:none;transition:opacity .45s ease,color .4s ease;z-index:3}
+  html.at-end .ftr{opacity:1;pointer-events:auto}
+}
+@media (min-width:901px) and (prefers-reduced-motion:reduce){ .tstage .tx{transition:none} }
+</style>
 </head>
 <body>
 <div class="wash" aria-hidden="true"></div>
@@ -283,6 +309,23 @@ function set(o){r.classList.toggle("menu-open",o);b.setAttribute("aria-label",o?
 b.addEventListener("click",function(){set(!r.classList.contains("menu-open"));});
 addEventListener("keydown",function(e){if(e.key==="Escape")set(false);});
 p.addEventListener("click",function(e){if(e.target.tagName==="A")set(false);});})();
+</script>
+<script>
+/* pinned text (desktop): copies of each step's text sit in one sticky layer; the step nearest the middle of the window shows */
+(function(){
+  if(!matchMedia("(min-width:901px)").matches) return;
+  var steps=[].slice.call(document.querySelectorAll(".steps .step")); if(!steps.length) return;
+  var track=document.createElement("div"); track.className="track"; steps[0].parentNode.insertBefore(track,steps[0]);
+  var stage=document.createElement("div"); stage.className="tstage"; track.appendChild(stage);
+  var tx=steps.map(function(s){ track.appendChild(s); var c=s.querySelector(":scope > div:not(.mphone)").cloneNode(true); c.className="tx"; c.setAttribute("aria-hidden","true");
+    [].forEach.call(c.querySelectorAll("a,button"),function(a){ a.tabIndex=-1; }); stage.appendChild(c); return c; });
+  var cur=-2, q=false;
+  function f(){ q=false; var vh=innerHeight, mid=vh/2, best=-1, bd=1e9;
+    if(scrollY>vh*.5) steps.forEach(function(el,i){ var r=el.getBoundingClientRect(), d=Math.abs(r.top+r.height/2-mid); if(d<bd){ bd=d; best=i; } });
+    if(best===cur) return; cur=best; tx.forEach(function(t,i){ t.classList.toggle("on",i===best); });
+    document.documentElement.classList.toggle("at-end", best===steps.length-1); }
+  addEventListener("scroll",function(){ if(!q){ q=true; requestAnimationFrame(f); } },{passive:true}); addEventListener("resize",f); f();
+})();
 </script>
 </body>
 </html>
