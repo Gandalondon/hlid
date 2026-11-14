@@ -4,7 +4,7 @@
 <meta name="robots" content="noindex">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#4A789F">
+<meta name="theme-color" content="#BC8945">
 <title>Hlid</title>
 <meta name="description" content="Choosing a walk shouldn't take longer than the walk. Hlid picks one you've never done, so all you have to do is go.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2218 18 72 72%22%3E%3Ccircle cx=%2254%22 cy=%2254%22 r=%2236%22 fill=%22%231A1A1A%22/%3E%3Cg transform=%22translate(54 54) scale(0.6667) translate(-54 -54) scale(0.10547)%22%3E%3Cpath d=%22M550.17 246.519C662.17 246.519 753.17 258.519 753.17 327.519C753.17 403.519 585.17 467.519 585.17 557.519C585.17 636.519 668.17 702.519 668.17 745.519C668.17 767.519 644.17 777.519 610.17 777.519C422.17 777.519 271.17 571.519 271.17 409.519C271.17 288.519 383.17 246.519 550.17 246.519Z%22 fill=%22none%22 stroke=%22%23FFFFFF%22 stroke-width=%2266.37%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/g%3E%3C/svg%3E">
@@ -44,9 +44,9 @@ p{margin:0;text-wrap:pretty}
 /* the weather wash: the day's colour, full window, cycling with the art (same timing, so the edges never show) */
 .wash{position:fixed;top:-25vh;left:0;right:0;height:150vh;top:-25lvh;height:150lvh;z-index:0;  /* 22:10 overscan: Android Chrome lags fixed layers on a fast flick, which uncovered a white band at the bottom; a quarter screen spare above and below covers it */
     /* 20:17 lvh: as tall as the screen with the address bar hidden, so no white strip when it slides away on phones */
-  pointer-events:none;background:#4A789F;animation:wash var(--cyc) linear infinite;opacity:var(--wash,1)}
+  pointer-events:none;background:#BC8945;animation:wash var(--cyc) linear infinite;opacity:var(--wash,1)}
 @keyframes wash{
-  0%,16%{background:#4A789F} 20%,36%{background:#C08021} 40%,56%{background:#616461} 60%,76%{background:#B7935B} 80%,96%{background:#8B7A62} 100%{background:#4A789F}
+  0%,16%{background:#BC8945} 20%,36%{background:#718495} 40%,56%{background:#5E6261} 60%,76%{background:#B8935A} 80%,96%{background:#496985} 100%{background:#BC8945}
 }
 
 /* header: white on the colour, ink once the colour has gone */
@@ -122,15 +122,15 @@ html.clear .step .btn{background:var(--ink);color:#FFFFFF}
 .art img{position:absolute;inset:0;width:100%;height:100%}
 @media (prefers-reduced-motion:reduce){
   .wash,.walls,.walls img,.hero,.step.fin,.ftr{animation:none}
-  .walls{background:#4A789F}.walls img{opacity:0}.walls img:first-child{opacity:1}
+  .walls{background:#BC8945}.walls img{opacity:0}.walls img:first-child{opacity:1}
   .screen{transition:none}
 }
 .ftop{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:16px 32px}.ftop .credit{flex:1 1 0;min-width:16em}.ftop nav{display:flex;flex-wrap:wrap;gap:8px 32px}.ftop a{white-space:nowrap;text-decoration:none}.ftop a:hover{opacity:.6}@media (max-width:600px){.ftop{flex-direction:column;align-items:flex-start;gap:24px}.ftop nav{flex-direction:column;gap:12px}.ftop .credit{order:2}}
 .hdr .wrap{justify-content:space-between}
 .btn.soon{cursor:default}
 .step .btn.soon:hover{background:var(--ink)}  /* Relay: the button is not a link until the app is out */
-.hdr .btn.soon{background:#FFFFFF;color:#4A789F;animation:washink var(--cyc) linear infinite}  /* text takes the hero colour, in step with the wash */
-@keyframes washink{0%,16%{color:#4A789F} 20%,36%{color:#C08021} 40%,56%{color:#616461} 60%,76%{color:#B7935B} 80%,96%{color:#8B7A62} 100%{color:#4A789F}}
+.hdr .btn.soon{background:#FFFFFF;color:#BC8945;animation:washink var(--cyc) linear infinite}  /* text takes the hero colour, in step with the wash */
+@keyframes washink{0%,16%{color:#BC8945} 20%,36%{color:#718495} 40%,56%{color:#5E6261} 60%,76%{color:#B8935A} 80%,96%{color:#496985} 100%{color:#BC8945}}
 @media (prefers-reduced-motion:reduce){.hdr .btn.soon{animation:none}}
 .hdr .btn.soon:hover{background:#FFFFFF}
 /* USP list (Sniff's why-list, no icons): small heading, one line under it */
