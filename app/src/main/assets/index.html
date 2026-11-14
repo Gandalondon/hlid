@@ -419,7 +419,7 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
     '<div style="'+COL+'"><h1 style="'+H1+'" class="th">Head to the start</h1><p style="'+P+'" class="tl">Finding you…</p>'+
     '<button type="button" data-t="go" style="'+BTN+'; margin-top: 28px">Start walk</button></div></div>');
   /* Walking: heading-up, you fixed low in the middle, km to go */
-  sec("t-walk",'<div style="'+ROOT+'; background: '+LAND+'"><svg class="tmap" style="position:absolute;inset:0" width="390" height="100%" role="img" aria-label="Map of the path ahead, turned so the way you face is up"></svg>'+
+  sec("t-walk",'<div style="'+ROOT+'; background: '+LAND+'"><svg class="tmap tilt" style="position:absolute;inset:0" width="390" height="100%" role="img" aria-label="Map of the path ahead, turned so the way you face is up, tilted like a sat-nav"></svg><div class="offb" role="status" aria-live="assertive">Off the path. Head back to the line.</div>'+
     '<div class="tpanel" style="position: absolute; left: 0; right: 0; bottom: 0; padding: 24px 24px 32px; background: #FFFFFF; display: flex; flex-direction: column; gap: 16px">'+
     '<p style="'+P+'" class="lab tl">'+dist(LEN)+' to go</p><button type="button" data-t="end" style="'+BTN+'">End walk</button></div></div>');
   /* End: your trace over the route */
@@ -488,7 +488,7 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
   window.wodenHeading=function(h){ st.head=h; if(cur==="t-walk"||cur==="t-start") draw(); };
 
   /* ---------- drawing ---------- */
-  function svgSize(svg){ var r=svg.parentNode.getBoundingClientRect(), s=svg.getBoundingClientRect(), k=(s.width||390)/390; return [390, Math.max(100,(s.height||600)/k)]; }
+  function svgSize(svg){ var w=svg.clientWidth||390, h=svg.clientHeight||600, k=w/390; return [390, Math.max(100,h/k)]; }  /* layout size, so the walking map tilt (CSS 3D) does not skew it (build 7) */
   function frame(svg,cx,cy,scale,rot,ax,ay,extra){
     var sz=svgSize(svg); svg.setAttribute("viewBox","0 0 "+sz[0]+" "+sz[1]);
     if(!svg.dataset.built){ svg.innerHTML='<rect class="bg" width="100%" height="100%" fill="'+LAND+'"/><g class="w"><g class="m">'+BASE+routeLayers("r")+START+'</g></g><g class="you"></g>'; svg.dataset.built=1; }
@@ -524,11 +524,16 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
     if(cur==="t-walk"){
       var pos=st.me||pointAt(st.prog), rot=-(st.head!=null? st.head : bearingAt(st.prog));
       var sz3=svgSize(svg), panel=s.querySelector(".tpanel").getBoundingClientRect().height/((svg.getBoundingClientRect().width||390)/390);
-      var f3=frame(svg,pos[0],pos[1],0.6,rot,sz3[0]/2,(sz3[1]-panel)*0.68);
+      var f3=frame(svg,pos[0],pos[1],st.zoom||0.85,rot,sz3[0]/2,(sz3[1]-panel)*0.78);  /* build 7: pinch zoom; you sit low on the tilted map */
       svg.querySelector(".r-done").setAttribute("d",walkedLine(st.prog));
+      /* build 7 (Tony on the walk): a dotted trail of where you've actually walked, so drifting off at an angle shows straight away */
+      var tr=svg.querySelector(".trail"); if(!tr){ tr=document.createElementNS(NS,"path"); tr.setAttribute("class","trail"); tr.setAttribute("fill","none"); tr.setAttribute("stroke",INK);
+        tr.setAttribute("stroke-width","5"); tr.setAttribute("stroke-linecap","round"); tr.setAttribute("stroke-dasharray","0.1 12"); tr.setAttribute("vector-effect","non-scaling-stroke");
+        svg.querySelector(".m").insertBefore(tr, svg.querySelector(".tstart")); }
+      var TR=st.trace.slice(-200); tr.setAttribute("d", TR.length>1? "M"+TR.map(function(q){ return q[0].toFixed(1)+" "+(-q[1]).toFixed(1); }).join(" L") : "");
       var g=svg.querySelector(".you"); g.innerHTML=ARROW; g.setAttribute("transform","translate("+f3.X+" "+f3.Y+")");
       var left=Math.max(0,LEN-st.prog);
-      s.querySelector(".tl").textContent= st.back? "You’re back" : (!st.me? "Finding you…" : (st.off? "Off the path. Head back to the line." : dist(left)+" to go"));
+      s.querySelector(".tl").textContent= st.back? "You’re back" : (!st.me? "Finding you…" : dist(left)+" to go"); s.querySelector(".offb").classList.toggle("on", !!st.off&&!st.back);  /* build 7: off the path shows as a black banner at the top, not in this line */
       return; }
     if(cur==="t-done"){
       var sz4=svgSize(svg); svg.setAttribute("viewBox","0 0 "+sz4[0]+" "+sz4[1]);
@@ -553,8 +558,24 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
       var ll=m2ll(q.x,-q.y); window.wodenFix(ll[0],ll[1],5,Date.now()); });
     addEventListener("keydown",function(e){ if(e.key==="ArrowLeft"||e.key==="ArrowRight"){ window.wodenHeading(((st.head||0)+(e.key==="ArrowLeft"?-15:15)+360)%360); } }); }
 
-  window.wodenTest={st:st,showT:showT,LEN:LEN,LOOP:LOOP,m2ll:m2ll};
+  window.wodenTest={st:st,showT:showT,LEN:LEN,LOOP:LOOP,m2ll:m2ll,redraw:function(){ draw(); }};
   showT("t-today");
+})();
+</script>
+<style>
+/* build 7 (14 Nov, Tony on the walk): sat-nav tilt, pinch zoom, off-the-path banner */
+.scr[data-id="t-walk"] svg.tilt{inset:auto!important;left:-8%!important;top:-30%!important;width:116%!important;height:130%!important;transform:perspective(1400px) rotateX(36deg);transform-origin:50% 100%;touch-action:none}
+.offb{position:absolute;top:48px;left:24px;right:24px;z-index:3;background:#1A1A1A;color:#FFFFFF;font:600 16px/24px "Zalando Sans Expanded","Inter",sans-serif;padding:16px 24px;border-radius:24px;text-wrap:balance;opacity:0;transform:translateY(-8px);transition:opacity .2s ease,transform .2s ease;pointer-events:none}
+.offb.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.offb{transition:none}}
+</style>
+<script>
+/* build 7: two-finger pinch on the walking map changes the zoom; the map keeps following you */
+(function(){ var d0=0,z0=0;
+  function dist(t){ return Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY); }
+  document.addEventListener("touchstart",function(e){ var m=e.target.closest&&e.target.closest('.scr[data-id="t-walk"]'); if(!m||e.touches.length!==2||!window.wodenTest) return; d0=dist(e.touches); z0=window.wodenTest.st.zoom||0.85; e.preventDefault(); },{passive:false});
+  document.addEventListener("touchmove",function(e){ if(!d0||e.touches.length!==2||!window.wodenTest) return; var z=z0*dist(e.touches)/d0; window.wodenTest.st.zoom=Math.max(0.15,Math.min(3,z)); if(window.wodenTest.redraw) window.wodenTest.redraw(); e.preventDefault(); },{passive:false});
+  document.addEventListener("touchend",function(e){ if(e.touches.length<2) d0=0; });
 })();
 </script>
 </body>
