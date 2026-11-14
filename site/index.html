@@ -103,6 +103,7 @@ html.menu-open .menu i:last-child{top:23px;transform:rotate(-45deg)}
 /* D desktop (Tony): every route starts from the same home dot, a couple turned about it so none crosses the headline; which sits under the s of How it works; the longest route
    (Bignor) ends on the intro's last baseline. Phones keep the centred map. */
 .hmap{display:none}
+.hmap{visibility:hidden;opacity:0;transition:opacity .4s}.hmap.placed{visibility:visible;opacity:1}  /* hidden until placed with the real fonts: no flash on load */
 @media (min-width:901px){
   .sph{display:none}
   .hmap{display:block;position:absolute;inset:0}
@@ -243,7 +244,8 @@ html.menu-open .menu i:last-child{top:23px;transform:rotate(-45deg)}
     var ay=Math.max(innerHeight,560)-112-760*k;   /* the deepest route, after turning, ends on the intro's last baseline */
     m.querySelectorAll("img").forEach(function(im){ var c=im.dataset.c.split(","); im.style.width=(780*k)+"px"; im.style.left=(ax-c[0]*k)+"px"; im.style.top=(ay-c[1]*k)+"px"; im.style.transformOrigin=(c[0]*k)+"px "+(c[1]*k)+"px"; im.style.transform="rotate("+(im.dataset.r||0)+"deg) scale("+(im.dataset.s||1)+")"; });
     var d=m.querySelector(".hdot"),R=(22+3)*k; d.style.width=d.style.height=(2*R)+"px"; d.style.left=(ax-R)+"px"; d.style.top=(ay-R)+"px"; d.style.borderWidth=(6*k)+"px";  /* turned about the dot where a route would run into the headline */ }
-  place(); addEventListener("resize",place); if(document.fonts) document.fonts.ready.then(place); })();
+  function show(){ place(); m.classList.add("placed"); }
+  place(); addEventListener("resize",place); if(document.fonts) document.fonts.ready.then(show); else show(); setTimeout(show,1500); })();
 </script>
 <script>
 /* menu: opens a full-screen panel; Escape or a link closes it (as on the live site) */
