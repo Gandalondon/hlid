@@ -8,6 +8,7 @@ async def main():
     async with async_playwright() as p:
         b=await p.chromium.launch(executable_path=os.environ.get("CHROME","/usr/bin/google-chrome")); pg=await b.new_page(viewport={"width":1200,"height":2000})
         await pg.goto("file://"+os.path.join(HERE,"shot.html")); await pg.evaluate("document.fonts.ready"); await pg.wait_for_timeout(400)
+        if not await pg.evaluate("[...document.fonts].some(f=>f.status==='loaded')"): sys.exit("Fonts did not load. Nothing rendered.")
         w=await pg.evaluate("Math.max(...[...document.querySelectorAll('.s h1')].map(h=>{const r=document.createRange();r.selectNodeContents(h);return r.getBoundingClientRect().width}))")
         print("widest title",round(w))
         for k,n in NAMES.items():
