@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2218 18 72 72%22%3E%3Ccircle cx=%2254%22 cy=%2254%22 r=%2236%22 fill=%22%231A1A1A%22/%3E%3Cg transform=%22translate(54 54) scale(0.6667) translate(-54 -54) scale(0.10547)%22%3E%3Cpath d=%22M550.17 246.519C662.17 246.519 753.17 258.519 753.17 327.519C753.17 403.519 585.17 467.519 585.17 557.519C585.17 636.519 668.17 702.519 668.17 745.519C668.17 767.519 644.17 777.519 610.17 777.519C422.17 777.519 271.17 571.519 271.17 409.519C271.17 288.519 383.17 246.519 550.17 246.519Z%22 fill=%22none%22 stroke=%22%23FFFFFF%22 stroke-width=%2266.37%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/g%3E%3C/svg%3E">
+<title>How it works | Hlid</title>
+<link rel="preload" href="fonts/zalando-sans-expanded-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-opsz-wght.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Inter";font-weight:100 900;font-display:block;src:url(fonts/inter-latin-opsz-wght.woff2) format("woff2")}
+@font-face{font-family:"Zalando Sans Expanded";font-weight:200 900;font-display:block;src:url(fonts/zalando-sans-expanded-latin-wght.woff2) format("woff2")}
+/* Five sizes only: --h1p page title, --h2 section title (same as the homepage), --lede (only under the title, as on the homepage), --body (all reading text, small headings are body size in 600), --small (footer) */
+:root{--ink:#1A1A1A;--bg:#FFFFFF;--font:"Inter","Helvetica Neue",Arial,system-ui,sans-serif;--display:"Zalando Sans Expanded","Inter",sans-serif;
+  --h1p:clamp(48px,6.4vw,96px);--h2:clamp(28px,2.6vw,40px);--lede:24px;--lede-lh:34px;--body:20px;--body-lh:32px;--small:16px;--small-lh:24px;
+  --edge:24px;--hdr:88px}
+@media (min-width:1024px){:root{--edge:64px}}
+@media (min-width:1440px){:root{--edge:80px}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--body)/var(--body-lh) var(--font);font-optical-sizing:auto;min-height:100svh;display:flex;flex-direction:column}
+main{flex:1 0 auto}
+a{color:inherit;text-decoration:none;font-weight:500}
+h1,h2{margin:0;font-family:var(--display);font-weight:600;letter-spacing:0;text-wrap:balance}
+h3{margin:0;font:600 var(--lede)/1.25 var(--display);letter-spacing:0;text-wrap:balance}
+p,ul{margin:0;text-wrap:pretty}
+.nw{white-space:nowrap}
+.wrap{padding-left:var(--edge);padding-right:var(--edge)}
+.hdr .wrap{height:var(--hdr);display:flex;align-items:center}
+.logo{--mk:32px;display:inline-flex;align-items:baseline;font:600 calc(var(--mk) * .866 * 65 / 72)/1 var(--display);color:inherit;text-decoration:none}
+.logo svg{width:1.1774em;height:0.714em;margin:0 -.01em 0 0;flex:none}
+.logo path{fill:currentColor}
+@media (max-width:600px){.logo{--mk:22px}}
+.head{padding-top:96px;max-width:min(1040px,100%)}
+h1{font-size:var(--h1p);line-height:.94}
+.lede{margin-top:40px;max-width:26em;font-size:var(--lede);line-height:var(--lede-lh)}
+/* Relay split: title left (2/5), content right (3/5) to the right gutter */
+.sec{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:32px 64px;margin-top:120px}
+.sec h2{font-size:var(--h2);line-height:1}
+.list{display:flex;flex-direction:column;gap:40px;min-width:0}
+h3 + p{margin-top:8px}
+/* privacy: small headings left, text right, tighter rhythm */
+.pol .sec{margin-top:64px}
+.pol .sec.first{margin-top:120px}
+.pol .list{gap:16px}
+.pol ul{padding-left:24px}
+.pol .list a{text-decoration:none;font-weight:600}  /* no underlines: links are bold, as on Relay and Sniff */
+.pol .list a.nw,.pol .list a{overflow-wrap:anywhere}
+/* footer: one line, credit left, links right (Relay) */
+.ftr{padding-top:160px}
+.ftop{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:16px 32px;padding-bottom:calc(48px + env(safe-area-inset-bottom,0px));font-size:var(--small);line-height:var(--small-lh)}
+.ftop .credit{flex:1 1 0;min-width:16em}
+.ftop nav{display:flex;flex-wrap:wrap;gap:8px 32px}
+.ftop a{font-weight:400;white-space:nowrap}
+.ftop a:hover{opacity:.6}
+@media (max-width:900px){:root{--hdr:72px}.head{padding-top:48px}.lede{margin-top:24px;font-size:21px;line-height:31px}
+  .sec{grid-template-columns:minmax(0,1fr);margin-top:96px}.pol .sec{margin-top:48px;gap:8px}.pol .sec.first{margin-top:72px}.ftr{padding-top:112px}}
+@media (max-width:600px){.ftop{flex-direction:column;align-items:flex-start;gap:24px}.ftop nav{flex-direction:column;gap:12px}.ftop .credit{order:2}}
+
+/* v3 (12:03): Sniff's FAQ layout. One centred 752px column, left-aligned inside. Sizes: page title, section title (inner), small heading 24, body 20, footer 16 */
+.col3{max-width:calc(752px + 2 * var(--edge));margin:0 auto}
+.col3 .head{padding-top:80px;max-width:none}
+.col3 .sec{display:block;margin-top:96px}
+.col3 .sec h2{margin-bottom:40px}
+.col3 .list{gap:40px}
+.col3 .pol .sec,.col3 .pol .sec.first{margin-top:56px}
+.col3 .pol .sec.first{margin-top:72px}
+.col3 .pol .sec h2{margin-bottom:12px}
+@media (max-width:900px){.col3 .sec{margin-top:72px}.col3 .sec h2{margin-bottom:24px}.col3 .pol .sec{margin-top:48px}}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 32px;border-radius:999px;background:var(--ink);color:#FFFFFF;font:600 18px/1 var(--display);white-space:nowrap}
+.btn.sm{height:40px;padding:0 20px;font-size:16px}
+.hdr .wrap{justify-content:space-between}
+.btn.soon{cursor:default}  /* Relay: the button is not a link until the app is out */
+.hright{display:flex;align-items:center;gap:32px}
+.topnav{font:600 16px/1 var(--display);color:inherit;text-decoration:none;white-space:nowrap}
+@media (max-width:420px){.hright{gap:20px}}
+@media (max-width:600px){.topnav{display:none}}  /* phones: text links live in the footer */
+/* mobile menu (13:36): two-line icon far right that turns into an X (exception to the text-Menu rule: the header also holds the button). Phones only; desktop keeps the two links */
+.menu{display:none;position:relative;width:48px;height:48px;margin-right:-12px;padding:0;border:0;background:none;color:inherit;cursor:pointer}
+.menu i{position:absolute;left:12px;width:24px;height:2px;border-radius:1px;background:currentColor;transition:transform .2s ease,top .2s ease}
+.menu i:first-child{top:19px}.menu i:last-child{top:27px}
+html.menu-open .menu i:first-child{top:23px;transform:rotate(45deg)}
+html.menu-open .menu i:last-child{top:23px;transform:rotate(-45deg)}
+@media (prefers-reduced-motion:reduce){.menu i{transition:none}}
+.mnav{display:none}
+@media (max-width:600px){
+  .menu{display:inline-block}
+  .hright{gap:16px}
+  .mnav{position:fixed;inset:0;z-index:15;background:#FFFFFF;color:var(--ink);padding:calc(var(--hdr) + 48px) var(--edge) calc(48px + env(safe-area-inset-bottom,0px));flex-direction:column}
+  html.menu-open .mnav{display:flex}
+  html.menu-open{overflow:hidden}
+  html.menu-open .hdr{position:fixed;inset:0 0 auto;z-index:30;color:var(--ink)}
+  html.menu-open .hdr .btn.soon{background:var(--ink);color:#FFFFFF;animation:none}
+  .mnav a{font:600 40px/1.1 var(--display);color:var(--ink);text-decoration:none}
+  .mnav a + a{margin-top:16px}
+}
+</style>
+</head>
+<body>
+<header class="hdr"><div class="wrap"><a class="logo" href="index.html" aria-label="Hlid"><span>Hlid</span></a><div class="hright"><a class="topnav" href="how-it-works.html" aria-current="page">How it works</a><a class="topnav" href="about.html">About</a><span class="btn sm soon">Coming soon</span><button class="menu" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Menu"><i></i><i></i></button></div></div></header>
+<nav class="mnav" id="mnav" aria-label="Menu"><a href="how-it-works.html">How it works</a><a href="about.html">About</a><a href="privacy.html">Privacy and credits</a></nav>
+
+<main><div class="wrap col3">
+<section class="head"><h1>How it works</h1></section>
+
+<section class="sec"><h2>Using Hlid</h2><div class="list">
+<div><h3>Where you are</h3><p>Hlid starts from where you are. Somewhere else? Change it in one tap.</p></div>
+<div><h3>How long for</h3><p>Pick a drive of up to two hours and a walk of one to four. That's it.</p></div>
+<div><h3>One walk</h3><p>One circular walk from a free car park, picked for your times and the weather. Don't fancy it? Tap Another walk.</p></div>
+<div><h3>Drive</h3><p>Tap Drive and Google Maps takes you to the car park.</p></div>
+<div><h3>Walk</h3><p>The map turns with you. Go the wrong way and your phone buzzes.</p></div>
+<div><h3>Works offline</h3><p>The map, your location and the wrong-way buzz all work without a connection.</p></div>
+<div><h3>Then the pub</h3><p>Head home, or let Hlid find a pub nearby.</p></div>
+<div><h3>Keep the day</h3><p>Each walk becomes a picture of your day, coloured by the weather. Keep it as a wallpaper.</p></div>
+</div></section>
+
+<section class="sec"><h2>One price</h2><div class="list">
+<div><h3>Pay once</h3><p>No subscription, no premium tier, nothing to unlock. Every feature is in from day one.</p></div>
+<div><h3>No paid extras</h3><p>Offline maps and the wrong-way buzz are paid extras in most walking apps. Here they're just part of it.</p></div>
+</div></section>
+
+<section class="sec"><h2>Where the walks come from</h2><div class="list">
+<div><h3>Real paths</h3><p>Built from OpenStreetMap footpaths and Ordnance Survey height data. No routes copied from other apps.</p></div>
+<div><h3>Picked for a good day out</h3><p>Ranked on views, hills, quiet and how easy the path is to follow. Busy spots drop down.</p></div>
+<div><h3>Honest times</h3><p>Walk times use Naismith's rule: 5 km an hour, plus a minute for every 10 m of climb. Drive times don't include traffic.</p></div>
+<div><h3>What it can't see</h3><p>Closures, mud or a full car park. Follow the signs on the ground.</p></div>
+</div></section>
+
+</div></main>
+<footer class="ftr"><div class="wrap"><div class="ftop">
+  <p class="credit">&copy; 2026 Hlid. Made in London by <a href="https://gandalondon.com" target="_blank" rel="noopener">Tony Goff-Yu</a>.</p>
+  <nav aria-label="Footer"><a href="about.html">About</a><a href="how-it-works.html" aria-current="page">How it works</a><a href="privacy.html">Privacy and credits</a></nav>
+</div></div></footer>
+<script>
+/* mobile menu: Menu opens a full-screen panel and becomes Close; Escape or a link closes it */
+(function(){var b=document.querySelector(".menu"),p=document.getElementById("mnav"),r=document.documentElement;if(!b||!p)return;
+function set(o){r.classList.toggle("menu-open",o);b.setAttribute("aria-label",o?"Close menu":"Menu");b.setAttribute("aria-expanded",o);}
+b.addEventListener("click",function(){set(!r.classList.contains("menu-open"));});
+addEventListener("keydown",function(e){if(e.key==="Escape")set(false);});
+p.addEventListener("click",function(e){if(e.target.tagName==="A")set(false);});})();
+</script>
+</body>
+</html>

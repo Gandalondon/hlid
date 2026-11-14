@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2218 18 72 72%22%3E%3Ccircle cx=%2254%22 cy=%2254%22 r=%2236%22 fill=%22%231A1A1A%22/%3E%3Cg transform=%22translate(54 54) scale(0.6667) translate(-54 -54) scale(0.10547)%22%3E%3Cpath d=%22M550.17 246.519C662.17 246.519 753.17 258.519 753.17 327.519C753.17 403.519 585.17 467.519 585.17 557.519C585.17 636.519 668.17 702.519 668.17 745.519C668.17 767.519 644.17 777.519 610.17 777.519C422.17 777.519 271.17 571.519 271.17 409.519C271.17 288.519 383.17 246.519 550.17 246.519Z%22 fill=%22none%22 stroke=%22%23FFFFFF%22 stroke-width=%2266.37%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/g%3E%3C/svg%3E">
+<title>About | Hlid</title>
+<link rel="preload" href="fonts/zalando-sans-expanded-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-opsz-wght.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Inter";font-weight:100 900;font-display:block;src:url(fonts/inter-latin-opsz-wght.woff2) format("woff2")}
+@font-face{font-family:"Zalando Sans Expanded";font-weight:200 900;font-display:block;src:url(fonts/zalando-sans-expanded-latin-wght.woff2) format("woff2")}
+/* Five sizes only: --h1p page title, --h2 section title (same as the homepage), --lede (only under the title, as on the homepage), --body (all reading text, small headings are body size in 600), --small (footer) */
+:root{--ink:#1A1A1A;--bg:#FFFFFF;--font:"Inter","Helvetica Neue",Arial,system-ui,sans-serif;--display:"Zalando Sans Expanded","Inter",sans-serif;
+  --h1p:clamp(48px,6.4vw,96px);--h2:clamp(28px,2.6vw,40px);--lede:24px;--lede-lh:34px;--body:20px;--body-lh:32px;--small:16px;--small-lh:24px;
+  --edge:24px;--hdr:88px}
+@media (min-width:1024px){:root{--edge:64px}}
+@media (min-width:1440px){:root{--edge:80px}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--body)/var(--body-lh) var(--font);font-optical-sizing:auto;min-height:100svh;display:flex;flex-direction:column}
+main{flex:1 0 auto}
+a{color:inherit;text-decoration:none;font-weight:500}
+h1,h2{margin:0;font-family:var(--display);font-weight:600;letter-spacing:0;text-wrap:balance}
+h3{margin:0;font:600 var(--lede)/1.25 var(--display);letter-spacing:0;text-wrap:balance}
+p,ul{margin:0;text-wrap:pretty}
+.nw{white-space:nowrap}
+.wrap{padding-left:var(--edge);padding-right:var(--edge)}
+.hdr .wrap{height:var(--hdr);display:flex;align-items:center}
+.logo{--mk:32px;display:inline-flex;align-items:baseline;font:600 calc(var(--mk) * .866 * 65 / 72)/1 var(--display);color:inherit;text-decoration:none}
+.logo svg{width:1.1774em;height:0.714em;margin:0 -.01em 0 0;flex:none}
+.logo path{fill:currentColor}
+@media (max-width:600px){.logo{--mk:22px}}
+.head{padding-top:96px;max-width:min(1040px,100%)}
+h1{font-size:var(--h1p);line-height:.94}
+.lede{margin-top:40px;max-width:26em;font-size:var(--lede);line-height:var(--lede-lh)}
+/* Relay split: title left (2/5), content right (3/5) to the right gutter */
+.sec{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:32px 64px;margin-top:120px}
+.sec h2{font-size:var(--h2);line-height:1}
+.list{display:flex;flex-direction:column;gap:40px;min-width:0}
+h3 + p{margin-top:8px}
+/* privacy: small headings left, text right, tighter rhythm */
+.pol .sec{margin-top:64px}
+.pol .sec.first{margin-top:120px}
+.pol .list{gap:16px}
+.pol ul{padding-left:24px}
+.pol .list a{text-decoration:none;font-weight:600}  /* no underlines: links are bold, as on Relay and Sniff */
+.pol .list a.nw,.pol .list a{overflow-wrap:anywhere}
+/* footer: one line, credit left, links right (Relay) */
+.ftr{padding-top:160px}
+.ftop{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:16px 32px;padding-bottom:calc(48px + env(safe-area-inset-bottom,0px));font-size:var(--small);line-height:var(--small-lh)}
+.ftop .credit{flex:1 1 0;min-width:16em}
+.ftop nav{display:flex;flex-wrap:wrap;gap:8px 32px}
+.ftop a{font-weight:400;white-space:nowrap}
+.ftop a:hover{opacity:.6}
+@media (max-width:900px){:root{--hdr:72px}.head{padding-top:48px}.lede{margin-top:24px;font-size:21px;line-height:31px}
+  .sec{grid-template-columns:minmax(0,1fr);margin-top:96px}.pol .sec{margin-top:48px;gap:8px}.pol .sec.first{margin-top:72px}.ftr{padding-top:112px}}
+@media (max-width:600px){.ftop{flex-direction:column;align-items:flex-start;gap:24px}.ftop nav{flex-direction:column;gap:12px}.ftop .credit{order:2}}
+
+/* v3 (12:03): Sniff's FAQ layout. One centred 752px column, left-aligned inside. Sizes: page title, section title (inner), small heading 24, body 20, footer 16 */
+.col3{max-width:calc(752px + 2 * var(--edge));margin:0 auto}
+.col3 .head{padding-top:80px;max-width:none}
+.col3 .sec{display:block;margin-top:96px}
+.col3 .sec h2{margin-bottom:40px}
+.col3 .list{gap:40px}
+.col3 .pol .sec,.col3 .pol .sec.first{margin-top:56px}
+.col3 .pol .sec.first{margin-top:72px}
+.col3 .pol .sec h2{margin-bottom:12px}
+@media (max-width:900px){.col3 .sec{margin-top:72px}.col3 .sec h2{margin-bottom:24px}.col3 .pol .sec{margin-top:48px}}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 32px;border-radius:999px;background:var(--ink);color:#FFFFFF;font:600 18px/1 var(--display);white-space:nowrap}
+.btn.sm{height:40px;padding:0 20px;font-size:16px}
+.hdr .wrap{justify-content:space-between}
+.btn.soon{cursor:default}  /* Relay: the button is not a link until the app is out */
+.hright{display:flex;align-items:center;gap:32px}
+.topnav{font:600 16px/1 var(--display);color:inherit;text-decoration:none;white-space:nowrap}
+@media (max-width:420px){.hright{gap:20px}}
+/* about: story in the centred column, then a wider grid of square photos (photos/01.jpg to 18.jpg, square, 1200px) */
+.story{margin-top:56px}
+.story p + p{margin-top:24px}
+.photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:1120px;margin:96px auto 0}
+.ph{aspect-ratio:1;border-radius:12px;background:#F0F0EE center/cover no-repeat}
+@media (max-width:900px){.photos{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:64px}.ph{border-radius:8px}}
+/* v2: one real day per row, the photo left and the day picture Hlid made of it right; bigger squares than the photo grid mark the change */
+.pairs{display:grid;gap:48px;max-width:1120px;margin:120px auto 0}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+.pair figure{margin:0}
+.pair figcaption{margin-top:16px;font-size:16px;line-height:24px}
+@media (max-width:900px){.pairs{gap:32px;margin-top:96px}.pair{gap:8px}.pair figcaption{margin-top:8px}}
+@media (max-width:600px){.topnav{display:none}}  /* phones: text links live in the footer */
+/* mobile menu (13:36): two-line icon far right that turns into an X (exception to the text-Menu rule: the header also holds the button). Phones only; desktop keeps the two links */
+.menu{display:none;position:relative;width:48px;height:48px;margin-right:-12px;padding:0;border:0;background:none;color:inherit;cursor:pointer}
+.menu i{position:absolute;left:12px;width:24px;height:2px;border-radius:1px;background:currentColor;transition:transform .2s ease,top .2s ease}
+.menu i:first-child{top:19px}.menu i:last-child{top:27px}
+html.menu-open .menu i:first-child{top:23px;transform:rotate(45deg)}
+html.menu-open .menu i:last-child{top:23px;transform:rotate(-45deg)}
+@media (prefers-reduced-motion:reduce){.menu i{transition:none}}
+.mnav{display:none}
+@media (max-width:600px){
+  .menu{display:inline-block}
+  .hright{gap:16px}
+  .mnav{position:fixed;inset:0;z-index:15;background:#FFFFFF;color:var(--ink);padding:calc(var(--hdr) + 48px) var(--edge) calc(48px + env(safe-area-inset-bottom,0px));flex-direction:column}
+  html.menu-open .mnav{display:flex}
+  html.menu-open{overflow:hidden}
+  html.menu-open .hdr{position:fixed;inset:0 0 auto;z-index:30;color:var(--ink)}
+  html.menu-open .hdr .btn.soon{background:var(--ink);color:#FFFFFF;animation:none}
+  .mnav a{font:600 40px/1.1 var(--display);color:var(--ink);text-decoration:none}
+  .mnav a + a{margin-top:16px}
+}
+</style>
+</head>
+<body>
+<header class="hdr"><div class="wrap"><a class="logo" href="index.html" aria-label="Hlid"><span>Hlid</span></a><div class="hright"><a class="topnav" href="how-it-works.html">How it works</a><a class="topnav" href="about.html" aria-current="page">About</a><span class="btn sm soon">Coming soon</span><button class="menu" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Menu"><i></i><i></i></button></div></div></header>
+<nav class="mnav" id="mnav" aria-label="Menu"><a href="how-it-works.html">How it works</a><a href="about.html">About</a><a href="privacy.html">Privacy and credits</a></nav>
+
+<main><div class="wrap col3">
+<section class="head"><h1>Why I made<br>this app</h1></section>
+<section class="story"><p>For years my weekends were National Trust days. Drive out, look round a house, then a walk. Eventually I ran out of houses, and the walks became the point.</p><p>Planning them took longer than doing them. I asked an AI for ideas, then checked Google Maps, the parking, AllTrails and somewhere for lunch. By the time I decided, half the morning had gone.</p><p>On the walk, I spent too long looking at my phone: photos, reviews, stats. I wanted the opposite. A rough direction, a quiet path, and the feeling that I found it myself.</p><p>I'm a product designer, so I made the app I wanted. It picks one walk, sends me there and stays out of the way. At the end it gives me a picture of the day, which I keep.</p><p>These are some of those days, and what Hlid kept of them.</p></section>
+</div>
+<div class="wrap"><div class="pairs"><div class="pair"><div class="ph" style="background-image:url(pairs/chanctonbury-photo.jpg)" role="img" aria-label="A photo from the walk at Chanctonbury Ring"></div><figure><div class="ph" style="background-image:url(pairs/chanctonbury-day.jpg)" role="img" aria-label="The day picture Hlid made of Chanctonbury Ring"></div></figure></div><div class="pair"><div class="ph" style="background-image:url(pairs/kithurst-hill-photo.jpg)" role="img" aria-label="A photo from the walk at Kithurst Hill"></div><figure><div class="ph" style="background-image:url(pairs/kithurst-hill-day.jpg)" role="img" aria-label="The day picture Hlid made of Kithurst Hill"></div></figure></div><div class="pair"><div class="ph" style="background-image:url(pairs/old-winchester-hill-photo.jpg)" role="img" aria-label="A photo from the walk at Old Winchester Hill"></div><figure><div class="ph" style="background-image:url(pairs/old-winchester-hill-day.jpg)" role="img" aria-label="The day picture Hlid made of Old Winchester Hill"></div></figure></div></div></div></main>
+<footer class="ftr"><div class="wrap"><div class="ftop">
+  <p class="credit">&copy; 2026 Hlid. Made in London by <a href="https://gandalondon.com" target="_blank" rel="noopener">Tony Goff-Yu</a>.</p>
+  <nav aria-label="Footer"><a href="about.html" aria-current="page">About</a><a href="how-it-works.html">How it works</a><a href="privacy.html">Privacy and credits</a></nav>
+</div></div></footer>
+<script>
+/* mobile menu: Menu opens a full-screen panel and becomes Close; Escape or a link closes it */
+(function(){var b=document.querySelector(".menu"),p=document.getElementById("mnav"),r=document.documentElement;if(!b||!p)return;
+function set(o){r.classList.toggle("menu-open",o);b.setAttribute("aria-label",o?"Close menu":"Menu");b.setAttribute("aria-expanded",o);}
+b.addEventListener("click",function(){set(!r.classList.contains("menu-open"));});
+addEventListener("keydown",function(e){if(e.key==="Escape")set(false);});
+p.addEventListener("click",function(e){if(e.target.tagName==="A")set(false);});})();
+</script>
+</body>
+</html>
