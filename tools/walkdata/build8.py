@@ -134,6 +134,12 @@ def build(W,check):
                 if len(nodes)>3 and a==b:
                     nodes=nodes[(i-1)%len(nodes):]+nodes[:(i-1)%len(nodes)]; nodes=nodes[2:]; changed=True; break
         loop=[pos[n] for n in nodes]; loopn=list(nodes)
+    elif W["how"]=="given":   # a demo loop already on foot ways (routes.py, snapped by tools/walkdata/snap.py)
+        sys.path.insert(0,ROOT); import routes
+        gl=routes.parse(routes.LOOPS[W["route"]])
+        if gl[0]==gl[-1]: gl=gl[:-1]
+        loop=[m(p) for p in gl]; loopn=list(range(len(loop)))
+        for k,q in enumerate(loop): pos[("g",k)]=q
     elif W["how"]=="carpark":
         loopn,info=carpark_loop(G,pos,A,W,m); check.append(info)
         loop=[pos[n] for n in loopn]
@@ -193,7 +199,8 @@ def build(W,check):
         loopn=loopn[k:]+loopn[:k]
         loop=[pos[n] for n in loopn if n in pos]
         check.extend(notes)
-    if W["how"] in ("park","carpark"):
+    if W["how"]=="given": pass
+    elif W["how"] in ("park","carpark"):
         # start where the loop is nearest the start point (car park)
         k=min(range(len(loop)),key=lambda k: math.hypot(*loop[k])); loop=loop[k:]+loop[:k]; loopn=loopn[k:]+loopn[:k]
         if sum(loop[i][0]*loop[(i+1)%len(loop)][1]-loop[(i+1)%len(loop)][0]*loop[i][1] for i in range(len(loop)))>0: loop=[loop[0]]+loop[1:][::-1]; loopn=[loopn[0]]+loopn[1:][::-1]
@@ -201,7 +208,7 @@ def build(W,check):
     LEN=sum(math.dist(a,b) for a,b in zip(loop,loop[1:]))
     # ---- every-metre check: each metre of the loop must lie on a foot way (within 2 m of its line) ----
     tree=STRtree(footlines); line=LineString(loop); n=int(LEN); bad=0; worst=0; badruns=[]
-    edges_ok=sum(1 for a,b in zip(loopn,loopn[1:]) if G.has_edge(a,b)); 
+    edges_ok=sum(1 for a,b in zip(loopn,loopn[1:]) if G.has_edge(a,b)) if W["how"]!="given" else -1
     for s in range(n+1):
         p=line.interpolate(s); idx=tree.query(p.buffer(3)); d=min((footlines[j].distance(p) for j in idx),default=99)
         worst=max(worst,d)
@@ -285,6 +292,14 @@ def build(W,check):
     return {"id":W["id"],"name":W["name"],"lat0":lat0,"lon0":lon0,"kx":KX,"ky":KY,"loop":rnd(loop),"len":round(LEN),
             "prof":{"step":20,"h":[round(float(v),1) for v in prof]},"relief":relief,"con":con,"f":F}
 
+DEMOS=[{"id":"chanctonbury","name":"Chanctonbury Ring","area":"chanctonbury","how":"given","route":"chanctonbury"}]
+
+if __name__=="__main__" and sys.argv[1:2]==["demo"]:
+    check=[]; out=[]
+    for W in DEMOS:
+        sys.path.insert(0,ROOT); import routes
+        p0=routes.parse(routes.LOOPS[W["route"]])[0]; W["start"]=(p0[1],p0[0]); out.append(build(W,check))
+    open(os.path.join(OUT,"demo8.json"),"w").write(json.dumps({"walks":out},separators=(",",":"))); print("\n".join(check)); sys.exit()
 if __name__=="__main__":
     only=sys.argv[1:]; check=[]; out=[]
     prev=os.path.join(OUT,"walks8.json")

@@ -5,9 +5,10 @@ import osmium, json, os, sys, time
 AREAS={  # name: (south, west, north, east)
  "cannon-morden": (51.383, -0.245, 51.412, -0.185),
  "ranmore": (51.215, -0.405, 51.272, -0.320),
+ "chanctonbury": (50.870, -0.430, 50.925, -0.340),   # demo walk on the site and in the prototype
 }
 # County extracts from Geofabrik (fast, each run fits in one shell call). Falls back to the GB file.
-SOURCE={"cannon-morden":"greater-london-latest.osm.pbf","ranmore":"surrey-latest.osm.pbf"}
+SOURCE={"cannon-morden":"greater-london-latest.osm.pbf","ranmore":"surrey-latest.osm.pbf","chanctonbury":"west-sussex-latest.osm.pbf"}
 ONLY=sys.argv[1:]  # e.g. python3 extract_areas.py ranmore
 if ONLY: AREAS={k:v for k,v in AREAS.items() if k in ONLY}
 KEYS=("highway","landuse","natural","leisure","amenity","waterway","building","railway","designation","access","foot","name","fee","parking","route","type","surface","sac_scale","barrier","prow_ref","ref","informal","footway","trail_visibility","tracktype","natural","water","wetland")

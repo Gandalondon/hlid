@@ -75,7 +75,7 @@ def hm(m): return f"{m // 60}h {m % 60:02d}"
 INFO = {META[k][0]: f"{datetime.date(2026, *d).strftime('%A')} {d[1]} {datetime.date(2026, *d).strftime('%B')}. {w}, {t}°. {META[k][2]} km walk, {hm(META[k][1])} drive." for k, d, t, w in SAVED}
 
 # ---- consistency pass (14 Nov): one stroke system, day colours from the weather rule only ----
-STOPS=[(2,(0x4A,0x78,0xA0)),(9,(0x6F,0x94,0x88)),(15,(0xED,0xB3,0x38)),(26,(0xE8,0x64,0x2A))]  # 3b (Tony, 14 Nov 16:22): Sea, Sage, Yellow, Orange
+STOPS=[(t,tuple(int(h[i:i+2],16) for i in (1,3,5))) for t,h,_ in __import__('json').load(open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),'tokens.json')))['day']['stops']]  # from tokens.json (3b, Tony 14 Nov 16:22)
 def _lin(c): c/=255; return c/12.92 if c<=0.04045 else ((c+0.055)/1.055)**2.4
 def _unlin(c): c=max(0,min(1,c)); return round(255*(12.92*c if c<=0.0031308 else 1.055*c**(1/2.4)-0.055))
 def _cr(c): r,g,b=[_lin(x) for x in c]; return 1.05/(.2126*r+.7152*g+.0722*b+.05)
