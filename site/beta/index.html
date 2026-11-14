@@ -250,8 +250,13 @@ html.menu-open .menu i:last-child{top:23px;transform:rotate(-45deg)}
     if(scrollY>vh*.5 && t<.5) steps.forEach(function(el){ var r=el.getBoundingClientRect(), d=Math.abs(r.top+r.height/2-mid); if(d<bd){ bd=d; best=+el.dataset.i; } });
     show(best);
   }
-  addEventListener("scroll",function(){ if(!q){ q=true; requestAnimationFrame(f); } },{passive:true});
-  addEventListener("resize",f); f();
+  /* 14 Nov: the page wash and the phone's colour are separate CSS animations and can drift apart after scrolling away and back
+     (Chrome throttles layers it can't see). Re-lock every colour animation to the same start whenever the hero comes back. */
+  var locked=false, NAMES={wash:1,wl:1,washink:1};
+  function lock(){ if(!document.getAnimations) return; document.getAnimations().forEach(function(a){ if(NAMES[a.animationName]) a.startTime=0; }); }
+  addEventListener("scroll",function(){ if(!q){ q=true; requestAnimationFrame(function(){ f(); var away=scrollY>innerHeight*1.2; if(away) locked=false; else if(!locked){ lock(); locked=true; } }); } },{passive:true});
+  addEventListener("visibilitychange",function(){ if(!document.hidden) lock(); });
+  addEventListener("resize",f); f(); lock(); locked=true;
 })();
 </script>
 <script>
