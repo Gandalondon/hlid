@@ -66,13 +66,14 @@ html.menu-open .menu i:last-child{top:23px;transform:rotate(-45deg)}
 .mnav{display:none}
 /* stage: the hero sits over a sticky layer with the day's colour and a phone; as you scroll the colour drains away
    and the route art gains a phone frame and fills with the coloured day picture. Then the page scrolls on to the rows. */
+:root{--sc:1.5}@media (max-width:900px){:root{--sc:1.15}}  /* hero map size set in CSS from the first paint (was 1.8 until the script ran: the phone flash) */
 .stage{position:relative;height:100svh;min-height:560px;overflow:hidden}  /* D: one screen, scrolls away like any block */
 .stick{position:absolute;inset:0}
 .wash{position:absolute;inset:0;animation:wash var(--cyc) linear infinite;opacity:calc(1 - var(--p,0))}
 .sph{--w:min(var(--pw),calc((100svh - 64px) / 2.045));position:absolute;left:calc(100% - var(--rl) - var(--w));  /* right edge on the rows' right edge, even when a short window makes the phone smaller */
   top:calc((100svh - 64px - var(--w) * 1.542) * (1 - var(--p,0)) + (100svh - var(--w) * 2.045) / 2 * var(--p,0));
   width:var(--w);aspect-ratio:337/689;padding:calc(var(--w) * .05);border-radius:calc(var(--w) * .154);
-  transform:scale(var(--sc,1.8));transform-origin:50% calc(var(--w) * 1.542)}  /* map 1.5x bigger in the hero, shrinking into the phone */
+  transform:scale(var(--sc));transform-origin:50% calc(var(--w) * 1.542)}  /* map 1.5x bigger in the hero, shrinking into the phone */
 .sph::before{content:"";position:absolute;inset:0;border-radius:inherit;background:var(--ink);opacity:var(--f,0)}
 .sph .scr{position:absolute;inset:calc(var(--w) * .05);border-radius:calc(var(--w) * .104);overflow:hidden}
 .sph .scr img{position:absolute;inset:0;width:100%;height:100%;opacity:0;animation:artc var(--cyc) linear infinite}
@@ -228,7 +229,10 @@ html.menu-open .menu i:last-child{top:23px;transform:rotate(-45deg)}
 /* colour lock (from the previous home, 14 Nov): the wash, the header button text and the route art are separate CSS animations
    and can drift apart after scrolling away and back; re-lock them to one start whenever the hero comes back */
 (function(){ if(!document.getAnimations) return; var N={wash:1,inkc:1,artc:1},locked=true;
-  function lock(){ document.getAnimations().forEach(function(a){ if(N[a.animationName]) a.startTime=0; }); }
+  var T0=null;   /* sync to when the colour actually started, not to page load (startTime 0 made phones jump on load) */
+  function lock(){ var as=document.getAnimations().filter(function(a){ return N[a.animationName]; });
+    if(T0==null){ as.forEach(function(a){ if(a.startTime!=null&&(T0==null||a.startTime<T0)) T0=a.startTime; }); if(T0==null) return; }
+    as.forEach(function(a){ a.startTime=T0; }); }
   addEventListener("scroll",function(){ var away=scrollY>innerHeight*1.2; if(away) locked=false; else if(!locked){ lock(); locked=true; } },{passive:true});
   addEventListener("visibilitychange",function(){ if(!document.hidden) lock(); });
   document.addEventListener("animationstart",function(e){ if(N[e.animationName]) lock(); }); lock(); })();
@@ -255,8 +259,7 @@ p.addEventListener("click",function(e){if(e.target.tagName==="A")set(false);});}
 </script>
 <script>
 /* D: the hero map is 1.5x the phone size on desktop (1.15x on phones), fixed */
-document.documentElement.style.setProperty("--sc",innerWidth>900?1.5:1.15);
-addEventListener("resize",function(){document.documentElement.style.setProperty("--sc",innerWidth>900?1.5:1.15);});
+/* --sc now set in CSS per breakpoint */
 </script>
 </body>
 </html>
