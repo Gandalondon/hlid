@@ -22,6 +22,7 @@ import android.os.VibrationEffect
 import android.os.Vibrator
 import android.provider.MediaStore
 import android.util.Base64
+import android.view.ViewTreeObserver
 import android.view.WindowInsets
 import android.view.WindowInsetsController
 import android.view.WindowManager
@@ -79,6 +80,18 @@ class MainActivity : Activity(), SensorEventListener {
         }
         setContentView(root)
         root.requestApplyInsets()
+        // build 30: like Relay, Android's white start screen with the hill stays up until the page has drawn
+        // today's walk (or 3.5 s), then cuts straight to it: no logo flash, no maps changing, no toast in between
+        val t0 = System.currentTimeMillis()
+        appReady = false
+        root.viewTreeObserver.addOnPreDrawListener(object : ViewTreeObserver.OnPreDrawListener {
+            override fun onPreDraw(): Boolean {
+                if (appReady || System.currentTimeMillis() - t0 > 3500) { root.viewTreeObserver.removeOnPreDrawListener(this); return true }
+                root.postDelayed({ root.invalidate() }, 50)
+                return false
+            }
+        })
+        if (Build.VERSION.SDK_INT >= 31) splashScreen.setOnExitAnimationListener { it.remove() }
         sensors = getSystemService(SENSOR_SERVICE) as SensorManager
         TrackService.listener = { lat, lon, acc, t ->
             main.post {
@@ -145,7 +158,10 @@ class MainActivity : Activity(), SensorEventListener {
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {}
 
+    @Volatile private var appReady = false
+
     inner class Bridge {
+        @JavascriptInterface fun ready() { appReady = true; main.post { web.invalidate() } }
         @JavascriptInterface fun hasLocation(): Boolean = this@MainActivity.hasLocation()
 
         @JavascriptInterface fun requestLocation() = main.post {

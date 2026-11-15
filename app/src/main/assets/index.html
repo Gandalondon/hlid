@@ -460,7 +460,10 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
     return wd===0||wd===6||HB.bank.indexOf(s)>=0||HB.school.some(function(r){ return s>=r[0]&&s<=r[1]; }); }
   function hm(m){ m=Math.round(m); return m<60? m+" min" : Math.floor(m/60)+"h "+("0"+m%60).slice(-2); }
   function crow(a,b){ var kx=111320*Math.cos(a[0]*Math.PI/180); return Math.hypot((a[1]-b[1])*kx,(a[0]-b[0])*111200); }
-  function tq(t,ms){ var x=document.getElementById("toast"); if(!x) return; x.textContent=t; x.classList.add("on"); setTimeout(function(){ x.classList.remove("on"); },ms||1200); }
+  /* build 30: on open, Android keeps the plain white start screen with the hill up until the first walk is drawn (like Relay), so nothing in between shows */
+  var BOOT=true; function ready(){ if(!BOOT) return; BOOT=false; requestAnimationFrame(function(){ requestAnimationFrame(function(){ try{ if(window.WodenNative&&WodenNative.ready) WodenNative.ready(); }catch(e){} }); }); }
+  setTimeout(ready,3000);
+  function tq(t,ms){ if(BOOT) return; var x=document.getElementById("toast"); if(!x) return; x.textContent=t; x.classList.add("on"); setTimeout(function(){ x.classList.remove("on"); },ms||1200); }
   function getJ(u,ms){ var c=new AbortController(), k=setTimeout(function(){ c.abort(); },ms||8000);
     return fetch(u,{signal:c.signal}).then(function(r){ clearTimeout(k); return r.ok? r.json() : null; }).catch(function(){ clearTimeout(k); return null; }); }
   function geocode(q){ var pc=q.replace(/\s+/g,"").toUpperCase(), tries=[];
@@ -474,25 +477,25 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
       return ALL.map(function(w,i){ var d=j&&j.durations&&j.durations[0][i+1]; return d!=null? d/60 : crow(o,w.meta.car_park)*1.35/1000; }); }); }
   window.hlidPick=function(){ var CV=window.hlidCV; if(window.hlidPaint) hlidPaint(); var my=++busyQ; tq("Finding a walk…",900);
     (CV.from===ORIGQ&&ORIGIN? Promise.resolve(ORIGIN) : geocode(CV.from)).then(function(o){ if(my!==busyQ) return;
-      if(!o){ tq("We can't find that postcode",1800); if(window.hlidOpenSheet) setTimeout(function(){ hlidOpenSheet("from"); },400); return; }
+      if(!o){ ready(); tq("We can't find that postcode",1800); if(window.hlidOpenSheet) setTimeout(function(){ hlidOpenSheet("from"); },400); return; }
       ORIGQ=CV.from; ORIGIN=o;
       var near=Math.min.apply(null,ALL.map(function(w){ return crow(o,w.meta.car_park); }));
-      if(near>150000){ showT("x-outside"); return; }
+      if(near>150000){ showT("x-outside"); ready(); return; }
       driveMins(o).then(function(dm){ if(my!==busyQ) return;
         var lim=DRV[CV.drive]||90, win=WLK[CV.walk]||[70,150], bz=busyDay(new Date());
         PICK=ALL.map(function(w,i){ return {i:i,dm:dm[i],w:w}; }).filter(function(x){ var m=x.w.meta;
           return m.busy!=="always" && x.dm<=lim && m.walk_min>=win[0] && m.walk_min<=win[1]; });
         PICK.sort(function(a,b){ var pa=bz&&a.w.meta.busy==="busy_days"?1:0, pb=bz&&b.w.meta.busy==="busy_days"?1:0;
           return pa-pb || (b.w.meta.score||0)-(a.w.meta.score||0) || a.dm-b.dm; });
-        if(!PICK.length){ el("x-nofit").querySelector(".nfp").textContent="Hlid doesn’t have a "+CV.walk.replace("h"," hour")+" walk within a "+(CV.drive==="30 min"?"30 minute":CV.drive.replace(" "," "))+" drive yet. Try a shorter walk or a longer drive."; showT("x-nofit"); return; }
+        if(!PICK.length){ el("x-nofit").querySelector(".nfp").textContent="Hlid doesn’t have a "+CV.walk.replace("h"," hour")+" walk within a "+(CV.drive==="30 min"?"30 minute":CV.drive.replace(" "," "))+" drive yet. Try a shorter walk or a longer drive."; showT("x-nofit"); ready(); return; }
         PI=0; showPick(); }); }); };
   function showPick(){ var x=PICK[PI]; load(x.i); var t=el("t-today"); var cp=x.w.meta.car_park;
     if(ORIGIN&&!x.route) getJ("https://router.project-osrm.org/route/v1/driving/"+ORIGIN[1].toFixed(5)+","+ORIGIN[0].toFixed(5)+";"+cp[1].toFixed(5)+","+cp[0].toFixed(5)+"?overview=full&geometries=geojson",10000).then(function(j){
       try{ x.route=j.routes[0].geometry.coordinates.map(function(q){ return [q[1],q[0]]; }); }catch(e){ x.route=[ORIGIN,cp]; }
-      if(PICK[PI]===x&&cur==="t-today"){ DRIVE=x.route; draw(); } });
+      if(PICK[PI]===x&&cur==="t-today"){ DRIVE=x.route; draw(); } ready(); });
     DRIVE=x.route||null;
     t.querySelector(".tsub").textContent=nb(hm(x.dm)+" drive. "+x.w.meta.km.toFixed(1)+" km walk.");
-    if(window.hlidPaint) hlidPaint(); showT("t-today"); }
+    if(window.hlidPaint) hlidPaint(); showT("t-today"); if(x.route||!ORIGIN) ready(); }
   function nextPick(){ if(!PICK.length){ hlidPick(); return; } PI=(PI+1)%PICK.length; showPick(); }
   var RING='<div aria-hidden="true" style="flex:1 1 auto;min-height:0;margin-top:96px"></div>';   /* the map's space, left empty (Tony: no dot) */
   var CHIPS='<div class="cbar"><button type="button" class="cchip" data-k="from"></button><button type="button" class="cchip" data-k="drive"></button><button type="button" class="cchip" data-k="walk"></button><span class="sp"></span>'+CARDS+'</div>';
