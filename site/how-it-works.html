@@ -7,19 +7,19 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2218 18 72 72%22%3E%3Ccircle cx=%2254%22 cy=%2254%22 r=%2236%22 fill=%22%23FFFFFF%22/%3E%3Cpath d=%22M35 61 A19 19 0 0 1 73 61 Z%22 fill=%22%231A1A1A%22/%3E%3C/svg%3E">
 <title>How it works | Hlid</title>
 <link rel="preload" href="fonts/zalando-sans-expanded-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-@font-face{font-family:"Instrument Sans";font-weight:400 700;font-display:block;src:url(fonts/instrument-sans-latin-wght-normal.woff2) format("woff2")}
+@font-face{font-family:"DM Sans";font-weight:100 1000;font-display:block;src:url(fonts/dm-sans-latin-wght-normal.woff2) format("woff2")}
 @font-face{font-family:"Zalando Sans Expanded";font-weight:200 900;font-display:block;src:url(fonts/zalando-sans-expanded-latin-wght.woff2) format("woff2")}
 /* Five sizes only: --h1p page title, --h2 section title (same as the homepage), --lede (only under the title, as on the homepage), --body (all reading text, small headings are body size in 600), --small (footer) */
-:root{--ink:#1A1A1A;--bg:#FFFFFF;--font:"Instrument Sans","Helvetica Neue",Arial,system-ui,sans-serif;--display:"Zalando Sans Expanded","Instrument Sans",sans-serif;
+:root{--ink:#1A1A1A;--bg:#FFFFFF;--font:"DM Sans","Helvetica Neue",Arial,system-ui,sans-serif;--display:"Zalando Sans Expanded","DM Sans",sans-serif;
   --h1p:clamp(48px,6.4vw,96px);--h2:clamp(28px,2.6vw,40px);--lede:24px;--lede-lh:34px;--body:20px;--body-lh:32px;--small:16px;--small-lh:24px;
   --edge:24px;--hdr:88px}
 @media (min-width:1024px){:root{--edge:64px}}
 @media (min-width:1440px){:root{--edge:80px}}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--body)/var(--body-lh) var(--font);font-optical-sizing:auto;min-height:100svh;display:flex;flex-direction:column}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 var(--body)/var(--body-lh) var(--font);font-optical-sizing:auto;min-height:100svh;display:flex;flex-direction:column}
 main{flex:1 0 auto}
 a{color:inherit;text-decoration:none;font-weight:500}
 h1,h2{margin:0;font-family:var(--display);font-weight:600;letter-spacing:0;text-wrap:balance}
@@ -52,7 +52,7 @@ h3 + p{margin-top:8px}
 .ftop{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:16px 32px;padding-bottom:calc(40px + env(safe-area-inset-bottom,0px));font-size:var(--small);line-height:var(--small-lh)}
 .ftop .credit{flex:1 1 0;min-width:16em}
 .ftop nav{display:flex;flex-wrap:wrap;gap:8px 32px}
-.ftop a{font-weight:400;white-space:nowrap}
+.ftop a{font-weight:300;white-space:nowrap}
 .ftop a:hover,.topnav:hover{opacity:.75}
 @media (max-width:900px){:root{--hdr:72px}.head{padding-top:48px}.lede{margin-top:24px;font-size:21px;line-height:31px}
   .sec{grid-template-columns:minmax(0,1fr);margin-top:96px}.pol .sec{margin-top:48px;gap:8px}.pol .sec.first{margin-top:72px}.ftr{padding-top:112px}}
