@@ -21,3 +21,7 @@
 Known: "about N min" on You're here uses 18 min/km, the picker uses km/5 + climb/10, so they can disagree.
 - 12:32 Icon rethink (Tony): R6 too busy next to Relay/Sniff/Hugin/Rinse; wants one element, White tile with an off-black shape. Hlid = Old Norse hlíð, hillside/slope. Exploration board 56: A slope (rounded shoulder), B slope (hillside S-curve), C dome (half circle), D low dome. Claude's pick B (A reads like a growth chart). If a dome wins, Rinse's mark can change (Tony: Rinse is personal).
 - 12:40 Icon C (the hill, M30 66 A24 24 0 0 1 78 66 Z, off-black on White) live: Hlid launcher, Play 512, site favicon on all four pages, V2 board 29 (build 27). R6 retired. Rinse's dome turned over into a bowl (launcher, notification icon, widget mark, design/icon.svg) in Gandalondon/rinse. Lockup reference: Exploration 57 (hill as tall as the H, on the baseline; Tony: never set side by side in use).
+
+## 15 Nov, 18:05: to do when the Mac is on
+- gethlid.app has no MX records, so hello@ bounces. Add in Vercel DNS: MX mx1.improvmx.com (10), MX mx2.improvmx.com (20), TXT v=spf1 include:spf.improvmx.com ~all. Then check ImprovMX shows the domain active and send a test to hello@.
+- Copy these repo handover notes into ~/Hlid/HANDOVER.md.
