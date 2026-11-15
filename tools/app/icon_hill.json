@@ -1,0 +1,7 @@
+{
+ "path": "M30 66 A24 24 0 0 1 78 66 Z",
+ "fill": "#1A1A1A",
+ "ground": "#FFFFFF",
+ "grid": "108, visible 18-90",
+ "note": "Icon C, the hill (15 Nov). R6 walk icon retired; its path is in git history."
+}
