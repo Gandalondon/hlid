@@ -7,3 +7,8 @@
 - Walks in the app: 3 test walks (Cannon Hill, Morden Park, Ranmore) + 17 from data/allwalks.json (tools/walkdata/build_all.py prep/extract/build/pack on the Mac; quality gate: length within 30%, under 2% of metres off a foot way). 25 OSM/NT routes failed the gate (gaps in route data); fix later.
 - The APK's assets/index.html was edited directly in the repo (w8walks data, prototype script hooks hlidCV/hlidPick/hlidOpenSheet, live script pick + states). ~/Hlid/app/app-c.html on the Mac is now behind: treat the repo asset as the source.
 - Walk data decisions (on the Mac, in sw-walks-v3.json): #2, #6, #7, #8 dropped; busy tiers + engine/busy.py + data/gb/veto-sw-london.json + data/gb/busy-days.json.
+
+## Tony's sofa QA, build 25 (10:31)
+1. "1 of 13 that fit" is a test-only counter: remove before the closed test.
+2. "Nothing fits today" (1h 30 drive + 4h walk): not weather, the data has no walk of 190+ min (longest about 2h 40). Copy should say so plainly, e.g. "No 4 hour walks within a 1h 30 drive yet." Weather is not used in the pick.
+3. Start walk away from the route: map is blank (you're off the map area) and the profile jumps mid-walk (startWalk projects you onto the route). Add a check: more than about 300 m from the route -> sheet "You're not at the start yet" with Head to the start / Start anyway; profile starts at 0 unless you are on the route.
