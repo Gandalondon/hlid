@@ -73,6 +73,16 @@ html,body{margin:0;height:100%;background:#F0F0F0;font-family:"DM Sans",sans-ser
 .perm .box{background:#FFFFFF;border-radius:28px;padding:24px;width:100%;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:16px;font-family:"DM Sans",sans-serif}
 .perm p{margin:0;font-size:18px;line-height:1.35;text-align:center;text-wrap:balance}
 .perm .pb{width:100%;height:48px;border:0;border-radius:24px;background:#F0F0F0;color:#1A1A1A;font:500 15px/1 "DM Sans",sans-serif!important;cursor:pointer}
+
+/* build 31: no blue tap flash or focus ring from the WebView; plain press states instead (Tony, 15 Nov):
+   light grey behind text buttons, chips and icons, and the off-black buttons go solid black while held */
+html{-webkit-tap-highlight-color:transparent}
+button{-webkit-tap-highlight-color:transparent}
+button:focus{outline:none}
+button:focus-visible{outline:2px solid #1A1A1A;outline-offset:2px}
+.scr button[style*="background: transparent"]:active,.scr button[style*="background:transparent"]:active{background:#EDEDED!important;border-radius:999px}
+.scr button[style*="background: #1A1A1A"]:active,.scr button[style*="background:#1A1A1A"]:active,.sheet .save:active{background:#000000!important}
+.cchip:active,.chip:active,.opt:active,.sheet .cancel:active{background:#EDEDED!important}
 </style>
 </head>
 <body>
@@ -475,19 +485,20 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
     var c=[o].concat(ALL.map(function(w){ return w.meta.car_park; })).map(function(p){ return p[1].toFixed(5)+","+p[0].toFixed(5); }).join(";");
     return getJ("https://router.project-osrm.org/table/v1/driving/"+c+"?sources=0",10000).then(function(j){
       return ALL.map(function(w,i){ var d=j&&j.durations&&j.durations[0][i+1]; return d!=null? d/60 : crow(o,w.meta.car_park)*1.35/1000; }); }); }
-  window.hlidPick=function(){ var CV=window.hlidCV; if(window.hlidPaint) hlidPaint(); var my=++busyQ; tq("Finding a walk…",900);
+  var SHOWN=0;
+  window.hlidPick=function(){ var CV=window.hlidCV; if(window.hlidPaint) hlidPaint(); var my=++busyQ; setTimeout(function(){ if(my===busyQ&&SHOWN!==my) tq("Finding a walk…",900); },1000);   /* build 31: only when the pick is slow */
     (CV.from===ORIGQ&&ORIGIN? Promise.resolve(ORIGIN) : geocode(CV.from)).then(function(o){ if(my!==busyQ) return;
       if(!o){ ready(); tq("We can't find that postcode",1800); if(window.hlidOpenSheet) setTimeout(function(){ hlidOpenSheet("from"); },400); return; }
       ORIGQ=CV.from; ORIGIN=o;
       var near=Math.min.apply(null,ALL.map(function(w){ return crow(o,w.meta.car_park); }));
-      if(near>150000){ showT("x-outside"); ready(); return; }
+      if(near>150000){ showT("x-outside"); SHOWN=busyQ; ready(); return; }
       driveMins(o).then(function(dm){ if(my!==busyQ) return;
         var lim=DRV[CV.drive]||90, win=WLK[CV.walk]||[70,150], bz=busyDay(new Date());
         PICK=ALL.map(function(w,i){ return {i:i,dm:dm[i],w:w}; }).filter(function(x){ var m=x.w.meta;
           return m.busy!=="always" && x.dm<=lim && m.walk_min>=win[0] && m.walk_min<=win[1]; });
         PICK.sort(function(a,b){ var pa=bz&&a.w.meta.busy==="busy_days"?1:0, pb=bz&&b.w.meta.busy==="busy_days"?1:0;
           return pa-pb || (b.w.meta.score||0)-(a.w.meta.score||0) || a.dm-b.dm; });
-        if(!PICK.length){ el("x-nofit").querySelector(".nfp").textContent="Hlid doesn’t have a "+CV.walk.replace("h"," hour")+" walk within a "+(CV.drive==="30 min"?"30 minute":CV.drive.replace(" "," "))+" drive yet. Try a shorter walk or a longer drive."; showT("x-nofit"); ready(); return; }
+        if(!PICK.length){ el("x-nofit").querySelector(".nfp").textContent="Hlid doesn’t have a "+CV.walk.replace("h"," hour")+" walk within a "+(CV.drive==="30 min"?"30 minute":CV.drive.replace(" "," "))+" drive yet. Try a shorter walk or a longer drive."; showT("x-nofit"); SHOWN=busyQ; ready(); return; }
         PI=0; showPick(); }); }); };
   function showPick(){ var x=PICK[PI]; load(x.i); var t=el("t-today"); var cp=x.w.meta.car_park;
     if(ORIGIN&&!x.route) getJ("https://router.project-osrm.org/route/v1/driving/"+ORIGIN[1].toFixed(5)+","+ORIGIN[0].toFixed(5)+";"+cp[1].toFixed(5)+","+cp[0].toFixed(5)+"?overview=full&geometries=geojson",10000).then(function(j){
@@ -495,7 +506,7 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
       if(PICK[PI]===x&&cur==="t-today"){ DRIVE=x.route; draw(); } ready(); });
     DRIVE=x.route||null;
     t.querySelector(".tsub").textContent=nb(hm(x.dm)+" drive. "+x.w.meta.km.toFixed(1)+" km walk.");
-    if(window.hlidPaint) hlidPaint(); showT("t-today"); if(x.route||!ORIGIN) ready(); }
+    if(window.hlidPaint) hlidPaint(); showT("t-today"); SHOWN=busyQ; if(x.route||!ORIGIN) ready(); }
   function nextPick(){ if(!PICK.length){ hlidPick(); return; } PI=(PI+1)%PICK.length; showPick(); }
   var RING='<div aria-hidden="true" style="flex:1 1 auto;min-height:0;margin-top:96px"></div>';   /* the map's space, left empty (Tony: no dot) */
   var CHIPS='<div class="cbar"><button type="button" class="cchip" data-k="from"></button><button type="button" class="cchip" data-k="drive"></button><button type="button" class="cchip" data-k="walk"></button><span class="sp"></span>'+CARDS+'</div>';
