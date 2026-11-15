@@ -13,7 +13,7 @@ async def main():
         b = await p.chromium.launch(executable_path=os.environ.get("CHROME","/usr/bin/google-chrome"))
         pg = await b.new_page(viewport={"width": 390, "height": 844}, device_scale_factor=2)
         await pg.goto("file://" + os.path.abspath(APP)); await pg.wait_for_timeout(800)
-        ok = await pg.evaluate("async()=>{await document.fonts.ready;var l=[...document.fonts];return l.some(f=>f.family.indexOf('Zalando')>=0&&f.status==='loaded')&&l.some(f=>f.family.indexOf('Inter')>=0&&f.status==='loaded')}")
+        ok = await pg.evaluate("async()=>{await document.fonts.ready;var l=[...document.fonts];return l.some(f=>f.family.indexOf('Zalando')>=0&&f.status==='loaded')&&l.some(f=>f.family.indexOf('DM Sans')>=0&&f.status==='loaded')}")
         if not ok: sys.exit("Fonts did not load (the app's fonts/ folder must sit next to the app file). Nothing rendered.")
         await pg.add_style_tag(content=".stage{display:block;padding:0;min-height:0}.under,.toast,.perm{display:none!important}html body .sheet .opt[aria-pressed=true],html body .sheet .chip[aria-pressed=true]{box-shadow:none!important}.phone{width:390px!important;height:844px!important}.frame{transform:none!important;background:none!important;border-radius:0!important;left:0;top:0}.view{left:0!important;top:0!important;border-radius:0!important}")
         for name, sid in MAP.items():

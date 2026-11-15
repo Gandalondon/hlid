@@ -11,7 +11,7 @@ async def main():
     async with async_playwright() as p:
         b = await p.chromium.launch(executable_path=os.environ.get("CHROME","/usr/bin/google-chrome")); pg = await b.new_page(viewport={"width": 390, "height": 844}, device_scale_factor=3)
         await pg.goto("file://" + os.path.abspath(APP)); await pg.wait_for_timeout(800); await pg.add_style_tag(content=CSS)
-        ok = await pg.evaluate("async()=>{await document.fonts.ready;var l=[...document.fonts];return l.some(f=>f.family.indexOf('Zalando')>=0&&f.status==='loaded')&&l.some(f=>f.family.indexOf('Inter')>=0&&f.status==='loaded')}")
+        ok = await pg.evaluate("async()=>{await document.fonts.ready;var l=[...document.fonts];return l.some(f=>f.family.indexOf('Zalando')>=0&&f.status==='loaded')&&l.some(f=>f.family.indexOf('DM Sans')>=0&&f.status==='loaded')}")
         if not ok: sys.exit("Fonts did not load (the app's fonts/ folder must sit next to the app file). Nothing rendered.")
         for name in SHOTS:
             sid, _, chip = name.partition("+")
