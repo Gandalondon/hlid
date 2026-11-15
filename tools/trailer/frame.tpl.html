@@ -1,0 +1,62 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:"Z";font-weight:200 900;src:url({{FONTS}}/zalando-sans-expanded-latin-wght.woff2) format("woff2")}
+@font-face{font-family:"I";font-weight:100 900;src:url({{FONTS}}/inter-latin-opsz-wght.woff2) format("woff2")}
+html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#1A1A1A}
+.sc{position:absolute;inset:0;opacity:0}
+h1{position:absolute;left:160px;top:411px;margin:0;font:600 140px/.92 "Z";color:#FFFFFF;letter-spacing:0;white-space:nowrap}
+h1 span{display:block} h1 i{font-style:normal}
+.rt{position:absolute;overflow:visible}
+.phone{position:absolute;right:140px;top:129px;width:380px;height:822px;border-radius:56px;background:#1A1A1A;padding:14px;box-sizing:border-box}
+.phone img{width:100%;height:100%;border-radius:44px;display:block}
+#end{background:#FFFFFF}
+#word{position:absolute;left:0;right:0;text-align:center;font:600 160px/1 "Z";color:#1A1A1A}
+#url{position:absolute;left:0;right:0;bottom:64px;text-align:center;font:600 40px/1 "Z";color:#1A1A1A}  /* centred at the bottom */
+#badge{position:absolute;right:80px;bottom:64px;height:84px}
+#legal{position:absolute;left:80px;bottom:64px;font:500 18px/1.35 "I";color:#5C5C5C;letter-spacing:.01em}
+/* 9:16 re-cut (?v): type top left, route or phone below, URL at the bottom */
+.v html,html.v,.v body{width:1080px;height:1920px}
+.v h1{left:72px;top:300px;font-size:104px}
+.v .phone{left:50%;right:auto;margin-left:-210px;top:720px;width:420px;height:909px;border-radius:62px;padding:16px}
+.v .phone img{border-radius:48px}
+.v #word{font-size:150px}
+.v #url{bottom:120px}
+</style></head><body>
+<div class="sc" id="s0" style="background:#456985"><h1 data-t="0.2"><span>More walk.</span><span>Less app.</span></h1></div>
+<div class="sc" id="s1" style="background:#4E685F"><h1 data-t="2.75"><span>Hlid picks</span><span>the walk.</span></h1></div>
+<div class="sc" id="s2" style="background:#618993"><h1 data-t="5.35"><span>No planning.</span><span>You just go.</span></h1></div>
+<div class="sc" id="s3" style="background:#D87F30"><h1 data-t="7.55"><span>Keep the day</span><span>you had.</span></h1><div class="phone"><img src="data:image/webp;base64,{{DONE}}"></div></div>
+<div class="sc" id="end"><div id="word">Hlid</div><div id="url">gethlid.app</div></div>
+<div id="hold" style="display:none">{{ROUTES}}</div>
+<script>
+if(/[?&]v/.test(location.search)) document.documentElement.classList.add("v");
+const E=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2, cl=v=>Math.max(0,Math.min(1,v)), seg=(t,a,b)=>cl((t-a)/(b-a));
+/* beats (s): Sea 0-2.6 (type only), Sage 2.6-5.2, Yellow 5.2-7.4, Orange 7.4-10.4, end 10.4-15. Hard cuts, words appear one by one. */
+const ALL=/[?&]all/.test(location.search), IDS=["s0","s1","s2","s3","end"], WORD=.28, LEAD=.2, HOLD=ALL?1.2:2.0, END=4.6;  /* B: lines are there at once, so a shorter hold */
+/* every beat: words land one by one (the route draws with them), then the same hold after the last word, then a hard cut */
+const B=[], T0=[]; let at=0;
+IDS.slice(0,4).forEach(id=>{ const n=document.querySelectorAll("#"+id+" h1 span").length? document.querySelector("#"+id+" h1").textContent.trim().split(/\s+/).length:0;
+  T0.push(at+LEAD); const e=at+LEAD+(n-1)*WORD+HOLD; B.push([at,e]); at=e; });
+B.push([at,at+END]); window.DUR=at+END;
+const R={};
+document.querySelectorAll("h1").forEach(h=>{ h.querySelectorAll("span").forEach(s=>{ s.innerHTML=s.textContent.split(" ").map(w=>"<i>"+w+"</i>").join(" "); }); });
+function setupRoute(i,sc,box){ const sv=document.getElementById("r"+i); document.getElementById(sc).appendChild(sv);
+  const ps=[...sv.querySelectorAll("path")], ring=sv.querySelector(".ring");
+  let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9; [...ps,ring].forEach(p=>{const b=p.getBBox();x0=Math.min(x0,b.x);y0=Math.min(y0,b.y);x1=Math.max(x1,b.x+b.width);y1=Math.max(y1,b.y+b.height)});
+  const pad=30; x0-=pad;y0-=pad;x1+=pad;y1+=pad; const k=Math.min(box.w/(x1-x0),box.h/(y1-y0));
+  sv.setAttribute("viewBox",`${x0} ${y0} ${x1-x0} ${y1-y0}`); sv.style.width=(x1-x0)*k+"px"; sv.style.height=(y1-y0)*k+"px";
+  sv.style.left=(box.cx-(x1-x0)*k/2)+"px"; sv.style.top=(box.cy-(y1-y0)*k/2)+"px";
+  const L=ps.map(p=>p.getTotalLength()); ps.forEach((p,j)=>{p.style.strokeDasharray=L[j]+" "+L[j]}); R[i]={ps,L,ring}; }
+function drawRoute(i,u){ const r=R[i]; r.ring.style.opacity=u>0?1:0;   /* ring just there, then drive, then walk */
+  const tot=r.L[0]+r.L[1], d=u*tot; r.ps.forEach((p,j)=>{const v=cl((d-(j?r.L[0]:0))/r.L[j]); p.style.strokeDashoffset=r.L[j]*(1-v)}); }
+function placeEnd(){ const w=document.getElementById("word"),u=document.getElementById("url");
+  const wh=w.getBoundingClientRect().height; w.style.top=((document.documentElement.classList.contains("v")?960:540)-wh/2)+"px"; }
+window.draw=function(t){
+  IDS.forEach((id,k)=>{ const [a,b]=B[k]; document.getElementById(id).style.opacity=(t>=a&&t<b)?1:0; });
+  document.querySelectorAll("h1").forEach((h,k)=>{ const t0=T0[k]; h.querySelectorAll("i").forEach((w,n)=>{ w.style.opacity=(ALL?t>=B[k][0]:t>=t0+n*WORD)?1:0; }); });  /* ?all: the whole line is there from the cut (version B) */
+  const dw=k=>(document.querySelectorAll("#s"+k+" h1 i").length-1)*WORD;
+  drawRoute(1,seg(t,T0[1],T0[1]+dw(1))); drawRoute(2,seg(t,T0[2],T0[2]+dw(2)));
+  
+};
+document.fonts.ready.then(()=>{ const V=document.documentElement.classList.contains("v"), box=V?{w:900,h:900,cx:540,cy:1200}:{w:600,h:860,cx:1560,cy:540};
+  setupRoute(1,"s1",box); setupRoute(2,"s2",box); placeEnd(); window.READY=true; draw(0); });
+</script></body></html>
