@@ -12,3 +12,4 @@
 1. "1 of 13 that fit" is a test-only counter: remove before the closed test.
 2. "Nothing fits today" (1h 30 drive + 4h walk): not weather, the data has no walk of 190+ min (longest about 2h 40). Copy should say so plainly, e.g. "No 4 hour walks within a 1h 30 drive yet." Weather is not used in the pick.
 3. Start walk away from the route: map is blank (you're off the map area) and the profile jumps mid-walk (startWalk projects you onto the route). Add a check: more than about 300 m from the route -> sheet "You're not at the start yet" with Head to the start / Start anyway; profile starts at 0 unless you are on the route.
+4. Drive should show the route overview first (Tony, 10:32): open Google Maps in directions mode (https://www.google.com/maps/dir/?api=1&destination=<lat,lon>&travelmode=driving) instead of google.navigation:, so Maps shows the route and its own Start button. No Hlid preview screen (keeps the 13 Nov decision).
