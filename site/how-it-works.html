@@ -97,13 +97,19 @@ html.menu-open .menu i:last-child{top:23px;transform:rotate(-45deg)}
   .mnav a + a{margin-top:16px}
 }
 </style>
+<style>
+/* Page title locked top left at the homepage hero size, content stays centred below */
+.ptitle{padding-top:16px}
+.ptitle h1{font-size:min(11.6vw,22svh);line-height:.814;margin-left:-.06em;text-wrap:balance}
+.col3>section:first-of-type{margin-top:96px}
+@media (max-width:900px){.ptitle{padding-top:8px}.ptitle h1{font-size:clamp(40px,calc((100vw - 48px) / 6.06),96px)}.col3>section:first-of-type{margin-top:72px}}
+</style>
 </head>
 <body>
 <header class="hdr"><div class="wrap"><a class="logo" href="index.html" aria-label="Hlid"><span>Hlid</span></a><div class="hright"><a class="topnav" href="about.html">About</a><a class="topnav" href="how-it-works.html" aria-current="page">How it works</a><a class="btn sm soon" href="mailto:hello@gethlid.app?subject=Try%20Hlid%20early&body=The%20email%20I%20use%20on%20Google%20Play%3A%20%0AWhere%20I%20live%20%28town%20or%20postcode%29%3A%20%0A">Try it early</a><button class="menu" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Menu"><i></i><i></i></button></div></div></header>
 <nav class="mnav" id="mnav" aria-label="Menu"><a href="about.html">About</a><a href="how-it-works.html">How it works</a><a href="privacy.html">Privacy and credits</a></nav>
 
-<main><div class="wrap col3">
-<section class="head"><h1>How it works</h1></section>
+<main><section class="wrap ptitle"><h1>How it works</h1></section><div class="wrap col3">
 
 <section class="sec"><h2>Using Hlid</h2><div class="list">
 <div><h3>Where you are</h3><p>Hlid starts from where you are. Somewhere else? Change it in one tap.</p></div>
