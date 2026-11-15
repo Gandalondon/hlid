@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Hlid icon B (14 Nov, Tony): the home ring, the dot every route starts from, white on ink. Same proportions as the site favicon. -->
+<!-- Hlid icon R6 (15 Nov, Tony): a real walk (Oldlands Wood loop) scaled down, off-black line on White, like the app's maps.
+     Line 3.2 in the 108 dp grid (the thinnest that still reads at launcher size). Source: canvas board 51; path from tools/app/icon_r6.json. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp" android:height="108dp"
     android:viewportWidth="108" android:viewportHeight="108">
-    <path android:fillColor="#00000000" android:strokeColor="#FFFFFF" android:strokeWidth="4.4"
-        android:pathData="M40,54 A14,14 0 1,0 68,54 A14,14 0 1,0 40,54" />
+    <path android:fillColor="#00000000" android:strokeColor="#1A1A1A" android:strokeWidth="3.2"
+        android:strokeLineCap="round" android:strokeLineJoin="round"
+        android:pathData="M43.96 35.55 L45.18 36.27 L47.43 41.16 L50.79 44.73 L51.30 45.95 L53.75 46.66 L57.82 49.11 L59.66 46.15 L60.78 45.85 L64.14 45.13 L65.46 47.17 L68.83 47.58 L71.58 46.15 L72.09 47.27 L70.97 49.82 L66.79 53.29 L66.08 54.61 L65.36 59.10 L64.65 59.91 L63.73 64.50 L62.82 65.82 L63.53 67.66 L63.32 70.10 L64.75 71.53 L62.51 71.53 L58.94 72.45 L55.78 71.12 L52.11 71.53 L50.79 70.71 L49.26 67.96 L48.24 67.15 L41.41 64.80 L35.91 61.34 L37.03 57.67 L40.80 52.27 L42.74 45.03Z" />
 </vector>
