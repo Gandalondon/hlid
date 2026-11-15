@@ -382,7 +382,7 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
   var ALL=JSON.parse(document.getElementById("w8walks").textContent).walks, TK=JSON.parse(document.getElementById("w8tok").textContent);
   var M=TK.map, GD=TK.guidance, INK=TK.ink, WHITE=TK.white, LAND=M.land, WALKED=M.walked, NS="http://www.w3.org/2000/svg";
   var view=document.getElementById("view");
-  var wi=0, D, LOOP, CUM, LEN, BASE, LOOPD, START, st;
+  var wi=0, D, LOOP, CUM, LEN, BASE, LOOPD, START, st, DRIVE=null;
   function m2ll(x,y){ return [D.lat0+y/D.ky, D.lon0+x/D.kx]; }
   function ll2m(lat,lon){ return [(lon-D.lon0)*D.kx,(lat-D.lat0)*D.ky]; }
   function nb(s){ return s.replace(/ (km|m|min)\b/g," $1"); }
@@ -391,6 +391,7 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
 
   /* ---------- one walk's map, built in metres (x east, y south on screen) ---------- */
   function load(i){
+    if(ALL[i]._orig){ ALL[i].prof.h=ALL[i]._orig.h; ALL[i]._orig=null; }   /* undo a joinAt() from an earlier walk */
     wi=i; D=ALL[i]; LOOP=D.loop; CUM=[0];
     for(var k=1;k<LOOP.length;k++) CUM.push(CUM[k-1]+Math.hypot(LOOP[k][0]-LOOP[k-1][0],LOOP[k][1]-LOOP[k-1][1]));
     LEN=CUM[CUM.length-1];
@@ -483,10 +484,14 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
           return m.busy!=="always" && x.dm<=lim && m.walk_min>=win[0] && m.walk_min<=win[1]; });
         PICK.sort(function(a,b){ var pa=bz&&a.w.meta.busy==="busy_days"?1:0, pb=bz&&b.w.meta.busy==="busy_days"?1:0;
           return pa-pb || (b.w.meta.score||0)-(a.w.meta.score||0) || a.dm-b.dm; });
-        if(!PICK.length){ el("x-nofit").querySelector(".nfp").textContent="No walk works with a "+(CV.drive==="30 min"?"30 minute":CV.drive.replace(" "," "))+" drive and "+CV.walk.replace("h"," hour"+(CV.walk==="1h"?"":"s"))+" walking. Try changing one."; showT("x-nofit"); return; }
+        if(!PICK.length){ el("x-nofit").querySelector(".nfp").textContent="Hlid doesn’t have a "+CV.walk.replace("h"," hour")+" walk within a "+(CV.drive==="30 min"?"30 minute":CV.drive.replace(" "," "))+" drive yet. Try a shorter walk or a longer drive."; showT("x-nofit"); return; }
         PI=0; showPick(); }); }); };
-  function showPick(){ var x=PICK[PI]; load(x.i); var t=el("t-today");
-    t.querySelector(".tsub").textContent=nb(hm(x.dm)+" drive. "+x.w.meta.km.toFixed(1)+" km walk."+(PICK.length>1?" "+(PI+1)+" of "+PICK.length+" that fit.":""));
+  function showPick(){ var x=PICK[PI]; load(x.i); var t=el("t-today"); var cp=x.w.meta.car_park;
+    if(ORIGIN&&!x.route) getJ("https://router.project-osrm.org/route/v1/driving/"+ORIGIN[1].toFixed(5)+","+ORIGIN[0].toFixed(5)+";"+cp[1].toFixed(5)+","+cp[0].toFixed(5)+"?overview=full&geometries=geojson",10000).then(function(j){
+      try{ x.route=j.routes[0].geometry.coordinates.map(function(q){ return [q[1],q[0]]; }); }catch(e){ x.route=[ORIGIN,cp]; }
+      if(PICK[PI]===x&&cur==="t-today"){ DRIVE=x.route; draw(); } });
+    DRIVE=x.route||null;
+    t.querySelector(".tsub").textContent=nb(hm(x.dm)+" drive. "+x.w.meta.km.toFixed(1)+" km walk.");
     if(window.hlidPaint) hlidPaint(); showT("t-today"); }
   function nextPick(){ if(!PICK.length){ hlidPick(); return; } PI=(PI+1)%PICK.length; showPick(); }
   var RING='<div aria-hidden="true" style="flex:1 1 auto;min-height:0;margin-top:96px"></div>';   /* the map's space, left empty (Tony: no dot) */
@@ -494,7 +499,7 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
   sec("x-outside",'<div style="'+ROOT+'">'+CHIPS+RING+'<div style="'+COL+'; padding-top: 24px"><h1 style="'+H1+'; font-size: 44px">No walks near<br>you yet</h1>'+
     '<p style="'+P+'; text-wrap: pretty; margin-top: 12px">Hlid only has walks in south-east England for now. More areas are coming.</p>'+
     '<button type="button" data-t="notify" style="'+BTN+'; margin-top: 28px">Tell me when it’s near me</button><button type="button" data-t="from" style="'+TBTN+'">Change location</button></div></div>');
-  sec("x-nofit",'<div style="'+ROOT+'">'+CHIPS+RING+'<div style="'+COL+'; padding-top: 24px"><h1 style="'+H1+'; font-size: 44px">Nothing fits<br>today</h1>'+
+  sec("x-nofit",'<div style="'+ROOT+'">'+CHIPS+RING+'<div style="'+COL+'; padding-top: 24px"><h1 style="'+H1+'; font-size: 44px">No walk fits<br>that yet</h1>'+
     '<p style="'+P+'; text-wrap: pretty; margin-top: 12px" class="nfp"></p>'+
     '<button type="button" data-t="drive" style="'+BTN+'; margin-top: 28px">Change the drive</button><button type="button" data-t="walk" style="'+TBTN+'">Change the walk</button></div></div>');
   var cur=null;
@@ -520,13 +525,26 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
     if(a==="another"){ nextPick(); }
     else if(a==="from"||a==="drive"||a==="walk"){ if(window.hlidOpenSheet) hlidOpenSheet(a); }
     else if(a==="notify"){ var pc=(window.hlidCV&&hlidCV.from||"").split(" ")[0]; if(N) N.openUrl("mailto:hello@gethlid.app?subject="+encodeURIComponent("Hlid near "+pc)+"&body="+encodeURIComponent("Tell me when Hlid has walks near "+pc+".")); }   /* the test walks in turn, then the prototype */
-    else if(a==="there"){ var cp=D.meta.car_park; if(N) N.openUrl("google.navigation:q="+cp[0]+","+cp[1]+"&mode=d"); showT("t-start"); }   /* build 23: Google Maps drives you; back in Hlid you're on Head to the start */
+    else if(a==="there"){ var cp=D.meta.car_park; if(N) N.openUrl("https://www.google.com/maps/dir/?api=1&destination="+cp[0]+","+cp[1]+"&travelmode=driving"); showT("t-start"); }   /* build 23: Google Maps drives you; back in Hlid you're on Head to the start */
     else if(a==="home"){ showT("t-today"); }
     else if(a==="go"){ startWalk(); }
     else if(a==="end"){ endWalk(); }
   }
-  function startWalk(){ st.walking=true; st.t0=Date.now(); st.trace=[]; st.back=false; st.offSince=0; st.buzzed=false; st.off=false;
-    st.prog = st.me && Math.hypot(st.me[0]-LOOP[0][0],st.me[1]-LOOP[0][1])>60 ? project(st.me,0,LEN).p : 0;
+  /* build 26 (Tony 15 Nov): join the loop wherever you reach it. The nearest point becomes the start, so km to go,
+     the height profile and "You're back" all count round the whole loop from there. */
+  var JOIN_M=300;
+  function joinAt(p){ var closed=Math.hypot(LOOP[0][0]-LOOP[LOOP.length-1][0],LOOP[0][1]-LOOP[LOOP.length-1][1])<20;
+    if(!closed||p<30||p>LEN-30) return;
+    if(!D._orig) D._orig={h:D.prof.h.slice()};
+    var k=1; while(k<CUM.length-1&&CUM[k]<p) k++;
+    var base=LOOP.slice(0,-1), L=base.slice(k).concat(base.slice(0,k)); L.push(L[0]);
+    var h=D.prof.h, n=h.length-1, j=Math.round(p/LEN*n), hb=h.slice(0,-1), H=hb.slice(j).concat(hb.slice(0,j)); H.push(H[0]);
+    LOOP=L; D.prof.h=H; CUM=[0]; for(var q=1;q<LOOP.length;q++) CUM.push(CUM[q-1]+Math.hypot(LOOP[q][0]-LOOP[q-1][0],LOOP[q][1]-LOOP[q-1][1]));
+    LEN=CUM[CUM.length-1]; LOOPD=d([LOOP],0); }
+  function startWalk(){
+    if(st.me){ var g0=project(st.me,0,LEN); if(g0.dd>JOIN_M&&!SIM){ tq("You’re "+dist(g0.dd)+" from the route. Head there first.",2200); return; } if(g0.dd<=JOIN_M) joinAt(g0.p); }
+    st.walking=true; st.t0=Date.now(); st.trace=[]; st.back=false; st.offSince=0; st.buzzed=false; st.off=false;
+    st.prog=0;
     if(N) N.startTrace(D.name); showT("t-walk"); }
   function endWalk(){ st.walking=false; st.file=N? N.endTrace() : "Downloads/Hlid/hlid-test.gpx";
     if(N) N.stopCompass(); showT("t-done"); }
@@ -552,7 +570,7 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
         if(!st.buzzed&&now-st.offSince>=GD.off_path_s*1000){ st.buzzed=true; st.off=true; if(N) N.vibrate(400); } }
       else if(g.dd<GD.off_path_m/2){ st.offSince=0; st.buzzed=false; st.off=false; }
       if(!st.back&&st.prog>LEN-60&&Math.hypot(st.me[0]-LOOP[0][0],st.me[1]-LOOP[0][1])<GD.back_m){ st.back=true; if(N) N.vibrate(300); } }
-    else if(cur==="t-start"){ var near=Math.hypot(st.me[0]-LOOP[0][0],st.me[1]-LOOP[0][1])<=GD.arrive_m;
+    else if(cur==="t-start"){ var near=project(st.me,0,LEN).dd<=GD.arrive_m;
       if(near&&!st.arrived){ st.arrived=true; if(N) N.vibrate(300); } }
     draw(); };
   window.wodenHeading=function(h){ st.head=h; if(cur==="t-walk"||cur==="t-start") draw(); };
@@ -593,12 +611,24 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
   function draw(){
     if(!cur) return;
     var s=el(cur), svg=s.querySelector(".tmap");
+    if(cur==="t-today"&&DRIVE&&DRIVE.length>1){ var szd=svgSize(svg); svg.setAttribute("viewBox","0 0 "+szd[0]+" "+szd[1]);
+      /* build 26: the day as one line, like the original Today art: thin drive from your home ring, thick walk loop, drawn the same size */
+      var dm=DRIVE.map(function(q){ return ll2m(q[0],q[1]); });
+      var bb=function(a){ var x0=1e9,x1=-1e9,y0=1e9,y1=-1e9; a.forEach(function(p){ x0=Math.min(x0,p[0]);x1=Math.max(x1,p[0]);y0=Math.min(y0,p[1]);y1=Math.max(y1,p[1]); }); return [x0,x1,y0,y1]; };
+      var bd=bb(dm), bl=bb(LOOP), sD=1/Math.max(bd[1]-bd[0],bd[3]-bd[2],1), sL=0.55/Math.max(bl[1]-bl[0],bl[3]-bl[2],1);
+      var E=[dm[dm.length-1][0]*sD,dm[dm.length-1][1]*sD];
+      var A=dm.map(function(p){ return [p[0]*sD,p[1]*sD]; }), B=LOOP.map(function(p){ return [E[0]+(p[0]-LOOP[0][0])*sL,E[1]+(p[1]-LOOP[0][1])*sL]; });
+      var ba=bb(A.concat(B)), k2=Math.min((szd[0]-112)/Math.max(ba[1]-ba[0],1e-6),(szd[1]-112)/Math.max(ba[3]-ba[2],1e-6)), cx=(ba[0]+ba[1])/2, cy=(ba[2]+ba[3])/2;
+      var P=function(p){ return (szd[0]/2+(p[0]-cx)*k2).toFixed(1)+" "+(szd[1]/2-(p[1]-cy)*k2).toFixed(1); }, h0=P(A[0]).split(" ");
+      svg.innerHTML='<path d="M'+A.map(P).join(" L")+'" fill="none" stroke="'+INK+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'+
+        '<path d="M'+B.map(P).join(" L")+'" fill="none" stroke="'+INK+'" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>'+
+        '<circle cx="'+h0[0]+'" cy="'+h0[1]+'" r="7" fill="#FFFFFF" stroke="'+INK+'" stroke-width="3"/>'; return; }
     if(cur==="t-today"){ var sz=svgSize(svg); svg.setAttribute("viewBox","0 0 "+sz[0]+" "+sz[1]);
       var fb=fitBox(LOOP,sz[0],sz[1],64), tr="translate("+sz[0]/2+" "+sz[1]/2+") scale("+fb.sc+") translate("+(-fb.cx)+" "+(fb.cy)+")";
       svg.innerHTML='<g transform="'+tr+'"><path d="'+LOOPD+'" fill="none" stroke="'+INK+'" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>'+
         '<circle cx="'+LOOP[0][0]+'" cy="'+(-LOOP[0][1])+'" r="7" fill="#FFFFFF" stroke="'+INK+'" stroke-width="3" vector-effect="non-scaling-stroke"/></g>'; return; }
     if(cur==="t-start"){
-      var pts=LOOP.slice(); var far=st.me? Math.hypot(st.me[0]-LOOP[0][0],st.me[1]-LOOP[0][1]) : null;
+      var pts=LOOP.slice(); var far=st.me? project(st.me,0,LEN).dd : null;
       if(st.me&&far<2500) pts.push(st.me);
       var sz2=svgSize(svg), fb2=fitBox(pts,sz2[0],sz2[1],48), f=frame(svg,fb2.cx,fb2.cy,fb2.sc,0);
       svg.querySelector(".r-done").setAttribute("d","");
@@ -607,7 +637,7 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
       if(st.perm===false){ h.textContent="Head to the start"; l.textContent="Location is off. Allow it in Settings to test the walk."; }
       else if(!st.me){ h.textContent="Head to the start"; l.textContent="Finding you…"; }
       else if(far<=GD.arrive_m||st.arrived){ h.textContent="You’re here"; l.textContent=nb((LEN/1000).toFixed(1)+" km loop, about "+Math.round(LEN/1000*18/5)*5+" min."); }
-      else { h.textContent="Head to the start"; l.textContent=dist(far)+" to the start."; }
+      else { h.textContent="Head to the route"; l.textContent=dist(far)+" to the route. Join it anywhere."; }
       return; }
     if(cur==="t-walk"){
       var pos=st.me||pointAt(st.prog), rot=-(st.head!=null? st.head : bearingAt(st.prog)), z=st.zoom||0.85;
