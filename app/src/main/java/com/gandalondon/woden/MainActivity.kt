@@ -6,6 +6,7 @@ import android.app.Activity
 import android.content.ContentValues
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.graphics.Color
 import android.hardware.GeomagneticField
 import android.hardware.Sensor
@@ -60,6 +61,8 @@ class MainActivity : Activity(), SensorEventListener {
         web.setBackgroundColor(Color.WHITE)
         web.settings.javaScriptEnabled = true
         web.settings.domStorageEnabled = true
+        @Suppress("DEPRECATION")
+        web.settings.allowUniversalAccessFromFileURLs = true   // build 23: postcode lookup and drive times (postcodes.io, OSRM) from the bundled page
         web.isVerticalScrollBarEnabled = false
         web.overScrollMode = WebView.OVER_SCROLL_NEVER
         web.addJavascriptInterface(Bridge(), "WodenNative")
@@ -189,6 +192,16 @@ class MainActivity : Activity(), SensorEventListener {
         }
 
         // a PNG (base64, no data: prefix) into Photos, in Pictures/Hlid
+        /* build 23: Drive hands off to Google Maps (navigation), "Tell me" opens an email */
+        @JavascriptInterface fun openUrl(url: String) = main.post {
+            try { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) }
+            catch (e: Exception) {
+                if (url.startsWith("google.navigation:")) {
+                    val q = url.substringAfter("q=").substringBefore("&")
+                    try { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/dir/?api=1&destination=$q&travelmode=driving"))) } catch (_: Exception) {}
+                }
+            }
+        }
         @JavascriptInterface fun savePng(b64: String, name: String): Boolean = try {
             val bytes = Base64.decode(b64, Base64.DEFAULT)
             val cv = ContentValues().apply {
