@@ -257,6 +257,11 @@ button:focus-visible{outline:2px solid #1A1A1A;outline-offset:2px}
   var CQ={from:"Setting off from?",drive:"Drive for how long?",walk:"Walk for how long?"};
   function cLabel(k){ return k==="from"?CV.from:k==="drive"?CV.drive+" drive":CV.walk+" walk"; }
   function cPaint(){ view.querySelectorAll(".cchip").forEach(function(c){ c.textContent=cLabel(c.dataset.k); }); }
+  window.hlidHere=function(lat,lon){ var f=document.getElementById("cFrom"); if(!f) return;
+    function fail(){ f.placeholder="Postcode or town"; toast("We can't find you. Type a postcode instead.",2000); }
+    if(lat==null){ fail(); return; }
+    fetch("https://api.postcodes.io/postcodes?lon="+lon+"&lat="+lat+"&limit=1&radius=2000").then(function(r){ return r.json(); }).then(function(j){
+      var p=j&&j.result&&j.result[0]; if(!p){ fail(); return; } f.value=p.outcode; f.placeholder="Postcode or town"; }).catch(fail); };
   function cAgain(){ closeSheet(); cPaint(); if(window.hlidPick){ window.hlidPick(); return; } toast("Finding a walk…",700,function(){ day=day%4+1; go("today",true); }); }
   openSheet=function(k){ sheetKey=k; document.getElementById("sheetq").textContent=CQ[k];
     var body=document.getElementById("sheetbody"); body.innerHTML="";
@@ -270,7 +275,9 @@ button:focus-visible{outline:2px solid #1A1A1A;outline-offset:2px}
   window.hlidOpenSheet=function(k){ openSheet(k); }; window.hlidPaint=cPaint;
   view.addEventListener("click",function(e){ var c=e.target.closest(".cchip"); if(c){ openSheet(c.dataset.k); e.stopPropagation(); } },true);
   sheet.addEventListener("click",function(e){ var b=e.target.closest(".chip"); if(b){ if(b.dataset.v===CV[sheetKey]){ closeSheet(); } else { CV[sheetKey]=b.dataset.v; cAgain(); } e.stopPropagation(); return; }  /* the option you already have just closes the sheet (Tony, 13 Nov) */
-    if(e.target.closest(".cloc")){ document.getElementById("cFrom").value="SW20"; e.stopPropagation(); } },true);
+    if(e.target.closest(".cloc")){ e.stopPropagation(); var f=document.getElementById("cFrom");   /* build 32: the dot finds where you are now */
+      if(!(window.WodenNative&&WodenNative.locate)){ return; }
+      f.value=""; f.placeholder="Finding you…"; WodenNative.locate(); } },true);
   view.addEventListener("click",function(e){ var p=e.target.closest(".pb"); if(!p) return; e.stopPropagation();
     document.getElementById("perm").classList.remove("on"); if(p.dataset.deny) openSheet("from"); },true);
   function firstOpen(){ day=1; reset("today"); document.getElementById("perm").classList.add("on"); }

@@ -9,6 +9,8 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.graphics.Color
 import android.hardware.GeomagneticField
+import android.location.Location
+import android.location.LocationManager
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
@@ -117,6 +119,7 @@ class MainActivity : Activity(), SensorEventListener {
             val ok = hasLocation()
             js("window.wodenPerm&&wodenPerm($ok)")
             if (ok && pendingGps) { pendingGps = false; startGps() }
+            if (pendingLocate) { pendingLocate = false; if (ok) locateOnce() else js("window.hlidHere&&hlidHere(null,null)") }
         }
     }
 
@@ -159,10 +162,36 @@ class MainActivity : Activity(), SensorEventListener {
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {}
 
     @Volatile private var appReady = false
+    private var pendingLocate = false
+
+    // build 32: the location dot in Setting off from. One quick fix (last known if under 10 min old, else a fresh one),
+    // handed to the page, which turns it into a postcode area. Never kept or sent anywhere else.
+    @SuppressLint("MissingPermission")
+    private fun locateOnce() {
+        val lm = getSystemService(LOCATION_SERVICE) as LocationManager
+        fun send(l: Location?) = js(if (l == null) "window.hlidHere&&hlidHere(null,null)" else "window.hlidHere&&hlidHere(${l.latitude},${l.longitude})")
+        val fresh = listOf(LocationManager.GPS_PROVIDER, LocationManager.NETWORK_PROVIDER, "fused")
+            .mapNotNull { try { lm.getLastKnownLocation(it) } catch (e: Exception) { null } }
+            .filter { System.currentTimeMillis() - it.time < 600_000 }.maxByOrNull { it.time }
+        if (fresh != null) { send(fresh); return }
+        val prov = if (lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) LocationManager.NETWORK_PROVIDER else LocationManager.GPS_PROVIDER
+        var done = false
+        val timeout = Runnable { if (!done) { done = true; send(null) } }
+        main.postDelayed(timeout, 15_000)
+        if (Build.VERSION.SDK_INT >= 30) {
+            lm.getCurrentLocation(prov, null, mainExecutor) { l -> if (!done) { done = true; main.removeCallbacks(timeout); send(l) } }
+        } else {
+            @Suppress("DEPRECATION")
+            lm.requestSingleUpdate(prov, { l -> if (!done) { done = true; main.removeCallbacks(timeout); send(l) } }, Looper.getMainLooper())
+        }
+    }
 
     inner class Bridge {
         @JavascriptInterface fun ready() { appReady = true; main.post { web.invalidate() } }
         @JavascriptInterface fun hasLocation(): Boolean = this@MainActivity.hasLocation()
+        @JavascriptInterface fun locate() = main.post {
+            if (hasLocation()) locateOnce() else { pendingLocate = true; requestPermissions(arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION), 1) }
+        }
 
         @JavascriptInterface fun requestLocation() = main.post {
             if (hasLocation()) js("window.wodenPerm&&wodenPerm(true)")
