@@ -1,0 +1,24 @@
+2026-11-20 17:10 extract: pass 1 5137 walking routes 15 s
+2026-11-20 17:43 extract: pass 1 5137 walking routes 65 s
+2026-11-20 17:59 extract: 143292 ways 11039 car parks 4907 pois 176 routes 5689 named places 1031 s
+2026-11-20 17:59 step extract done in 1040 s
+2026-11-20 17:59 routes: 176 relations -> 16 checked, 4 kept; out: {'not a loop': 117, 'too flat': 5, 'too short': 24, 'too long': 6, 'no ways': 2, 'not a country walk (name)': 2, 'no free car park within 400 m': 4} ; dropped: {'roads': 12, 'car park': 1}
+2026-11-20 17:59 step routes done in 4 s
+2026-11-20 17:59 parks: 11039 car parks -> 117 pass -> 71 after 2 km spacing; out: {'access': 1662, 'fee not no': 8661, 'honeypot at start': 407, 'too flat': 171, 'customers only': 21}
+2026-11-20 17:59 step parks done in 3 s
+2026-11-20 18:01 loops: 71 car parks tried, 23 ok
+2026-11-20 18:01 step loops done in 119 s
+2026-11-20 18:01 merge: 25 walks ( 4 routes, 21 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 1, 'none': 24}
+2026-11-20 18:01 step merge done in 4 s
+2026-11-20 18:01 areas: 25 walks, 25 to extract, 18 new terrain tiles
+2026-11-20 18:09 areas: nodes 1129857 485 s
+2026-11-20 18:15 areas: extracted 25 855 s
+2026-11-20 18:15 step areas done in 857 s
+2026-11-20 18:16 build: 25 built, 0 failed this run
+2026-11-20 18:16 step build done in 74 s
+2026-11-20 18:16 pack: 21 kept, 4 failed the gates 8.7 MB
+2026-11-20 18:16   failed cot-2-bruce-trail-friendship-trail 9.7 km vs 9.7, 733 of 9715 m off a path
+2026-11-20 18:16   failed cot-10-farnborough-parkland 8.5 km vs 7.6, 1250 of 8484 m off a path
+2026-11-20 18:16   failed cot-24-round-cropredy 22.8 km vs 7.4, 2640 of 22792 m off a path
+2026-11-20 18:16   failed cot-25-the-cole-and-its-landscape-former 0.1 km vs 7.1, 120 of 131 m off a path
+2026-11-20 18:16 step pack done in 1 s

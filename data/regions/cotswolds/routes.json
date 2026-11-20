@@ -1,0 +1,468 @@
+[
+ {
+  "source": "osm route",
+  "id": 2077181,
+  "name": "Adderbury Circular Walk",
+  "km": 5.1,
+  "climb": 94,
+  "top_m": 115,
+  "walk_min": 70,
+  "car_park": [
+   52.015847,
+   -1.317183
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3861,
+  "road_m": 1207,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "Manor Road": 304,
+   "High Street": 212,
+   "Water Lane": 197,
+   "Cross Hill Road": 184
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 2406537,
+  "name": "Round Cropredy Walk",
+  "km": 7.4,
+  "climb": 107,
+  "top_m": 129,
+  "walk_min": 99,
+  "car_park": [
+   52.11459,
+   -1.316748
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "SOUK",
+  "foot_m": 6471,
+  "road_m": 923,
+  "honeypot": [
+   "at the car park: cafe, restaurant, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Williamscot Road": 602,
+   "unclassified": 167,
+   "residential": 154
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 2673997,
+  "name": "White horse circular walk",
+  "km": 6.6,
+  "climb": 132,
+  "top_m": 258,
+  "walk_min": 93,
+  "car_park": [
+   51.576268,
+   -1.572895
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "National Trust",
+  "foot_m": 5302,
+  "road_m": 1316,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.3 km on roads"
+  ],
+  "roads": {
+   "Woolstone Road": 887,
+   "unclassified": 299,
+   "secondary": 76,
+   "Broad Way": 28
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 2774984,
+  "name": "Marcle Ridge Circular Walk",
+  "km": 7.0,
+  "climb": 174,
+  "top_m": 228,
+  "walk_min": 101,
+  "car_park": [
+   52.00913,
+   -2.54014
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5890,
+  "road_m": 1068,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.1 km on roads"
+  ],
+  "roads": {
+   "unclassified": 772,
+   "Glowson Wood Road": 239,
+   "The Hyde": 57
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 2790157,
+  "name": "Woolhope Circular Walk",
+  "km": 9.6,
+  "climb": 218,
+  "top_m": 165,
+  "walk_min": 138,
+  "car_park": [
+   52.023015,
+   -2.576355
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 8095,
+  "road_m": 1552,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.6 km on roads"
+  ],
+  "roads": {
+   "unclassified": 693,
+   "tertiary": 397,
+   "Alfords Mill": 278,
+   "The Hyde": 170
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 9186287,
+  "name": "Bruce Trail Friendship Trail",
+  "km": 9.7,
+  "climb": 413,
+  "top_m": 242,
+  "walk_min": 158,
+  "car_park": [
+   51.780731,
+   -2.24306
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8956,
+  "road_m": 759,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 298,
+   "unclassified": 295,
+   "Randwick Road": 82,
+   "Edge Road": 42
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 15957905,
+  "name": "The Cole and its Landscape (Formerly the Red Walk: Coleshill)",
+  "km": 7.1,
+  "climb": 63,
+  "top_m": 134,
+  "walk_min": 92,
+  "car_park": [
+   51.642467,
+   -1.658763
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6613,
+  "road_m": 518,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Coleshill": 310,
+   "residential": 145,
+   "untagged": 62
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 16450070,
+  "name": "Botley Health Routes - Purple",
+  "km": 5.4,
+  "climb": 98,
+  "top_m": 128,
+  "walk_min": 75,
+  "car_park": [
+   51.742332,
+   -1.302436
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 2196,
+  "road_m": 3239,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "3.2 km on roads"
+  ],
+  "roads": {
+   "Hurst Rise Road": 704,
+   "Hutchcomb Road": 584,
+   "Arnold's Way": 529,
+   "Turnpike Road": 244
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18922949,
+  "name": "Wotton-under-Edge Cotswold Gateway Route 1",
+  "km": 11.6,
+  "climb": 322,
+  "top_m": 234,
+  "walk_min": 171,
+  "car_park": [
+   51.632124,
+   -2.349379
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 8794,
+  "road_m": 2770,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "2.8 km on roads"
+  ],
+  "roads": {
+   "Park Lane": 1204,
+   "Blackquarries Hill": 353,
+   "unclassified": 239,
+   "Clarence Road": 177
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18925349,
+  "name": "Wotton-under-Edge Cotswold Gateway Route 2",
+  "km": 7.5,
+  "climb": 196,
+  "top_m": 202,
+  "walk_min": 109,
+  "car_park": [
+   51.638885,
+   -2.35448
+  ],
+  "car_park_name": "Civic Centre",
+  "car_park_check": "free",
+  "car_park_operator": "Wotton-Under-Edge Town Council",
+  "foot_m": 6290,
+  "road_m": 1186,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "Bradley Street": 371,
+   "Market Street": 308,
+   "High Street": 128,
+   "Bear Street": 122
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18938201,
+  "name": "Wotton-under-Edge Cotswold Gateway Route 3",
+  "km": 10.4,
+  "climb": 390,
+  "top_m": 220,
+  "walk_min": 163,
+  "car_park": [
+   51.64512,
+   -2.356279
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 7480,
+  "road_m": 2878,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.9 km on roads"
+  ],
+  "roads": {
+   "Blackquarries Hill": 883,
+   "unclassified": 625,
+   "Bradley Street": 371,
+   "Hillmill Lane": 182
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19001735,
+  "name": "Village Walk, Sherborne Park Estate",
+  "km": 5.3,
+  "climb": 77,
+  "top_m": 155,
+  "walk_min": 71,
+  "car_park": [
+   51.837176,
+   -1.746777
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "National Trust",
+  "foot_m": 3454,
+  "road_m": 1829,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.8 km on roads"
+  ],
+  "roads": {
+   "unclassified": 1829
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19283820,
+  "name": "Farnborough Parkland Walk, Farnborough Hall",
+  "km": 7.6,
+  "climb": 157,
+  "top_m": 189,
+  "walk_min": 106,
+  "car_park": [
+   52.141481,
+   -1.375365
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "National Trust",
+  "foot_m": 6668,
+  "road_m": 883,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "tertiary": 582,
+   "Main Street": 293,
+   "unclassified": 8
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19284186,
+  "name": "The Shenington Round from Upton House, Upton House and Gardens",
+  "km": 11.3,
+  "climb": 113,
+  "top_m": 214,
+  "walk_min": 147,
+  "car_park": [
+   52.109151,
+   -1.466133
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 10119,
+  "road_m": 1206,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "service": 292,
+   "primary": 284,
+   "Kenhill Road": 168,
+   "Rattlecombe Road": 156
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19284270,
+  "name": "Upton House Ley Line Walk, Upton House and Gardens",
+  "km": 9.5,
+  "climb": 199,
+  "top_m": 214,
+  "walk_min": 134,
+  "car_park": [
+   52.125633,
+   -1.446695
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7217,
+  "road_m": 2273,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "2.3 km on roads"
+  ],
+  "roads": {
+   "primary": 688,
+   "Old Road": 381,
+   "Church Street": 321,
+   "Quarry Road": 304
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19553664,
+  "name": "Middle Littleton Tithe Barn Walk, Middle Littleton",
+  "km": 10.3,
+  "climb": 97,
+  "top_m": 67,
+  "walk_min": 133,
+  "car_park": [
+   52.121502,
+   -1.884661
+  ],
+  "car_park_name": null,
+  "car_park_check": "probably paid (National Trust)",
+  "car_park_operator": "National Trust",
+  "foot_m": 8925,
+  "road_m": 1328,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "1.3 km on roads",
+   "car park probably paid (National Trust)"
+  ],
+  "roads": {
+   "unclassified": 486,
+   "Manor Road": 281,
+   "Main Street": 133,
+   "service": 132
+  }
+ }
+]
