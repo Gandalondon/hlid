@@ -1,0 +1,182 @@
+[
+ {
+  "source": "osm route",
+  "id": 180945,
+  "name": "Quarryman's Path",
+  "km": 6.1,
+  "climb": 554,
+  "top_m": 270,
+  "walk_min": 128,
+  "car_park": [
+   52.64403,
+   -3.956074
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6080,
+  "road_m": 0,
+  "honeypot": [
+   "at the car park: cafe, playground, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 9864510,
+  "name": "Ysbyty Ifan and Cwm Eidda walk, Ysbyty",
+  "km": 7.7,
+  "climb": 447,
+  "top_m": 380,
+  "walk_min": 137,
+  "car_park": [
+   53.023872,
+   -3.727213
+  ],
+  "car_park_name": null,
+  "car_park_check": "probably paid (National Trust)",
+  "car_park_operator": "National Trust",
+  "foot_m": 4949,
+  "road_m": 2781,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "2.8 km on roads",
+   "car park probably paid (National Trust)"
+  ],
+  "roads": {
+   "unclassified": 2666,
+   "secondary": 50,
+   "service": 49,
+   "Pont Blaen Eidda": 16
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 9864670,
+  "name": "Ty'n y Coed Uchaf and Cwm Eidda walk, Ysbyty",
+  "km": 8.0,
+  "climb": 297,
+  "top_m": 350,
+  "walk_min": 125,
+  "car_park": [
+   53.050859,
+   -3.791768
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7781,
+  "road_m": 172,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "secondary": 102,
+   "unclassified": 37,
+   "service": 33
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 16453907,
+  "name": "Penmaenmawr Upland walk",
+  "km": 7.8,
+  "climb": 380,
+  "top_m": 420,
+  "walk_min": 132,
+  "car_park": [
+   53.265654,
+   -3.904984
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5583,
+  "road_m": 2211,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.2 km on roads"
+  ],
+  "roads": {
+   "Mountain Lane": 1053,
+   "Graiglwyd Road": 593,
+   "Fernbrook Road": 565
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19400417,
+  "name": "Aberglaslyn, Bryn Du and Beddgelert walk, Meirionydd",
+  "km": 5.1,
+  "climb": 386,
+  "top_m": 171,
+  "walk_min": 100,
+  "car_park": [
+   52.999899,
+   -4.098027
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4821,
+  "road_m": 273,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 133,
+   "primary": 123,
+   "Pont Aberglaslyn": 17
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20382719,
+  "name": "Hendre Pleasure Drive",
+  "km": 9.6,
+  "climb": 332,
+  "top_m": 368,
+  "walk_min": 149,
+  "car_park": [
+   52.725546,
+   -3.438778
+  ],
+  "car_park_name": "Hendre Car Park",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 9632,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 20633860,
+  "name": "Conwy Panorama Walk",
+  "km": 5.9,
+  "climb": 221,
+  "top_m": 270,
+  "walk_min": 93,
+  "car_park": [
+   53.132148,
+   -3.809234
+  ],
+  "car_park_name": "Sawbench",
+  "car_park_check": "free",
+  "car_park_operator": "Natural Resources Wales",
+  "foot_m": 5866,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ }
+]

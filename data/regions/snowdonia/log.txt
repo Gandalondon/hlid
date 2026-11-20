@@ -1,0 +1,21 @@
+2026-11-20 20:51 extract: pass 1 5137 walking routes 15 s
+2026-11-20 21:06 extract: 47577 ways 3487 car parks 1826 pois 76 routes 3057 named places 901 s
+2026-11-20 21:06 step extract done in 903 s
+2026-11-20 21:06 routes: 76 relations -> 7 checked, 5 kept; out: {'not a loop': 51, 'too short': 16, 'no free car park within 400 m': 2} ; dropped: {'roads': 2, 'car park': 1}
+2026-11-20 21:06 step routes done in 3 s
+2026-11-20 21:06 parks: 3487 car parks -> 145 pass -> 87 after 2 km spacing; out: {'access': 259, 'fee not no': 2923, 'honeypot at start': 129, 'too flat': 28, 'customers only': 3}
+2026-11-20 21:06 step parks done in 2 s
+2026-11-20 21:09 loops: 87 car parks tried, 21 ok
+2026-11-20 21:09 step loops done in 171 s
+2026-11-20 21:09 merge: 24 walks ( 4 routes, 20 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 24}
+2026-11-20 21:09 step merge done in 4 s
+2026-11-20 21:09 areas: 24 walks, 24 to extract, 34 new terrain tiles
+2026-11-20 21:17 areas: nodes 918854 471 s
+2026-11-20 21:23 areas: extracted 24 810 s
+2026-11-20 21:23 step areas done in 811 s
+2026-11-20 21:24 build: 24 built, 0 failed this run
+2026-11-20 21:24 step build done in 92 s
+2026-11-20 21:24 pack: 22 kept, 2 failed the gates 8.9 MB
+2026-11-20 21:24   failed snw-11-ty-n-y-coed-uchaf-and-cwm-eidda 8.0 km vs 8.0, 162 of 7953 m off a path
+2026-11-20 21:24   failed snw-13-aberglaslyn 5.1 km vs 5.1, 263 of 5124 m off a path
+2026-11-20 21:24 step pack done in 1 s
