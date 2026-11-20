@@ -1,0 +1,30 @@
+2026-11-20 14:29 extract: pass 1 5137 walking routes 17 s
+2026-11-20 15:00 extract: 1539757 ways 136559 car parks 70283 pois 2220 routes 48220 named places 1875 s
+2026-11-20 15:00 step extract done in 1876 s
+2026-11-20 15:01 routes: 2220 relations -> 83 checked, 42 kept; out: {'not a loop': 1228, 'too near (inner ring)': 412, 'too short': 169, 'too long': 13, 'no ways': 31, 'too far': 203, 'too flat': 48, 'not a country walk (name)': 23, 'no free car park within 400 m': 10} ; dropped: {'roads': 39, 'car park': 3}
+2026-11-20 15:01 step routes done in 41 s
+2026-11-20 15:01 parks: 136559 car parks -> 146 pass -> 100 after 2 km spacing; out: {'fee not no': 119104, 'distance': 3617, 'too flat': 809, 'access': 11414, 'honeypot at start': 1400, 'customers only': 69}
+2026-11-20 15:02 step parks done in 35 s
+2026-11-20 15:04 loops: 100 car parks tried, 31 ok
+2026-11-20 15:04 step loops done in 176 s
+2026-11-20 15:05 merge: 23 walks ( 14 routes, 9 car park loops ), 39 over 125 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 3, 'none': 20}
+2026-11-20 15:05 step merge done in 20 s
+2026-11-20 15:05 areas: 23 walks, 23 to extract, 31 new terrain tiles
+2026-11-20 15:15 areas: nodes 1139846 570 s
+2026-11-20 15:21 areas: extracted 23 975 s
+2026-11-20 15:21 step areas done in 991 s
+2026-11-20 15:22 build: 23 built, 0 failed this run
+2026-11-20 15:22 step build done in 61 s
+2026-11-20 15:22 pack: 12 kept, 11 failed the gates 3.1 MB
+2026-11-20 15:22   failed r120-2-farnborough-parkland 8.5 km vs 7.6, 1250 of 8484 m off a path
+2026-11-20 15:22   failed r120-10-a 10.2 km vs 6.5, 1458 of 10250 m off a path
+2026-11-20 15:22   failed r120-12-the-path-of-the-brave 0.0 km vs 7.0, 5 of 17 m off a path
+2026-11-20 15:22   failed r120-13-avebury-ridgeway 8.7 km vs 8.5, 988 of 8742 m off a path
+2026-11-20 15:22   failed r120-17-walk 7.3 km vs 5.4, 868 of 7252 m off a path
+2026-11-20 15:22   failed r120-18-round-cropredy 22.8 km vs 7.6, 2640 of 22792 m off a path
+2026-11-20 15:22   failed r120-19-the-cole-and-its-landscape-forme 0.1 km vs 7.1, 120 of 131 m off a path
+2026-11-20 15:22   failed r120-20-rail-trail-royal-leamington-spa- 13.1 km vs 11.8, 603 of 13137 m off a path
+2026-11-20 15:22   failed r120-21-rail-trail-warwick-parkway-circu 8.2 km vs 8.1, 445 of 8227 m off a path
+2026-11-20 15:22   failed r120-22-walk 4.3 km vs 4.3, 202 of 4333 m off a path
+2026-11-20 15:22   failed r120-23-home-front-route 0.1 km vs 4.2, 57 of 57 m off a path
+2026-11-20 15:22 step pack done in 0 s

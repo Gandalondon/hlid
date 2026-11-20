@@ -1,0 +1,1 @@
+{"id": "cornwall", "label": "Cornwall", "prefix": "cnw", "home": [-4.85, 50.4], "box": [49.95, -5.75, 50.95, -4.2], "geofabrik": ["europe/great-britain/england"], "straight_km": [0, 100], "route_km_min": 0, "route_km": 100, "drive_min": 0, "drive_max": 120, "score_drive": false, "veto": null}

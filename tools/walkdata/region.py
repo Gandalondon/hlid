@@ -261,8 +261,9 @@ def osrm(home, pts):
             except Exception: time.sleep(5 * (k + 1)); d = [None] * len(ch)
         out += [round(x / 60) if x else None for x in d]; time.sleep(1)
     return out
-def score(km, climb, dm, wm, road_share, honey, free):
+def score(km, climb, dm, wm, road_share, honey, free, drive=True):
     s = min(climb, 350) / 350 * 35
+    if not drive: dm = 60   # regions away from Tony's home: the drive from the region's centre means nothing, so every walk gets the same drive points
     s += 20 if 6 <= km <= 11 else (12 if 4.5 <= km <= 13 else 4)
     s += 20 if dm and 45 <= dm <= 90 else (10 if dm and 30 <= dm <= 110 else 0)
     s += 10 * wm
@@ -281,12 +282,12 @@ def merge(r):
         rs = w["road_m"] / max(1, w["foot_m"] + w["road_m"])
         out.append(dict(source="osm route", name=w["name"], km=w["km"], climb=w["climb"], top_m=w["top_m"], walk_min=w["walk_min"], drive_min=dm,
                         car_park=w["car_park"], car_park_check=w["car_park_check"], road_m=w["road_m"], waymarked=1.0, honeypot=w["honeypot"], osm_relation=w["id"],
-                        score=score(w["km"], w["climb"], dm, 1.0, rs, w["honeypot"], w["car_park_check"] == "free")))
+                        score=score(w["km"], w["climb"], dm, 1.0, rs, w["honeypot"], w["car_park_check"] == "free", C.get("score_drive", True))))
     for v, dm in zip(L, dl):
         if dm is None or dm > C["drive_max"] or dm < C.get("drive_min", 0): far += 1; continue
         out.append(dict(source="car park loop", name=v.get("name") or f"Free car park near {C['label']}", km=v["km"], climb=v["climb"], top_m=v["top_m"],
                         walk_min=v["walk_min"], drive_min=dm, car_park=[v["lat"], v["lon"]], car_park_check="free", road_m=0, waymarked=v["waymarked"], honeypot=[],
-                        repeat_m=v["repeat_m"], loop=v["loop"], score=score(v["km"], v["climb"], dm, v["waymarked"], 0, [], True)))
+                        repeat_m=v["repeat_m"], loop=v["loop"], score=score(v["km"], v["climb"], dm, v["waymarked"], 0, [], True, C.get("score_drive", True))))
     # same car park twice (route + loop): keep the higher score
     out.sort(key=lambda w: -w["score"]); ded = []
     for w in out:
