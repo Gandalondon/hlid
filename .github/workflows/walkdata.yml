@@ -60,8 +60,9 @@ jobs:
           for g in C["geofabrik"]:
               f = "/tmp/" + g.replace("/", "_") + ".osm.pbf"
               ok = False
-              for u in (f"https://download.geofabrik.de/{g}-latest.osm.pbf",   # Geofabrik, then the openstreetmap.fr mirror of the same extracts
-                        "https://download.openstreetmap.fr/extracts/" + g.replace("united-kingdom", "united_kingdom") + "-latest.osm.pbf"):
+              for u in (f"https://download.geofabrik.de/{g}-latest.osm.pbf",   # Geofabrik, its GWDG mirror, then a copy kept as a release asset
+                        f"https://ftp5.gwdg.de/pub/misc/openstreetmap/download.geofabrik.de/{g}-latest.osm.pbf",
+                        f"https://github.com/Gandalondon/hlid/releases/download/osm-data/{g.split('/')[-1]}-latest.osm.pbf"):
                   if subprocess.run(["curl", "-sSfL", "--retry", "4", "--retry-all-errors", "--retry-delay", "10", "-o", f, u]).returncode == 0: ok = True; print("from", u); break
               if not ok: sys.exit("no OSM download")
               files.append(f)
