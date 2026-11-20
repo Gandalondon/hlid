@@ -1,0 +1,1 @@
+{"id": "brecon", "label": "Brecon Beacons", "prefix": "brc", "home": [-3.45, 51.9], "box": [51.55, -4.2, 52.2, -2.75], "geofabrik": ["europe/great-britain"], "straight_km": [0, 100], "route_km_min": 0, "route_km": 100, "drive_min": 0, "drive_max": 120, "score_drive": false, "veto": null}

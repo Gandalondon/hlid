@@ -1,0 +1,1 @@
+{"id": "peak", "label": "Peak District", "prefix": "pk", "home": [-1.8, 53.3], "box": [52.95, -2.25, 53.65, -1.35], "geofabrik": ["europe/great-britain"], "straight_km": [0, 100], "route_km_min": 0, "route_km": 100, "drive_min": 0, "drive_max": 120, "score_drive": false, "veto": null}
