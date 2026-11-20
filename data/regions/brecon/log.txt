@@ -1,1 +1,20 @@
 2026-11-20 18:17 extract: pass 1 5137 walking routes 16 s
+2026-11-20 18:32 extract: 75546 ways 6539 car parks 2823 pois 65 routes 2882 named places 954 s
+2026-11-20 18:32 step extract done in 955 s
+2026-11-20 18:32 routes: 65 relations -> 3 checked, 1 kept; out: {'not a loop': 51, 'too long': 2, 'not a country walk (name)': 1, 'too short': 5, 'no free car park within 400 m': 2, 'too flat': 1} ; dropped: {'roads': 2, 'car park': 0}
+2026-11-20 18:32 step routes done in 3 s
+2026-11-20 18:32 parks: 6539 car parks -> 133 pass -> 90 after 2 km spacing; out: {'fee not no': 5731, 'access': 381, 'too flat': 29, 'honeypot at start': 250, 'customers only': 15}
+2026-11-20 18:32 step parks done in 2 s
+2026-11-20 18:35 loops: 90 car parks tried, 26 ok
+2026-11-20 18:35 step loops done in 141 s
+2026-11-20 18:35 merge: 26 walks ( 1 routes, 25 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 1, 'none': 25}
+2026-11-20 18:35 step merge done in 4 s
+2026-11-20 18:35 areas: 26 walks, 26 to extract, 45 new terrain tiles
+2026-11-20 18:43 areas: nodes 1123357 463 s
+2026-11-20 18:49 areas: extracted 26 823 s
+2026-11-20 18:49 step areas done in 823 s
+2026-11-20 18:50 build: 26 built, 0 failed this run
+2026-11-20 18:50 step build done in 89 s
+2026-11-20 18:50 pack: 25 kept, 1 failed the gates 10.4 MB
+2026-11-20 18:50   failed brc-26-bishton-llanwern-loop 0.1 km vs 5.0, 106 of 151 m off a path
+2026-11-20 18:50 step pack done in 1 s

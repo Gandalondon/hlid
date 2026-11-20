@@ -1,0 +1,88 @@
+[
+ {
+  "source": "osm route",
+  "id": 1628935,
+  "name": "Rhymney River Circular",
+  "km": 15.4,
+  "climb": 309,
+  "top_m": 147,
+  "walk_min": 215,
+  "car_park": [
+   51.595968,
+   -3.13842
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "Machen Stores",
+  "foot_m": 11803,
+  "road_m": 3563,
+  "honeypot": [
+   "at the car park: cafe, playground"
+  ],
+  "keep": false,
+  "drop": [
+   "3.6 km on roads"
+  ],
+  "roads": {
+   "service": 1112,
+   "Rhyd-y-Gwern Lane": 788,
+   "unclassified": 443,
+   "Cefn Mably Park": 419
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19331465,
+  "name": "Clytha and Coed y Bwnydd walk, East Wales",
+  "km": 13.2,
+  "climb": 423,
+  "top_m": 199,
+  "walk_min": 201,
+  "car_park": [
+   51.774641,
+   -2.916331
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 10095,
+  "road_m": 3098,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "3.1 km on roads"
+  ],
+  "roads": {
+   "unclassified": 2901,
+   "residential": 141,
+   "Usk Walk": 56
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20286835,
+  "name": "Bishton & Llanwern Loop",
+  "km": 5.0,
+  "climb": 99,
+  "top_m": 54,
+  "walk_min": 70,
+  "car_park": [
+   51.589589,
+   -2.913973
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4364,
+  "road_m": 676,
+  "honeypot": [
+   "at the car park: restaurant"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 349,
+   "Bishton Road": 326
+  }
+ }
+]
