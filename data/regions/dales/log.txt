@@ -1,1 +1,22 @@
 2026-11-20 19:30 extract: pass 1 5137 walking routes 16 s
+2026-11-20 19:46 extract: 64751 ways 3715 car parks 1705 pois 114 routes 7650 named places 996 s
+2026-11-20 19:46 step extract done in 997 s
+2026-11-20 19:46 routes: 114 relations -> 13 checked, 7 kept; out: {'not a loop': 75, 'too long': 3, 'no ways': 2, 'too short': 17, 'not a country walk (name)': 3, 'no free car park within 400 m': 1} ; dropped: {'roads': 6, 'car park': 2}
+2026-11-20 19:46 step routes done in 3 s
+2026-11-20 19:46 parks: 3715 car parks -> 186 pass -> 111 after 2 km spacing; out: {'fee not no': 2907, 'access': 455, 'honeypot at start': 142, 'too flat': 13, 'customers only': 12}
+2026-11-20 19:46 step parks done in 3 s
+2026-11-20 19:49 loops: 111 car parks tried, 22 ok
+2026-11-20 19:49 step loops done in 147 s
+2026-11-20 19:49 merge: 25 walks ( 4 routes, 21 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 1, 'none': 24}
+2026-11-20 19:49 step merge done in 4 s
+2026-11-20 19:49 areas: 25 walks, 25 to extract, 35 new terrain tiles
+2026-11-20 19:57 areas: nodes 1136901 499 s
+2026-11-20 20:04 areas: extracted 25 878 s
+2026-11-20 20:04 step areas done in 878 s
+2026-11-20 20:05 build: 25 built, 0 failed this run
+2026-11-20 20:05 step build done in 91 s
+2026-11-20 20:05 pack: 22 kept, 3 failed the gates 8.8 MB
+2026-11-20 20:05   failed yd-2-horse-head-moor-and-deepdale 10.2 km vs 10.2, 420 of 10179 m off a path
+2026-11-20 20:05   failed yd-5-buckden-pike-and-the-polish-memoria 7.5 km vs 12.8, 465 of 7541 m off a path
+2026-11-20 20:05   failed yd-13-ingleton-waterfalls-trail 8.1 km vs 6.8, 1415 of 8066 m off a path
+2026-11-20 20:05 step pack done in 1 s

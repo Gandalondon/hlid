@@ -1,0 +1,357 @@
+[
+ {
+  "source": "osm route",
+  "id": 8388741,
+  "name": "Ingleton Waterfalls Trail",
+  "km": 6.8,
+  "climb": 687,
+  "top_m": 286,
+  "walk_min": 150,
+  "car_park": [
+   54.15545,
+   -2.466516
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5930,
+  "road_m": 865,
+  "honeypot": [
+   "at the car park: cafe, ice_cream, playground, restaurant, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 368,
+   "Thacking Lane": 198,
+   "unclassified": 168,
+   "Bell Horse Gate": 62
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 15601314,
+  "name": "Chevin Geology Trail",
+  "km": 4.7,
+  "climb": 163,
+  "top_m": 273,
+  "walk_min": 72,
+  "car_park": [
+   53.892515,
+   -1.698225
+  ],
+  "car_park_name": "Yorkgate Quarry Car Park",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 4660,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 18971897,
+  "name": "Wyre Way (Tarnbrook Loop)",
+  "km": 12.9,
+  "climb": 356,
+  "top_m": 274,
+  "walk_min": 190,
+  "car_park": [
+   53.983394,
+   -2.667006
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 9467,
+  "road_m": 3429,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "3.4 km on roads"
+  ],
+  "roads": {
+   "Trough Road": 2165,
+   "Strait Lane": 726,
+   "tertiary": 261,
+   "Doeholme Rake": 135
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18999079,
+  "name": "Malham Tarn Upland Farm Circular Walk",
+  "km": 6.7,
+  "climb": 142,
+  "top_m": 405,
+  "walk_min": 95,
+  "car_park": [
+   54.08823,
+   -2.1631
+  ],
+  "car_park_name": "Water Sinks",
+  "car_park_check": "free",
+  "car_park_operator": "National Trust",
+  "foot_m": 5709,
+  "road_m": 1019,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.0 km on roads"
+  ],
+  "roads": {
+   "unclassified": 986,
+   "service": 21,
+   "Henside Road": 12
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19039392,
+  "name": "Horse Head Moor and Deepdale walk, Upper Wharfdale",
+  "km": 10.2,
+  "climb": 603,
+  "top_m": 605,
+  "walk_min": 182,
+  "car_park": [
+   54.203418,
+   -2.145727
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 9740,
+  "road_m": 438,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 419,
+   "Deepdale Bridge": 18
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19040210,
+  "name": "Yockenthwaite to Cray walk, Upper Wharfdale",
+  "km": 11.4,
+  "climb": 353,
+  "top_m": 375,
+  "walk_min": 172,
+  "car_park": [
+   54.203418,
+   -2.145727
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 10446,
+  "road_m": 942,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Dubb's Lane": 722,
+   "unclassified": 122,
+   "Buckden Bridge": 44,
+   "Hubberholme Bridge": 21
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19058496,
+  "name": "Buckden Pike and the Polish Memorial, Upper Wharfdale",
+  "km": 12.8,
+  "climb": 431,
+  "top_m": 701,
+  "walk_min": 197,
+  "car_park": [
+   54.200912,
+   -2.098909
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 12406,
+  "road_m": 413,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "residential": 217,
+   "unclassified": 122,
+   "Buckden Bridge": 44,
+   "secondary": 22
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19162196,
+  "name": "Upper Wharfdale Ranger Run, Upper Wharfdale",
+  "km": 11.3,
+  "climb": 345,
+  "top_m": 375,
+  "walk_min": 170,
+  "car_park": [
+   54.203418,
+   -2.145727
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 10368,
+  "road_m": 942,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Dubb's Lane": 722,
+   "unclassified": 122,
+   "Buckden Bridge": 44,
+   "Hubberholme Bridge": 21
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19302724,
+  "name": "Farmland, Big Skies and Birds of Prey Walk, Brimham Rocks",
+  "km": 6.6,
+  "climb": 78,
+  "top_m": 212,
+  "walk_min": 87,
+  "car_park": [
+   54.081784,
+   -1.632644
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4665,
+  "road_m": 1917,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.9 km on roads"
+  ],
+  "roads": {
+   "service": 1366,
+   "unclassified": 552
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19341660,
+  "name": "Fountains Abbey Ancient Trees Walk",
+  "km": 4.1,
+  "climb": 80,
+  "top_m": 116,
+  "walk_min": 58,
+  "car_park": [
+   54.113348,
+   -1.582727
+  ],
+  "car_park_name": "Car Park B",
+  "car_park_check": "probably paid (National Trust)",
+  "car_park_operator": "National Trust",
+  "foot_m": 2941,
+  "road_m": 1184,
+  "honeypot": [
+   "at the car park: cafe, playground, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads",
+   "car park probably paid (National Trust)"
+  ],
+  "roads": {
+   "service": 1129,
+   "untagged": 55
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19360694,
+  "name": "Brimham Rocks Boundary Walk",
+  "km": 5.4,
+  "climb": 186,
+  "top_m": 285,
+  "walk_min": 83,
+  "car_park": [
+   54.079946,
+   -1.676428
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5363,
+  "road_m": 10,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Brimham Rocks Road": 10
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19365218,
+  "name": "Fountains Abbey Estate Boundary Walk",
+  "km": 9.1,
+  "climb": 313,
+  "top_m": 117,
+  "walk_min": 140,
+  "car_park": [
+   54.113348,
+   -1.582727
+  ],
+  "car_park_name": "Car Park B",
+  "car_park_check": "probably paid (National Trust)",
+  "car_park_operator": "National Trust",
+  "foot_m": 5212,
+  "road_m": 3851,
+  "honeypot": [
+   "at the car park: cafe, playground, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "3.9 km on roads",
+   "car park probably paid (National Trust)"
+  ],
+  "roads": {
+   "service": 3089,
+   "Fountains Lane": 494,
+   "Plumpton Lane": 192,
+   "untagged": 55
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19378830,
+  "name": "Studley Park, Water Gardens and Fountains Abbey Walk",
+  "km": 6.0,
+  "climb": 132,
+  "top_m": 107,
+  "walk_min": 86,
+  "car_park": [
+   54.127567,
+   -1.576672
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4865,
+  "road_m": 1167,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "service": 765,
+   "Studley Lane": 210,
+   "Plumpton Lane": 192
+  }
+ }
+]
