@@ -1,0 +1,424 @@
+[
+ {
+  "source": "osm route",
+  "id": 2131781,
+  "name": "Coleridge Link",
+  "km": 13.9,
+  "climb": 344,
+  "top_m": 232,
+  "walk_min": 202,
+  "car_park": [
+   50.718605,
+   -3.28987
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 12173,
+  "road_m": 1767,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "1.8 km on roads"
+  ],
+  "roads": {
+   "unclassified": 1139,
+   "Knightstone Road": 215,
+   "Lower Way": 128,
+   "Knapp's Lane": 107
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 3727629,
+  "name": "Sticklepath to Belstone Circular",
+  "km": 6.8,
+  "climb": 265,
+  "top_m": 309,
+  "walk_min": 108,
+  "car_park": [
+   50.724783,
+   -3.956393
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5926,
+  "road_m": 874,
+  "honeypot": [
+   "at the car park: cafe"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 562,
+   "tertiary": 180,
+   "service": 132
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 5012226,
+  "name": "Moretonhampstead North Bovey Circular",
+  "km": 8.0,
+  "climb": 225,
+  "top_m": 251,
+  "walk_min": 119,
+  "car_park": [
+   50.640596,
+   -3.783239
+  ],
+  "car_park_name": "North Bovey Car Park",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5377,
+  "road_m": 2656,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.7 km on roads"
+  ],
+  "roads": {
+   "Brinning Road": 959,
+   "Court Street": 542,
+   "unclassified": 499,
+   "Water Lane": 319
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 5510386,
+  "name": "Tarka Trail - Croyde to Saunton Circular Route",
+  "km": 6.8,
+  "climb": 346,
+  "top_m": 151,
+  "walk_min": 116,
+  "car_park": [
+   51.121797,
+   -4.239097
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6582,
+  "road_m": 236,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Cloutman's Lane": 108,
+   "Croyde Road": 84,
+   "Hobb's Hill": 45
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 6642942,
+  "name": "Herepath Trail - Castle Neroche",
+  "km": 6.3,
+  "climb": 71,
+  "top_m": 269,
+  "walk_min": 83,
+  "car_park": [
+   50.935617,
+   -3.035126
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5427,
+  "road_m": 892,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Curland Road": 820,
+   "tertiary": 65,
+   "Pound Road": 8
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 8432542,
+  "name": "Aylesbeare Circular",
+  "km": 4.5,
+  "climb": 72,
+  "top_m": 121,
+  "walk_min": 61,
+  "car_park": [
+   50.72112,
+   -3.362923
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3302,
+  "road_m": 1194,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "unclassified": 546,
+   "service": 368,
+   "Village Way": 192,
+   "Withen Lane": 45
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 9154111,
+  "name": "Kenton Starcross Circular",
+  "km": 6.6,
+  "climb": 115,
+  "top_m": 78,
+  "walk_min": 90,
+  "car_park": [
+   50.623711,
+   -3.449392
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 1046,
+  "road_m": 5526,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "5.5 km on roads"
+  ],
+  "roads": {
+   "unclassified": 3050,
+   "service": 1316,
+   "Staplake Lane": 513,
+   "Warborough Hill": 190
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 9621393,
+  "name": "Dunkery and Horner Wood circular walk",
+  "km": 4.4,
+  "climb": 156,
+  "top_m": 338,
+  "walk_min": 69,
+  "car_park": [
+   51.183781,
+   -3.571415
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3217,
+  "road_m": 1215,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "track": 776,
+   "unclassified": 439
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 9774011,
+  "name": "Countisbury figure of eight walk",
+  "km": 4.3,
+  "climb": 328,
+  "top_m": 278,
+  "walk_min": 85,
+  "car_park": [
+   51.231748,
+   -3.797685
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3977,
+  "road_m": 356,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Countisbury Hill": 254,
+   "primary": 81,
+   "service": 22
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 9774298,
+  "name": "Heddon Valley to Woody Bay Walk",
+  "km": 8.6,
+  "climb": 880,
+  "top_m": 231,
+  "walk_min": 191,
+  "car_park": [
+   51.21657,
+   -3.927544
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8244,
+  "road_m": 375,
+  "honeypot": [
+   "at the car park: cafe, ice_cream, restaurant, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Sir Robert's Path": 251,
+   "Jose's Lane": 97,
+   "King's Lane": 27
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18976849,
+  "name": "Arlington Court deer park circular walk, Arlington Court",
+  "km": 4.7,
+  "climb": 187,
+  "top_m": 200,
+  "walk_min": 75,
+  "car_park": [
+   51.149555,
+   -3.987764
+  ],
+  "car_park_name": "Arlington Court",
+  "car_park_check": "probably paid (National Trust)",
+  "car_park_operator": "National Trust",
+  "foot_m": 4131,
+  "road_m": 537,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "car park probably paid (National Trust)"
+  ],
+  "roads": {
+   "service": 537
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18976975,
+  "name": "Woodland and Cott Brake circular walk at Arlington Court, Arlington Court",
+  "km": 7.8,
+  "climb": 358,
+  "top_m": 197,
+  "walk_min": 130,
+  "car_park": [
+   51.149555,
+   -3.987764
+  ],
+  "car_park_name": "Arlington Court",
+  "car_park_check": "probably paid (National Trust)",
+  "car_park_operator": "National Trust",
+  "foot_m": 7552,
+  "road_m": 263,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "car park probably paid (National Trust)"
+  ],
+  "roads": {
+   "service": 191,
+   "unclassified": 72
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19793600,
+  "name": "Struddicks circular walk, Lansallos",
+  "km": 5.0,
+  "climb": 116,
+  "top_m": 153,
+  "walk_min": 71,
+  "car_park": [
+   50.365673,
+   -4.385127
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3454,
+  "road_m": 1517,
+  "honeypot": [
+   "at the car park: cafe, playground, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.5 km on roads"
+  ],
+  "roads": {
+   "Looe Hill": 996,
+   "unclassified": 389,
+   "Hessenford Road": 60,
+   "Keveral Lane": 55
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 21279699,
+  "name": "Horner Wood Circular, Holnicote",
+  "km": 5.2,
+  "climb": 322,
+  "top_m": 257,
+  "walk_min": 94,
+  "car_park": [
+   51.197954,
+   -3.578538
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5074,
+  "road_m": 103,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 103
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 21462134,
+  "name": "Danescombe Valley Walk, Cothele",
+  "km": 4.3,
+  "climb": 208,
+  "top_m": 84,
+  "walk_min": 73,
+  "car_park": [
+   50.49307,
+   -4.226464
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4292,
+  "road_m": 45,
+  "honeypot": [
+   "at the car park: cafe, restaurant, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 39,
+   "service": 6
+  }
+ }
+]

@@ -1,0 +1,25 @@
+2026-11-20 15:59 extract: pass 1 5137 walking routes 16 s
+2026-11-20 16:15 extract: 118976 ways 9306 car parks 4345 pois 224 routes 7356 named places 1010 s
+2026-11-20 16:15 step extract done in 1011 s
+2026-11-20 16:15 routes: 224 relations -> 15 checked, 7 kept; out: {'not a loop': 147, 'no free car park within 400 m': 4, 'too short': 51, 'not a country walk (name)': 3, 'too flat': 2, 'too long': 1, 'no ways': 1} ; dropped: {'roads': 6, 'car park': 2}
+2026-11-20 16:15 step routes done in 3 s
+2026-11-20 16:15 parks: 9306 car parks -> 251 pass -> 143 after 2 km spacing; out: {'fee not no': 7589, 'access': 1107, 'honeypot at start': 276, 'too flat': 70, 'thin path network': 2, 'customers only': 11}
+2026-11-20 16:15 step parks done in 3 s
+2026-11-20 16:20 loops: 143 car parks tried, 31 ok
+2026-11-20 16:20 step loops done in 257 s
+2026-11-20 16:20 merge: 35 walks ( 7 routes, 28 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 3, 'none': 32}
+2026-11-20 16:20 step merge done in 4 s
+2026-11-20 16:20 areas: 35 walks, 35 to extract, 45 new terrain tiles
+2026-11-20 16:28 areas: nodes 1120223 485 s
+2026-11-20 16:34 areas: extracted 35 856 s
+2026-11-20 16:34 step areas done in 857 s
+2026-11-20 16:36 build: 35 built, 0 failed this run
+2026-11-20 16:36 step build done in 97 s
+2026-11-20 16:36 pack: 29 kept, 6 failed the gates 9.9 MB
+2026-11-20 16:36   failed dev-1-tarka-trail-croyde-to-saunton-circ 12.0 km vs 6.8, 2029 of 12029 m off a path
+2026-11-20 16:36   failed dev-17-heddon-valley-to-woody-bay 9.1 km vs 8.6, 239 of 9126 m off a path
+2026-11-20 16:36   failed dev-23-countisbury-figure-of-eight 4.4 km vs 4.3, 351 of 4355 m off a path
+2026-11-20 16:36   failed dev-32-sticklepath-to-belstone-circular 10.5 km vs 6.8, 793 of 10549 m off a path
+2026-11-20 16:36   failed dev-34-herepath-trail-castle-neroche 6.3 km vs 6.3, 884 of 6321 m off a path
+2026-11-20 16:36   failed dev-35-danescombe-valley 5.9 km vs 4.3, 612 of 5877 m off a path
+2026-11-20 16:36 step pack done in 1 s

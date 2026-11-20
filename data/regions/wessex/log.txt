@@ -1,0 +1,22 @@
+2026-11-20 15:26 extract: pass 1 5137 walking routes 17 s
+2026-11-20 15:43 extract: 146223 ways 10285 car parks 5853 pois 147 routes 5303 named places 1050 s
+2026-11-20 15:43 step extract done in 1052 s
+2026-11-20 15:43 routes: 147 relations -> 4 checked, 3 kept; out: {'not a loop': 104, 'too long': 4, 'too short': 30, 'too flat': 3, 'no free car park within 400 m': 2} ; dropped: {'roads': 1, 'car park': 0}
+2026-11-20 15:43 step routes done in 3 s
+2026-11-20 15:43 parks: 10285 car parks -> 67 pass -> 52 after 2 km spacing; out: {'fee not no': 8293, 'access': 1464, 'too flat': 113, 'honeypot at start': 331, 'customers only': 17}
+2026-11-20 15:43 step parks done in 3 s
+2026-11-20 15:44 loops: 52 car parks tried, 11 ok
+2026-11-20 15:44 step loops done in 65 s
+2026-11-20 15:44 merge: 11 walks ( 3 routes, 8 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 11}
+2026-11-20 15:44 step merge done in 5 s
+2026-11-20 15:44 areas: 11 walks, 11 to extract, 21 new terrain tiles
+2026-11-20 15:52 areas: nodes 742942 467 s
+2026-11-20 15:58 areas: extracted 11 812 s
+2026-11-20 15:58 step areas done in 814 s
+2026-11-20 15:58 build: 11 built, 0 failed this run
+2026-11-20 15:58 step build done in 31 s
+2026-11-20 15:58 pack: 8 kept, 3 failed the gates 3.3 MB
+2026-11-20 15:58   failed wsx-4-bath-skyline 23.1 km vs 9.3, 1935 of 23070 m off a path
+2026-11-20 15:58   failed wsx-10-walk 7.3 km vs 5.4, 868 of 7252 m off a path
+2026-11-20 15:58   failed wsx-11-walk 4.3 km vs 4.3, 202 of 4333 m off a path
+2026-11-20 15:58 step pack done in 0 s

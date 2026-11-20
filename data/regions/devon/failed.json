@@ -1,0 +1,26 @@
+[
+ {
+  "id": "dev-1-tarka-trail-croyde-to-saunton-circ",
+  "why": "12.0 km vs 6.8, 2029 of 12029 m off a path"
+ },
+ {
+  "id": "dev-17-heddon-valley-to-woody-bay",
+  "why": "9.1 km vs 8.6, 239 of 9126 m off a path"
+ },
+ {
+  "id": "dev-23-countisbury-figure-of-eight",
+  "why": "4.4 km vs 4.3, 351 of 4355 m off a path"
+ },
+ {
+  "id": "dev-32-sticklepath-to-belstone-circular",
+  "why": "10.5 km vs 6.8, 793 of 10549 m off a path"
+ },
+ {
+  "id": "dev-34-herepath-trail-castle-neroche",
+  "why": "6.3 km vs 6.3, 884 of 6321 m off a path"
+ },
+ {
+  "id": "dev-35-danescombe-valley",
+  "why": "5.9 km vs 4.3, 612 of 5877 m off a path"
+ }
+]

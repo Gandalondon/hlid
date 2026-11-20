@@ -1,0 +1,102 @@
+[
+ {
+  "source": "osm route",
+  "id": 3174132,
+  "name": "Bath Skyline Walk",
+  "km": 9.3,
+  "climb": 338,
+  "top_m": 189,
+  "walk_min": 145,
+  "car_park": [
+   51.366077,
+   -2.340621
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 9277,
+  "road_m": 0,
+  "honeypot": [
+   "at the car park: playground, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 19217568,
+  "name": "Walk at Badbury Rings and The Oaks, Kingston Lacy",
+  "km": 5.4,
+  "climb": 79,
+  "top_m": 86,
+  "walk_min": 73,
+  "car_park": [
+   50.820078,
+   -2.049358
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5392,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 19217596,
+  "name": "Walk at Eye Bridge and Pamphill, Kingston Lacy",
+  "km": 4.3,
+  "climb": 71,
+  "top_m": 48,
+  "walk_min": 59,
+  "car_park": [
+   50.800395,
+   -2.007228
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4111,
+  "road_m": 221,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 182,
+   "Cowgrove Road": 39
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20286378,
+  "name": "Newport Wetlands & Goldcliff Loop",
+  "km": 10.7,
+  "climb": 81,
+  "top_m": 12,
+  "walk_min": 136,
+  "car_park": [
+   51.541147,
+   -2.910463
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8950,
+  "road_m": 1735,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.7 km on roads"
+  ],
+  "roads": {
+   "Salt Marsh Lane": 670,
+   "Henton Road": 475,
+   "Goldcliff Road": 440,
+   "service": 75
+  }
+ }
+]
