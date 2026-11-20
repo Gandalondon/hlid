@@ -59,7 +59,12 @@ jobs:
           files = []
           for g in C["geofabrik"]:
               f = "/tmp/" + g.replace("/", "_") + ".osm.pbf"
-              subprocess.run(["curl", "-sSL", "--retry", "3", "-o", f, f"https://download.geofabrik.de/{g}-latest.osm.pbf"], check=True); files.append(f)
+              ok = False
+              for u in (f"https://download.geofabrik.de/{g}-latest.osm.pbf",   # Geofabrik, then the openstreetmap.fr mirror of the same extracts
+                        "https://download.openstreetmap.fr/extracts/" + g.replace("united-kingdom", "united_kingdom") + "-latest.osm.pbf"):
+                  if subprocess.run(["curl", "-sSfL", "--retry", "4", "--retry-all-errors", "--retry-delay", "10", "-o", f, u]).returncode == 0: ok = True; print("from", u); break
+              if not ok: sys.exit("no OSM download")
+              files.append(f)
           if len(files) > 1: subprocess.run(["osmium", "merge", "-O", "-o", "/tmp/merged.osm.pbf", *files], check=True); src = "/tmp/merged.osm.pbf"
           else: src = files[0]
           s, w, n, e = C["box"]
