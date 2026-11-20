@@ -34,3 +34,24 @@
 2026-11-20 13:34   failed r60-35-limpsfield-common-and-the-carpent 5.9 km vs 5.7, 339 of 5915 m off a path
 2026-11-20 13:34   failed r60-36-grayswood 4.3 km vs 4.3, 482 of 4315 m off a path
 2026-11-20 13:34 step pack done in 2 s
+2026-11-20 13:48 build: 2 built, 0 failed this run
+2026-11-20 13:48 step build done in 3 s
+2026-11-20 13:48 pack: 19 kept, 17 failed the gates 10.1 MB
+2026-11-20 13:48   failed r60-2-beacon-hill 9.5 km vs 7.1, 1230 of 9489 m off a path
+2026-11-20 13:48   failed r60-5-views-of-the-hughenden-manor-estat 9.2 km vs 8.9, 320 of 9248 m off a path
+2026-11-20 13:48   failed r60-8-harewoods-lodge-farm 9.5 km vs 7.5, 745 of 9522 m off a path
+2026-11-20 13:48   failed r60-13-tillingbourne 15.2 km vs 12.1, 2075 of 15233 m off a path
+2026-11-20 13:48   failed r60-14-shottermill-to-marley-common-and- 6.6 km vs 6.6, 585 of 6567 m off a path
+2026-11-20 13:48   failed r60-19-hambleden-and-pheasant-s-hill-tra 9.1 km vs 9.1, 666 of 9067 m off a path
+2026-11-20 13:48   failed r60-21-weardale 9.3 km vs 8.3, 719 of 9252 m off a path
+2026-11-20 13:48   failed r60-22-cookham-and-cock-marsh 0.1 km vs 6.7, 122 of 131 m off a path
+2026-11-20 13:48   failed r60-26-abinger-roughs-to-gomshall 9.9 km vs 9.9, 629 of 9881 m off a path
+2026-11-20 13:48   failed r60-28-boundary 0.4 km vs 6.3, 352 of 362 m off a path
+2026-11-20 13:48   failed r60-29-dormans-park 7.0 km vs 7.1, 290 of 6994 m off a path
+2026-11-20 13:48   failed r60-30-heathland-hike 7.8 km vs 5.8, 833 of 7844 m off a path
+2026-11-20 13:48   failed r60-31-tykes-water-beyond 7.5 km vs 7.0, 685 of 7501 m off a path
+2026-11-20 13:48   failed r60-32-petworth-ancient-trees 0.2 km vs 5.7, 192 of 216 m off a path
+2026-11-20 13:48   failed r60-34-estate 4.9 km vs 4.7, 746 of 4888 m off a path
+2026-11-20 13:48   failed r60-35-limpsfield-common-and-the-carpent 5.9 km vs 5.7, 339 of 5915 m off a path
+2026-11-20 13:48   failed r60-36-grayswood 4.3 km vs 4.3, 482 of 4315 m off a path
+2026-11-20 13:48 step pack done in 1 s

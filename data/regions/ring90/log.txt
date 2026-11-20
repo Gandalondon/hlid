@@ -1,0 +1,30 @@
+2026-11-20 13:35 extract: pass 1 5137 walking routes 17 s
+2026-11-20 14:01 extract: 1145048 ways 105330 car parks 55803 pois 1643 routes 34760 named places 1534 s
+2026-11-20 14:01 step extract done in 1535 s
+2026-11-20 14:01 routes: 1643 relations -> 71 checked, 35 kept; out: {'not a loop': 957, 'too long': 12, 'too far': 149, 'too short': 109, 'no ways': 13, 'too near (inner ring)': 292, 'not a country walk (name)': 4, 'too flat': 25, 'no free car park within 400 m': 11} ; dropped: {'roads': 35, 'car park': 1}
+2026-11-20 14:01 step routes done in 28 s
+2026-11-20 14:02 parks: 105330 car parks -> 122 pass -> 89 after 2 km spacing; out: {'fee not no': 92652, 'too flat': 547, 'distance': 1951, 'access': 8572, 'honeypot at start': 1423, 'customers only': 63}
+2026-11-20 14:02 step parks done in 21 s
+2026-11-20 14:06 loops: 89 car parks tried, 40 ok
+2026-11-20 14:06 step loops done in 229 s
+2026-11-20 14:06 merge: 36 walks ( 15 routes, 21 car park loops ), 29 over 95 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 1, 'none': 35}
+2026-11-20 14:06 step merge done in 15 s
+2026-11-20 14:06 areas: 36 walks, 36 to extract, 55 new terrain tiles
+2026-11-20 14:16 areas: nodes 1912028 628 s
+2026-11-20 14:23 areas: extracted 36 1030 s
+2026-11-20 14:23 step areas done in 1040 s
+2026-11-20 14:25 build: 36 built, 0 failed this run
+2026-11-20 14:25 step build done in 90 s
+2026-11-20 14:25 pack: 25 kept, 11 failed the gates 8.8 MB
+2026-11-20 14:25   failed r90-1-coombe-hill-and-chequers-trail 0.2 km vs 10.5, 220 of 248 m off a path
+2026-11-20 14:25   failed r90-3-exploring-the-chiltern-escarpment 0.2 km vs 15.4, 218 of 248 m off a path
+2026-11-20 14:25   failed r90-6-kingfisher-trail 18.3 km vs 9.9, 2986 of 18348 m off a path
+2026-11-20 14:25   failed r90-13-watlington-hill-and-the-wormsley- 0.1 km vs 13.4, 118 of 141 m off a path
+2026-11-20 14:25   failed r90-14-hill-and-vale 9.8 km vs 6.8, 115 of 9804 m off a path
+2026-11-20 14:25   failed r90-24-walk-on-the-wild-side 10.3 km vs 5.6, 1541 of 10335 m off a path
+2026-11-20 14:25   failed r90-25-hertfordshire-chain 8.1 km vs 8.1, 902 of 8094 m off a path
+2026-11-20 14:25   failed r90-26-between-the-south-downs-and-the-s 0.2 km vs 6.7, 106 of 204 m off a path
+2026-11-20 14:25   failed r90-28-a 0.1 km vs 6.9, 126 of 131 m off a path
+2026-11-20 14:25   failed r90-32-chasm-explorer 6.3 km vs 4.8, 366 of 6283 m off a path
+2026-11-20 14:25   failed r90-36-otter-trail 3.7 km vs 5.8, 1169 of 3729 m off a path
+2026-11-20 14:25 step pack done in 1 s

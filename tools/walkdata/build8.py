@@ -170,7 +170,7 @@ def build(W,check):
         nodes=[nd for nd,_ in chain]
         nodeway={}
         for wid in mem:
-            for nd in ways[wid]["nd"]: nodeway.setdefault(nd,set()).add(ways[wid]["t"].get("name") or ways[wid]["t"].get("highway"))
+            for nd in ways[wid]["nd"]: nodeway.setdefault(nd,set()).add(ways[wid]["t"].get("name") or ways[wid]["t"].get("highway") or "unnamed way")
         def ways_of(ns):
             out=[]
             for a,b in zip(ns,ns[1:]): out+=list(nodeway.get(a,set())&nodeway.get(b,set()))

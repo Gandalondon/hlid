@@ -37,7 +37,7 @@
  },
  {
   "id": "r60-28-boundary",
-  "why": "TypeError: sequence item 0: expected str instance, NoneType found"
+  "why": "0.4 km vs 6.3, 352 of 362 m off a path"
  },
  {
   "id": "r60-29-dormans-park",
@@ -53,7 +53,7 @@
  },
  {
   "id": "r60-32-petworth-ancient-trees",
-  "why": "TypeError: sequence item 0: expected str instance, NoneType found"
+  "why": "0.2 km vs 5.7, 192 of 216 m off a path"
  },
  {
   "id": "r60-34-estate",
