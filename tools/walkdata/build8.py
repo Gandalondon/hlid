@@ -140,6 +140,11 @@ def build(W,check):
         if gl[0]==gl[-1]: gl=gl[:-1]
         loop=[m(p) for p in gl]; loopn=list(range(len(loop)))
         for k,q in enumerate(loop): pos[("g",k)]=q
+    elif W["how"]=="pts":   # 15 Nov: a loop already built on foot ways (sw-walks-v3 car park loops), lon/lat points
+        gl=list(W["pts"])
+        if gl[0]==gl[-1]: gl=gl[:-1]
+        loop=[m(p) for p in gl]; loopn=list(range(len(loop)))
+        for k,q in enumerate(loop): pos[("g",k)]=q
     elif W["how"]=="carpark":
         loopn,info=carpark_loop(G,pos,A,W,m); check.append(info)
         loop=[pos[n] for n in loopn]
@@ -199,7 +204,7 @@ def build(W,check):
         loopn=loopn[k:]+loopn[:k]
         loop=[pos[n] for n in loopn if n in pos]
         check.extend(notes)
-    if W["how"]=="given": pass
+    if W["how"] in ("given","pts"): pass
     elif W["how"] in ("park","carpark"):
         # start where the loop is nearest the start point (car park)
         k=min(range(len(loop)),key=lambda k: math.hypot(*loop[k])); loop=loop[k:]+loop[:k]; loopn=loopn[k:]+loopn[:k]
@@ -208,7 +213,7 @@ def build(W,check):
     LEN=sum(math.dist(a,b) for a,b in zip(loop,loop[1:]))
     # ---- every-metre check: each metre of the loop must lie on a foot way (within 2 m of its line) ----
     tree=STRtree(footlines); line=LineString(loop); n=int(LEN); bad=0; worst=0; badruns=[]
-    edges_ok=sum(1 for a,b in zip(loopn,loopn[1:]) if G.has_edge(a,b)) if W["how"]!="given" else -1
+    edges_ok=sum(1 for a,b in zip(loopn,loopn[1:]) if G.has_edge(a,b)) if W["how"] not in ("given","pts") else -1
     for s in range(n+1):
         p=line.interpolate(s); idx=tree.query(p.buffer(3)); d=min((footlines[j].distance(p) for j in idx),default=99)
         worst=max(worst,d)

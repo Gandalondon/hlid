@@ -36,7 +36,7 @@ BIG = {"motorway", "trunk", "primary", "secondary", "tertiary", "trunk_link", "p
 # ---------- extract ----------
 def extract(r):
     import osmium; from build8 import is_foot
-    C, D = cfg(r); B = C["box"]; pbf = f"{G}/{C['pbf']}"; t0 = time.time()
+    C, D = cfg(r); B = C["box"]; pbf = f"{G}/{C.get('pbf') or r + '.osm.pbf'}"; t0 = time.time()
     KEYS = ("highway", "designation", "foot", "access", "informal", "footway", "name", "fee", "operator", "capacity", "amenity", "parking",
             "tourism", "information", "leisure", "route", "type", "network", "surface", "tracktype", "ref", "prow_ref", "sac_scale")
     # pass 1: walking route relations and their member ways (relations come last in the file, so they need their own pass)
@@ -207,14 +207,17 @@ def loops(r):
     import networkx as nx, build8, pick
     C, D = cfg(r); P = json.load(open(f"{D}/parks.json")); OUT = f"{D}/loops.json"
     res = json.load(open(OUT)) if os.path.exists(OUT) else {}
-    F = load_foot(D)
+    F = load_foot(D); GRID = {}
+    for k, w in F["ways"].items():   # 0.05 x 0.1 degree cells, so each car park only scans the ways near it
+        for p in w["p"][::4] + w["p"][-1:]: GRID.setdefault((int(p[1] // 0.05), int(p[0] // 0.1)), set()).add(k)
     for i, c in enumerate(P):
         key = f"{c['lat']:.5f},{c['lon']:.5f}"
         if key in res: continue
         lat0, lon0 = c["lat"], c["lon"]; KX = 111320 * math.cos(math.radians(lat0)); KY = 111200
         def mm(p): return ((p[0] - lon0) * KX, (p[1] - lat0) * KY)
         box = 0.05
-        ways = {k: w for k, w in F["ways"].items() if any(abs(p[0] - lon0) < box * 1.9 and abs(p[1] - lat0) < box for p in w["p"][::4] + w["p"][-1:])}
+        near = set().union(*[GRID.get((int(lat0 // 0.05) + a, int(lon0 // 0.1) + b), set()) for a in (-2, -1, 0, 1, 2) for b in (-2, -1, 0, 1, 2)])
+        ways = {k: F["ways"][k] for k in near if any(abs(p[0] - lon0) < box * 1.9 and abs(p[1] - lat0) < box for p in F["ways"][k]["p"][::4] + F["ways"][k]["p"][-1:])}
         A = {"ways": ways, "rels": F["rels"]}; Gr = nx.Graph(); pos = {}
         for wid, w in ways.items():
             if not build8.is_foot(w["t"]): continue
@@ -362,7 +365,7 @@ def areas(r):
     KEYS = ("highway", "landuse", "natural", "leisure", "amenity", "waterway", "building", "railway", "designation", "access", "foot", "name", "fee", "parking", "route", "type",
             "surface", "sac_scale", "barrier", "prow_ref", "ref", "informal", "footway", "trail_visibility", "tracktype", "water", "wetland")
     S = min(a[0] for a in todo.values()); Wb = min(a[1] for a in todo.values()); N = max(a[2] for a in todo.values()); E = max(a[3] for a in todo.values())
-    nodes = {}; nodetags = {}; pbf = f"{G}/{C['pbf']}"
+    nodes = {}; nodetags = {}; pbf = f"{G}/{C.get('pbf') or r + '.osm.pbf'}"
     class NH(osmium.SimpleHandler):
         def node(self, n):
             l = n.location
@@ -398,7 +401,12 @@ def areas(r):
 
 # ---------- build + pack (build_all.py) ----------
 def build(r):
-    import build8
+    import build8, glob, numpy as np
+    for f in glob.glob(f"{ROOT}/data/terr50/*.asc"):   # tiles written by areas() after build8 was first imported
+        fh = open(f); h = {}
+        for _ in range(5): k, v = fh.readline().split(); h[k] = float(v)
+        key = (int(h["xllcorner"]), int(h["yllcorner"]))
+        if key not in build8.TILES: build8.TILES[key] = np.loadtxt(fh)
     C, D = cfg(r); n_ok = n_fail = 0
     for w in walks_ok(C, D):
         i = wid(C, w); out = f"{D}/maps/{i}.json"
