@@ -1,0 +1,94 @@
+name: Walk data
+
+# Builds Hlid walk data for one region with tools/walkdata/region.py and commits the results to the data-pipeline branch.
+# Runs on GitHub's machines, so Tony's Mac can be off. Switch off: Actions > Walk data > ... > Disable workflow.
+on:
+  workflow_dispatch:
+    inputs:
+      region:
+        description: Region file in data/regions (e.g. aberdeen, london)
+        required: true
+      steps:
+        description: Steps to run (all, or e.g. "merge areas build pack")
+        default: all
+
+permissions:
+  contents: write
+
+concurrency:
+  group: walkdata
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data-pipeline
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y -q osmium-tool
+          pip install -q osmium pyproj shapely networkx numpy scipy matplotlib pillow
+
+      - name: OS Terrain 50 (cached)
+        uses: actions/cache@v4
+        with:
+          path: data/terr50_gagg_gb.zip
+          key: terr50-2026
+
+      - name: Get OS Terrain 50
+        run: |
+          if [ ! -s data/terr50_gagg_gb.zip ]; then
+            curl -sSL --retry 3 -o data/terr50_gagg_gb.zip "https://api.os.uk/downloads/v1/products/Terrain50/downloads?area=GB&format=ASCII+Grid+and+GML+%28Grid%29&redirect"
+          fi
+          ls -la data/terr50_gagg_gb.zip
+
+      - name: Get OpenStreetMap for the region
+        run: |
+          R="${{ inputs.region }}"
+          python3 - "$R" <<'PY'
+          import json, sys, subprocess, os
+          r = sys.argv[1]; C = json.load(open(f"data/regions/{r}.json"))
+          files = []
+          for g in C["geofabrik"]:
+              f = "/tmp/" + g.replace("/", "_") + ".osm.pbf"
+              subprocess.run(["curl", "-sSL", "--retry", "3", "-o", f, f"https://download.geofabrik.de/{g}-latest.osm.pbf"], check=True); files.append(f)
+          if len(files) > 1: subprocess.run(["osmium", "merge", "-O", "-o", "/tmp/merged.osm.pbf", *files], check=True); src = "/tmp/merged.osm.pbf"
+          else: src = files[0]
+          s, w, n, e = C["box"]
+          subprocess.run(["osmium", "extract", "-O", "-b", f"{w},{s},{e},{n}", "-s", "smart", "-o", f"data/gb/{r}.osm.pbf", src], check=True)
+          print(os.path.getsize(f"data/gb/{r}.osm.pbf") // 1000000, "MB")
+          PY
+
+      - name: Build
+        run: |
+          R="${{ inputs.region }}"; S="${{ inputs.steps }}"
+          mkdir -p data/areas
+          if [ "$S" = "all" ]; then S="extract routes parks loops merge areas build pack"; fi
+          for s in $S; do python3 tools/walkdata/region.py $s $R; done
+
+      - name: Keep the big files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: walkdata-${{ inputs.region }}-${{ github.run_number }}
+          path: |
+            data/regions/${{ inputs.region }}/
+          retention-days: 30
+
+      - name: Commit results
+        if: always()
+        run: |
+          R="${{ inputs.region }}"
+          git config user.name "Hlid walk data"; git config user.email "hello@gethlid.app"
+          git add -f data/regions/$R/walks.json data/regions/$R/allwalks.json data/regions/$R/failed.json data/regions/$R/log.txt \
+            data/regions/$R/routes.json data/regions/$R/parks.json data/regions/$R/loops.json 2>/dev/null || true
+          git commit -m "Walk data: $R (run ${{ github.run_number }}) [skip ci]" || exit 0
+          git pull -q --rebase origin data-pipeline && git push -q origin HEAD:data-pipeline
