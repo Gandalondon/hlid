@@ -1,1 +1,22 @@
 2026-11-20 23:02 extract: pass 1 5137 walking routes 16 s
+2026-11-20 23:18 extract: 32200 ways 2471 car parks 931 pois 75 routes 1849 named places 933 s
+2026-11-20 23:18 step extract done in 935 s
+2026-11-20 23:18 routes: 75 relations -> 6 checked, 5 kept; out: {'not a loop': 47, 'too short': 17, 'too long': 3, 'no free car park within 400 m': 2} ; dropped: {'roads': 1, 'car park': 0}
+2026-11-20 23:18 step routes done in 2 s
+2026-11-20 23:18 parks: 2471 car parks -> 57 pass -> 45 after 2 km spacing; out: {'fee not no': 2054, 'honeypot at start': 74, 'access': 239, 'too flat': 37, 'customers only': 10}
+2026-11-20 23:18 step parks done in 1 s
+2026-11-20 23:18 loops: 45 car parks tried, 9 ok
+2026-11-20 23:18 step loops done in 37 s
+2026-11-20 23:19 merge: 12 walks ( 3 routes, 9 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 2, 'none': 10}
+2026-11-20 23:19 step merge done in 3 s
+2026-11-20 23:19 areas: 12 walks, 12 to extract, 22 new terrain tiles
+2026-11-20 23:26 areas: nodes 477398 443 s
+2026-11-20 23:31 areas: extracted 12 776 s
+2026-11-20 23:31 step areas done in 776 s
+2026-11-20 23:32 build: 12 built, 0 failed this run
+2026-11-20 23:32 step build done in 43 s
+2026-11-20 23:32 pack: 9 kept, 3 failed the gates 2.9 MB
+2026-11-20 23:32   failed shr-2-george-maw-trail 5.6 km vs 6.2, 1136 of 5631 m off a path
+2026-11-20 23:32   failed shr-3-the-burway-loop-a 9.0 km vs 9.0, 299 of 9040 m off a path
+2026-11-20 23:32   failed shr-12-wilfred-s 9.5 km vs 4.9, 652 of 9456 m off a path
+2026-11-20 23:32 step pack done in 0 s

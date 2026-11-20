@@ -1,0 +1,150 @@
+[
+ {
+  "source": "osm route",
+  "id": 377466,
+  "name": "Wilfred's Walk",
+  "km": 4.9,
+  "climb": 93,
+  "top_m": 146,
+  "walk_min": 68,
+  "car_park": [
+   52.728352,
+   -2.674277
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4913,
+  "road_m": 0,
+  "honeypot": [
+   "at the car park: cafe"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 1804456,
+  "name": "The Stiperstones Circular",
+  "km": 8.3,
+  "climb": 343,
+  "top_m": 528,
+  "walk_min": 134,
+  "car_park": [
+   52.574259,
+   -2.950808
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6520,
+  "road_m": 1747,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.7 km on roads"
+  ],
+  "roads": {
+   "unclassified": 1747
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 15088570,
+  "name": "Major's Leap Walk, Wenlock Edge",
+  "km": 5.3,
+  "climb": 216,
+  "top_m": 265,
+  "walk_min": 85,
+  "car_park": [
+   52.593249,
+   -2.573106
+  ],
+  "car_park_name": "Much Wenlock National Trust Car Park",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5276,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 19849967,
+  "name": "The Burway Loop: A Walk to the Top of the Long Mynd, Carding Mill Valley",
+  "km": 9.0,
+  "climb": 297,
+  "top_m": 516,
+  "walk_min": 138,
+  "car_park": [
+   52.545825,
+   -2.85354
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8718,
+  "road_m": 322,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Carding Mill Valley": 215,
+   "The Portway": 97,
+   "Burway Road": 11
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19853783,
+  "name": "Ironbridge Walk, Benthall Hall",
+  "km": 5.7,
+  "climb": 175,
+  "top_m": 195,
+  "walk_min": 86,
+  "car_park": [
+   52.631667,
+   -2.50266
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5738,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 19853835,
+  "name": "George Maw Trail, Benthall Hall",
+  "km": 6.2,
+  "climb": 343,
+  "top_m": 195,
+  "walk_min": 108,
+  "car_park": [
+   52.631667,
+   -2.50266
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5882,
+  "road_m": 282,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Bridge Road": 252,
+   "service": 22,
+   "residential": 8
+  }
+ }
+]
