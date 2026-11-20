@@ -133,6 +133,7 @@ def routes(r):
         reason = None
         if not circ: reason = "not a loop"
         elif m(c0, home) / 1000 > C["route_km"]: reason = "too far"
+        elif m(c0, home) / 1000 < C.get("route_km_min", 0): reason = "too near (inner ring)"
         elif L < 4: reason = "too short"
         elif L > 16: reason = "too long"
         elif BAD.search(rel["t"]["name"] or ""): reason = "not a country walk (name)"
@@ -272,13 +273,13 @@ def merge(r):
     dr = osrm(home, [(w["car_park"][1], w["car_park"][0]) for w in R]); dl = osrm(home, [(v["lon"], v["lat"]) for v in L])
     out = []; far = 0
     for w, dm in zip(R, dr):
-        if dm is None or dm > C["drive_max"]: far += 1; continue
+        if dm is None or dm > C["drive_max"] or dm < C.get("drive_min", 0): far += 1; continue
         rs = w["road_m"] / max(1, w["foot_m"] + w["road_m"])
         out.append(dict(source="osm route", name=w["name"], km=w["km"], climb=w["climb"], top_m=w["top_m"], walk_min=w["walk_min"], drive_min=dm,
                         car_park=w["car_park"], car_park_check=w["car_park_check"], road_m=w["road_m"], waymarked=1.0, honeypot=w["honeypot"], osm_relation=w["id"],
                         score=score(w["km"], w["climb"], dm, 1.0, rs, w["honeypot"], w["car_park_check"] == "free")))
     for v, dm in zip(L, dl):
-        if dm is None or dm > C["drive_max"]: far += 1; continue
+        if dm is None or dm > C["drive_max"] or dm < C.get("drive_min", 0): far += 1; continue
         out.append(dict(source="car park loop", name=v.get("name") or f"Free car park near {C['label']}", km=v["km"], climb=v["climb"], top_m=v["top_m"],
                         walk_min=v["walk_min"], drive_min=dm, car_park=[v["lat"], v["lon"]], car_park_check="free", road_m=0, waymarked=v["waymarked"], honeypot=[],
                         repeat_m=v["repeat_m"], loop=v["loop"], score=score(v["km"], v["climb"], dm, v["waymarked"], 0, [], True)))
@@ -330,7 +331,7 @@ def merge(r):
     for i, w in enumerate(out): w["rank"] = i + 1; w["region"] = r
     json.dump(out, open(f"{D}/walks.json", "w"), indent=1)
     log(D, "merge:", len(out), "walks (", sum(w["source"] == "osm route" for w in out), "routes,", sum(w["source"] == "car park loop" for w in out),
-        "car park loops ),", far, "over", C["drive_max"], "min drive; busy:", {k: sum(w["busy"] == k for w in out) for k in ("always", "busy_days", "none")})
+        "car park loops ),", far, "over", C["drive_max"], "min drive (or under drive_min); busy:", {k: sum(w["busy"] == k for w in out) for k in ("always", "busy_days", "none")})
 
 # ---------- areas + terrain (extract_areas.py + build_all.py prep) ----------
 def wid(C, w): return slug(f"{C['prefix']}-{w['rank']}-{w.get('name_auto') or w['name']}")

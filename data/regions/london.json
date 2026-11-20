@@ -1,0 +1,1 @@
+{"id": "london", "label": "London", "prefix": "ldn", "home": [-0.231, 51.409], "box": [51.049, -0.807, 51.769, 0.345], "geofabrik": ["europe/united-kingdom/england"], "straight_km": [0, 35], "route_km_min": 0, "route_km": 40, "drive_min": 0, "drive_max": 35, "veto": "veto-sw-london.json"}

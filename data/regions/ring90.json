@@ -1,0 +1,1 @@
+{"id": "ring90", "label": "London, 1 to 1.5 h", "prefix": "r90", "home": [-0.231, 51.409], "box": [50.373, -1.888, 52.445, 1.426], "geofabrik": ["europe/united-kingdom/england"], "straight_km": [50, 110], "route_km_min": 50, "route_km": 110, "drive_min": 66, "drive_max": 95, "veto": "veto-sw-london.json"}
