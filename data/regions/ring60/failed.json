@@ -1,0 +1,70 @@
+[
+ {
+  "id": "r60-2-beacon-hill",
+  "why": "9.5 km vs 7.1, 1230 of 9489 m off a path"
+ },
+ {
+  "id": "r60-5-views-of-the-hughenden-manor-estat",
+  "why": "9.2 km vs 8.9, 320 of 9248 m off a path"
+ },
+ {
+  "id": "r60-8-harewoods-lodge-farm",
+  "why": "9.5 km vs 7.5, 745 of 9522 m off a path"
+ },
+ {
+  "id": "r60-13-tillingbourne",
+  "why": "15.2 km vs 12.1, 2075 of 15233 m off a path"
+ },
+ {
+  "id": "r60-14-shottermill-to-marley-common-and-",
+  "why": "6.6 km vs 6.6, 585 of 6567 m off a path"
+ },
+ {
+  "id": "r60-19-hambleden-and-pheasant-s-hill-tra",
+  "why": "9.1 km vs 9.1, 666 of 9067 m off a path"
+ },
+ {
+  "id": "r60-21-weardale",
+  "why": "9.3 km vs 8.3, 719 of 9252 m off a path"
+ },
+ {
+  "id": "r60-22-cookham-and-cock-marsh",
+  "why": "0.1 km vs 6.7, 122 of 131 m off a path"
+ },
+ {
+  "id": "r60-26-abinger-roughs-to-gomshall",
+  "why": "9.9 km vs 9.9, 629 of 9881 m off a path"
+ },
+ {
+  "id": "r60-28-boundary",
+  "why": "TypeError: sequence item 0: expected str instance, NoneType found"
+ },
+ {
+  "id": "r60-29-dormans-park",
+  "why": "7.0 km vs 7.1, 290 of 6994 m off a path"
+ },
+ {
+  "id": "r60-30-heathland-hike",
+  "why": "7.8 km vs 5.8, 833 of 7844 m off a path"
+ },
+ {
+  "id": "r60-31-tykes-water-beyond",
+  "why": "7.5 km vs 7.0, 685 of 7501 m off a path"
+ },
+ {
+  "id": "r60-32-petworth-ancient-trees",
+  "why": "TypeError: sequence item 0: expected str instance, NoneType found"
+ },
+ {
+  "id": "r60-34-estate",
+  "why": "4.9 km vs 4.7, 746 of 4888 m off a path"
+ },
+ {
+  "id": "r60-35-limpsfield-common-and-the-carpent",
+  "why": "5.9 km vs 5.7, 339 of 5915 m off a path"
+ },
+ {
+  "id": "r60-36-grayswood",
+  "why": "4.3 km vs 4.3, 482 of 4315 m off a path"
+ }
+]

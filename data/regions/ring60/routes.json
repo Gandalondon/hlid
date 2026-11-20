@@ -1,0 +1,2932 @@
+[
+ {
+  "source": "osm route",
+  "id": 8470,
+  "name": "Chattenden Woods Walk",
+  "km": 5.8,
+  "climb": 132,
+  "top_m": 67,
+  "walk_min": 83,
+  "car_park": [
+   51.432951,
+   0.498679
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4662,
+  "road_m": 1161,
+  "honeypot": [
+   "at the car park: restaurant"
+  ],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "Cooling Street": 628,
+   "unclassified": 533
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 274314,
+  "name": "circular walk",
+  "km": 8.5,
+  "climb": 120,
+  "top_m": 147,
+  "walk_min": 114,
+  "car_park": [
+   51.955953,
+   -0.172623
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7411,
+  "road_m": 1062,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.1 km on roads"
+  ],
+  "roads": {
+   "Back Lane": 547,
+   "Church Lane": 215,
+   "Damask Green Road": 153,
+   "service": 64
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 410689,
+  "name": "Heathland Hike, Hindhead",
+  "km": 5.8,
+  "climb": 75,
+  "top_m": 88,
+  "walk_min": 77,
+  "car_park": [
+   51.150151,
+   -0.675456
+  ],
+  "car_park_name": "Lea Coach Road Car Park",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5779,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 1450247,
+  "name": "Walk on the wild side",
+  "km": 5.6,
+  "climb": 176,
+  "top_m": 176,
+  "walk_min": 85,
+  "car_park": [
+   51.957185,
+   -0.3539
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5052,
+  "road_m": 542,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Pegsdon Way": 292,
+   "Apsley End Road": 132,
+   "unclassified": 94,
+   "service": 25
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 2867847,
+  "name": "Merry Hill Circular Footpath",
+  "km": 6.4,
+  "climb": 123,
+  "top_m": 120,
+  "walk_min": 89,
+  "car_park": [
+   51.636255,
+   -0.360968
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6338,
+  "road_m": 13,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Merry Hill Road": 13
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 3003287,
+  "name": "Biggin Hill Circular Walk",
+  "km": 11.4,
+  "climb": 218,
+  "top_m": 226,
+  "walk_min": 159,
+  "car_park": [
+   51.293097,
+   0.025853
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 9189,
+  "road_m": 2258,
+  "honeypot": [
+   "at the car park: cafe, playground"
+  ],
+  "keep": false,
+  "drop": [
+   "2.3 km on roads"
+  ],
+  "roads": {
+   "Main Road": 530,
+   "Paynesfield Road": 367,
+   "Victoria Gardens": 211,
+   "Ricketts Hill Road": 196
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 5518314,
+  "name": "Corner of Four Counties walk (SCC)",
+  "km": 8.9,
+  "climb": 213,
+  "top_m": 170,
+  "walk_min": 128,
+  "car_park": [
+   51.166934,
+   0.009552
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8297,
+  "road_m": 589,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Ford Manor Road": 589
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 5519811,
+  "name": "Dormans Park Walk (SCC)",
+  "km": 7.1,
+  "climb": 116,
+  "top_m": 104,
+  "walk_min": 96,
+  "car_park": [
+   51.146137,
+   -0.017283
+  ],
+  "car_park_name": "Charters Village Visitors",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6770,
+  "road_m": 303,
+  "honeypot": [
+   "at the car park: cafe"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Blackberry Road": 178,
+   "path": 75,
+   "Dormans Station Road": 33,
+   "Blackberry Lane": 17
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 5525996,
+  "name": "Grayswood walk (SCC)",
+  "km": 4.3,
+  "climb": 136,
+  "top_m": 185,
+  "walk_min": 65,
+  "car_park": [
+   51.104953,
+   -0.690794
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3809,
+  "road_m": 507,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Three Gates Lane": 331,
+   "Sandy Lane": 158,
+   "service": 18
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 5537392,
+  "name": "Medieval Waverley (SCC)",
+  "km": 9.3,
+  "climb": 250,
+  "top_m": 162,
+  "walk_min": 136,
+  "car_park": [
+   51.191554,
+   -0.723933
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 7457,
+  "road_m": 1822,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.8 km on roads"
+  ],
+  "roads": {
+   "Whitmead Lane": 448,
+   "Tilford Street": 391,
+   "Waverley Lane": 236,
+   "Botany Hill": 208
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 5553415,
+  "name": "Prospects of Polesden (SCC)",
+  "km": 7.9,
+  "climb": 258,
+  "top_m": 198,
+  "walk_min": 121,
+  "car_park": [
+   51.26256,
+   -0.373211
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7851,
+  "road_m": 68,
+  "honeypot": [
+   "at the car park: cafe"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 54,
+   "Polesden Road": 14
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 5569618,
+  "name": "Tillingbourne at work (long) (SCC)",
+  "km": 12.1,
+  "climb": 279,
+  "top_m": 121,
+  "walk_min": 173,
+  "car_park": [
+   51.226334,
+   -0.519226
+  ],
+  "car_park_name": "St Martha's Hill - Guildford Lane Car Park",
+  "car_park_check": "free",
+  "car_park_operator": "Surrey Wildlife Trust",
+  "foot_m": 11244,
+  "road_m": 847,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Park Road": 598,
+   "Chantry Lane": 176,
+   "Guildford Lane": 40,
+   "Blackheath Lane": 15
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 6951138,
+  "name": "Risborough Red Route",
+  "km": 6.4,
+  "climb": 228,
+  "top_m": 232,
+  "walk_min": 100,
+  "car_park": [
+   51.744926,
+   -0.80592
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5282,
+  "road_m": 1144,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.1 km on roads"
+  ],
+  "roads": {
+   "Aylesbury Road": 277,
+   "Askett Lane": 264,
+   "Church Lane": 157,
+   "service": 123
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 8640772,
+  "name": "Woodland Walk",
+  "km": 4.0,
+  "climb": 155,
+  "top_m": 226,
+  "walk_min": 64,
+  "car_park": [
+   51.787126,
+   -0.660217
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4019,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 8656982,
+  "name": "Boundary Walk, Hughenden",
+  "km": 6.3,
+  "climb": 132,
+  "top_m": 173,
+  "walk_min": 89,
+  "car_park": [
+   51.651202,
+   -0.756776
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5899,
+  "road_m": 446,
+  "honeypot": [
+   "at the car park: cafe, playground, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Littleworth Road": 201,
+   "St Michael & All Angels": 106,
+   "service": 99,
+   "Coates Lane": 40
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 9506235,
+  "name": "Chelwood Vachery (Ashdown Forest on foot)",
+  "km": 5.0,
+  "climb": 115,
+  "top_m": 191,
+  "walk_min": 71,
+  "car_park": [
+   51.060926,
+   0.035505
+  ],
+  "car_park_name": "Long U",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 4977,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 9852929,
+  "name": "Wildlife Walk, Ashridge Estate",
+  "km": 11.4,
+  "climb": 125,
+  "top_m": 246,
+  "walk_min": 149,
+  "car_park": [
+   51.807488,
+   -0.59254
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 11002,
+  "road_m": 406,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "track": 382,
+   "Monument Drive": 24
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 10978141,
+  "name": "Turpin's Trail 1",
+  "km": 12.1,
+  "climb": 112,
+  "top_m": 111,
+  "walk_min": 156,
+  "car_park": [
+   51.954338,
+   0.341593
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 10823,
+  "road_m": 1275,
+  "honeypot": [
+   "at the car park: restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.3 km on roads"
+  ],
+  "roads": {
+   "Copthall Lane": 257,
+   "Bardfield End Green Road": 218,
+   "Flemings Farm Lane": 197,
+   "Weaverhead Lane": 192
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 12792941,
+  "name": "Parkfield, Oakmere & Beyond 4 mile walk",
+  "km": 6.9,
+  "climb": 85,
+  "top_m": 127,
+  "walk_min": 91,
+  "car_park": [
+   51.696271,
+   -0.176132
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4870,
+  "road_m": 2042,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "2.0 km on roads"
+  ],
+  "roads": {
+   "footway": 787,
+   "Swanley Bar Lane": 613,
+   "Great North Road": 302,
+   "Billy Lows Lane": 194
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 12796970,
+  "name": "Shenley Route 5",
+  "km": 12.2,
+  "climb": 131,
+  "top_m": 131,
+  "walk_min": 159,
+  "car_park": [
+   51.703935,
+   -0.289381
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 9470,
+  "road_m": 2720,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.7 km on roads"
+  ],
+  "roads": {
+   "Rectory Lane": 1054,
+   "footway": 999,
+   "Woodhall Lane": 247,
+   "Mimms Lane": 240
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 12801307,
+  "name": "Shenley Walk 4",
+  "km": 6.4,
+  "climb": 94,
+  "top_m": 132,
+  "walk_min": 86,
+  "car_park": [
+   51.688573,
+   -0.278634
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5244,
+  "road_m": 1178,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "footway": 848,
+   "King Charles Road": 121,
+   "Armstrong Gardens": 67,
+   "Nell Gwynn Close": 52
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 12801308,
+  "name": "Shenley Walk 3",
+  "km": 5.4,
+  "climb": 75,
+  "top_m": 118,
+  "walk_min": 72,
+  "car_park": [
+   51.69075,
+   -0.292585
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3588,
+  "road_m": 1811,
+  "honeypot": [
+   "at the car park: cafe, playground"
+  ],
+  "keep": false,
+  "drop": [
+   "1.8 km on roads"
+  ],
+  "roads": {
+   "Shenley Road": 767,
+   "Shenley Hill": 472,
+   "Radlett Lane": 191,
+   "The Avenue": 187
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 12862088,
+  "name": "Oak Trail",
+  "km": 10.5,
+  "climb": 112,
+  "top_m": 114,
+  "walk_min": 137,
+  "car_park": [
+   51.671875,
+   0.100954
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 9050,
+  "road_m": 1433,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant"
+  ],
+  "keep": false,
+  "drop": [
+   "1.4 km on roads"
+  ],
+  "roads": {
+   "Coppice Row": 681,
+   "Forest Drive": 453,
+   "Station Approach": 173,
+   "service": 114
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 12901574,
+  "name": "Berry's Green Circular Walk",
+  "km": 12.8,
+  "climb": 253,
+  "top_m": 240,
+  "walk_min": 179,
+  "car_park": [
+   51.318357,
+   0.073596
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 10501,
+  "road_m": 2291,
+  "honeypot": [
+   "at the car park: playground, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "2.3 km on roads"
+  ],
+  "roads": {
+   "Birdhouse Lane": 441,
+   "Bombers Lane": 336,
+   "Cudham Lane South": 295,
+   "Berry's Green Road": 274
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 13751739,
+  "name": "Lea Valley Circle",
+  "km": 5.5,
+  "climb": 93,
+  "top_m": 117,
+  "walk_min": 76,
+  "car_park": [
+   51.811854,
+   -0.296326
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3663,
+  "road_m": 1883,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.9 km on roads"
+  ],
+  "roads": {
+   "footway": 915,
+   "Marshalls Heath Lane": 656,
+   "Cherry Tree Lane": 271,
+   "Leasey Bridge Lane": 27
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 13753597,
+  "name": "Devil's Dyke & Nomansland",
+  "km": 7.3,
+  "climb": 136,
+  "top_m": 120,
+  "walk_min": 102,
+  "car_park": [
+   51.808751,
+   -0.284351
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3613,
+  "road_m": 3714,
+  "honeypot": [
+   "at the car park: playground, restaurant"
+  ],
+  "keep": false,
+  "drop": [
+   "3.7 km on roads"
+  ],
+  "roads": {
+   "Bull Lane": 836,
+   "Amwell Lane": 656,
+   "footway": 631,
+   "Brewhouse Hill": 507
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 13753654,
+  "name": "Above the Lea Valley",
+  "km": 10.3,
+  "climb": 149,
+  "top_m": 128,
+  "walk_min": 139,
+  "car_park": [
+   51.811854,
+   -0.296326
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7175,
+  "road_m": 3141,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "3.1 km on roads"
+  ],
+  "roads": {
+   "footway": 629,
+   "service": 444,
+   "Mackerye End": 408,
+   "Marshalls Heath Lane": 362
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 13753687,
+  "name": "The Romans & Nomansland",
+  "km": 12.1,
+  "climb": 104,
+  "top_m": 119,
+  "walk_min": 156,
+  "car_park": [
+   51.808751,
+   -0.284351
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8103,
+  "road_m": 3999,
+  "honeypot": [
+   "at the car park: playground, restaurant"
+  ],
+  "keep": false,
+  "drop": [
+   "4.0 km on roads"
+  ],
+  "roads": {
+   "Cromer Hyde Lane": 1760,
+   "footway": 1047,
+   "Dyke Lane": 416,
+   "Hammonds Lane": 312
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 13753707,
+  "name": "Lamer & Ayot St Lawrence",
+  "km": 11.9,
+  "climb": 84,
+  "top_m": 126,
+  "walk_min": 152,
+  "car_park": [
+   51.812843,
+   -0.292983
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 10861,
+  "road_m": 1084,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.1 km on roads"
+  ],
+  "roads": {
+   "footway": 511,
+   "Bride Hall Lane": 173,
+   "Hill Farm Lane": 142,
+   "Sheepcote Lane": 125
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 13753733,
+  "name": "Old Railway & River Lea",
+  "km": 12.2,
+  "climb": 160,
+  "top_m": 128,
+  "walk_min": 162,
+  "car_park": [
+   51.814344,
+   -0.291853
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 10533,
+  "road_m": 1631,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.6 km on roads"
+  ],
+  "roads": {
+   "Ayot Green": 624,
+   "footway": 618,
+   "Brickwall Close": 174,
+   "Sheepcote Lane": 125
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 13797612,
+  "name": "Yellow Trail",
+  "km": 4.4,
+  "climb": 98,
+  "top_m": 122,
+  "walk_min": 62,
+  "car_park": [
+   51.720455,
+   -0.145142
+  ],
+  "car_park_name": "Great Wood Car Park",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4256,
+  "road_m": 122,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 122
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 14082892,
+  "name": "Ver Valley Walk 2",
+  "km": 10.1,
+  "climb": 99,
+  "top_m": 160,
+  "walk_min": 131,
+  "car_park": [
+   51.81928,
+   -0.440796
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5826,
+  "road_m": 4250,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "4.3 km on roads"
+  ],
+  "roads": {
+   "Old Watling Street": 1895,
+   "London Road": 646,
+   "Singlets Lane": 469,
+   "High Street": 228
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 14087499,
+  "name": "Samuel Palmer Trail",
+  "km": 7.4,
+  "climb": 205,
+  "top_m": 137,
+  "walk_min": 110,
+  "car_park": [
+   51.350358,
+   0.171778
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6205,
+  "road_m": 1214,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "Church Street": 408,
+   "Cockerhurst Road": 370,
+   "Shacklands Road": 199,
+   "Redmans Lane": 106
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 14108661,
+  "name": "Tykes Water & Beyond",
+  "km": 7.0,
+  "climb": 66,
+  "top_m": 130,
+  "walk_min": 91,
+  "car_park": [
+   51.672582,
+   -0.275285
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6230,
+  "road_m": 806,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Thirsk Road": 204,
+   "Aycliffe Road": 144,
+   "footway": 131,
+   "Clifton Way": 113
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 14119948,
+  "name": "Ver Valley Walk 5",
+  "km": 13.3,
+  "climb": 93,
+  "top_m": 130,
+  "walk_min": 169,
+  "car_park": [
+   51.754032,
+   -0.352917
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 9179,
+  "road_m": 4090,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "4.1 km on roads"
+  ],
+  "roads": {
+   "Beesonend Lane": 2183,
+   "East Common": 709,
+   "Cross Lane": 368,
+   "Branch Road": 273
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 15580557,
+  "name": "Tring Parish Walks: 1- Little Tring",
+  "km": 5.1,
+  "climb": 81,
+  "top_m": 158,
+  "walk_min": 70,
+  "car_park": [
+   51.804953,
+   -0.658779
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4140,
+  "road_m": 1004,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "1.0 km on roads"
+  ],
+  "roads": {
+   "footway": 935,
+   "service": 56,
+   "Miswell Lane": 6,
+   "Frogmore Street": 4
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18107623,
+  "name": "The Candlestick Loop",
+  "km": 6.6,
+  "climb": 72,
+  "top_m": 107,
+  "walk_min": 86,
+  "car_park": [
+   51.760114,
+   -0.153825
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5556,
+  "road_m": 1040,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.0 km on roads"
+  ],
+  "roads": {
+   "West End Lane": 672,
+   "unclassified": 368
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19229756,
+  "name": "Chasm Explorer, Sussex East",
+  "km": 4.8,
+  "climb": 285,
+  "top_m": 215,
+  "walk_min": 86,
+  "car_park": [
+   50.8845,
+   -0.212305
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4428,
+  "road_m": 347,
+  "honeypot": [
+   "at the car park: playground, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "The Devil's Dyke": 180,
+   "Devil's Dyke Road": 101,
+   "unclassified": 66
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19238422,
+  "name": "Windmill Hill at Waddesdon,",
+  "km": 5.0,
+  "climb": 124,
+  "top_m": 137,
+  "walk_min": 72,
+  "car_park": [
+   51.842192,
+   -0.925005
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4162,
+  "road_m": 812,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 639,
+   "Windmill Hill Archive": 173
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19249922,
+  "name": "Wolstonbury Hill Explore Nature Walk, Sussex East",
+  "km": 5.4,
+  "climb": 248,
+  "top_m": 205,
+  "walk_min": 90,
+  "car_park": [
+   50.91316,
+   -0.15455
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "Jack and Jill",
+  "foot_m": 4358,
+  "road_m": 1080,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "1.1 km on roads"
+  ],
+  "roads": {
+   "New Way Lane": 1040,
+   "Brighton Road": 40
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19258276,
+  "name": "Petworth Ancient Trees Walk, Petworth",
+  "km": 5.7,
+  "climb": 136,
+  "top_m": 111,
+  "walk_min": 81,
+  "car_park": [
+   50.994351,
+   -0.611801
+  ],
+  "car_park_name": "Petworth House Car Park",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4878,
+  "road_m": 778,
+  "honeypot": [
+   "at the car park: playground, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 778
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19318764,
+  "name": "Petworth Park Through Turner's Eyes, Petworth",
+  "km": 5.2,
+  "climb": 63,
+  "top_m": 73,
+  "walk_min": 69,
+  "car_park": [
+   50.994351,
+   -0.611801
+  ],
+  "car_park_name": "Petworth House Car Park",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5039,
+  "road_m": 175,
+  "honeypot": [
+   "at the car park: playground, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 175
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19322273,
+  "name": "Takeley to Wall Wood Circular Walk, Hatfield Forest",
+  "km": 14.3,
+  "climb": 84,
+  "top_m": 103,
+  "walk_min": 180,
+  "car_park": [
+   51.868507,
+   0.246817
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 11409,
+  "road_m": 2913,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.9 km on roads"
+  ],
+  "roads": {
+   "Howe Green Road": 1218,
+   "Wood Row": 678,
+   "service": 428,
+   "Hatfield Forest Road": 312
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19397268,
+  "name": "Bradenham Countryside Trail, Bradenham",
+  "km": 7.7,
+  "climb": 128,
+  "top_m": 194,
+  "walk_min": 105,
+  "car_park": [
+   51.667243,
+   -0.804189
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 2882,
+  "road_m": 4799,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "4.8 km on roads"
+  ],
+  "roads": {
+   "Park Wood": 4038,
+   "Bradenham Wood Lane": 363,
+   "Bradenham Manor": 181,
+   "St Botolph's, Bradenham": 83
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19397299,
+  "name": "Bradenham Beech Woods Walk, Bradenham",
+  "km": 12.6,
+  "climb": 263,
+  "top_m": 193,
+  "walk_min": 177,
+  "car_park": [
+   51.667243,
+   -0.804189
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7514,
+  "road_m": 5052,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "5.1 km on roads"
+  ],
+  "roads": {
+   "Park Wood": 4038,
+   "Smalldean Lane": 665,
+   "Bradenham Manor": 181,
+   "St Botolph's, Bradenham": 83
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19400405,
+  "name": "Bradenham: Chiltern Hills, Valleys and Woodlands Walk, Bradenham",
+  "km": 13.1,
+  "climb": 295,
+  "top_m": 225,
+  "walk_min": 187,
+  "car_park": [
+   51.683658,
+   -0.810668
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 9264,
+  "road_m": 3843,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "3.8 km on roads"
+  ],
+  "roads": {
+   "Kiln Lane": 860,
+   "Highwood Bottom": 778,
+   "Loosley Hill": 556,
+   "Smalldean Lane": 357
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19400586,
+  "name": "Wycombe West Ridges and Bottoms walk, West Wycombe Village",
+  "km": 13.5,
+  "climb": 401,
+  "top_m": 192,
+  "walk_min": 202,
+  "car_park": [
+   51.648382,
+   -0.805982
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 11094,
+  "road_m": 2428,
+  "honeypot": [
+   "at the car park: cafe"
+  ],
+  "keep": false,
+  "drop": [
+   "2.4 km on roads"
+  ],
+  "roads": {
+   "Chinnor Road": 787,
+   "Green End Road": 355,
+   "Church Lane": 256,
+   "Oxford Road": 240
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19405441,
+  "name": "Watlington Hill and the Wormsley Estate walk, Watlington Hill",
+  "km": 13.4,
+  "climb": 386,
+  "top_m": 252,
+  "walk_min": 200,
+  "car_park": [
+   51.640443,
+   -0.992095
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 12588,
+  "road_m": 839,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Hill Road": 590,
+   "tertiary": 118,
+   "The Fox & Hounds": 94,
+   "Christmas Common Road": 37
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19406719,
+  "name": "Views of the Hughenden Manor Estate Walk, Hughenden",
+  "km": 8.9,
+  "climb": 186,
+  "top_m": 187,
+  "walk_min": 126,
+  "car_park": [
+   51.651837,
+   -0.751146
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 8079,
+  "road_m": 835,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Hunts Hill Lane": 357,
+   "Littleworth Road": 201,
+   "St Michael & All Angels": 106,
+   "service": 99
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19426790,
+  "name": "Beacon Hill, Juniper Bank and Aston Wood Walk, Central Chilterns",
+  "km": 7.1,
+  "climb": 248,
+  "top_m": 254,
+  "walk_min": 110,
+  "car_park": [
+   51.672779,
+   -0.949531
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6630,
+  "road_m": 466,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 281,
+   "primary": 112,
+   "service": 73
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19430199,
+  "name": "Chiltern Hills Three-in-One walk, Central Chilterns",
+  "km": 14.3,
+  "climb": 318,
+  "top_m": 188,
+  "walk_min": 204,
+  "car_park": [
+   51.665497,
+   -0.804256
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 12604,
+  "road_m": 1704,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.7 km on roads"
+  ],
+  "roads": {
+   "Church Lane": 413,
+   "Hunts Hill Lane": 357,
+   "High Street": 229,
+   "Bradenham Wood Lane": 156
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19430208,
+  "name": "Coombe Hill and Chequers Trail, Central Chilterns",
+  "km": 10.5,
+  "climb": 444,
+  "top_m": 258,
+  "walk_min": 171,
+  "car_park": [
+   51.733888,
+   -0.795489
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 10288,
+  "road_m": 255,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 127,
+   "Missenden Road": 100,
+   "Ellesborough Road": 28
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19437168,
+  "name": "Hambleden and Pheasant\u2019s Hill trail, Central Chilterns",
+  "km": 9.1,
+  "climb": 110,
+  "top_m": 146,
+  "walk_min": 120,
+  "car_park": [
+   51.572362,
+   -0.868613
+  ],
+  "car_park_name": "Dene",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8368,
+  "road_m": 691,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 297,
+   "Colstrope Lane": 271,
+   "Skirmett Road": 123
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19450527,
+  "name": "Exploring the Chiltern Escarpment, Central Chilterns",
+  "km": 15.4,
+  "climb": 507,
+  "top_m": 258,
+  "walk_min": 236,
+  "car_park": [
+   51.748527,
+   -0.767724
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 15077,
+  "road_m": 369,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 138,
+   "service": 123,
+   "Chalkshire Road": 57,
+   "Ellesborough Road": 24
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19455173,
+  "name": "Hambleden Valley, Turville and Fingest, Central Chilterns",
+  "km": 15.5,
+  "climb": 182,
+  "top_m": 188,
+  "walk_min": 204,
+  "car_park": [
+   51.613654,
+   -0.892714
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 12835,
+  "road_m": 2643,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.6 km on roads"
+  ],
+  "roads": {
+   "Fingest Lane": 710,
+   "unclassified": 498,
+   "Dudley Lane": 422,
+   "tertiary": 190
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19483325,
+  "name": "Alfriston Clergy House Countryside Walk, Alfriston",
+  "km": 8.7,
+  "climb": 221,
+  "top_m": 173,
+  "walk_min": 127,
+  "car_park": [
+   50.809219,
+   0.156574
+  ],
+  "car_park_name": "The Dene",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 7203,
+  "road_m": 1530,
+  "honeypot": [
+   "at the car park: cafe, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.5 km on roads"
+  ],
+  "roads": {
+   "West Street": 722,
+   "The Village": 428,
+   "River Lane": 132,
+   "Weavers Lane": 116
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19483533,
+  "name": "Alfriston Clergy House to Berwick Church, Alfriston",
+  "km": 5.0,
+  "climb": 121,
+  "top_m": 39,
+  "walk_min": 72,
+  "car_park": [
+   50.809219,
+   0.156574
+  ],
+  "car_park_name": "The Dene",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 3263,
+  "road_m": 1756,
+  "honeypot": [
+   "at the car park: cafe, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.8 km on roads"
+  ],
+  "roads": {
+   "West Street": 1445,
+   "High Street": 175,
+   "George Inn": 79,
+   "Ye Olde Smugglers Inne": 58
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19525655,
+  "name": "Hill and Vale Walk at Frog Firle Farm, South Downs East",
+  "km": 6.8,
+  "climb": 168,
+  "top_m": 96,
+  "walk_min": 99,
+  "car_park": [
+   50.789774,
+   0.139688
+  ],
+  "car_park_name": "High and Over",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6795,
+  "road_m": 51,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Alfriston Road": 35,
+   "service": 16
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19525673,
+  "name": "A Walk at Blackcap, Blackcap",
+  "km": 6.9,
+  "climb": 82,
+  "top_m": 204,
+  "walk_min": 91,
+  "car_park": [
+   50.900286,
+   -0.0405
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6900,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 19550095,
+  "name": "Shottermill to Marley Common and Cognor Wood walk, Black Down",
+  "km": 6.6,
+  "climb": 107,
+  "top_m": 209,
+  "walk_min": 90,
+  "car_park": [
+   51.07039,
+   -0.7314
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5949,
+  "road_m": 696,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Camelsdale Road": 279,
+   "Marley Lane": 103,
+   "Shottermill Road": 100,
+   "service": 89
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19553798,
+  "name": "Woolbeding, River Rother and Midhurst Walk, South Downs West",
+  "km": 4.6,
+  "climb": 83,
+  "top_m": 55,
+  "walk_min": 63,
+  "car_park": [
+   50.990366,
+   -0.74809
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 2943,
+  "road_m": 1634,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "1.6 km on roads"
+  ],
+  "roads": {
+   "June Lane": 1102,
+   "North Street": 487,
+   "Rumbolds Hill": 46
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19554276,
+  "name": "Woolbeding Landscapes Walk, Sussex West",
+  "km": 9.4,
+  "climb": 250,
+  "top_m": 196,
+  "walk_min": 138,
+  "car_park": [
+   51.02707,
+   -0.761294
+  ],
+  "car_park_name": "Older Hill Car Park",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8019,
+  "road_m": 1418,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.4 km on roads"
+  ],
+  "roads": {
+   "track": 880,
+   "Eastshaw Lane": 376,
+   "service": 119,
+   "Stedham Lane": 42
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19697043,
+  "name": "Hidden Hindhead Walking Trail, Hindhead",
+  "km": 5.5,
+  "climb": 177,
+  "top_m": 272,
+  "walk_min": 83,
+  "car_park": [
+   51.104308,
+   -0.725254
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5458,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 19735252,
+  "name": "Whipsnade and Dunstable Downs Walk, Dunstable Downs and Whipsnade Estate",
+  "km": 7.1,
+  "climb": 151,
+  "top_m": 241,
+  "walk_min": 100,
+  "car_park": [
+   51.851333,
+   -0.525762
+  ],
+  "car_park_name": "Whipsnade Heath Carpark",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5970,
+  "road_m": 1104,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.1 km on roads"
+  ],
+  "roads": {
+   "Isle of Wight Lane": 773,
+   "Old Hunters Lodge": 105,
+   "Bushey Close": 94,
+   "Common Road": 70
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19741914,
+  "name": "Dunstable Downs Countryside Walk, Dunstable Downs and Whipsnade Estate",
+  "km": 10.4,
+  "climb": 304,
+  "top_m": 241,
+  "walk_min": 155,
+  "car_park": [
+   51.882257,
+   -0.53763
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8926,
+  "road_m": 1438,
+  "honeypot": [
+   "at the car park: playground, restaurant"
+  ],
+  "keep": false,
+  "drop": [
+   "1.4 km on roads"
+  ],
+  "roads": {
+   "Well Head Road": 1208,
+   "Furlong Lane": 176,
+   "Church Road": 24,
+   "service": 15
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19770467,
+  "name": "Red Walk, Emmetts",
+  "km": 4.7,
+  "climb": 172,
+  "top_m": 243,
+  "walk_min": 74,
+  "car_park": [
+   51.245574,
+   0.10434
+  ],
+  "car_park_name": "National Trust Toys Hill",
+  "car_park_check": "probably paid (National Trust)",
+  "car_park_operator": "National Trust",
+  "foot_m": 4628,
+  "road_m": 71,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "car park probably paid (National Trust)"
+  ],
+  "roads": {
+   "service": 67,
+   "Chart Lane": 3
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19775311,
+  "name": "Weardale Walk From Emmetts Garden, Emmetts",
+  "km": 8.3,
+  "climb": 253,
+  "top_m": 245,
+  "walk_min": 125,
+  "car_park": [
+   51.247755,
+   0.084049
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7549,
+  "road_m": 737,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Mapleton Road": 257,
+   "service": 232,
+   "Hosey Common Lane": 176,
+   "Emmetts Road": 72
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19775346,
+  "name": "Hosey Common to Mariners Hill Loop Walk, Chartwell",
+  "km": 6.6,
+  "climb": 141,
+  "top_m": 210,
+  "walk_min": 93,
+  "car_park": [
+   51.243527,
+   0.081942
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6456,
+  "road_m": 139,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 139
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19798945,
+  "name": "Woodland Ramble, Knole",
+  "km": 4.1,
+  "climb": 75,
+  "top_m": 209,
+  "walk_min": 57,
+  "car_park": [
+   51.267124,
+   0.203488
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4070,
+  "road_m": 57,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 57
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19798946,
+  "name": "Boundary Walk, Knole",
+  "km": 5.2,
+  "climb": 71,
+  "top_m": 211,
+  "walk_min": 69,
+  "car_park": [
+   51.267124,
+   0.203488
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5113,
+  "road_m": 57,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 57
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19802373,
+  "name": "In the Footsteps of Capability Brown, Ashridge Estate",
+  "km": 7.1,
+  "climb": 85,
+  "top_m": 220,
+  "walk_min": 94,
+  "car_park": [
+   51.807488,
+   -0.59254
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 6238,
+  "road_m": 860,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Hillingdon Road": 597,
+   "New Road": 263
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19802436,
+  "name": "Bridgewater Monument to Pitstone Windmill Circular Walk, Pitstone Windmill",
+  "km": 10.0,
+  "climb": 188,
+  "top_m": 241,
+  "walk_min": 139,
+  "car_park": [
+   51.832748,
+   -0.626854
+  ],
+  "car_park_name": null,
+  "car_park_check": "probably paid (National Trust)",
+  "car_park_operator": "National Trust",
+  "foot_m": 9353,
+  "road_m": 681,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "car park probably paid (National Trust)"
+  ],
+  "roads": {
+   "Stocks Road": 551,
+   "secondary": 130
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19803302,
+  "name": "Wheathampstead to Shaw's Corner Circular Walk, Shaw's Corner",
+  "km": 11.6,
+  "climb": 130,
+  "top_m": 124,
+  "walk_min": 153,
+  "car_park": [
+   51.814344,
+   -0.291853
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 10292,
+  "road_m": 1357,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.4 km on roads"
+  ],
+  "roads": {
+   "footway": 615,
+   "Bibbs Hall Lane": 334,
+   "Bride Hall Lane": 173,
+   "Sheepcote Lane": 125
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19803386,
+  "name": "Northey Island Circular Walk, Northey Island",
+  "km": 5.2,
+  "climb": 63,
+  "top_m": 7,
+  "walk_min": 68,
+  "car_park": [
+   51.72598,
+   0.696117
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3335,
+  "road_m": 1825,
+  "honeypot": [
+   "at the car park: playground, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.8 km on roads"
+  ],
+  "roads": {
+   "service": 1215,
+   "South House Chase": 321,
+   "Northey Island Causeway": 272,
+   "untagged": 17
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19853758,
+  "name": "Harewoods Lodge Farm Walk, Harewoods",
+  "km": 7.5,
+  "climb": 116,
+  "top_m": 108,
+  "walk_min": 102,
+  "car_park": [
+   51.193179,
+   -0.086647
+  ],
+  "car_park_name": "Horncourt Hill Car Park",
+  "car_park_check": "free",
+  "car_park_operator": "National Trust",
+  "foot_m": 7528,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 19853833,
+  "name": "Limpsfield common and the Carpenters Arms Walk, Harewoods",
+  "km": 5.7,
+  "climb": 89,
+  "top_m": 176,
+  "walk_min": 78,
+  "car_park": [
+   51.256322,
+   0.021869
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5407,
+  "road_m": 311,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Tally Road": 148,
+   "Brick Kiln Lane": 103,
+   "Moorhouse Road": 21,
+   "Kent Hatch Road": 14
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19910855,
+  "name": "The Long Wind in the Willows Walk, Maidenhead",
+  "km": 8.7,
+  "climb": 228,
+  "top_m": 107,
+  "walk_min": 127,
+  "car_park": [
+   51.551312,
+   -0.758842
+  ],
+  "car_park_name": "Cookham Dean Common car park",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5817,
+  "road_m": 2902,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.9 km on roads"
+  ],
+  "roads": {
+   "Quarry Wood": 562,
+   "Alleyns Lane": 541,
+   "Church Road": 455,
+   "Warners Hill": 320
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19910886,
+  "name": "Cookham and Cock Marsh Walk, Maidenhead",
+  "km": 6.7,
+  "climb": 63,
+  "top_m": 77,
+  "walk_min": 86,
+  "car_park": [
+   51.562555,
+   -0.71831
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5722,
+  "road_m": 932,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "High Street": 265,
+   "unclassified": 219,
+   "Holy Trinity": 127,
+   "The Bounty": 91
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19917476,
+  "name": "Maidenhead Commons Trail, Maidenhead",
+  "km": 11.2,
+  "climb": 82,
+  "top_m": 82,
+  "walk_min": 143,
+  "car_park": [
+   51.515505,
+   -0.76259
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 10035,
+  "road_m": 1170,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "Malders Lane": 293,
+   "footway": 254,
+   "Cherry Garden Lane": 147,
+   "Cannon Lane": 115
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19991014,
+  "name": "Darnley Trail",
+  "km": 10.5,
+  "climb": 211,
+  "top_m": 131,
+  "walk_min": 147,
+  "car_park": [
+   51.389585,
+   0.413894
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7920,
+  "road_m": 2585,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.6 km on roads"
+  ],
+  "roads": {
+   "The Street": 979,
+   "Lodge Lane": 707,
+   "unclassified": 515,
+   "Park Pale": 228
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20050408,
+  "name": "Ightham Mote Circular Walk to Knole, Ightham Mote",
+  "km": 12.0,
+  "climb": 321,
+  "top_m": 194,
+  "walk_min": 177,
+  "car_park": [
+   51.258924,
+   0.271268
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 10845,
+  "road_m": 1195,
+  "honeypot": [
+   "at the car park: cafe, playground, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "service": 1034,
+   "Park Lane": 62,
+   "Mote Road": 49,
+   "tertiary": 27
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20050425,
+  "name": "Ightham Mote Circular Walk to Shipbourne and Fairlawne, Ightham Mote",
+  "km": 5.9,
+  "climb": 100,
+  "top_m": 156,
+  "walk_min": 80,
+  "car_park": [
+   51.24703,
+   0.279357
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4799,
+  "road_m": 1063,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.1 km on roads"
+  ],
+  "roads": {
+   "service": 621,
+   "Upper Green Road": 347,
+   "Mote Road": 95
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20050502,
+  "name": "Ightham Mote Circular Walk to Old Soar Manor, Ightham Mote",
+  "km": 10.2,
+  "climb": 271,
+  "top_m": 156,
+  "walk_min": 150,
+  "car_park": [
+   51.24703,
+   0.279357
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6778,
+  "road_m": 3420,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "3.4 km on roads"
+  ],
+  "roads": {
+   "Roughway Lane": 825,
+   "Dux Hill": 563,
+   "Old Soar Road": 501,
+   "Upper Green Road": 490
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20050546,
+  "name": "Ightham Mote Circular Walk to Oldbury Hill, Ightham Mote",
+  "km": 8.3,
+  "climb": 170,
+  "top_m": 203,
+  "walk_min": 117,
+  "car_park": [
+   51.259295,
+   0.270116
+  ],
+  "car_park_name": null,
+  "car_park_check": "probably paid (National Trust)",
+  "car_park_operator": "National Trust",
+  "foot_m": 7139,
+  "road_m": 1157,
+  "honeypot": [
+   "at the car park: cafe, playground, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads",
+   "car park probably paid (National Trust)"
+  ],
+  "roads": {
+   "service": 648,
+   "Mote Road": 264,
+   "Sevenoaks Road": 198,
+   "unclassified": 47
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20143624,
+  "name": "Meadows and Woodlands of Streatley Walk, Goring Gap",
+  "km": 6.3,
+  "climb": 237,
+  "top_m": 166,
+  "walk_min": 99,
+  "car_park": [
+   51.522992,
+   -1.140371
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 4185,
+  "road_m": 2109,
+  "honeypot": [
+   "at the car park: cafe, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "2.1 km on roads"
+  ],
+  "roads": {
+   "High Street": 595,
+   "Goring Bridge": 293,
+   "Reading Road": 237,
+   "Ferry Lane": 208
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20143865,
+  "name": "West Berkshire Countryside Walk, Goring Gap",
+  "km": 11.1,
+  "climb": 355,
+  "top_m": 166,
+  "walk_min": 169,
+  "car_park": [
+   51.522049,
+   -1.160794
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 7011,
+  "road_m": 4108,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "4.1 km on roads"
+  ],
+  "roads": {
+   "unclassified": 2398,
+   "Rectory Road": 1211,
+   "Ash Hill": 362,
+   "secondary": 88
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20149611,
+  "name": "Ouzel Meander",
+  "km": 6.5,
+  "climb": 116,
+  "top_m": 110,
+  "walk_min": 89,
+  "car_park": [
+   51.927053,
+   -0.657097
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4869,
+  "road_m": 1590,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "1.6 km on roads"
+  ],
+  "roads": {
+   "Heath Road": 745,
+   "Plantation Road": 440,
+   "Greenhill": 210,
+   "Sandy Lane": 98
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20152412,
+  "name": "Western Historic Parkland Walk",
+  "km": 5.7,
+  "climb": 68,
+  "top_m": 110,
+  "walk_min": 75,
+  "car_park": [
+   52.012464,
+   -0.626963
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4226,
+  "road_m": 1434,
+  "honeypot": [
+   "at the car park: restaurant"
+  ],
+  "keep": false,
+  "drop": [
+   "1.4 km on roads"
+  ],
+  "roads": {
+   "Bedford Road": 566,
+   "Mount Pleasant": 299,
+   "Church Street": 261,
+   "unclassified": 131
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20165024,
+  "name": "Standen to Selsfield Common, Standen",
+  "km": 11.3,
+  "climb": 357,
+  "top_m": 157,
+  "walk_min": 171,
+  "car_park": [
+   51.096199,
+   -0.022194
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 9894,
+  "road_m": 1407,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.4 km on roads"
+  ],
+  "roads": {
+   "Admiral's Bridge Lane": 765,
+   "service": 288,
+   "track": 272,
+   "West Hoathly Road": 83
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20181604,
+  "name": "Estate Walk at Sheffield Park",
+  "km": 4.7,
+  "climb": 85,
+  "top_m": 47,
+  "walk_min": 65,
+  "car_park": [
+   50.997808,
+   0.012849
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3934,
+  "road_m": 793,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 524,
+   "Estate Road": 269
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20443338,
+  "name": "Abinger Roughs to Gomshall Walking Circuit, North Downs West",
+  "km": 9.9,
+  "climb": 277,
+  "top_m": 217,
+  "walk_min": 146,
+  "car_park": [
+   51.218914,
+   -0.44811
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 9235,
+  "road_m": 644,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "footway": 425,
+   "Colekitchen Lane": 180,
+   "Dorking Road": 27,
+   "Whitedown Lane": 8
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20674327,
+  "name": "Hertfordshire Chain Walk - Walk 15",
+  "km": 10.6,
+  "climb": 272,
+  "top_m": 168,
+  "walk_min": 154,
+  "car_park": [
+   52.031106,
+   -0.109032
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7645,
+  "road_m": 2929,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.9 km on roads"
+  ],
+  "roads": {
+   "Therfield Road": 1962,
+   "unclassified": 393,
+   "Station Road": 318,
+   "Kelshall Road": 85
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20674328,
+  "name": "Hertfordshire Chain Walk - Walk 14",
+  "km": 8.0,
+  "climb": 77,
+  "top_m": 160,
+  "walk_min": 104,
+  "car_park": [
+   51.993046,
+   -0.076183
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5832,
+  "road_m": 2206,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.2 km on roads"
+  ],
+  "roads": {
+   "tertiary": 1020,
+   "unclassified": 818,
+   "Church Lane": 146,
+   "Kelshall Street": 141
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20674329,
+  "name": "Hertfordshire Chain Walk - Walk 13",
+  "km": 8.2,
+  "climb": 92,
+  "top_m": 157,
+  "walk_min": 107,
+  "car_park": [
+   51.992992,
+   -0.077125
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7176,
+  "road_m": 1010,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.0 km on roads"
+  ],
+  "roads": {
+   "tertiary": 300,
+   "unclassified": 274,
+   "Rushden Road": 205,
+   "service": 191
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20674333,
+  "name": "Hertfordshire Chain Walk - Walk 9",
+  "km": 8.1,
+  "climb": 145,
+  "top_m": 122,
+  "walk_min": 112,
+  "car_park": [
+   51.889655,
+   -0.056219
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7170,
+  "road_m": 923,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 624,
+   "Frogs Hall Lane": 158,
+   "The Street": 141
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20674334,
+  "name": "Hertfordshire Chain Walk - Walk 8",
+  "km": 10.9,
+  "climb": 106,
+  "top_m": 122,
+  "walk_min": 141,
+  "car_park": [
+   51.859008,
+   -0.112607
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 9094,
+  "road_m": 1807,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.8 km on roads"
+  ],
+  "roads": {
+   "Mill Lane": 1265,
+   "unclassified": 542
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20674335,
+  "name": "Hertfordshire Chain Walk - Walk 7",
+  "km": 7.9,
+  "climb": 83,
+  "top_m": 124,
+  "walk_min": 104,
+  "car_park": [
+   51.856353,
+   -0.111097
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6265,
+  "road_m": 1676,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "1.7 km on roads"
+  ],
+  "roads": {
+   "Perrywood Lane": 1185,
+   "Church Lane": 277,
+   "track": 115,
+   "Gobions Lane": 61
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20674336,
+  "name": "Hertfordshire Chain Walk - Walk 6",
+  "km": 7.5,
+  "climb": 97,
+  "top_m": 123,
+  "walk_min": 100,
+  "car_park": [
+   51.825872,
+   -0.126858
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6235,
+  "road_m": 1289,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "1.3 km on roads"
+  ],
+  "roads": {
+   "Tewin Hill": 573,
+   "Holly Grove Road": 281,
+   "Winding Shott": 217,
+   "tertiary": 116
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20674337,
+  "name": "Hertfordshire Chain Walk - Walk 5",
+  "km": 10.2,
+  "climb": 125,
+  "top_m": 77,
+  "walk_min": 136,
+  "car_park": [
+   51.788162,
+   -0.10329
+  ],
+  "car_park_name": "Hertingfordbury",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8283,
+  "road_m": 1966,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.0 km on roads"
+  ],
+  "roads": {
+   "footway": 745,
+   "St Mary's Lane": 404,
+   "Hertingfordbury Road": 317,
+   "Hertford Road": 243
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20674338,
+  "name": "Hertfordshire Chain Walk - Walk 4",
+  "km": 9.8,
+  "climb": 155,
+  "top_m": 115,
+  "walk_min": 133,
+  "car_park": [
+   51.770993,
+   -0.119533
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7392,
+  "road_m": 2426,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.4 km on roads"
+  ],
+  "roads": {
+   "unclassified": 978,
+   "Stockings Lane": 447,
+   "Robins Nest Hill": 423,
+   "Woolmers Lane": 218
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20674339,
+  "name": "Hertfordshire Chain Walk - Walk 3",
+  "km": 9.1,
+  "climb": 129,
+  "top_m": 125,
+  "walk_min": 122,
+  "car_park": [
+   51.758293,
+   -0.104212
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7074,
+  "road_m": 2040,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "2.0 km on roads"
+  ],
+  "roads": {
+   "Ashendene Road": 758,
+   "Tyler's Causeway": 647,
+   "White Stubbs Lane": 449,
+   "tertiary": 167
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20674340,
+  "name": "Hertfordshire Chain Walk - Walk 2",
+  "km": 15.4,
+  "climb": 282,
+  "top_m": 115,
+  "walk_min": 213,
+  "car_park": [
+   51.70301,
+   -0.116616
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 10080,
+  "road_m": 5320,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "5.3 km on roads"
+  ],
+  "roads": {
+   "Newgatestreet Road": 1810,
+   "Carbone Hill": 862,
+   "White Stubbs Lane": 658,
+   "Northaw Road East": 444
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20674341,
+  "name": "Hertfordshire Chain Walk - Walk 1",
+  "km": 11.9,
+  "climb": 131,
+  "top_m": 86,
+  "walk_min": 156,
+  "car_park": [
+   51.68166,
+   -0.07898
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 9269,
+  "road_m": 2678,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.7 km on roads"
+  ],
+  "roads": {
+   "Silver Street": 967,
+   "Cattlegate Road Crews Hill": 706,
+   "Strayfield Road": 379,
+   "Barrow Lane": 356
+  }
+ }
+]

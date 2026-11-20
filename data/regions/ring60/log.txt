@@ -1,0 +1,36 @@
+2026-11-20 12:46 extract: pass 1 5137 walking routes 16 s
+2026-11-20 13:09 extract: 842059 ways 77854 car parks 44376 pois 1200 routes 21618 named places 1359 s
+2026-11-20 13:09 step extract done in 1361 s
+2026-11-20 13:09 routes: 1200 relations -> 103 checked, 39 kept; out: {'not a loop': 732, 'too long': 12, 'too far': 57, 'no ways': 13, 'too short': 182, 'too near (inner ring)': 67, 'not a country walk (name)': 7, 'too flat': 15, 'no free car park within 400 m': 12} ; dropped: {'roads': 62, 'car park': 3}
+2026-11-20 13:09 step routes done in 26 s
+2026-11-20 13:10 parks: 77854 car parks -> 147 pass -> 102 after 2 km spacing; out: {'fee not no': 70146, 'too flat': 396, 'access': 5110, 'honeypot at start': 1107, 'distance': 900, 'customers only': 48}
+2026-11-20 13:10 step parks done in 15 s
+2026-11-20 13:16 loops: 102 car parks tried, 47 ok
+2026-11-20 13:16 step loops done in 371 s
+2026-11-20 13:16 merge: 36 walks ( 23 routes, 13 car park loops ), 40 over 65 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 4, 'none': 32}
+2026-11-20 13:16 step merge done in 13 s
+2026-11-20 13:16 areas: 36 walks, 36 to extract, 41 new terrain tiles
+2026-11-20 13:25 areas: nodes 2119786 560 s
+2026-11-20 13:33 areas: extracted 36 1005 s
+2026-11-20 13:33 step areas done in 1013 s
+2026-11-20 13:34 build: 34 built, 2 failed this run
+2026-11-20 13:34 step build done in 84 s
+2026-11-20 13:34 pack: 19 kept, 17 failed the gates 10.1 MB
+2026-11-20 13:34   failed r60-2-beacon-hill 9.5 km vs 7.1, 1230 of 9489 m off a path
+2026-11-20 13:34   failed r60-5-views-of-the-hughenden-manor-estat 9.2 km vs 8.9, 320 of 9248 m off a path
+2026-11-20 13:34   failed r60-8-harewoods-lodge-farm 9.5 km vs 7.5, 745 of 9522 m off a path
+2026-11-20 13:34   failed r60-13-tillingbourne 15.2 km vs 12.1, 2075 of 15233 m off a path
+2026-11-20 13:34   failed r60-14-shottermill-to-marley-common-and- 6.6 km vs 6.6, 585 of 6567 m off a path
+2026-11-20 13:34   failed r60-19-hambleden-and-pheasant-s-hill-tra 9.1 km vs 9.1, 666 of 9067 m off a path
+2026-11-20 13:34   failed r60-21-weardale 9.3 km vs 8.3, 719 of 9252 m off a path
+2026-11-20 13:34   failed r60-22-cookham-and-cock-marsh 0.1 km vs 6.7, 122 of 131 m off a path
+2026-11-20 13:34   failed r60-26-abinger-roughs-to-gomshall 9.9 km vs 9.9, 629 of 9881 m off a path
+2026-11-20 13:34   failed r60-28-boundary TypeError: sequence item 0: expected str instance, NoneType found
+2026-11-20 13:34   failed r60-29-dormans-park 7.0 km vs 7.1, 290 of 6994 m off a path
+2026-11-20 13:34   failed r60-30-heathland-hike 7.8 km vs 5.8, 833 of 7844 m off a path
+2026-11-20 13:34   failed r60-31-tykes-water-beyond 7.5 km vs 7.0, 685 of 7501 m off a path
+2026-11-20 13:34   failed r60-32-petworth-ancient-trees TypeError: sequence item 0: expected str instance, NoneType found
+2026-11-20 13:34   failed r60-34-estate 4.9 km vs 4.7, 746 of 4888 m off a path
+2026-11-20 13:34   failed r60-35-limpsfield-common-and-the-carpent 5.9 km vs 5.7, 339 of 5915 m off a path
+2026-11-20 13:34   failed r60-36-grayswood 4.3 km vs 4.3, 482 of 4315 m off a path
+2026-11-20 13:34 step pack done in 2 s
