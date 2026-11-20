@@ -1,1 +1,21 @@
 2026-11-20 21:25 extract: pass 1 5137 walking routes 15 s
+2026-11-20 22:03 extract: pass 1 5137 walking routes 16 s
+2026-11-20 22:18 extract: 41289 ways 2278 car parks 1206 pois 47 routes 3528 named places 916 s
+2026-11-20 22:18 step extract done in 924 s
+2026-11-20 22:18 routes: 47 relations -> 2 checked, 1 kept; out: {'not a loop': 40, 'too short': 4, 'no ways': 1} ; dropped: {'roads': 1, 'car park': 0}
+2026-11-20 22:18 step routes done in 3 s
+2026-11-20 22:18 parks: 2278 car parks -> 52 pass -> 37 after 2 km spacing; out: {'fee not no': 1931, 'honeypot at start': 73, 'access': 176, 'customers only': 8, 'too flat': 38}
+2026-11-20 22:18 step parks done in 1 s
+2026-11-20 22:19 loops: 37 car parks tried, 13 ok
+2026-11-20 22:19 step loops done in 72 s
+2026-11-20 22:19 merge: 12 walks ( 1 routes, 11 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 12}
+2026-11-20 22:19 step merge done in 3 s
+2026-11-20 22:19 areas: 12 walks, 12 to extract, 17 new terrain tiles
+2026-11-20 22:26 areas: nodes 376490 429 s
+2026-11-20 22:32 areas: extracted 12 757 s
+2026-11-20 22:32 step areas done in 757 s
+2026-11-20 22:33 build: 12 built, 0 failed this run
+2026-11-20 22:33 step build done in 43 s
+2026-11-20 22:33 pack: 11 kept, 1 failed the gates 3.5 MB
+2026-11-20 22:33   failed nym-12-dalby-beck-red-trail 5.9 km vs 4.5, 87 of 5853 m off a path
+2026-11-20 22:33 step pack done in 0 s

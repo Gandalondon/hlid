@@ -1,0 +1,53 @@
+[
+ {
+  "source": "osm route",
+  "id": 3335360,
+  "name": "Dalby Beck Red Trail",
+  "km": 4.5,
+  "climb": 117,
+  "top_m": 104,
+  "walk_min": 66,
+  "car_park": [
+   54.262606,
+   -0.692522
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4531,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 21107830,
+  "name": "The Miners Way",
+  "km": 8.9,
+  "climb": 195,
+  "top_m": 185,
+  "walk_min": 126,
+  "car_park": [
+   54.571274,
+   -0.898832
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5873,
+  "road_m": 2998,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "3.0 km on roads"
+  ],
+  "roads": {
+   "Cross Lane": 613,
+   "Hummersea Lane": 464,
+   "High Street": 387,
+   "Seymour Hill Terrace": 384
+  }
+ }
+]
