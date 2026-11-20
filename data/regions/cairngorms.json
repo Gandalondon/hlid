@@ -1,0 +1,1 @@
+{"id": "cairngorms", "label": "Cairngorms", "prefix": "cgm", "home": [-3.7, 57.1], "box": [56.75, -4.4, 57.45, -2.95], "geofabrik": ["europe/great-britain"], "straight_km": [0, 100], "route_km_min": 0, "route_km": 100, "drive_min": 0, "drive_max": 120, "score_drive": false, "veto": null}
