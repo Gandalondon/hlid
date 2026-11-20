@@ -4,3 +4,4 @@
 - 20 Nov 19:32: build 58. Peak District: 33 candidates, 23 passed. Next: Yorkshire Dales, Lake District.
 - 20 Nov 20:08: build 59. Yorkshire Dales: 25 candidates, 22 passed. Next: Lake District.
 - 20 Nov 20:47: build 60. Lake District: 44 candidates, 36 passed. 236 walks in the app. Next (data running): Snowdonia, North York Moors, Northumberland, Shropshire Hills.
+- 20 Nov 21:30: build 61. Snowdonia: 24 candidates, 22 passed. 257 walks in the app. Running: North York Moors, then Northumberland, Shropshire Hills.
