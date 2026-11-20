@@ -1,0 +1,1 @@
+{"id": "shropshire", "label": "Shropshire Hills", "prefix": "shr", "home": [-2.85, 52.5], "box": [52.25, -3.25, 52.8, -2.4], "geofabrik": ["europe/great-britain"], "straight_km": [0, 100], "route_km_min": 0, "route_km": 100, "drive_min": 0, "drive_max": 120, "score_drive": false, "veto": null}

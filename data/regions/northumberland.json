@@ -1,0 +1,1 @@
+{"id": "northumberland", "label": "Northumberland", "prefix": "nth", "home": [-2.1, 55.3], "box": [54.9, -2.75, 55.75, -1.6], "geofabrik": ["europe/great-britain"], "straight_km": [0, 100], "route_km_min": 0, "route_km": 100, "drive_min": 0, "drive_max": 120, "score_drive": false, "veto": null}
