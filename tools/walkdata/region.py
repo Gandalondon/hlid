@@ -24,6 +24,10 @@ sys.path.insert(0, f"{ROOT}/engine")
 def cfg(r):
     C = json.load(open(f"{ROOT}/data/regions/{r}.json")); D = f"{ROOT}/data/regions/{r}"
     os.makedirs(f"{D}/maps", exist_ok=True); return C, D
+def srcpbf(C, r):   # the region's own extract if the workflow made one, else the whole of GB
+    for f in (C.get("pbf"), f"{r}.osm.pbf", "great-britain-latest.osm.pbf"):
+        if f and os.path.exists(f"{G}/{f}"): return f"{G}/{f}"
+    raise SystemExit("no OSM file in data/gb")
 def log(D, *a):
     s = time.strftime("%Y-%m-%d %H:%M ") + " ".join(str(x) for x in a); print(s, flush=True)
     open(f"{D}/log.txt", "a").write(s + "\n")
@@ -36,7 +40,7 @@ BIG = {"motorway", "trunk", "primary", "secondary", "tertiary", "trunk_link", "p
 # ---------- extract ----------
 def extract(r):
     import osmium; from build8 import is_foot
-    C, D = cfg(r); B = C["box"]; pbf = f"{G}/{C.get('pbf') or r + '.osm.pbf'}"; t0 = time.time()
+    C, D = cfg(r); B = C["box"]; pbf = srcpbf(C, r); t0 = time.time()
     KEYS = ("highway", "designation", "foot", "access", "informal", "footway", "name", "fee", "operator", "capacity", "amenity", "parking",
             "tourism", "information", "leisure", "route", "type", "network", "surface", "tracktype", "ref", "prow_ref", "sac_scale")
     # pass 1: walking route relations and their member ways (relations come last in the file, so they need their own pass)
@@ -366,7 +370,7 @@ def areas(r):
     KEYS = ("highway", "landuse", "natural", "leisure", "amenity", "waterway", "building", "railway", "designation", "access", "foot", "name", "fee", "parking", "route", "type",
             "surface", "sac_scale", "barrier", "prow_ref", "ref", "informal", "footway", "trail_visibility", "tracktype", "water", "wetland")
     S = min(a[0] for a in todo.values()); Wb = min(a[1] for a in todo.values()); N = max(a[2] for a in todo.values()); E = max(a[3] for a in todo.values())
-    nodes = {}; nodetags = {}; pbf = f"{G}/{C.get('pbf') or r + '.osm.pbf'}"
+    nodes = {}; nodetags = {}; pbf = srcpbf(C, r)
     class NH(osmium.SimpleHandler):
         def node(self, n):
             l = n.location

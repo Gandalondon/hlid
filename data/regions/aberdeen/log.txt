@@ -1,0 +1,23 @@
+2026-11-20 11:23 extract: pass 1 5137 walking routes 16 s
+2026-11-20 11:40 extract: 63386 ways 5726 car parks 1924 pois 124 routes 7305 named places 1006 s
+2026-11-20 11:40 step extract done in 1007 s
+2026-11-20 11:41 routes: 124 relations -> 7 checked, 6 kept; out: {'not a loop': 90, 'too long': 2, 'too short': 19, 'no free car park within 400 m': 4, 'too far': 2} ; dropped: {'roads': 1, 'car park': 0}
+2026-11-20 11:41 step routes done in 2 s
+2026-11-20 11:41 parks: 5726 car parks -> 92 pass -> 59 after 2 km spacing; out: {'fee not no': 4850, 'too flat': 47, 'distance': 104, 'honeypot at start': 176, 'access': 443, 'customers only': 14}
+2026-11-20 11:41 step parks done in 2 s
+2026-11-20 11:41 loops: 59 car parks tried, 3 ok
+2026-11-20 11:41 step loops done in 31 s
+2026-11-20 11:41 merge: 8 walks ( 6 routes, 2 car park loops ), 0 over 95 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 8}
+2026-11-20 11:41 step merge done in 4 s
+2026-11-20 11:45 areas: 8 walks, 8 to extract, 16 new terrain tiles
+2026-11-20 11:53 areas: nodes 174394 482 s
+2026-11-20 11:59 areas: extracted 8 845 s
+2026-11-20 11:59 step areas done in 845 s
+2026-11-20 11:59 build: 8 built, 0 failed this run
+2026-11-20 11:59 step build done in 21 s
+2026-11-20 11:59 pack: 4 kept, 4 failed the gates 1.4 MB
+2026-11-20 11:59   failed ab-5-queen-s-drive 4.7 km vs 4.7, 840 of 4654 m off a path
+2026-11-20 11:59   failed ab-6-morrone-circular 4.2 km vs 4.1, 433 of 4238 m off a path
+2026-11-20 11:59   failed ab-7-drummy-woods-and-stone-circle 5.0 km vs 5.0, 820 of 5044 m off a path
+2026-11-20 11:59   failed ab-8-ley-way 6.5 km vs 5.9, 242 of 6486 m off a path
+2026-11-20 11:59 step pack done in 0 s

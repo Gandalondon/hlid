@@ -1,0 +1,182 @@
+[
+ {
+  "source": "osm route",
+  "id": 5616132,
+  "name": "Round Loch Muick",
+  "km": 11.9,
+  "climb": 338,
+  "top_m": 447,
+  "walk_min": 177,
+  "car_park": [
+   56.952653,
+   -3.137949
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 11920,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 5619921,
+  "name": "Loch Kinord Trail",
+  "km": 6.4,
+  "climb": 135,
+  "top_m": 185,
+  "walk_min": 90,
+  "car_park": [
+   57.087754,
+   -2.936381
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6381,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 5637972,
+  "name": "Morrone Circular",
+  "km": 4.1,
+  "climb": 164,
+  "top_m": 451,
+  "walk_min": 66,
+  "car_park": [
+   57.003774,
+   -3.419339
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3739,
+  "road_m": 402,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 402
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 8374119,
+  "name": "Ley Way",
+  "km": 5.9,
+  "climb": 143,
+  "top_m": 110,
+  "walk_min": 85,
+  "car_park": [
+   57.061646,
+   -2.436872
+  ],
+  "car_park_name": "Overflow Carpark",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5922,
+  "road_m": 0,
+  "honeypot": [
+   "at the car park: cafe, playground, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 12466329,
+  "name": "Pittenderich",
+  "km": 10.4,
+  "climb": 537,
+  "top_m": 500,
+  "walk_min": 179,
+  "car_park": [
+   57.141252,
+   -2.859725
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7714,
+  "road_m": 2725,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "2.7 km on roads"
+  ],
+  "roads": {
+   "unclassified": 2180,
+   "service": 450,
+   "secondary": 95
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 12476364,
+  "name": "Drummy Woods and Stone circle",
+  "km": 5.0,
+  "climb": 78,
+  "top_m": 181,
+  "walk_min": 68,
+  "car_park": [
+   57.127522,
+   -2.859324
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4217,
+  "road_m": 819,
+  "honeypot": [
+   "at the car park: cafe, playground"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Mill Road": 217,
+   "Bridge Street": 161,
+   "Melgum Road": 133,
+   "unclassified": 124
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 13487882,
+  "name": "Queen's Drive",
+  "km": 4.7,
+  "climb": 218,
+  "top_m": 413,
+  "walk_min": 78,
+  "car_park": [
+   57.005525,
+   -3.398393
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 3798,
+  "road_m": 856,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Cluniebank Road": 265,
+   "Hillside Road": 258,
+   "unclassified": 148,
+   "Invercauld Road": 67
+  }
+ }
+]

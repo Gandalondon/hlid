@@ -5,3 +5,13 @@ local.properties
 *.iml
 .DS_Store
 *.keystore
+# walk data working files (big; rebuilt by tools/walkdata/region.py)
+data/gb/*.pbf
+data/terr50/
+data/terr50_gagg_gb.zip
+data/areas/
+data/regions/*/foot.json
+data/regions/*/named.json
+data/regions/*/maps/
+__pycache__/
+data/testwalk/relief8-*
