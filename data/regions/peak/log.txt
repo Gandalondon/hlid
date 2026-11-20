@@ -1,1 +1,29 @@
 2026-11-20 18:50 extract: pass 1 5137 walking routes 16 s
+2026-11-20 19:07 extract: 168037 ways 16397 car parks 6345 pois 265 routes 4072 named places 995 s
+2026-11-20 19:07 step extract done in 996 s
+2026-11-20 19:07 routes: 265 relations -> 22 checked, 10 kept; out: {'not a loop': 206, 'too short': 29, 'too long': 3, 'no free car park within 400 m': 4, 'too flat': 1} ; dropped: {'roads': 12, 'car park': 0}
+2026-11-20 19:07 step routes done in 6 s
+2026-11-20 19:07 parks: 16397 car parks -> 224 pass -> 132 after 2 km spacing; out: {'fee not no': 14256, 'customers only': 24, 'access': 1398, 'honeypot at start': 427, 'too flat': 68}
+2026-11-20 19:07 step parks done in 3 s
+2026-11-20 19:13 loops: 132 car parks tried, 28 ok
+2026-11-20 19:13 step loops done in 358 s
+2026-11-20 19:13 merge: 33 walks ( 10 routes, 23 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 1, 'none': 32}
+2026-11-20 19:13 step merge done in 5 s
+2026-11-20 19:13 areas: 33 walks, 33 to extract, 39 new terrain tiles
+2026-11-20 19:21 areas: nodes 1845411 491 s
+2026-11-20 19:28 areas: extracted 33 881 s
+2026-11-20 19:28 step areas done in 882 s
+2026-11-20 19:30 build: 33 built, 0 failed this run
+2026-11-20 19:30 step build done in 110 s
+2026-11-20 19:30 pack: 23 kept, 10 failed the gates 9.9 MB
+2026-11-20 19:30   failed pk-3-frogatt 9.5 km vs 9.4, 231 of 9530 m off a path
+2026-11-20 19:30   failed pk-6-alport-castles-loop 12.2 km vs 12.2, 345 of 12183 m off a path
+2026-11-20 19:30   failed pk-17-mam-tor-circular 4.6 km vs 4.5, 400 of 4589 m off a path
+2026-11-20 19:30   failed pk-18-amber-valley-routeway 4.4 km vs 8.2, 777 of 4363 m off a path
+2026-11-20 19:30   failed pk-19-views-and-woodlands 0.2 km vs 8.6, 222 of 235 m off a path
+2026-11-20 19:30   failed pk-29-north-wingfield 7.3 km vs 4.6, 954 of 7337 m off a path
+2026-11-20 19:30   failed pk-30-long 11.6 km vs 4.9, 445 of 11589 m off a path
+2026-11-20 19:30   failed pk-31-royston-carlton-boundary 13.5 km vs 13.5, 421 of 13473 m off a path
+2026-11-20 19:30   failed pk-32-pilsley 5.0 km vs 5.0, 585 of 4983 m off a path
+2026-11-20 19:30   failed pk-33-eastergate-return 1.6 km vs 4.4, 19 of 1587 m off a path
+2026-11-20 19:30 step pack done in 2 s

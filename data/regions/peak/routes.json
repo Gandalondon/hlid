@@ -1,0 +1,611 @@
+[
+ {
+  "source": "osm route",
+  "id": 1694510,
+  "name": "Pilsley Walk",
+  "km": 5.0,
+  "climb": 69,
+  "top_m": 176,
+  "walk_min": 67,
+  "car_park": [
+   53.157452,
+   -1.358143
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4541,
+  "road_m": 458,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Back Lane": 166,
+   "Locko Lane": 108,
+   "Locko Road": 107,
+   "Station Road": 77
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 1694536,
+  "name": "North Wingfield Walk",
+  "km": 4.6,
+  "climb": 97,
+  "top_m": 159,
+  "walk_min": 65,
+  "car_park": [
+   53.17415,
+   -1.361284
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 4564,
+  "road_m": 67,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Seanor Lane": 67
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 1753531,
+  "name": "Linacre and Cordwell Valleys Circular Walk",
+  "km": 15.3,
+  "climb": 421,
+  "top_m": 293,
+  "walk_min": 225,
+  "car_park": [
+   53.284169,
+   -1.525101
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 11935,
+  "road_m": 3317,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "3.3 km on roads"
+  ],
+  "roads": {
+   "unclassified": 617,
+   "Wilkin Hill": 515,
+   "Main Road": 449,
+   "Millthorpe Lane": 416
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 2551611,
+  "name": "Amber Valley Routeway Walk 1",
+  "km": 8.2,
+  "climb": 192,
+  "top_m": 184,
+  "walk_min": 117,
+  "car_park": [
+   52.993281,
+   -1.572992
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7346,
+  "road_m": 838,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Highfield Lane": 382,
+   "Burland Green Lane": 163,
+   "Church Lane": 83,
+   "Cutler Lane": 81
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 9621985,
+  "name": "Mam Tor Circular Walk, High Peak",
+  "km": 4.5,
+  "climb": 282,
+  "top_m": 516,
+  "walk_min": 82,
+  "car_park": [
+   53.345237,
+   -1.81329
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4173,
+  "road_m": 323,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Mam Tor Road": 162,
+   "tertiary": 160
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 15488326,
+  "name": "Long Walk, Kedleston Hall",
+  "km": 4.9,
+  "climb": 81,
+  "top_m": 132,
+  "walk_min": 66,
+  "car_park": [
+   52.960333,
+   -1.553248
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4861,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 15740982,
+  "name": "Meltham Way",
+  "km": 14.0,
+  "climb": 335,
+  "top_m": 273,
+  "walk_min": 202,
+  "car_park": [
+   53.595697,
+   -1.824962
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 11773,
+  "road_m": 2275,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.3 km on roads"
+  ],
+  "roads": {
+   "Royd Road": 717,
+   "Crosland Factory Lane": 377,
+   "Woodbottom Road": 357,
+   "Knowle Lane": 209
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19207197,
+  "name": "Mam Tor Cavedale Loop, High Peak",
+  "km": 9.4,
+  "climb": 316,
+  "top_m": 470,
+  "walk_min": 145,
+  "car_park": [
+   53.34762,
+   -1.799028
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8056,
+  "road_m": 1389,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.4 km on roads"
+  ],
+  "roads": {
+   "service": 697,
+   "tertiary": 341,
+   "The Stones": 166,
+   "Buxton Road": 78
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19207270,
+  "name": "Alport Castles Loop, High Peak",
+  "km": 12.2,
+  "climb": 786,
+  "top_m": 481,
+  "walk_min": 225,
+  "car_park": [
+   53.400573,
+   -1.742222
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 11829,
+  "road_m": 353,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 344,
+   "Snake Road": 8
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19207687,
+  "name": "Lyme South Perimeter Walk",
+  "km": 10.9,
+  "climb": 460,
+  "top_m": 396,
+  "walk_min": 177,
+  "car_park": [
+   53.332124,
+   -2.079084
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 9663,
+  "road_m": 1245,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "Mudhurst Lane": 682,
+   "Bowstonegate Road": 327,
+   "'old' West Park Drive": 182,
+   "unclassified": 23
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19210926,
+  "name": "Below Kinder Scout: A Circular Walk Around Kinder Reservoir, High Peak",
+  "km": 9.5,
+  "climb": 464,
+  "top_m": 366,
+  "walk_min": 161,
+  "car_park": [
+   53.379294,
+   -1.946515
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6863,
+  "road_m": 2662,
+  "honeypot": [
+   "at the car park: cafe, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "2.7 km on roads"
+  ],
+  "roads": {
+   "Kinder Road": 2377,
+   "Walk Mill Road": 125,
+   "Bank Street": 109,
+   "Church Street": 36
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19211130,
+  "name": "Derwent Valley and Reservoir Walk,",
+  "km": 7.4,
+  "climb": 588,
+  "top_m": 412,
+  "walk_min": 148,
+  "car_park": [
+   53.400573,
+   -1.742222
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5141,
+  "road_m": 2282,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.3 km on roads"
+  ],
+  "roads": {
+   "Derwent Lane": 1196,
+   "unclassified": 1086
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19211282,
+  "name": "Edale Circular Walk, High Peak",
+  "km": 5.5,
+  "climb": 154,
+  "top_m": 355,
+  "walk_min": 82,
+  "car_park": [
+   53.364633,
+   -1.817426
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4474,
+  "road_m": 1057,
+  "honeypot": [
+   "at the car park: cafe, playground, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.1 km on roads"
+  ],
+  "roads": {
+   "Marys Lane": 686,
+   "service": 215,
+   "Station Approach": 98,
+   "unclassified": 58
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19216918,
+  "name": "Crook Hill Circular (Ethel), High Peak",
+  "km": 11.5,
+  "climb": 681,
+  "top_m": 391,
+  "walk_min": 206,
+  "car_park": [
+   53.400573,
+   -1.742222
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8346,
+  "road_m": 3118,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "3.1 km on roads"
+  ],
+  "roads": {
+   "Derwent Lane": 1228,
+   "footway": 1143,
+   "unclassified": 727,
+   "primary": 16
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19217022,
+  "name": "Lantern Pike Circular (Ethel), High Peak",
+  "km": 7.3,
+  "climb": 446,
+  "top_m": 372,
+  "walk_min": 133,
+  "car_park": [
+   53.379294,
+   -1.946515
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6087,
+  "road_m": 1256,
+  "honeypot": [
+   "at the car park: cafe, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.3 km on roads"
+  ],
+  "roads": {
+   "service": 424,
+   "Bank Vale Road": 270,
+   "Swallow House Lane": 248,
+   "Station Road": 141
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19217067,
+  "name": "Lost Lad and Back Tor (Ethels), High Peak",
+  "km": 12.2,
+  "climb": 424,
+  "top_m": 530,
+  "walk_min": 188,
+  "car_park": [
+   53.400573,
+   -1.742222
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 10376,
+  "road_m": 1785,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.8 km on roads"
+  ],
+  "roads": {
+   "Derwent Lane": 1228,
+   "unclassified": 557
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19283071,
+  "name": "Frogatt, Curbar and White Edge Red Deer Circular Walk, Longshaw Estate",
+  "km": 9.4,
+  "climb": 244,
+  "top_m": 371,
+  "walk_min": 138,
+  "car_park": [
+   53.29697,
+   -1.614374
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 9145,
+  "road_m": 293,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "primary": 115,
+   "The Grouse Inn": 111,
+   "untagged": 67
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19283292,
+  "name": "Views and Woodlands Walk at Longshaw, Longshaw Estate",
+  "km": 8.6,
+  "climb": 323,
+  "top_m": 356,
+  "walk_min": 136,
+  "car_park": [
+   53.315558,
+   -1.604016
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "Staff car park",
+  "foot_m": 8038,
+  "road_m": 579,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Tedgness Road": 304,
+   "untagged": 125,
+   "primary": 73,
+   "Main Road": 38
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19605464,
+  "name": "Royston & Carlton Boundary Walk",
+  "km": 13.5,
+  "climb": 133,
+  "top_m": 90,
+  "walk_min": 175,
+  "car_park": [
+   53.599569,
+   -1.436904
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 13041,
+  "road_m": 433,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "footway": 399,
+   "Lee Lane": 34
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19774052,
+  "name": "Pule Hill Walk, Marsden Moor",
+  "km": 6.7,
+  "climb": 343,
+  "top_m": 360,
+  "walk_min": 115,
+  "car_park": [
+   53.58728,
+   -1.951703
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3970,
+  "road_m": 2731,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.7 km on roads"
+  ],
+  "roads": {
+   "Old Mount Road": 924,
+   "Manchester Road": 631,
+   "Mount Road": 613,
+   "Ainsley Lane": 203
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19774106,
+  "name": "Marsden Deer Hill Walk, Marsden Moor",
+  "km": 6.3,
+  "climb": 332,
+  "top_m": 366,
+  "walk_min": 109,
+  "car_park": [
+   53.601763,
+   -1.928645
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "Colne Valley Group Practice",
+  "foot_m": 4678,
+  "road_m": 1668,
+  "honeypot": [
+   "at the car park: cafe, ice_cream, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.7 km on roads"
+  ],
+  "roads": {
+   "Binn Road": 582,
+   "Binn Lane": 306,
+   "Fall Lane": 303,
+   "Peel Street": 205
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19774128,
+  "name": "Eastergate Return Walk, Marsden Moor",
+  "km": 4.4,
+  "climb": 128,
+  "top_m": 229,
+  "walk_min": 65,
+  "car_park": [
+   53.604449,
+   -1.940762
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 3498,
+  "road_m": 868,
+  "honeypot": [
+   "at the car park: cafe, playground, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Waters Road": 723,
+   "Blake Lee Lane": 145
+  }
+ }
+]
