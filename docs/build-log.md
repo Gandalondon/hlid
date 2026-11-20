@@ -3,3 +3,4 @@
 - 20 Nov 18:52: build 57. Brecon Beacons: 26 candidates, 25 passed (nearly all car park loops). 155 walks in the app. Next: Peak District, Yorkshire Dales, Lake District.
 - 20 Nov 19:32: build 58. Peak District: 33 candidates, 23 passed. Next: Yorkshire Dales, Lake District.
 - 20 Nov 20:08: build 59. Yorkshire Dales: 25 candidates, 22 passed. Next: Lake District.
+- 20 Nov 20:47: build 60. Lake District: 44 candidates, 36 passed. 236 walks in the app. Next (data running): Snowdonia, North York Moors, Northumberland, Shropshire Hills.
