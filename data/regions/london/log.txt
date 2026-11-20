@@ -1,0 +1,24 @@
+2026-11-20 12:05 extract: pass 1 5137 walking routes 16 s
+2026-11-20 12:24 extract: 431157 ways 39959 car parks 28096 pois 691 routes 6882 named places 1177 s
+2026-11-20 12:24 step extract done in 1178 s
+2026-11-20 12:25 routes: 691 relations -> 56 checked, 32 kept; out: {'not a loop': 438, 'too short': 139, 'too far': 36, 'no ways': 1, 'too long': 1, 'too flat': 10, 'not a country walk (name)': 6, 'no free car park within 400 m': 4} ; dropped: {'roads': 23, 'car park': 2}
+2026-11-20 12:25 step routes done in 15 s
+2026-11-20 12:25 parks: 39959 car parks -> 44 pass -> 29 after 2 km spacing; out: {'fee not no': 36719, 'access': 2276, 'too flat': 151, 'honeypot at start': 419, 'distance': 322, 'customers only': 28}
+2026-11-20 12:25 step parks done in 6 s
+2026-11-20 12:28 loops: 29 car parks tried, 13 ok
+2026-11-20 12:28 step loops done in 162 s
+2026-11-20 12:28 merge: 17 walks ( 11 routes, 6 car park loops ), 20 over 35 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 4, 'none': 13}
+2026-11-20 12:28 step merge done in 7 s
+2026-11-20 12:28 areas: 14 walks, 14 to extract, 14 new terrain tiles
+2026-11-20 12:36 areas: nodes 1840840 493 s
+2026-11-20 12:43 areas: extracted 14 883 s
+2026-11-20 12:43 step areas done in 887 s
+2026-11-20 12:43 build: 14 built, 0 failed this run
+2026-11-20 12:43 step build done in 46 s
+2026-11-20 12:43 pack: 9 kept, 5 failed the gates 9.8 MB
+2026-11-20 12:43   failed ldn-5-downlands-circular 9.4 km vs 9.5, 1758 of 9375 m off a path
+2026-11-20 12:43   failed ldn-9-margery-wood-circular 0.1 km vs 5.9, 122 of 133 m off a path
+2026-11-20 12:43   failed ldn-10-mills-pillboxes 7.1 km vs 7.1, 638 of 7136 m off a path
+2026-11-20 12:43   failed ldn-13-reigate-hill 11.4 km vs 6.3, 2116 of 11423 m off a path
+2026-11-20 12:43   failed ldn-15-chessington-countryside 0.2 km vs 8.4, 58 of 175 m off a path
+2026-11-20 12:43 step pack done in 1 s
