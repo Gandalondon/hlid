@@ -1,0 +1,85 @@
+[
+ {
+  "source": "osm route",
+  "id": 11350784,
+  "name": "Boundary Walk",
+  "km": 7.7,
+  "climb": 131,
+  "top_m": 208,
+  "walk_min": 105,
+  "car_park": [
+   54.92073,
+   -1.786836
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 7326,
+  "road_m": 334,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 285,
+   "unclassified": 49
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 16123531,
+  "name": "Eildon Hills Trail",
+  "km": 9.1,
+  "climb": 891,
+  "top_m": 416,
+  "walk_min": 199,
+  "car_park": [
+   55.597382,
+   -2.719662
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8500,
+  "road_m": 639,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Dingleton Road": 181,
+   "Priors Walk": 137,
+   "Abbey Street": 128,
+   "unclassified": 107
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19449464,
+  "name": "Riever Trails: The Sill Circular",
+  "km": 9.8,
+  "climb": 120,
+  "top_m": 289,
+  "walk_min": 130,
+  "car_park": [
+   54.99277,
+   -2.385845
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 2276,
+  "road_m": 7525,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "7.5 km on roads"
+  ],
+  "roads": {
+   "unclassified": 5646,
+   "tertiary": 1142,
+   "footway": 451,
+   "Military Road": 287
+  }
+ }
+]

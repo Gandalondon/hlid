@@ -1,1 +1,21 @@
 2026-11-20 22:33 extract: pass 1 5137 walking routes 16 s
+2026-11-20 22:48 extract: 45754 ways 2612 car parks 1634 pois 60 routes 6822 named places 915 s
+2026-11-20 22:48 step extract done in 917 s
+2026-11-20 22:48 routes: 60 relations -> 3 checked, 2 kept; out: {'not a loop': 44, 'too short': 9, 'too long': 1, 'not a country walk (name)': 1, 'no free car park within 400 m': 2} ; dropped: {'roads': 1, 'car park': 0}
+2026-11-20 22:48 step routes done in 2 s
+2026-11-20 22:48 parks: 2612 car parks -> 82 pass -> 60 after 2 km spacing; out: {'fee not no': 1731, 'access': 568, 'honeypot at start': 164, 'too flat': 54, 'customers only': 13}
+2026-11-20 22:48 step parks done in 1 s
+2026-11-20 22:49 loops: 60 car parks tried, 8 ok
+2026-11-20 22:49 step loops done in 42 s
+2026-11-20 22:49 merge: 9 walks ( 2 routes, 7 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 9}
+2026-11-20 22:49 step merge done in 4 s
+2026-11-20 22:49 areas: 9 walks, 9 to extract, 19 new terrain tiles
+2026-11-20 22:56 areas: nodes 279652 442 s
+2026-11-20 23:02 areas: extracted 9 771 s
+2026-11-20 23:02 step areas done in 771 s
+2026-11-20 23:02 build: 9 built, 0 failed this run
+2026-11-20 23:02 step build done in 37 s
+2026-11-20 23:02 pack: 7 kept, 2 failed the gates 2.0 MB
+2026-11-20 23:02   failed nth-6-eildon-hills-trail 9.1 km vs 9.1, 607 of 9139 m off a path
+2026-11-20 23:02   failed nth-7-boundary 7.7 km vs 7.7, 316 of 7659 m off a path
+2026-11-20 23:02 step pack done in 0 s
