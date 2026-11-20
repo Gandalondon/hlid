@@ -1,0 +1,371 @@
+[
+ {
+  "source": "osm route",
+  "id": 4154763,
+  "name": "Carron Crag Trail",
+  "km": 7.8,
+  "climb": 410,
+  "top_m": 308,
+  "walk_min": 134,
+  "car_park": [
+   54.339688,
+   -3.022874
+  ],
+  "car_park_name": "Grizedale Forest (disabled)",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7681,
+  "road_m": 95,
+  "honeypot": [
+   "at the car park: cafe, playground, toilets, visitor_centre"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 95
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 14359923,
+  "name": "Ullswater Way - Dalemain Loop",
+  "km": 8.1,
+  "climb": 190,
+  "top_m": 199,
+  "walk_min": 116,
+  "car_park": [
+   54.612218,
+   -2.821281
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 6284,
+  "road_m": 1834,
+  "honeypot": [
+   "at the car park: cafe, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.8 km on roads"
+  ],
+  "roads": {
+   "unclassified": 1357,
+   "primary": 456,
+   "service": 21
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 14389659,
+  "name": "Ullswater Way - Lowther Castle Loop",
+  "km": 13.0,
+  "climb": 366,
+  "top_m": 348,
+  "walk_min": 193,
+  "car_park": [
+   54.607884,
+   -2.738707
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 9466,
+  "road_m": 3543,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "3.5 km on roads"
+  ],
+  "roads": {
+   "unclassified": 2581,
+   "tertiary": 598,
+   "service": 313,
+   "Helton Road": 28
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17359295,
+  "name": "Heversham Trail",
+  "km": 4.2,
+  "climb": 104,
+  "top_m": 102,
+  "walk_min": 61,
+  "car_park": [
+   54.246952,
+   -2.776244
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 3517,
+  "road_m": 691,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "tertiary": 402,
+   "unclassified": 209,
+   "primary": 55,
+   "Princes Way": 16
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17444860,
+  "name": "Walla Crag to Ashness Bridge walk, North Lakes Outdoors",
+  "km": 7.2,
+  "climb": 550,
+  "top_m": 375,
+  "walk_min": 141,
+  "car_park": [
+   54.572919,
+   -3.131882
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 7065,
+  "road_m": 125,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 60,
+   "Great Wood Car Park": 55,
+   "Ashness Bridge": 10
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17445039,
+  "name": "Castle Crag from Seatoller Trail: The Scenic Route, North Lakes Outdoors",
+  "km": 7.7,
+  "climb": 217,
+  "top_m": 242,
+  "walk_min": 114,
+  "car_park": [
+   54.532209,
+   -3.150885
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 7471,
+  "road_m": 204,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Honister Pass": 163,
+   "Seatoller National Trust Car Park": 41
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17448525,
+  "name": "Rosthwaite Round, Fells, Tarn and Beck Walk, North Lakes Outdoors",
+  "km": 7.7,
+  "climb": 520,
+  "top_m": 421,
+  "walk_min": 145,
+  "car_park": [
+   54.513654,
+   -3.140619
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 7709,
+  "road_m": 0,
+  "honeypot": [
+   "at the car park: cafe"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 19431032,
+  "name": "Aira Force and Gowbarrow Park Trail, Ullswater Valley",
+  "km": 6.8,
+  "climb": 671,
+  "top_m": 475,
+  "walk_min": 149,
+  "car_park": [
+   54.575166,
+   -2.934825
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 6833,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 19553644,
+  "name": "Pillar Trail from Wasdale Head, North Lakes Outdoors",
+  "km": 12.7,
+  "climb": 1722,
+  "top_m": 891,
+  "walk_min": 325,
+  "car_park": [
+   54.465422,
+   -3.256201
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 12298,
+  "road_m": 449,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 449
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19583869,
+  "name": "Lanthwaite Wood and Crummock Water Walk, North Lakes Outdoors",
+  "km": 5.7,
+  "climb": 188,
+  "top_m": 156,
+  "walk_min": 87,
+  "car_park": [
+   54.567917,
+   -3.30053
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5042,
+  "road_m": 676,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "secondary": 592,
+   "service": 84
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19584208,
+  "name": "Buttermere to Rannerdale Walk, North Lakes Outdoors",
+  "km": 4.6,
+  "climb": 337,
+  "top_m": 348,
+  "walk_min": 89,
+  "car_park": [
+   54.548036,
+   -3.288477
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 4616,
+  "road_m": 26,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "secondary": 26
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19914927,
+  "name": "Tarn Hows Ranger Run, Tarn Hows and Coniston, South Lakes Outdoors",
+  "km": 6.4,
+  "climb": 344,
+  "top_m": 213,
+  "walk_min": 111,
+  "car_park": [
+   54.393835,
+   -3.04543
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 6173,
+  "road_m": 179,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 171,
+   "Smithy Brow": 7
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19915012,
+  "name": "Yewdale Valley walk, Tarn Hows and Coniston",
+  "km": 7.4,
+  "climb": 385,
+  "top_m": 163,
+  "walk_min": 127,
+  "car_park": [
+   54.389135,
+   -3.057666
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 6523,
+  "road_m": 849,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "primary": 313,
+   "Shepherd's Bridge Lane": 226,
+   "Yewdale Road": 160,
+   "unclassified": 145
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19947001,
+  "name": "Ambleside to Troutbeck Walk, Windermere",
+  "km": 10.3,
+  "climb": 625,
+  "top_m": 484,
+  "walk_min": 186,
+  "car_park": [
+   54.431709,
+   -2.962138
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 8155,
+  "road_m": 2152,
+  "honeypot": [
+   "at the car park: cafe, ice_cream, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "2.2 km on roads"
+  ],
+  "roads": {
+   "unclassified": 840,
+   "Old Lake Road": 499,
+   "Stock Ghyll Lane": 302,
+   "Lake Road": 144
+  }
+ }
+]

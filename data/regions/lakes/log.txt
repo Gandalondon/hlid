@@ -1,1 +1,27 @@
 2026-11-20 20:05 extract: pass 1 5137 walking routes 16 s
+2026-11-20 20:21 extract: 47778 ways 3696 car parks 1309 pois 123 routes 7251 named places 949 s
+2026-11-20 20:21 step extract done in 951 s
+2026-11-20 20:21 routes: 123 relations -> 14 checked, 11 kept; out: {'not a loop': 55, 'too short': 40, 'no free car park within 400 m': 11, 'too long': 1, 'not a country walk (name)': 2} ; dropped: {'roads': 3, 'car park': 0}
+2026-11-20 20:21 step routes done in 3 s
+2026-11-20 20:21 parks: 3696 car parks -> 230 pass -> 116 after 2 km spacing; out: {'access': 994, 'fee not no': 2313, 'honeypot at start': 101, 'too flat': 48, 'customers only': 10}
+2026-11-20 20:21 step parks done in 2 s
+2026-11-20 20:27 loops: 116 car parks tried, 35 ok
+2026-11-20 20:27 step loops done in 386 s
+2026-11-20 20:28 merge: 44 walks ( 10 routes, 34 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 4, 'none': 40}
+2026-11-20 20:28 step merge done in 5 s
+2026-11-20 20:28 areas: 44 walks, 44 to extract, 31 new terrain tiles
+2026-11-20 20:36 areas: nodes 2165121 478 s
+2026-11-20 20:42 areas: extracted 44 876 s
+2026-11-20 20:42 step areas done in 877 s
+2026-11-20 20:45 build: 44 built, 0 failed this run
+2026-11-20 20:45 step build done in 181 s
+2026-11-20 20:45 pack: 36 kept, 8 failed the gates 16.8 MB
+2026-11-20 20:45   failed lk-1-aira-force-and-gowbarrow-park-trail 0.0 km vs 6.8, 19 of 19 m off a path
+2026-11-20 20:45   failed lk-3-tarn-hows-ranger-run 10.7 km vs 6.4, 1902 of 10749 m off a path
+2026-11-20 20:45   failed lk-5-yewdale-valley 7.4 km vs 7.4, 813 of 7372 m off a path
+2026-11-20 20:45   failed lk-16-buttermere-to-rannerdale 8.3 km vs 4.6, 0 of 8286 m off a path
+2026-11-20 20:45   failed lk-26-castle-crag-from-seatoller-trail-t 14.6 km vs 7.7, 2371 of 14645 m off a path
+2026-11-20 20:45   failed lk-35-carron-crag-trail 7.9 km vs 7.8, 167 of 7888 m off a path
+2026-11-20 20:45   failed lk-40-lanthwaite-wood-and-crummock-water 6.5 km vs 5.7, 579 of 6459 m off a path
+2026-11-20 20:45   failed lk-44-heversham-trail 4.2 km vs 4.2, 679 of 4209 m off a path
+2026-11-20 20:45 step pack done in 2 s
