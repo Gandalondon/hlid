@@ -1,0 +1,285 @@
+[
+ {
+  "source": "osm route",
+  "id": 13631946,
+  "name": "Hall Walk",
+  "km": 7.0,
+  "climb": 324,
+  "top_m": 80,
+  "walk_min": 116,
+  "car_park": [
+   50.341679,
+   -4.629816
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 4421,
+  "road_m": 2562,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "2.6 km on roads"
+  ],
+  "roads": {
+   "untagged": 524,
+   "Bodinnick Ferry": 438,
+   "Esplanade": 260,
+   "Passage Street": 201
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17410251,
+  "name": "Chacewater Trail 1 - The Main Settlement Loop",
+  "km": 4.5,
+  "climb": 134,
+  "top_m": 110,
+  "walk_min": 67,
+  "car_park": [
+   50.256797,
+   -5.159676
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 2917,
+  "road_m": 1589,
+  "honeypot": [
+   "at the car park: cafe, playground, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.6 km on roads"
+  ],
+  "roads": {
+   "Station Road": 1098,
+   "High Street": 192,
+   "Fore Street": 121,
+   "The Terrace": 68
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17410923,
+  "name": "Chacewater Trail 3 - The Todpool, Poldice Valley, Twelveheads Loop",
+  "km": 6.4,
+  "climb": 196,
+  "top_m": 118,
+  "walk_min": 97,
+  "car_park": [
+   50.236343,
+   -5.141874
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 2287,
+  "road_m": 4121,
+  "honeypot": [
+   "at the car park: cafe, playground"
+  ],
+  "keep": false,
+  "drop": [
+   "4.1 km on roads"
+  ],
+  "roads": {
+   "unclassified": 2887,
+   "Church Hill": 1106,
+   "Twelveheads Road": 102,
+   "The Square": 16
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19158346,
+  "name": "Lanhydrock Parkland walk, Lanhydrock",
+  "km": 4.2,
+  "climb": 131,
+  "top_m": 113,
+  "walk_min": 63,
+  "car_park": [
+   50.447512,
+   -4.697121
+  ],
+  "car_park_name": null,
+  "car_park_check": "probably paid (National Trust)",
+  "car_park_operator": "National Trust",
+  "foot_m": 3889,
+  "road_m": 289,
+  "honeypot": [
+   "at the car park: cafe, playground, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "car park probably paid (National Trust)"
+  ],
+  "roads": {
+   "service": 289
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19307136,
+  "name": "Pentire and Baby Bay circular walk, North Cornwall",
+  "km": 5.2,
+  "climb": 272,
+  "top_m": 79,
+  "walk_min": 90,
+  "car_park": [
+   50.583244,
+   -4.90989
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4647,
+  "road_m": 583,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 498,
+   "service": 85
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19347060,
+  "name": "Chyvarloe to Gunwalloe Fishing Cove, Penrose",
+  "km": 5.3,
+  "climb": 156,
+  "top_m": 67,
+  "walk_min": 79,
+  "car_park": [
+   50.066797,
+   -5.282463
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 4434,
+  "road_m": 846,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 835,
+   "service": 11
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19347100,
+  "name": "Higher Penrose and the Parkland walk, Penrose",
+  "km": 6.4,
+  "climb": 245,
+  "top_m": 69,
+  "walk_min": 102,
+  "car_park": [
+   50.077144,
+   -5.305453
+  ],
+  "car_park_name": "Parc-An-Als",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 6361,
+  "road_m": 81,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 81
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19792137,
+  "name": "Hendersick and Talland Bay Loop, Lansallos",
+  "km": 4.1,
+  "climb": 301,
+  "top_m": 119,
+  "walk_min": 79,
+  "car_park": [
+   50.337555,
+   -4.49383
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 2996,
+  "road_m": 1097,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.1 km on roads"
+  ],
+  "roads": {
+   "unclassified": 1097
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19793600,
+  "name": "Struddicks circular walk, Lansallos",
+  "km": 5.0,
+  "climb": 116,
+  "top_m": 153,
+  "walk_min": 71,
+  "car_park": [
+   50.365673,
+   -4.385127
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3454,
+  "road_m": 1517,
+  "honeypot": [
+   "at the car park: cafe, playground, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.5 km on roads"
+  ],
+  "roads": {
+   "Looe Hill": 996,
+   "unclassified": 389,
+   "Hessenford Road": 60,
+   "Keveral Lane": 55
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 21462134,
+  "name": "Danescombe Valley Walk, Cothele",
+  "km": 4.3,
+  "climb": 208,
+  "top_m": 84,
+  "walk_min": 73,
+  "car_park": [
+   50.49307,
+   -4.226464
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4292,
+  "road_m": 45,
+  "honeypot": [
+   "at the car park: cafe, restaurant, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 39,
+   "service": 6
+  }
+ }
+]

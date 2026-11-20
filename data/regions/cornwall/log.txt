@@ -1,1 +1,23 @@
 2026-11-20 16:36 extract: pass 1 5137 walking routes 15 s
+2026-11-20 16:50 extract: 55459 ways 3417 car parks 2262 pois 311 routes 3147 named places 894 s
+2026-11-20 16:50 step extract done in 895 s
+2026-11-20 16:51 routes: 311 relations -> 10 checked, 4 kept; out: {'not a loop': 228, 'no free car park within 400 m': 1, 'not a country walk (name)': 2, 'too short': 70} ; dropped: {'roads': 5, 'car park': 1}
+2026-11-20 16:51 step routes done in 2 s
+2026-11-20 16:51 parks: 3417 car parks -> 88 pass -> 67 after 2 km spacing; out: {'fee not no': 2616, 'access': 485, 'honeypot at start': 126, 'too flat': 95, 'customers only': 7}
+2026-11-20 16:51 step parks done in 1 s
+2026-11-20 16:51 loops: 67 car parks tried, 4 ok
+2026-11-20 16:51 step loops done in 45 s
+2026-11-20 16:51 merge: 7 walks ( 4 routes, 3 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 1, 'none': 6}
+2026-11-20 16:51 step merge done in 4 s
+2026-11-20 16:51 areas: 7 walks, 7 to extract, 13 new terrain tiles
+2026-11-20 16:59 areas: nodes 252429 473 s
+2026-11-20 17:05 areas: extracted 7 830 s
+2026-11-20 17:05 step areas done in 831 s
+2026-11-20 17:06 build: 7 built, 0 failed this run
+2026-11-20 17:06 step build done in 14 s
+2026-11-20 17:06 pack: 3 kept, 4 failed the gates 0.7 MB
+2026-11-20 17:06   failed cnw-1-higher-penrose-and-the-parkland 0.1 km vs 6.4, 128 of 132 m off a path
+2026-11-20 17:06   failed cnw-5-chyvarloe-to-gunwalloe-fishing-cov 5.6 km vs 5.3, 1091 of 5558 m off a path
+2026-11-20 17:06   failed cnw-6-pentire-and-baby-bay-circular 0.2 km vs 5.2, 235 of 235 m off a path
+2026-11-20 17:06   failed cnw-7-danescombe-valley 5.9 km vs 4.3, 612 of 5877 m off a path
+2026-11-20 17:06 step pack done in 0 s
