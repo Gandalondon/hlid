@@ -39,4 +39,4 @@ Core story: not a curated list, but every walk has passed the same rules, and th
 - Master copy (Tony, 21 Nov): the app's How it works page (the t-info screen in app/src/main/assets/index.html) is the master. Write and change copy there first; site/how-it-works.html follows it.
 - The site's last section names the sources (OpenStreetMap, Ordnance Survey) and says it can't see mud: both go when the page is rewritten (recipe, and the mud check).
 
-- 21 Nov (final): icon is the notes page (E), 14 x 17, 2px stroke; the Your walks card is redrawn to the same 14 x 17 so they match. (A brief switch to the standard (i) was undone.)
+- 21 Nov (final): icon is the notes page (E); it and the Your walks card are both 13 x 20 (the original card's proportions, taller), 2px stroke. (A brief switch to the standard (i) was undone.)
