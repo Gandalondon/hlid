@@ -1,0 +1,26 @@
+[
+ {
+  "source": "osm route",
+  "id": 14447625,
+  "name": "Stob Ban (white peak) and Mullach nan Coirean (Summit of the Corries)",
+  "km": 13.1,
+  "climb": 1861,
+  "top_m": 999,
+  "walk_min": 343,
+  "car_park": [
+   56.76992,
+   -5.041001
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 12861,
+  "road_m": 243,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Glen Nevis Road": 243
+  }
+ }
+]

@@ -1,1 +1,21 @@
 2026-11-21 08:34 extract: pass 1 5137 walking routes 17 s
+2026-11-21 08:51 extract: pass 1 5137 walking routes 18 s
+2026-11-21 09:08 extract: 6522 ways 440 car parks 172 pois 33 routes 1093 named places 1044 s
+2026-11-21 09:08 step extract done in 1048 s
+2026-11-21 09:08 routes: 33 relations -> 1 checked, 1 kept; out: {'not a loop': 30, 'too short': 2} ; dropped: {'roads': 0, 'car park': 0}
+2026-11-21 09:08 step routes done in 2 s
+2026-11-21 09:08 parks: 440 car parks -> 52 pass -> 36 after 2 km spacing; out: {'fee not no': 321, 'access': 48, 'honeypot at start': 17, 'thin path network': 2}
+2026-11-21 09:08 step parks done in 1 s
+2026-11-21 09:09 loops: 36 car parks tried, 4 ok
+2026-11-21 09:09 step loops done in 48 s
+2026-11-21 09:09 merge: 4 walks ( 1 routes, 3 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 4}
+2026-11-21 09:09 step merge done in 4 s
+2026-11-21 09:09 areas: 4 walks, 4 to extract, 14 new terrain tiles
+2026-11-21 09:18 areas: nodes 79233 533 s
+2026-11-21 09:24 areas: extracted 4 924 s
+2026-11-21 09:24 step areas done in 924 s
+2026-11-21 09:25 build: 4 built, 0 failed this run
+2026-11-21 09:25 step build done in 27 s
+2026-11-21 09:25 pack: 3 kept, 1 failed the gates 1.1 MB
+2026-11-21 09:25   failed fw-2-stob-ban-white-peak-and-mullach-nan 25.4 km vs 13.1, 884 of 25381 m off a path
+2026-11-21 09:25 step pack done in 0 s
