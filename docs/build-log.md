@@ -11,3 +11,4 @@
 - 21 Nov 00:05: build 65. Cairngorms: 8 candidates, 6 passed, 4 new (2 overlap Aberdeen) (same Scotland limits: 407 of 680 car parks not tagged free; 7 of 65 good car parks have a passing loop). 288 walks in the app. Running: Trossachs, Galloway, Mid Wales.
 - 21 Nov 00:35: Trossachs: 8 candidates, all 8 passed. 296 walks in the app. Running: Galloway, Mid Wales.
 - 21 Nov 01:10: Galloway: 1 candidate, 1 passed (647 car parks, very few tagged free). 297 walks in the app. Running: Mid Wales, then North Pennines, Exmoor and Quantocks, Malverns and Wye Valley, Pembrokeshire, Arran (log /tmp/north4.log).
+- 21 Nov 01:35: Mid Wales: 12 candidates, 11 passed. Running: North Pennines, Exmoor and Quantocks, Malverns and Wye Valley, Pembrokeshire, Arran (log /tmp/north4.log).
