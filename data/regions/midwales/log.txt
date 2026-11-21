@@ -1,1 +1,20 @@
 2026-11-21 00:59 extract: pass 1 5137 walking routes 15 s
+2026-11-21 01:14 extract: 25571 ways 1206 car parks 568 pois 34 routes 1834 named places 910 s
+2026-11-21 01:14 step extract done in 911 s
+2026-11-21 01:14 routes: 34 relations -> 3 checked, 3 kept; out: {'not a loop': 23, 'too short': 6, 'no free car park within 400 m': 2} ; dropped: {'roads': 0, 'car park': 0}
+2026-11-21 01:14 step routes done in 2 s
+2026-11-21 01:14 parks: 1206 car parks -> 80 pass -> 52 after 2 km spacing; out: {'fee not no': 1018, 'access': 75, 'honeypot at start': 29, 'customers only': 3, 'too flat': 1}
+2026-11-21 01:14 step parks done in 1 s
+2026-11-21 01:15 loops: 52 car parks tried, 11 ok
+2026-11-21 01:15 step loops done in 49 s
+2026-11-21 01:15 merge: 12 walks ( 3 routes, 9 car park loops ), 1 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 12}
+2026-11-21 01:15 step merge done in 3 s
+2026-11-21 01:15 areas: 12 walks, 12 to extract, 20 new terrain tiles
+2026-11-21 01:22 areas: nodes 229344 434 s
+2026-11-21 01:28 areas: extracted 12 768 s
+2026-11-21 01:28 step areas done in 769 s
+2026-11-21 01:29 build: 12 built, 0 failed this run
+2026-11-21 01:29 step build done in 48 s
+2026-11-21 01:29 pack: 11 kept, 1 failed the gates 3.8 MB
+2026-11-21 01:29   failed mwl-12-gregynog-long-circular 9.3 km vs 5.3, 0 of 9306 m off a path
+2026-11-21 01:29 step pack done in 0 s

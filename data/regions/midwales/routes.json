@@ -1,0 +1,72 @@
+[
+ {
+  "source": "osm route",
+  "id": 163646,
+  "name": "Gregynog long circular walk",
+  "km": 5.3,
+  "climb": 210,
+  "top_m": 257,
+  "walk_min": 85,
+  "car_park": [
+   52.568826,
+   -3.350151
+  ],
+  "car_park_name": "Gregynog overflow car park",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 4424,
+  "road_m": 880,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 880
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 180945,
+  "name": "Quarryman's Path",
+  "km": 6.1,
+  "climb": 554,
+  "top_m": 270,
+  "walk_min": 128,
+  "car_park": [
+   52.64403,
+   -3.956074
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6080,
+  "road_m": 0,
+  "honeypot": [
+   "at the car park: cafe, playground, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 20382719,
+  "name": "Hendre Pleasure Drive",
+  "km": 9.6,
+  "climb": 332,
+  "top_m": 368,
+  "walk_min": 149,
+  "car_park": [
+   52.725546,
+   -3.438778
+  ],
+  "car_park_name": "Hendre Car Park",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 9632,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ }
+]
