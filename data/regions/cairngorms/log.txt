@@ -1,1 +1,21 @@
 2026-11-20 23:33 extract: pass 1 5137 walking routes 16 s
+2026-11-20 23:47 extract: 16912 ways 680 car parks 269 pois 78 routes 2215 named places 912 s
+2026-11-20 23:47 step extract done in 913 s
+2026-11-20 23:48 routes: 78 relations -> 8 checked, 3 kept; out: {'not a loop': 51, 'no ways': 1, 'too short': 13, 'too long': 2, 'no free car park within 400 m': 3} ; dropped: {'roads': 5, 'car park': 0}
+2026-11-20 23:48 step routes done in 3 s
+2026-11-20 23:48 parks: 680 car parks -> 146 pass -> 65 after 2 km spacing; out: {'fee not no': 407, 'access': 73, 'honeypot at start': 49, 'customers only': 5}
+2026-11-20 23:48 step parks done in 1 s
+2026-11-20 23:48 loops: 65 car parks tried, 7 ok
+2026-11-20 23:48 step loops done in 45 s
+2026-11-20 23:48 merge: 8 walks ( 3 routes, 5 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 8}
+2026-11-20 23:48 step merge done in 3 s
+2026-11-20 23:48 areas: 8 walks, 8 to extract, 12 new terrain tiles
+2026-11-20 23:56 areas: nodes 159812 432 s
+2026-11-21 00:01 areas: extracted 8 755 s
+2026-11-21 00:01 step areas done in 755 s
+2026-11-21 00:02 build: 8 built, 0 failed this run
+2026-11-21 00:02 step build done in 35 s
+2026-11-21 00:02 pack: 6 kept, 2 failed the gates 2.1 MB
+2026-11-21 00:02   failed cgm-7-queen-s-drive 4.7 km vs 4.7, 840 of 4654 m off a path
+2026-11-21 00:02   failed cgm-8-morrone-circular 4.2 km vs 4.1, 433 of 4238 m off a path
+2026-11-21 00:02 step pack done in 0 s

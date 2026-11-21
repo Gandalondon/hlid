@@ -1,0 +1,221 @@
+[
+ {
+  "source": "osm route",
+  "id": 5385430,
+  "name": "Creag Bheag Trail",
+  "km": 5.4,
+  "climb": 212,
+  "top_m": 485,
+  "walk_min": 86,
+  "car_park": [
+   57.080782,
+   -4.054389
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 3458,
+  "road_m": 1911,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.9 km on roads"
+  ],
+  "roads": {
+   "service": 816,
+   "Gynack Road": 675,
+   "Ardbroilach Road": 211,
+   "Tait's Brae": 125
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 5616132,
+  "name": "Round Loch Muick",
+  "km": 11.9,
+  "climb": 338,
+  "top_m": 447,
+  "walk_min": 177,
+  "car_park": [
+   56.952653,
+   -3.137949
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 11920,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 5637972,
+  "name": "Morrone Circular",
+  "km": 4.1,
+  "climb": 164,
+  "top_m": 451,
+  "walk_min": 66,
+  "car_park": [
+   57.003774,
+   -3.419339
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3739,
+  "road_m": 402,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 402
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 11798894,
+  "name": "Glen Tilt Trail",
+  "km": 14.8,
+  "climb": 777,
+  "top_m": 276,
+  "walk_min": 256,
+  "car_park": [
+   56.796577,
+   -3.840349
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 13078,
+  "road_m": 1769,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.8 km on roads"
+  ],
+  "roads": {
+   "unclassified": 1441,
+   "service": 301,
+   "Fender Bridge": 27
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 13487882,
+  "name": "Queen's Drive",
+  "km": 4.7,
+  "climb": 218,
+  "top_m": 413,
+  "walk_min": 78,
+  "car_park": [
+   57.005525,
+   -3.398393
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 3798,
+  "road_m": 856,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Cluniebank Road": 265,
+   "Hillside Road": 258,
+   "unclassified": 148,
+   "Invercauld Road": 67
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 13635494,
+  "name": "Aviemore Orbital",
+  "km": 6.8,
+  "climb": 86,
+  "top_m": 234,
+  "walk_min": 90,
+  "car_park": [
+   57.188044,
+   -3.829347
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3645,
+  "road_m": 3110,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "3.1 km on roads"
+  ],
+  "roads": {
+   "Dalnabay": 738,
+   "unclassified": 492,
+   "Dalfaber Road": 482,
+   "secondary": 466
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19426375,
+  "name": "Woodend Walk",
+  "km": 8.6,
+  "climb": 250,
+  "top_m": 265,
+  "walk_min": 128,
+  "car_park": [
+   56.774336,
+   -3.843434
+  ],
+  "car_park_name": "Glen Tilt Car Park",
+  "car_park_check": "unknown",
+  "car_park_operator": "Atholl Estates",
+  "foot_m": 6178,
+  "road_m": 2381,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.4 km on roads"
+  ],
+  "roads": {
+   "unclassified": 1746,
+   "service": 635
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19426376,
+  "name": "Farm and Forest Walk",
+  "km": 5.7,
+  "climb": 293,
+  "top_m": 280,
+  "walk_min": 98,
+  "car_park": [
+   56.774336,
+   -3.843434
+  ],
+  "car_park_name": "Glen Tilt Car Park",
+  "car_park_check": "unknown",
+  "car_park_operator": "Atholl Estates",
+  "foot_m": 4514,
+  "road_m": 1167,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "unclassified": 789,
+   "service": 378
+  }
+ }
+]
