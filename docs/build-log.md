@@ -17,3 +17,4 @@
 - 21 Nov 03:03: Malverns and Wye Valley: 13 candidates, 11 passed, all already in the app from Cotswolds (no new build). 314 walks in the app. Running: Pembrokeshire, Arran.
 - 21 Nov 03:32: Pembrokeshire: 10 candidates, 7 passed. Running: Arran, then Fort William and Glen Coe, Skye, Argyll, Lincolnshire Wolds (log /tmp/north5.log).
 - 21 Nov 08:38: Arran and Ayrshire: 1 candidate, 1 passed. (Overnight gap 03:45-08:18: check-ins didn't fire while the chat was open.) Running: Fort William and Glen Coe, Skye, Argyll, Lincolnshire Wolds.
+- 21 Nov 09:28: Fort William and Glen Coe: 4 candidates, 3 passed. Running: Skye, Argyll, Lincolnshire Wolds.
