@@ -38,3 +38,5 @@ Core story: not a curated list, but every walk has passed the same rules, and th
 - Built 21 Nov: notes-page icon (24px, 2px stroke, same as Your walks) left of Your walks; opens How it works with the site's six sections word for word.
 - Master copy (Tony, 21 Nov): the app's How it works page (the t-info screen in app/src/main/assets/index.html) is the master. Write and change copy there first; site/how-it-works.html follows it.
 - The site's last section names the sources (OpenStreetMap, Ordnance Survey) and says it can't see mud: both go when the page is rewritten (recipe, and the mud check).
+
+- 21 Nov (later): icon changed to the standard info (i), the same Material icon as Forn, for consistency between apps. The Your walks icon is scaled up slightly (1.06) so both stand 20px tall; stroke stays 2px.

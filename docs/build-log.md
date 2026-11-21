@@ -35,3 +35,4 @@
 - 21 Nov 17:10: build 82. In-app How it works (master copy) rewritten for the internal build: added Wet week? (mud, not built yet; Tony fine with that for internal builds), Home before dark, One buzz, then quiet; dropped the source names and the 'can't see mud' line. Info icon now the same size as the front card of Your walks (11 x 17). Site still has the old copy.
 - 21 Nov 17:15: build 83. In-app How it works: Pay once replaced by All included (no payment talk inside the paid app).
 - 21 Nov 17:20: build 84. How it works copy: All included (option A: offline maps, one short vibration if you stray off the path); One nudge, then quiet.
+- 21 Nov 17:25: build 85. Info icon is now the standard (i) as in Forn; Your walks icon scaled to the same 20px height.
