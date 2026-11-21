@@ -1,0 +1,33 @@
+name: Mud
+
+# Recent rain at every walk, a few times a day, for Hlid's mud check (tools/mud/rain.py).
+# Writes mud.json to the weather branch (one commit, replaced each run). Switch off: Actions > Mud > ... > Disable workflow.
+on:
+  schedule:
+    - cron: '23 4,10,16 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mud
+  cancel-in-progress: true
+
+jobs:
+  rain:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read the rain gauges
+        run: python3 tools/mud/rain.py /tmp/mud.json
+      - name: Publish to the weather branch
+        run: |
+          mkdir /tmp/w && cd /tmp/w && git init -q -b weather && cp /tmp/mud.json .
+          git config user.name "Hlid weather"; git config user.email "hello@gethlid.app"
+          git add mud.json && git commit -qm "Recent rain $(date -u +%FT%H:%MZ) [skip ci]"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" weather
