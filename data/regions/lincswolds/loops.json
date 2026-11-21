@@ -1,0 +1,1 @@
+{"53.16501,0.01809": {"lon": 0.018095, "lat": 53.165015, "name": null, "operator": "", "capacity": "3", "straight_km": 21.1, "h": 32, "top": 108, "relief": 76, "foot_density": 154, "score": 60.4, "ok": false, "why": "no loop (TypeError)"}}

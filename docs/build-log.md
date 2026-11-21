@@ -20,3 +20,4 @@
 - 21 Nov 09:28: Fort William and Glen Coe: 4 candidates, 3 passed. Running: Skye, Argyll, Lincolnshire Wolds.
 - 21 Nov 10:01: Skye: 3 candidates, 3 passed. Running: Argyll, Lincolnshire Wolds.
 - 21 Nov 10:34: Argyll: 1 candidate, 1 passed. Running: Lincolnshire Wolds, then Torridon, Assynt, Inverness, Cannock Chase (log /tmp/north6.log).
+- 21 Nov 10:52: Lincolnshire Wolds: 0 walks (too flat for the relief rule; few free car parks). Running: Torridon, Assynt, Inverness, Cannock Chase.
