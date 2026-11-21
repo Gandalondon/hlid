@@ -1,0 +1,1 @@
+{"id": "bowland", "label": "Forest of Bowland", "prefix": "bow", "home": [-2.5, 53.95], "box": [53.8, -2.75, 54.1, -2.25], "geofabrik": ["europe/great-britain"], "straight_km": [0, 100], "route_km_min": 0, "route_km": 100, "drive_min": 0, "drive_max": 120, "score_drive": false, "veto": null}

@@ -1,0 +1,1 @@
+{"id": "anglesey", "label": "Anglesey", "prefix": "ang", "home": [-4.38, 53.28], "box": [53.1, -4.75, 53.45, -4.0], "geofabrik": ["europe/great-britain"], "straight_km": [0, 100], "route_km_min": 0, "route_km": 100, "drive_min": 0, "drive_max": 120, "score_drive": false, "veto": null}

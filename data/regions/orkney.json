@@ -1,0 +1,1 @@
+{"id": "orkney", "label": "Orkney", "prefix": "ork", "home": [-2.9, 59.05], "box": [58.7, -3.5, 59.4, -2.3], "geofabrik": ["europe/great-britain"], "straight_km": [0, 100], "route_km_min": 0, "route_km": 100, "drive_min": 0, "drive_max": 120, "score_drive": false, "veto": null}

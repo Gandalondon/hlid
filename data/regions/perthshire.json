@@ -1,0 +1,1 @@
+{"id": "perthshire", "label": "Perthshire", "prefix": "per", "home": [-3.7, 56.5], "box": [56.25, -4.2, 56.75, -3.2], "geofabrik": ["europe/great-britain"], "straight_km": [0, 100], "route_km_min": 0, "route_km": 100, "drive_min": 0, "drive_max": 120, "score_drive": false, "veto": null}

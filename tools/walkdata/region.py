@@ -39,8 +39,11 @@ BIG = {"motorway", "trunk", "primary", "secondary", "tertiary", "trunk_link", "p
 
 # ---------- extract ----------
 def extract(r):
+    """r can be several regions, comma-separated: the GB file is then read once for all of them (21 Nov)."""
     import osmium; from build8 import is_foot
-    C, D = cfg(r); B = C["box"]; pbf = srcpbf(C, r); t0 = time.time()
+    RS = r.split(","); CDs = [cfg(x) for x in RS]; BS = [c["box"] for c, _ in CDs]
+    C, D = CDs[0]; pbf = srcpbf(C, RS[0]); t0 = time.time()
+    def inany(x, y): return any(inbox(b, x, y) for b in BS)
     KEYS = ("highway", "designation", "foot", "access", "informal", "footway", "name", "fee", "operator", "capacity", "amenity", "parking",
             "tourism", "information", "leisure", "route", "type", "network", "surface", "tracktype", "ref", "prow_ref", "sac_scale")
     # pass 1: walking route relations and their member ways (relations come last in the file, so they need their own pass)
@@ -65,7 +68,7 @@ def extract(r):
     class H(osmium.SimpleHandler):
         def node(self, n):
             l = n.location
-            if not l.valid() or not inbox(B, l.lon, l.lat): return
+            if not l.valid() or not inany(l.lon, l.lat): return
             t = n.tags; a = t.get("amenity")
             if a == "parking" or a in ("cafe", "ice_cream", "toilets", "restaurant") or t.get("information") == "visitor_centre" or t.get("leisure") == "playground":
                 d = {k: v for k, v in t if k in KEYS}; (parks if a == "parking" else pois).append([round(l.lon, 6), round(l.lat, 6), d])
@@ -76,7 +79,7 @@ def extract(r):
         def way(self, w):
             try: ps = [(nn.lon, nn.lat) for nn in w.nodes]
             except Exception: return
-            if not any(inbox(B, x, y) for x, y in ps[::max(1, len(ps) // 8)] + ps[-1:]): return
+            if not any(inany(x, y) for x, y in ps[::max(1, len(ps) // 8)] + ps[-1:]): return
             t = {k: v for k, v in w.tags if k in KEYS}; full = dict(w.tags)
             nm = full.get("name"); k = kind(full)
             if nm and k and len(ps) > 2:
@@ -92,11 +95,16 @@ def extract(r):
     H().apply_file(pbf, locations=True, idx=idx)
     try: os.remove(f"/tmp/hlid-{r}-nodes.idx")
     except OSError: pass
-    rels = [x for x in rels if any(str(y[1]) in ways or y[1] in ways for y in x["m"])]
     ways = {str(k): v for k, v in ways.items()}
-    json.dump({"ways": ways, "parks": parks, "pois": pois, "rels": rels}, open(f"{D}/foot.json", "w"), separators=(",", ":"))
-    json.dump(named, open(f"{D}/named.json", "w"))
-    log(D, "extract:", len(ways), "ways", len(parks), "car parks", len(pois), "pois", len(rels), "routes", len(named), "named places", round(time.time() - t0), "s")
+    allrels = rels; allways = ways; allparks = parks; allpois = pois; allnamed = named
+    for (C, D), B in zip(CDs, BS):
+        ways = {k: v for k, v in allways.items() if any(inbox(B, x, y) for x, y in v["p"][::max(1, len(v["p"]) // 8)] + v["p"][-1:])}
+        parks = [q for q in allparks if inbox(B, q[0], q[1])]; pois = [q for q in allpois if inbox(B, q[0], q[1])]
+        named = [q for q in allnamed if inbox(B, q[0], q[1])]
+        rels = [x for x in allrels if any(str(y[1]) in ways for y in x["m"])]
+        json.dump({"ways": ways, "parks": parks, "pois": pois, "rels": rels}, open(f"{D}/foot.json", "w"), separators=(",", ":"))
+        json.dump(named, open(f"{D}/named.json", "w"))
+        log(D, "extract:", len(ways), "ways", len(parks), "car parks", len(pois), "pois", len(rels), "routes", len(named), "named places", round(time.time() - t0), "s")
 
 def load_foot(D): return json.load(open(f"{D}/foot.json"))
 
@@ -449,4 +457,5 @@ STEPS = {"extract": extract, "routes": routes, "parks": parks, "loops": loops, "
 if __name__ == "__main__":
     step, r = sys.argv[1], sys.argv[2]
     for s in (list(STEPS) if step == "all" else [step]):
-        t = time.time(); STEPS[s](r); cfg(r); log(cfg(r)[1], f"step {s} done in {round(time.time() - t)} s")
+        for rr in ([r] if s == "extract" else r.split(",")):
+            t = time.time(); STEPS[s](rr); log(cfg(rr.split(",")[0])[1], f"step {s} done in {round(time.time() - t)} s")
