@@ -8,3 +8,4 @@
 - 20 Nov 22:36: build 62. North York Moors: 12 candidates, 11 passed. 268 walks in the app. Running: Northumberland, then Shropshire Hills.
 - 20 Nov 23:05: build 63. Northumberland: 9 candidates, 7 passed. Running: Shropshire Hills, then Cairngorms, Trossachs, Galloway, Mid Wales.
 - 20 Nov 23:35: build 64. Shropshire Hills: 12 candidates, 9 passed. 284 walks in the app. Running: Cairngorms, Trossachs, Galloway, Mid Wales (log /tmp/north3.log).
+- 21 Nov 00:05: build 65. Cairngorms: 8 candidates, 6 passed (same Scotland limits: 407 of 680 car parks not tagged free; 7 of 65 good car parks have a passing loop). 290 walks in the app. Running: Trossachs, Galloway, Mid Wales.
