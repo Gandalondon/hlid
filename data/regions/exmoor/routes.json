@@ -1,0 +1,166 @@
+[
+ {
+  "source": "osm route",
+  "id": 9621393,
+  "name": "Dunkery and Horner Wood circular walk",
+  "km": 4.4,
+  "climb": 156,
+  "top_m": 338,
+  "walk_min": 69,
+  "car_park": [
+   51.183781,
+   -3.571415
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3217,
+  "road_m": 1215,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "track": 776,
+   "unclassified": 439
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 9774011,
+  "name": "Countisbury figure of eight walk",
+  "km": 4.3,
+  "climb": 328,
+  "top_m": 278,
+  "walk_min": 85,
+  "car_park": [
+   51.231748,
+   -3.797685
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3977,
+  "road_m": 356,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Countisbury Hill": 254,
+   "primary": 81,
+   "service": 22
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 9774298,
+  "name": "Heddon Valley to Woody Bay Walk",
+  "km": 8.6,
+  "climb": 880,
+  "top_m": 231,
+  "walk_min": 191,
+  "car_park": [
+   51.21657,
+   -3.927544
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8244,
+  "road_m": 375,
+  "honeypot": [
+   "at the car park: cafe, ice_cream, restaurant, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Sir Robert's Path": 251,
+   "Jose's Lane": 97,
+   "King's Lane": 27
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18976849,
+  "name": "Arlington Court deer park circular walk, Arlington Court",
+  "km": 4.7,
+  "climb": 187,
+  "top_m": 200,
+  "walk_min": 75,
+  "car_park": [
+   51.149555,
+   -3.987764
+  ],
+  "car_park_name": "Arlington Court",
+  "car_park_check": "probably paid (National Trust)",
+  "car_park_operator": "National Trust",
+  "foot_m": 4131,
+  "road_m": 537,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "car park probably paid (National Trust)"
+  ],
+  "roads": {
+   "service": 537
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18976975,
+  "name": "Woodland and Cott Brake circular walk at Arlington Court, Arlington Court",
+  "km": 7.8,
+  "climb": 358,
+  "top_m": 197,
+  "walk_min": 130,
+  "car_park": [
+   51.149555,
+   -3.987764
+  ],
+  "car_park_name": "Arlington Court",
+  "car_park_check": "probably paid (National Trust)",
+  "car_park_operator": "National Trust",
+  "foot_m": 7552,
+  "road_m": 263,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "car park probably paid (National Trust)"
+  ],
+  "roads": {
+   "service": 191,
+   "unclassified": 72
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 21279699,
+  "name": "Horner Wood Circular, Holnicote",
+  "km": 5.2,
+  "climb": 322,
+  "top_m": 257,
+  "walk_min": 94,
+  "car_park": [
+   51.197954,
+   -3.578538
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5074,
+  "road_m": 103,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 103
+  }
+ }
+]

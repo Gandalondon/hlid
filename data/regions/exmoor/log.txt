@@ -1,1 +1,21 @@
 2026-11-21 01:59 extract: pass 1 5137 walking routes 15 s
+2026-11-21 02:14 extract: 26429 ways 3099 car parks 829 pois 56 routes 1813 named places 901 s
+2026-11-21 02:14 step extract done in 902 s
+2026-11-21 02:14 routes: 56 relations -> 6 checked, 3 kept; out: {'not a loop': 37, 'no free car park within 400 m': 1, 'too short': 10, 'not a country walk (name)': 1, 'no ways': 1} ; dropped: {'roads': 1, 'car park': 2}
+2026-11-21 02:14 step routes done in 3 s
+2026-11-21 02:14 parks: 3099 car parks -> 47 pass -> 24 after 2 km spacing; out: {'fee not no': 2450, 'too flat': 12, 'honeypot at start': 48, 'access': 542}
+2026-11-21 02:14 step parks done in 1 s
+2026-11-21 02:15 loops: 24 car parks tried, 7 ok
+2026-11-21 02:15 step loops done in 41 s
+2026-11-21 02:15 merge: 10 walks ( 3 routes, 7 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 1, 'none': 9}
+2026-11-21 02:15 step merge done in 3 s
+2026-11-21 02:15 areas: 10 walks, 10 to extract, 0 new terrain tiles
+2026-11-21 02:22 areas: nodes 301442 430 s
+2026-11-21 02:28 areas: extracted 10 768 s
+2026-11-21 02:28 step areas done in 769 s
+2026-11-21 02:28 build: 10 built, 0 failed this run
+2026-11-21 02:28 step build done in 38 s
+2026-11-21 02:29 pack: 8 kept, 2 failed the gates 3.0 MB
+2026-11-21 02:29   failed exq-7-heddon-valley-to-woody-bay 9.1 km vs 8.6, 239 of 9126 m off a path
+2026-11-21 02:29   failed exq-8-countisbury-figure-of-eight 4.4 km vs 4.3, 351 of 4355 m off a path
+2026-11-21 02:29 step pack done in 0 s
