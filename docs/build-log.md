@@ -18,3 +18,4 @@
 - 21 Nov 03:32: Pembrokeshire: 10 candidates, 7 passed. Running: Arran, then Fort William and Glen Coe, Skye, Argyll, Lincolnshire Wolds (log /tmp/north5.log).
 - 21 Nov 08:38: Arran and Ayrshire: 1 candidate, 1 passed. (Overnight gap 03:45-08:18: check-ins didn't fire while the chat was open.) Running: Fort William and Glen Coe, Skye, Argyll, Lincolnshire Wolds.
 - 21 Nov 09:28: Fort William and Glen Coe: 4 candidates, 3 passed. Running: Skye, Argyll, Lincolnshire Wolds.
+- 21 Nov 10:01: Skye: 3 candidates, 3 passed. Running: Argyll, Lincolnshire Wolds.
