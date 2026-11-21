@@ -1,0 +1,26 @@
+[
+ {
+  "source": "osm route",
+  "id": 3174132,
+  "name": "Bath Skyline Walk",
+  "km": 9.3,
+  "climb": 338,
+  "top_m": 189,
+  "walk_min": 145,
+  "car_park": [
+   51.366077,
+   -2.340621
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 9277,
+  "road_m": 0,
+  "honeypot": [
+   "at the car park: playground, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ }
+]

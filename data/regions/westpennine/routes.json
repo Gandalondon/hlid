@@ -1,0 +1,60 @@
+[
+ {
+  "source": "osm route",
+  "id": 78272,
+  "name": "Warpers Trail - Witton Weavers Way",
+  "km": 14.3,
+  "climb": 416,
+  "top_m": 282,
+  "walk_min": 213,
+  "car_park": [
+   53.642326,
+   -2.397264
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 12830,
+  "road_m": 1435,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.4 km on roads"
+  ],
+  "roads": {
+   "Tower Drive": 329,
+   "Bolton Road": 243,
+   "Chapeltown Road": 230,
+   "Birches Road": 152
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 13923513,
+  "name": "Huncoat Trail",
+  "km": 14.7,
+  "climb": 545,
+  "top_m": 323,
+  "walk_min": 230,
+  "car_park": [
+   53.759263,
+   -2.351692
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "Peel Park car park",
+  "foot_m": 13719,
+  "road_m": 938,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Higher Gate Road": 225,
+   "Burnley Road": 203,
+   "Burnley Lane": 116,
+   "unclassified": 104
+  }
+ }
+]

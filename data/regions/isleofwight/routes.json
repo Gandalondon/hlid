@@ -1,0 +1,462 @@
+[
+ {
+  "source": "osm route",
+  "id": 5480108,
+  "name": "Tapnell Trail",
+  "km": 11.1,
+  "climb": 246,
+  "top_m": 109,
+  "walk_min": 157,
+  "car_park": [
+   50.677597,
+   -1.468852
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 10474,
+  "road_m": 594,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "The Causeway": 555,
+   "Newport Road": 39
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19258837,
+  "name": "Bembridge and Culver Downs trail, Isle of Wight",
+  "km": 8.6,
+  "climb": 219,
+  "top_m": 100,
+  "walk_min": 125,
+  "car_park": [
+   50.66678,
+   -1.105477
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 7870,
+  "road_m": 683,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Culver Down Road": 448,
+   "track": 111,
+   "Hillway Road": 96,
+   "Sandown Road": 29
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19335005,
+  "name": "Circumnavigate Culver Down Trail, Isle of Wight",
+  "km": 4.3,
+  "climb": 139,
+  "top_m": 104,
+  "walk_min": 66,
+  "car_park": [
+   50.670415,
+   -1.116555
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 4018,
+  "road_m": 322,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Culver Down Road": 322
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19337582,
+  "name": "Chillerton Down Circular Walk, Isle of Wight",
+  "km": 7.0,
+  "climb": 162,
+  "top_m": 164,
+  "walk_min": 100,
+  "car_park": [
+   50.64434,
+   -1.320678
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6999,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 19337654,
+  "name": "Challenging Chillerton Down Walk, Isle of Wight",
+  "km": 14.7,
+  "climb": 306,
+  "top_m": 151,
+  "walk_min": 206,
+  "car_park": [
+   50.64434,
+   -1.320678
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 11659,
+  "road_m": 2997,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "3.0 km on roads"
+  ],
+  "roads": {
+   "Sandy Lane": 949,
+   "Gatcombe Road": 572,
+   "Rectory Lane": 549,
+   "Berry Lane": 375
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19337947,
+  "name": "Compton Bay and Downs Walk, Isle of Wight",
+  "km": 12.3,
+  "climb": 446,
+  "top_m": 164,
+  "walk_min": 192,
+  "car_park": [
+   50.650888,
+   -1.455909
+  ],
+  "car_park_name": "Brook Chine car park",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 11713,
+  "road_m": 577,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Brook Lane": 278,
+   "secondary": 200,
+   "Sheep Lane": 47,
+   "service": 40
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19338050,
+  "name": "Discover Dansbury trail, Isle of Wight",
+  "km": 5.3,
+  "climb": 112,
+  "top_m": 98,
+  "walk_min": 75,
+  "car_park": [
+   50.650888,
+   -1.455909
+  ],
+  "car_park_name": "Brook Chine car park",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4674,
+  "road_m": 617,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Brook Lane": 436,
+   "service": 79,
+   "Badger Lane": 77,
+   "Military Road": 25
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19338132,
+  "name": "A Climb To The Common at Mottistone",
+  "km": 6.4,
+  "climb": 263,
+  "top_m": 200,
+  "walk_min": 103,
+  "car_park": [
+   50.658876,
+   -1.406847
+  ],
+  "car_park_name": "Jubilee Car Park",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5486,
+  "road_m": 932,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Strawberry Lane": 896,
+   "Lynch Lane": 36
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19338349,
+  "name": "A Mottistone Meander: South to the Sea, Mottistone",
+  "km": 4.4,
+  "climb": 62,
+  "top_m": 72,
+  "walk_min": 60,
+  "car_park": [
+   50.652522,
+   -1.428749
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "Mottistone Manor",
+  "foot_m": 4236,
+  "road_m": 212,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Military Road": 115,
+   "Church Lane": 56,
+   "secondary": 42
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19356159,
+  "name": "Headon Warren Walk, Isle of Wight",
+  "km": 6.5,
+  "climb": 172,
+  "top_m": 118,
+  "walk_min": 96,
+  "car_park": [
+   50.669378,
+   -1.565841
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4481,
+  "road_m": 2052,
+  "honeypot": [
+   "at the car park: cafe, ice_cream, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "2.1 km on roads"
+  ],
+  "roads": {
+   "Cliff Road": 1536,
+   "Headon Rise": 189,
+   "footway": 182,
+   "Alum Bay New Road": 131
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19356280,
+  "name": "Tennyson Down Trail, Isle of Wight",
+  "km": 11.1,
+  "climb": 205,
+  "top_m": 146,
+  "walk_min": 154,
+  "car_park": [
+   50.669088,
+   -1.541806
+  ],
+  "car_park_name": null,
+  "car_park_check": "probably paid (National Trust)",
+  "car_park_operator": "National Trust",
+  "foot_m": 10603,
+  "road_m": 537,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "car park probably paid (National Trust)"
+  ],
+  "roads": {
+   "Gate Lane": 274,
+   "service": 263
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19362612,
+  "name": "The Monk and the Merchant Walk, Isle of Wight",
+  "km": 7.3,
+  "climb": 166,
+  "top_m": 234,
+  "walk_min": 105,
+  "car_park": [
+   50.588106,
+   -1.307824
+  ],
+  "car_park_name": "Blackgang Viewpoint Car Park",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7170,
+  "road_m": 177,
+  "honeypot": [
+   "at the car park: cafe, ice_cream, playground, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 171,
+   "track": 7
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19362901,
+  "name": "Tip of the Wight",
+  "km": 5.5,
+  "climb": 259,
+  "top_m": 149,
+  "walk_min": 92,
+  "car_park": [
+   50.580422,
+   -1.302809
+  ],
+  "car_park_name": "Windy Gap Car Park",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 4572,
+  "road_m": 947,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Old Blackgang Road": 395,
+   "Sandrock Road": 315,
+   "Barrack Shute": 191,
+   "St Catherines Road": 45
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19366870,
+  "name": "Mottistone Trial, Mottistone",
+  "km": 7.7,
+  "climb": 223,
+  "top_m": 145,
+  "walk_min": 115,
+  "car_park": [
+   50.652522,
+   -1.428749
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "Mottistone Manor",
+  "foot_m": 7062,
+  "road_m": 628,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Brook Lane": 278,
+   "secondary": 145,
+   "Military Road": 127,
+   "Badger Lane": 77
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19366871,
+  "name": "Compton Trail, Isle of Wight",
+  "km": 6.3,
+  "climb": 167,
+  "top_m": 157,
+  "walk_min": 92,
+  "car_park": [
+   50.664664,
+   -1.477054
+  ],
+  "car_park_name": null,
+  "car_park_check": "probably paid (National Trust)",
+  "car_park_operator": "National Trust",
+  "foot_m": 6163,
+  "road_m": 124,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "car park probably paid (National Trust)"
+  ],
+  "roads": {
+   "Military Road": 68,
+   "service": 56
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19366872,
+  "name": "Perimeter Route, Mottistone",
+  "km": 14.4,
+  "climb": 577,
+  "top_m": 200,
+  "walk_min": 230,
+  "car_park": [
+   50.650888,
+   -1.455909
+  ],
+  "car_park_name": "Brook Chine car park",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 12896,
+  "road_m": 1469,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.5 km on roads"
+  ],
+  "roads": {
+   "Strawberry Lane": 896,
+   "service": 312,
+   "Military Road": 115,
+   "track": 89
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19373771,
+  "name": "Views of Ventor Walking Trail, Isle of Wight",
+  "km": 4.1,
+  "climb": 253,
+  "top_m": 241,
+  "walk_min": 74,
+  "car_park": [
+   50.603405,
+   -1.202659
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3733,
+  "road_m": 352,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Mitchell Avenue": 308,
+   "Old Station Road": 43
+  }
+ }
+]

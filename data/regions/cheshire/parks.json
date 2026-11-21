@@ -1,0 +1,67 @@
+[
+ {
+  "lon": -2.778843,
+  "lat": 53.083783,
+  "name": "Broxton Picnic Area",
+  "operator": "",
+  "capacity": "",
+  "straight_km": 9.1,
+  "h": 48,
+  "top": 145,
+  "relief": 97,
+  "foot_density": 546,
+  "score": 103.1
+ },
+ {
+  "lon": -2.703482,
+  "lat": 53.19604,
+  "name": null,
+  "operator": "",
+  "capacity": "10",
+  "straight_km": 5.1,
+  "h": 72,
+  "top": 164,
+  "relief": 91,
+  "foot_density": 800,
+  "score": 102.9
+ },
+ {
+  "lon": -2.733579,
+  "lat": 53.076942,
+  "name": null,
+  "operator": "",
+  "capacity": "5",
+  "straight_km": 8.4,
+  "h": 125,
+  "top": 200,
+  "relief": 75,
+  "foot_density": 582,
+  "score": 99.8
+ },
+ {
+  "lon": -2.687716,
+  "lat": 53.238996,
+  "name": "Barns Bridge Gate",
+  "operator": "",
+  "capacity": "",
+  "straight_km": 9.9,
+  "h": 82,
+  "top": 159,
+  "relief": 77,
+  "foot_density": 1762,
+  "score": 96.8
+ },
+ {
+  "lon": -2.780416,
+  "lat": 53.261694,
+  "name": null,
+  "operator": "",
+  "capacity": "",
+  "straight_km": 13.5,
+  "h": 10,
+  "top": 89,
+  "relief": 79,
+  "foot_density": 823,
+  "score": 90.5
+ }
+]

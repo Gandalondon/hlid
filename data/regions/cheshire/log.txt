@@ -1,0 +1,14 @@
+2026-11-21 13:31 extract: 18956 ways 1479 car parks 706 pois 39 routes 583 named places 1789 s
+2026-11-21 13:31 routes: 39 relations -> 5 checked, 3 kept; out: {'not a loop': 29, 'no free car park within 400 m': 1, 'too short': 4} ; dropped: {'roads': 2, 'car park': 0}
+2026-11-21 13:31 step routes done in 0 s
+2026-11-21 13:31 parks: 1479 car parks -> 7 pass -> 5 after 2 km spacing; out: {'fee not no': 1258, 'access': 139, 'too flat': 27, 'honeypot at start': 43, 'customers only': 5}
+2026-11-21 13:31 step parks done in 0 s
+2026-11-21 13:33 loops: 5 car parks tried, 2 ok
+2026-11-21 13:33 step loops done in 5 s
+2026-11-21 13:34 merge: 3 walks ( 2 routes, 1 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 3}
+2026-11-21 13:34 step merge done in 4 s
+2026-11-21 13:57 build: 3 built, 0 failed this run
+2026-11-21 13:57 step build done in 12 s
+2026-11-21 13:59 pack: 2 kept, 1 failed the gates 0.5 MB
+2026-11-21 13:59   failed chs-2-whitemoor-trail 10.2 km vs 10.2, 519 of 10223 m off a path
+2026-11-21 13:59 step pack done in 0 s

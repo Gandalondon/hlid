@@ -1,0 +1,14 @@
+2026-11-21 13:31 extract: 39388 ways 3024 car parks 1065 pois 27 routes 659 named places 1789 s
+2026-11-21 13:31 routes: 27 relations -> 2 checked, 1 kept; out: {'not a loop': 24, 'too short': 1} ; dropped: {'roads': 1, 'car park': 0}
+2026-11-21 13:31 step routes done in 0 s
+2026-11-21 13:31 parks: 3024 car parks -> 37 pass -> 23 after 2 km spacing; out: {'fee not no': 2793, 'access': 99, 'honeypot at start': 85, 'customers only': 5, 'too flat': 5}
+2026-11-21 13:31 step parks done in 1 s
+2026-11-21 13:33 loops: 23 car parks tried, 8 ok
+2026-11-21 13:33 step loops done in 65 s
+2026-11-21 13:34 merge: 9 walks ( 1 routes, 8 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 9}
+2026-11-21 13:34 step merge done in 4 s
+2026-11-21 13:57 build: 9 built, 0 failed this run
+2026-11-21 13:57 step build done in 53 s
+2026-11-21 13:59 pack: 8 kept, 1 failed the gates 4.8 MB
+2026-11-21 13:59   failed wpm-9-huncoat-trail 13.9 km vs 14.7, 1432 of 13936 m off a path
+2026-11-21 13:59 step pack done in 1 s

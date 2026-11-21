@@ -1,0 +1,80 @@
+[
+ {
+  "lon": -5.403756,
+  "lat": 55.866205,
+  "name": "Tarbert to Portavadie Ferry Parking",
+  "operator": "",
+  "capacity": "",
+  "straight_km": 29.3,
+  "h": 0,
+  "top": 255,
+  "relief": 255,
+  "foot_density": 373,
+  "score": 146.6
+ },
+ {
+  "lon": -5.55398,
+  "lat": 55.939296,
+  "name": null,
+  "operator": "",
+  "capacity": "",
+  "straight_km": 35.5,
+  "h": 28,
+  "top": 233,
+  "relief": 205,
+  "foot_density": 319,
+  "score": 142.6
+ },
+ {
+  "lon": -5.313351,
+  "lat": 55.877345,
+  "name": null,
+  "operator": "",
+  "capacity": "4",
+  "straight_km": 32.8,
+  "h": 3,
+  "top": 170,
+  "relief": 167,
+  "foot_density": 199,
+  "score": 108.7
+ },
+ {
+  "lon": -5.499699,
+  "lat": 55.819499,
+  "name": "Torinturk",
+  "operator": "Foresty Comission Scotland",
+  "capacity": "10",
+  "straight_km": 22.6,
+  "h": 31,
+  "top": 155,
+  "relief": 124,
+  "foot_density": 179,
+  "score": 87.7
+ },
+ {
+  "lon": -5.332626,
+  "lat": 55.531654,
+  "name": "King's cave parking",
+  "operator": "",
+  "capacity": "",
+  "straight_km": 17.9,
+  "h": 40,
+  "top": 134,
+  "relief": 94,
+  "foot_density": 205,
+  "score": 76.6
+ },
+ {
+  "lon": -5.786412,
+  "lat": 55.308758,
+  "name": null,
+  "operator": "",
+  "capacity": "",
+  "straight_km": 37.2,
+  "h": 344,
+  "top": 415,
+  "relief": 71,
+  "foot_density": 104,
+  "score": 68.7
+ }
+]

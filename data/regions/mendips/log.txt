@@ -1,0 +1,17 @@
+2026-11-21 13:02 extract: pass 1 5137 walking routes 18 s
+2026-11-21 13:31 extract: 36851 ways 2904 car parks 1435 pois 39 routes 1043 named places 1787 s
+2026-11-21 13:31 step extract done in 1797 s
+2026-11-21 13:31 routes: 39 relations -> 1 checked, 1 kept; out: {'not a loop': 29, 'too long': 2, 'too short': 7} ; dropped: {'roads': 0, 'car park': 0}
+2026-11-21 13:31 step routes done in 3 s
+2026-11-21 13:31 parks: 2904 car parks -> 20 pass -> 17 after 2 km spacing; out: {'fee not no': 2422, 'access': 363, 'too flat': 14, 'honeypot at start': 82, 'customers only': 3}
+2026-11-21 13:31 step parks done in 1 s
+2026-11-21 13:32 loops: 17 car parks tried, 2 ok
+2026-11-21 13:32 step loops done in 28 s
+2026-11-21 13:34 merge: 3 walks ( 1 routes, 2 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 3}
+2026-11-21 13:34 step merge done in 4 s
+2026-11-21 13:56 step areas done in 1309 s
+2026-11-21 13:56 build: 3 built, 0 failed this run
+2026-11-21 13:56 step build done in 20 s
+2026-11-21 13:59 pack: 2 kept, 1 failed the gates 1.5 MB
+2026-11-21 13:59   failed mnd-1-bath-skyline 23.1 km vs 9.3, 1935 of 23070 m off a path
+2026-11-21 13:59 step pack done in 0 s

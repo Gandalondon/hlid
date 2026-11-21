@@ -1,0 +1,132 @@
+[
+ {
+  "source": "osm route",
+  "id": 59361,
+  "name": "Raw Head",
+  "km": 8.8,
+  "climb": 345,
+  "top_m": 218,
+  "walk_min": 140,
+  "car_park": [
+   53.103192,
+   -2.715105
+  ],
+  "car_park_name": "Walkers' Car Park",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 6233,
+  "road_m": 2578,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.6 km on roads"
+  ],
+  "roads": {
+   "Harthill Road": 1031,
+   "Waste Hill Road": 474,
+   "School Lane": 441,
+   "Hill Lane": 278
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 13092655,
+  "name": "Norley Wildflower Memorial Walk",
+  "km": 6.1,
+  "climb": 82,
+  "top_m": 86,
+  "walk_min": 81,
+  "car_park": [
+   53.247277,
+   -2.651077
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 1391,
+  "road_m": 4683,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "4.7 km on roads"
+  ],
+  "roads": {
+   "School Lane": 1081,
+   "Post Office Lane": 765,
+   "Town Farm Lane": 683,
+   "Stannybrook Lane": 518
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20947785,
+  "name": "Blakemere Trail",
+  "km": 5.8,
+  "climb": 105,
+  "top_m": 86,
+  "walk_min": 81,
+  "car_park": [
+   53.238996,
+   -2.687716
+  ],
+  "car_park_name": "Barns Bridge Gate",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5840,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 20947849,
+  "name": "Hunger Hill Trail",
+  "km": 6.0,
+  "climb": 80,
+  "top_m": 87,
+  "walk_min": 80,
+  "car_park": [
+   53.238996,
+   -2.687716
+  ],
+  "car_park_name": "Barns Bridge Gate",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 6009,
+  "road_m": 29,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Ashton Road": 29
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20948448,
+  "name": "Whitemoor Trail",
+  "km": 10.2,
+  "climb": 138,
+  "top_m": 91,
+  "walk_min": 136,
+  "car_park": [
+   53.241684,
+   -2.681528
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 9679,
+  "road_m": 544,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 544
+  }
+ }
+]

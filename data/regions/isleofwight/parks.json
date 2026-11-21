@@ -1,0 +1,80 @@
+[
+ {
+  "lon": -1.186787,
+  "lat": 50.601572,
+  "name": null,
+  "operator": "",
+  "capacity": "",
+  "straight_km": 12.7,
+  "h": 97,
+  "top": 235,
+  "relief": 138,
+  "foot_density": 896,
+  "score": 128.6
+ },
+ {
+  "lon": -1.41844,
+  "lat": 50.651985,
+  "name": null,
+  "operator": "National Trust",
+  "capacity": "6",
+  "straight_km": 6.6,
+  "h": 77,
+  "top": 198,
+  "relief": 120,
+  "foot_density": 1164,
+  "score": 117.9
+ },
+ {
+  "lon": -1.481839,
+  "lat": 50.667196,
+  "name": null,
+  "operator": "",
+  "capacity": "30",
+  "straight_km": 10.7,
+  "h": 46,
+  "top": 142,
+  "relief": 95,
+  "foot_density": 740,
+  "score": 102.3
+ },
+ {
+  "lon": -1.232017,
+  "lat": 50.665903,
+  "name": null,
+  "operator": "",
+  "capacity": "8",
+  "straight_km": 6.9,
+  "h": 9,
+  "top": 107,
+  "relief": 98,
+  "foot_density": 760,
+  "score": 99.9
+ },
+ {
+  "lon": -1.336942,
+  "lat": 50.603924,
+  "name": "Whale Chine",
+  "operator": "",
+  "capacity": "",
+  "straight_km": 7.4,
+  "h": 43,
+  "top": 127,
+  "relief": 84,
+  "foot_density": 425,
+  "score": 96.3
+ },
+ {
+  "lon": -1.240205,
+  "lat": 50.607357,
+  "name": null,
+  "operator": "",
+  "capacity": "",
+  "straight_km": 9.4,
+  "h": 205,
+  "top": 220,
+  "relief": 16,
+  "foot_density": 1068,
+  "score": 77.8
+ }
+]

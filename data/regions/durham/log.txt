@@ -1,0 +1,18 @@
+2026-11-21 13:31 extract: 38914 ways 2730 car parks 1171 pois 62 routes 711 named places 1791 s
+2026-11-21 13:31 routes: 62 relations -> 11 checked, 6 kept; out: {'not a loop': 31, 'too short': 12, 'no ways': 1, 'no free car park within 400 m': 3, 'not a country walk (name)': 4} ; dropped: {'roads': 5, 'car park': 0}
+2026-11-21 13:31 step routes done in 1 s
+2026-11-21 13:31 parks: 2730 car parks -> 19 pass -> 14 after 2 km spacing; out: {'fee not no': 2252, 'access': 280, 'customers only': 5, 'honeypot at start': 136, 'too flat': 38}
+2026-11-21 13:31 step parks done in 0 s
+2026-11-21 13:33 loops: 14 car parks tried, 1 ok
+2026-11-21 13:33 step loops done in 20 s
+2026-11-21 13:34 merge: 7 walks ( 6 routes, 1 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 7}
+2026-11-21 13:34 step merge done in 3 s
+2026-11-21 13:58 build: 7 built, 0 failed this run
+2026-11-21 13:58 step build done in 26 s
+2026-11-21 13:59 pack: 2 kept, 5 failed the gates 0.6 MB
+2026-11-21 13:59   failed dur-2-h100-esh-winning-and-waterhouses 5.3 km vs 5.3, 223 of 5299 m off a path
+2026-11-21 13:59   failed dur-3-h100-newton-hall-brasside 6.1 km vs 5.7, 272 of 6134 m off a path
+2026-11-21 13:59   failed dur-4-three-becks 7.9 km vs 7.7, 528 of 7862 m off a path
+2026-11-21 13:59   failed dur-6-h100-croxdale 8.1 km vs 8.0, 757 of 8057 m off a path
+2026-11-21 13:59   failed dur-7-west-bowburn-way 1.8 km vs 5.6, 1284 of 1838 m off a path
+2026-11-21 13:59 step pack done in 0 s

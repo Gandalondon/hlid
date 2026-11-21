@@ -1,0 +1,314 @@
+[
+ {
+  "source": "osm route",
+  "id": 153770,
+  "name": "Small Pilgrim Places",
+  "km": 11.5,
+  "climb": 251,
+  "top_m": 104,
+  "walk_min": 163,
+  "car_park": [
+   54.77808,
+   -1.583491
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "Durham Dental Clinic",
+  "foot_m": 10291,
+  "road_m": 1230,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "St Monica Grove": 372,
+   "Redhills Lane": 189,
+   "Waddington Street": 136,
+   "Flass Street": 120
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 966635,
+  "name": "West Bowburn Way",
+  "km": 5.6,
+  "climb": 124,
+  "top_m": 109,
+  "walk_min": 80,
+  "car_park": [
+   54.734916,
+   -1.52547
+  ],
+  "car_park_name": "Bowburn Community Center",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5625,
+  "road_m": 23,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Edna Street": 23
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 4787425,
+  "name": "Battle of Neville's Cross",
+  "km": 4.1,
+  "climb": 134,
+  "top_m": 105,
+  "walk_min": 63,
+  "car_park": [
+   54.778538,
+   -1.598453
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3116,
+  "road_m": 1003,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.0 km on roads"
+  ],
+  "roads": {
+   "Toll House Road": 325,
+   "service": 185,
+   "Waddington Street": 143,
+   "Flass Street": 120
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 11288430,
+  "name": "Three Becks Walk",
+  "km": 7.7,
+  "climb": 230,
+  "top_m": 260,
+  "walk_min": 115,
+  "car_park": [
+   54.675524,
+   -1.861903
+  ],
+  "car_park_name": "Windy Bank",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7158,
+  "road_m": 544,
+  "honeypot": [
+   "at the car park: cafe, playground, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "path": 209,
+   "service": 198,
+   "Forest Drive": 123,
+   "Grove Road": 14
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 15396634,
+  "name": "Hardwick Park & Bishop's Fen",
+  "km": 6.4,
+  "climb": 75,
+  "top_m": 107,
+  "walk_min": 84,
+  "car_park": [
+   54.653073,
+   -1.471795
+  ],
+  "car_park_name": "Overflow parking",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5969,
+  "road_m": 435,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 435
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17899881,
+  "name": "H100: Croxdale",
+  "km": 8.0,
+  "climb": 177,
+  "top_m": 94,
+  "walk_min": 114,
+  "car_park": [
+   54.729157,
+   -1.585379
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 7169,
+  "road_m": 819,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Front Street": 223,
+   "unclassified": 182,
+   "Rogerson Terrace": 141,
+   "Wood View": 84
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17908033,
+  "name": "H100 - Esh Winning and Waterhouses",
+  "km": 5.3,
+  "climb": 135,
+  "top_m": 234,
+  "walk_min": 77,
+  "car_park": [
+   54.768929,
+   -1.703634
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5067,
+  "road_m": 232,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Russell Street": 119,
+   "service": 85,
+   "Woodland Terrace": 28
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17914053,
+  "name": "H100 - Spennymoor and Byers Green",
+  "km": 8.2,
+  "climb": 74,
+  "top_m": 129,
+  "walk_min": 106,
+  "car_park": [
+   54.698393,
+   -1.621346
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 6667,
+  "road_m": 1575,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.6 km on roads"
+  ],
+  "roads": {
+   "Stanner's Lane": 433,
+   "High Street": 315,
+   "North Street": 289,
+   "Carr Street": 284
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17952203,
+  "name": "H100 - Newton Hall & Brasside",
+  "km": 5.7,
+  "climb": 139,
+  "top_m": 89,
+  "walk_min": 82,
+  "car_park": [
+   54.799765,
+   -1.568207
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5321,
+  "road_m": 389,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Cotherstone Road": 150,
+   "Canterbury Road": 139,
+   "Lindisfarne Road": 39,
+   "Featherstone Road": 27
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17956016,
+  "name": "H100 - Sedgefield",
+  "km": 4.9,
+  "climb": 78,
+  "top_m": 111,
+  "walk_min": 67,
+  "car_park": [
+   54.653278,
+   -1.449639
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3602,
+  "road_m": 1291,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant"
+  ],
+  "keep": false,
+  "drop": [
+   "1.3 km on roads"
+  ],
+  "roads": {
+   "Station Road": 488,
+   "service": 305,
+   "West End": 234,
+   "High Street": 130
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17962989,
+  "name": "Tow Law",
+  "km": 10.8,
+  "climb": 279,
+  "top_m": 314,
+  "walk_min": 158,
+  "car_park": [
+   54.745454,
+   -1.812342
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 9680,
+  "road_m": 1162,
+  "honeypot": [
+   "at the car park: cafe, playground"
+  ],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "Ironworks Road": 307,
+   "Church Lane": 249,
+   "Smith Street": 138,
+   "service": 136
+  }
+ }
+]
