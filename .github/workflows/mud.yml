@@ -24,6 +24,8 @@ jobs:
         with:
           python-version: '3.12'
       - name: Read the rain gauges
+        env:
+          MET_OFFICE_KEY: ${{ secrets.MET_OFFICE_KEY }}
         run: python3 tools/mud/rain.py /tmp/mud.json
       - name: Publish to the weather branch
         run: |
