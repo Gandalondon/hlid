@@ -14,4 +14,4 @@
 - 21 Nov 01:35: Mid Wales: 12 candidates, 11 passed. Running: North Pennines, Exmoor and Quantocks, Malverns and Wye Valley, Pembrokeshire, Arran (log /tmp/north4.log).
 - 21 Nov 02:02: North Pennines: 15 candidates, 12 passed. Running: Exmoor and Quantocks, Malverns and Wye Valley, Pembrokeshire, Arran.
 - 21 Nov 02:32: Exmoor and Quantocks: 10 candidates, 8 passed, all already in the app from Devon and Wessex (no new build). Running: Malverns and Wye Valley, Pembrokeshire, Arran.
-- 21 Nov 03:03: Malverns and Wye Valley: 13 candidates, 11 passed. 314 walks in the app. Running: Pembrokeshire, Arran.
+- 21 Nov 03:03: Malverns and Wye Valley: 13 candidates, 11 passed, all already in the app from Cotswolds (no new build). 314 walks in the app. Running: Pembrokeshire, Arran.
