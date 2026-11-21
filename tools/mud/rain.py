@@ -70,6 +70,7 @@ def read(key):
                 i = dayidx(ts)
                 if 0 <= i <= 3 and v is not None and v >= 0: tot[i] += float(v); ok = True
         except Exception: pass
+    if any(x > 100 for x in tot): ok = False   # 21 Nov: a faulty gauge reported 348 mm in a day (Sowdley Wood); over 100 mm a day isn't believable
     return key, ([round(x, 1) for x in tot] if ok else None)
 from concurrent.futures import ThreadPoolExecutor
 with ThreadPoolExecutor(8) as ex:   # 21 Nov: 8 at a time (one by one took 24 min)
