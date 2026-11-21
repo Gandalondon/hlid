@@ -21,3 +21,4 @@
 - 21 Nov 10:01: Skye: 3 candidates, 3 passed. Running: Argyll, Lincolnshire Wolds.
 - 21 Nov 10:34: Argyll: 1 candidate, 1 passed. Running: Lincolnshire Wolds, then Torridon, Assynt, Inverness, Cannock Chase (log /tmp/north6.log).
 - 21 Nov 10:52: Lincolnshire Wolds: 0 walks (too flat for the relief rule; few free car parks). Running: Torridon, Assynt, Inverness, Cannock Chase.
+- 21 Nov 11:33: Torridon and Wester Ross: 4 candidates, 4 passed. Now one GB read for 18 regions at once (assynt, inverness, cannock, borders, perthshire, fife, pentlands, mull, caithness, hebrides, orkney, shetland, norfolk, charnwood, bowland, yorkswolds, anglesey, clwyd; log /tmp/batch.log).
