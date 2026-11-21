@@ -1,0 +1,189 @@
+[
+ {
+  "source": "osm route",
+  "id": 14205035,
+  "name": "Stackpole Estate Wildlife Walk, Stackpole",
+  "km": 10.0,
+  "climb": 499,
+  "top_m": 37,
+  "walk_min": 170,
+  "car_park": [
+   51.615644,
+   -4.938129
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 10020,
+  "road_m": 0,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 18991201,
+  "name": "DInas Island Circular Walk, Pembroke",
+  "km": 4.9,
+  "climb": 435,
+  "top_m": 136,
+  "walk_min": 102,
+  "car_park": [
+   52.021358,
+   -4.908174
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 4648,
+  "road_m": 221,
+  "honeypot": [
+   "at the car park: restaurant, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 115,
+   "service": 106
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19022191,
+  "name": "Treginnis Walk from Porthclais, Pembroke",
+  "km": 10.3,
+  "climb": 765,
+  "top_m": 50,
+  "walk_min": 200,
+  "car_park": [
+   51.87916,
+   -5.307383
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 8215,
+  "road_m": 2088,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.1 km on roads"
+  ],
+  "roads": {
+   "unclassified": 1676,
+   "tertiary": 356,
+   "service": 56
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19022282,
+  "name": "Southwood Estate Coast to Coast Walk, Pembroke",
+  "km": 4.5,
+  "climb": 181,
+  "top_m": 76,
+  "walk_min": 72,
+  "car_park": [
+   51.838522,
+   -5.110808
+  ],
+  "car_park_name": "Maidenhall",
+  "car_park_check": "free",
+  "car_park_operator": "National Trust",
+  "foot_m": 3621,
+  "road_m": 868,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Welsh Road": 813,
+   "service": 55
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19093108,
+  "name": "Porthgain to Abereiddi Coastal Walk, Pembroke",
+  "km": 5.9,
+  "climb": 342,
+  "top_m": 53,
+  "walk_min": 105,
+  "car_park": [
+   51.947874,
+   -5.180626
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 4656,
+  "road_m": 1215,
+  "honeypot": [
+   "at the car park: restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "Llanrhian Road": 779,
+   "service": 409,
+   "The Counting House": 27
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19129516,
+  "name": "Lawrenny Walk, Pembroke",
+  "km": 4.5,
+  "climb": 195,
+  "top_m": 33,
+  "walk_min": 74,
+  "car_park": [
+   51.718789,
+   -4.880622
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 2435,
+  "road_m": 2110,
+  "honeypot": [
+   "at the car park: cafe"
+  ],
+  "keep": false,
+  "drop": [
+   "2.1 km on roads"
+  ],
+  "roads": {
+   "tertiary": 2110
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19129614,
+  "name": "Colby Estate Streamside Walk, Colby",
+  "km": 4.6,
+  "climb": 250,
+  "top_m": 133,
+  "walk_min": 80,
+  "car_park": [
+   51.741992,
+   -4.679686
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4243,
+  "road_m": 383,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "unclassified": 296,
+   "service": 87
+  }
+ }
+]

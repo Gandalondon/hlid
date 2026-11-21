@@ -1,1 +1,22 @@
 2026-11-21 03:00 extract: pass 1 5137 walking routes 15 s
+2026-11-21 03:14 extract: 14889 ways 1328 car parks 639 pois 32 routes 843 named places 878 s
+2026-11-21 03:14 step extract done in 880 s
+2026-11-21 03:14 routes: 32 relations -> 7 checked, 4 kept; out: {'not a loop': 13, 'too short': 11, 'no free car park within 400 m': 1} ; dropped: {'roads': 3, 'car park': 0}
+2026-11-21 03:14 step routes done in 3 s
+2026-11-21 03:14 parks: 1328 car parks -> 33 pass -> 21 after 2 km spacing; out: {'fee not no': 870, 'access': 325, 'honeypot at start': 49, 'too flat': 45, 'customers only': 6}
+2026-11-21 03:14 step parks done in 0 s
+2026-11-21 03:15 loops: 21 car parks tried, 6 ok
+2026-11-21 03:15 step loops done in 63 s
+2026-11-21 03:15 merge: 10 walks ( 4 routes, 6 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 2, 'none': 8}
+2026-11-21 03:15 step merge done in 3 s
+2026-11-21 03:15 areas: 10 walks, 10 to extract, 15 new terrain tiles
+2026-11-21 03:22 areas: nodes 314120 420 s
+2026-11-21 03:28 areas: extracted 10 748 s
+2026-11-21 03:28 step areas done in 748 s
+2026-11-21 03:28 build: 10 built, 0 failed this run
+2026-11-21 03:28 step build done in 33 s
+2026-11-21 03:28 pack: 7 kept, 3 failed the gates 1.7 MB
+2026-11-21 03:28   failed pem-4-dinas-island-circular 4.9 km vs 4.9, 210 of 4871 m off a path
+2026-11-21 03:28   failed pem-6-colby-estate-streamside 4.7 km vs 4.6, 357 of 4731 m off a path
+2026-11-21 03:28   failed pem-10-southwood-estate-coast-to-coast 4.5 km vs 4.5, 861 of 4490 m off a path
+2026-11-21 03:28 step pack done in 0 s
