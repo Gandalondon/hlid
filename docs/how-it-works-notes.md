@@ -29,8 +29,11 @@ Core story: not a curated list, but every walk has passed the same rules, and th
 - Mud check (agreed 17 Nov, not built): past few days' rain at the walk plus the day's weather; "may be muddy" note when wet everywhere.
 - Weather and rain sources need fallbacks we control (Open-Meteo is non-commercial only).
 
-## In the app too (Tony, 21 Nov)
+## In the app too (Tony, 21 Nov; built in build 81)
 - An info (i) button top right on the home screen opens an information page: what Hlid does and how it works, word for word the same as the site's How it works (like Sniff and Forn). So someone wondering "why so few results?" gets the answer there (only loops, only free car parks, only paths, finish before dark...).
 - No settings icon: rules, not options (no "show walks without a car park").
 - Icon (Tony, 21 Nov): leaning to an outlined notes page (option E: a page with lines), stroke style to match Hlid's stroke-only icons (13 Nov rule). Solid book is the fallback. Sniff keeps its existing icon. Check it fits beside the postcode, drive and walk chips without crowding them.
 - Copy matters most: write the How it works once, use it in both places.
+
+- Built 21 Nov: notes-page icon (24px, 2px stroke, same as Your walks) left of Your walks; opens How it works with the site's six sections word for word (site/how-it-works.html). Change one, change both.
+- The site's last section names the sources (OpenStreetMap, Ordnance Survey) and says it can't see mud: both go when the page is rewritten (recipe, and the mud check).
