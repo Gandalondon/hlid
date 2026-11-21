@@ -31,6 +31,11 @@ for i, w in enumerate(W):
     d = DIRS.get(w["meta"].get("region"), w["meta"].get("region")); w["meta"]["dir"] = d; os.makedirs(f"{WD}/{d}", exist_ok=True)
     json.dump(w, open(f"{WD}/{d}/{w['id']}.json", "w"), separators=(",", ":"))
     W[i] = {"id": w["id"], "name": w["name"], "meta": w["meta"]}; moved += 1
+PUBS = f"{ROOT}/data/gb/walk-pubs.json"   # nearest pubs per walk (tools/walkdata/pubs.py walks), for Find a pub
+if os.path.exists(PUBS):
+    PB = json.load(open(PUBS))
+    for w in W:
+        if w["id"] in PB: w.setdefault("meta", {})["pubs"] = PB[w["id"]]
 data["walks"] = W
 s = s[:mm.start(2)] + json.dumps(data, separators=(",", ":")) + s[mm.end(2):]
 open(P, "w").write(s)
