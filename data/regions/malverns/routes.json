@@ -1,0 +1,112 @@
+[
+ {
+  "source": "osm route",
+  "id": 9315,
+  "name": "Mordiford Loop",
+  "km": 5.9,
+  "climb": 217,
+  "top_m": 180,
+  "walk_min": 92,
+  "car_park": [
+   52.04374,
+   -2.616919
+  ],
+  "car_park_name": "Swardon Quarry",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5432,
+  "road_m": 433,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "tertiary": 199,
+   "unclassified": 174,
+   "Pentaloe Close": 60
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 2774984,
+  "name": "Marcle Ridge Circular Walk",
+  "km": 7.0,
+  "climb": 174,
+  "top_m": 228,
+  "walk_min": 101,
+  "car_park": [
+   52.00913,
+   -2.54014
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5890,
+  "road_m": 1068,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.1 km on roads"
+  ],
+  "roads": {
+   "unclassified": 772,
+   "Glowson Wood Road": 239,
+   "The Hyde": 57
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 2790157,
+  "name": "Woolhope Circular Walk",
+  "km": 9.6,
+  "climb": 218,
+  "top_m": 165,
+  "walk_min": 138,
+  "car_park": [
+   52.023015,
+   -2.576355
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 8095,
+  "road_m": 1552,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.6 km on roads"
+  ],
+  "roads": {
+   "unclassified": 693,
+   "tertiary": 397,
+   "Alfords Mill": 278,
+   "The Hyde": 170
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 9186287,
+  "name": "Bruce Trail Friendship Trail",
+  "km": 9.7,
+  "climb": 413,
+  "top_m": 242,
+  "walk_min": 158,
+  "car_park": [
+   51.780731,
+   -2.24306
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8956,
+  "road_m": 759,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 298,
+   "unclassified": 295,
+   "Randwick Road": 82,
+   "Edge Road": 42
+  }
+ }
+]
