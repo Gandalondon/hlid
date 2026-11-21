@@ -34,3 +34,4 @@
 - 21 Nov 17:05: build 81. How it works in the app: notes-page icon top right beside Your walks, full page with back arrow, the site's six sections word for word.
 - 21 Nov 17:10: build 82. In-app How it works (master copy) rewritten for the internal build: added Wet week? (mud, not built yet; Tony fine with that for internal builds), Home before dark, One buzz, then quiet; dropped the source names and the 'can't see mud' line. Info icon now the same size as the front card of Your walks (11 x 17). Site still has the old copy.
 - 21 Nov 17:15: build 83. In-app How it works: Pay once replaced by All included (no payment talk inside the paid app).
+- 21 Nov 17:20: build 84. How it works copy: All included (option A: offline maps, one short vibration if you stray off the path); One nudge, then quiet.
