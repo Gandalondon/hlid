@@ -1,0 +1,758 @@
+[
+ {
+  "source": "osm route",
+  "id": 3134526,
+  "name": "Birnam Hill Path",
+  "km": 6.2,
+  "climb": 346,
+  "top_m": 400,
+  "walk_min": 110,
+  "car_park": [
+   56.546274,
+   -3.560943
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5955,
+  "road_m": 285,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Birnam Glen Road": 285
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 3134544,
+  "name": "Loch of the Lowes Path",
+  "km": 7.5,
+  "climb": 247,
+  "top_m": 140,
+  "walk_min": 115,
+  "car_park": [
+   56.568233,
+   -3.586807
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 4706,
+  "road_m": 2790,
+  "honeypot": [
+   "at the car park: cafe, library, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "2.8 km on roads"
+  ],
+  "roads": {
+   "service": 1135,
+   "Brae Street": 735,
+   "Dunkeld Road": 285,
+   "Atholl Street": 238
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 3134561,
+  "name": "Inver Path",
+  "km": 8.1,
+  "climb": 99,
+  "top_m": 110,
+  "walk_min": 107,
+  "car_park": [
+   56.574727,
+   -3.624803
+  ],
+  "car_park_name": null,
+  "car_park_check": "probably paid (Forestry and Land Scotland)",
+  "car_park_operator": "Forestry and Land Scotland",
+  "foot_m": 7588,
+  "road_m": 467,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "car park probably paid (Forestry and Land Scotland)"
+  ],
+  "roads": {
+   "tertiary": 236,
+   "service": 231
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 3136799,
+  "name": "Braan Path",
+  "km": 7.0,
+  "climb": 165,
+  "top_m": 188,
+  "walk_min": 101,
+  "car_park": [
+   56.558932,
+   -3.602517
+  ],
+  "car_park_name": "Inver Brae",
+  "car_park_check": "free",
+  "car_park_operator": "Forestry and Land Scotland",
+  "foot_m": 4990,
+  "road_m": 2050,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.1 km on roads"
+  ],
+  "roads": {
+   "service": 1090,
+   "tertiary": 676,
+   "Rumbling bridge": 220,
+   "Rumbling Bridge": 64
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 3719207,
+  "name": "Two Forts Trail",
+  "km": 4.2,
+  "climb": 236,
+  "top_m": 196,
+  "walk_min": 74,
+  "car_park": [
+   56.373249,
+   -3.396723
+  ],
+  "car_park_name": "Tay Car Park",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4236,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 13765828,
+  "name": "Fiddler's Path",
+  "km": 10.2,
+  "climb": 239,
+  "top_m": 72,
+  "walk_min": 147,
+  "car_park": [
+   56.565214,
+   -3.585477
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "Perth and Kinross Council",
+  "foot_m": 8551,
+  "road_m": 1692,
+  "honeypot": [
+   "at the car park: cafe, library, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.7 km on roads"
+  ],
+  "roads": {
+   "tertiary": 652,
+   "Atholl Street": 219,
+   "Dunkeld Bridge": 192,
+   "primary": 165
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 13944955,
+  "name": "Faskally Forest 5km ParkRun Route",
+  "km": 4.8,
+  "climb": 116,
+  "top_m": 124,
+  "walk_min": 69,
+  "car_park": [
+   56.710958,
+   -3.764298
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4802,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 14022463,
+  "name": "Atholl Woods Path",
+  "km": 10.7,
+  "climb": 470,
+  "top_m": 260,
+  "walk_min": 175,
+  "car_park": [
+   56.575146,
+   -3.591483
+  ],
+  "car_park_name": "Cally Car Park",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 6111,
+  "road_m": 4584,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "4.6 km on roads"
+  ],
+  "roads": {
+   "service": 4025,
+   "tertiary": 559
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 14530552,
+  "name": "Inchewan Path",
+  "km": 8.6,
+  "climb": 344,
+  "top_m": 222,
+  "walk_min": 138,
+  "car_park": [
+   56.55701,
+   -3.578188
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 6544,
+  "road_m": 2084,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "2.1 km on roads"
+  ],
+  "roads": {
+   "service": 1539,
+   "Birnam Glen": 436,
+   "Birnam Glen Road": 109
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 15757300,
+  "name": "Taymouth Trail",
+  "km": 5.1,
+  "climb": 364,
+  "top_m": 273,
+  "walk_min": 98,
+  "car_park": [
+   56.590058,
+   -4.001423
+  ],
+  "car_park_name": "For access to Drummond Hill",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5102,
+  "road_m": 0,
+  "honeypot": [
+   "at the car park: playground, restaurant, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 16071667,
+  "name": "Bertha Loch Loop from Pitcairngreen",
+  "km": 4.8,
+  "climb": 74,
+  "top_m": 72,
+  "walk_min": 65,
+  "car_park": [
+   56.426057,
+   -3.516399
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4785,
+  "road_m": 0,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 16075650,
+  "name": "Pine Cone Point Path",
+  "km": 4.2,
+  "climb": 201,
+  "top_m": 190,
+  "walk_min": 70,
+  "car_park": [
+   56.559218,
+   -3.613797
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "Forestry and Land Scotland",
+  "foot_m": 4154,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 16341741,
+  "name": "Clunie Path",
+  "km": 10.5,
+  "climb": 383,
+  "top_m": 388,
+  "walk_min": 164,
+  "car_park": [
+   56.699283,
+   -3.733743
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 9260,
+  "road_m": 1232,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "service": 1019,
+   "Port-na-Craig Road": 180,
+   "Foss Road": 32
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 16411761,
+  "name": "Loch A Choire Route",
+  "km": 11.6,
+  "climb": 975,
+  "top_m": 566,
+  "walk_min": 237,
+  "car_park": [
+   56.71794,
+   -3.726537
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 7565,
+  "road_m": 4022,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "4.0 km on roads"
+  ],
+  "roads": {
+   "Golf Course Road": 2057,
+   "Baledmund Road": 891,
+   "Craiglunie Road": 515,
+   "Larchwood Road": 429
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 16837109,
+  "name": "Dunkeld Christmas Grotto Walk",
+  "km": 6.2,
+  "climb": 290,
+  "top_m": 187,
+  "walk_min": 103,
+  "car_park": [
+   56.56569,
+   -3.586776
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5411,
+  "road_m": 768,
+  "honeypot": [
+   "at the car park: cafe, library, playground, restaurant, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 593,
+   "footway": 123,
+   "tertiary": 51
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18032251,
+  "name": "Civil Engineering Walk",
+  "km": 11.0,
+  "climb": 413,
+  "top_m": 264,
+  "walk_min": 173,
+  "car_park": [
+   56.735847,
+   -3.7706
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8366,
+  "road_m": 2625,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.6 km on roads"
+  ],
+  "roads": {
+   "service": 1378,
+   "Clunie Bridge Road": 405,
+   "General Wade's Military Road": 362,
+   "residential": 261
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18226030,
+  "name": "Birnam Hill and The River Tay",
+  "km": 13.5,
+  "climb": 502,
+  "top_m": 394,
+  "walk_min": 212,
+  "car_park": [
+   56.55701,
+   -3.578188
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 12455,
+  "road_m": 1039,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.0 km on roads"
+  ],
+  "roads": {
+   "service": 671,
+   "Oak Road": 168,
+   "Pittensorn Road": 164,
+   "Saint Mary's Road": 35
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18327140,
+  "name": "Fir Long Loop",
+  "km": 7.5,
+  "climb": 377,
+  "top_m": 196,
+  "walk_min": 128,
+  "car_park": [
+   56.373249,
+   -3.396723
+  ],
+  "car_park_name": "Tay Car Park",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7516,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 18622234,
+  "name": "Cally Loch and Hatton Circular",
+  "km": 4.4,
+  "climb": 83,
+  "top_m": 150,
+  "walk_min": 62,
+  "car_park": [
+   56.575146,
+   -3.591483
+  ],
+  "car_park_name": "Cally Car Park",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 2167,
+  "road_m": 2282,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.3 km on roads"
+  ],
+  "roads": {
+   "service": 2251,
+   "path": 31
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18884497,
+  "name": "Dun Coillich Green",
+  "km": 7.9,
+  "climb": 719,
+  "top_m": 566,
+  "walk_min": 167,
+  "car_park": [
+   56.661641,
+   -4.002308
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7939,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 19326713,
+  "name": "Hermitage, Rumbling Bridge and Inchewan Burn",
+  "km": 11.5,
+  "climb": 308,
+  "top_m": 219,
+  "walk_min": 169,
+  "car_park": [
+   56.565285,
+   -3.585401
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "Perth and Kinross Council",
+  "foot_m": 6836,
+  "road_m": 4649,
+  "honeypot": [
+   "at the car park: cafe, library, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "4.6 km on roads"
+  ],
+  "roads": {
+   "service": 2250,
+   "tertiary": 888,
+   "footway": 627,
+   "Rumbling bridge": 220
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19588105,
+  "name": "Craigower Viewpoint",
+  "km": 5.9,
+  "climb": 261,
+  "top_m": 415,
+  "walk_min": 97,
+  "car_park": [
+   56.713527,
+   -3.738443
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "National Trust for Scotland",
+  "foot_m": 5608,
+  "road_m": 284,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 284
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19590513,
+  "name": "Buffalo Hut",
+  "km": 4.5,
+  "climb": 177,
+  "top_m": 182,
+  "walk_min": 72,
+  "car_park": [
+   56.531838,
+   -3.535362
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4326,
+  "road_m": 160,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 160
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19854096,
+  "name": "Aaron's Walk",
+  "km": 9.8,
+  "climb": 313,
+  "top_m": 248,
+  "walk_min": 149,
+  "car_park": [
+   56.332897,
+   -3.315459
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5149,
+  "road_m": 4661,
+  "honeypot": [
+   "at the car park: cafe"
+  ],
+  "keep": false,
+  "drop": [
+   "4.7 km on roads"
+  ],
+  "roads": {
+   "service": 2100,
+   "unclassified": 1262,
+   "Kirk Wynd": 517,
+   "tertiary": 240
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20109752,
+  "name": "Deuchny Trail",
+  "km": 5.5,
+  "climb": 253,
+  "top_m": 217,
+  "walk_min": 91,
+  "car_park": [
+   56.396834,
+   -3.387277
+  ],
+  "car_park_name": "Jubilee Car Park",
+  "car_park_check": "free",
+  "car_park_operator": "Forestry Commission Scotland",
+  "foot_m": 5446,
+  "road_m": 66,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 66
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20304305,
+  "name": "Maam Road Walk",
+  "km": 8.0,
+  "climb": 471,
+  "top_m": 222,
+  "walk_min": 143,
+  "car_park": [
+   56.389548,
+   -3.998182
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5746,
+  "road_m": 2208,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.2 km on roads"
+  ],
+  "roads": {
+   "Monument Road": 1973,
+   "Dundas Street": 159,
+   "steps": 41,
+   "path": 36
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20304307,
+  "name": "Ruchill Walk",
+  "km": 6.3,
+  "climb": 125,
+  "top_m": 89,
+  "walk_min": 88,
+  "car_park": [
+   56.373034,
+   -3.987886
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3774,
+  "road_m": 2538,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "2.5 km on roads"
+  ],
+  "roads": {
+   "Strowan Road": 1018,
+   "Langside Road": 629,
+   "tertiary": 605,
+   "Field of Refuge": 173
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20304308,
+  "name": "Bogton Braes Walk",
+  "km": 9.2,
+  "climb": 123,
+  "top_m": 117,
+  "walk_min": 123,
+  "car_park": [
+   56.373655,
+   -3.98521
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5830,
+  "road_m": 3418,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "3.4 km on roads"
+  ],
+  "roads": {
+   "service": 889,
+   "Dalginross": 737,
+   "Glascorrie Road": 451,
+   "construction": 425
+  }
+ }
+]

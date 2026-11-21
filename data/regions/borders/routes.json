@@ -1,0 +1,31 @@
+[
+ {
+  "source": "osm route",
+  "id": 16123531,
+  "name": "Eildon Hills Trail",
+  "km": 9.1,
+  "climb": 891,
+  "top_m": 416,
+  "walk_min": 199,
+  "car_park": [
+   55.597382,
+   -2.719662
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8500,
+  "road_m": 639,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Dingleton Road": 181,
+   "Priors Walk": 137,
+   "Abbey Street": 128,
+   "unclassified": 107
+  }
+ }
+]

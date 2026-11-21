@@ -1,0 +1,19 @@
+2026-11-21 11:50 extract: 95596 ways 4795 car parks 2797 pois 310 routes 2438 named places 2280 s
+2026-11-21 12:00 routes: 310 relations -> 47 checked, 5 kept; out: {'not a loop': 97, 'too short': 87, 'too flat': 54, 'no free car park within 400 m': 11, 'no ways': 4, 'not a country walk (name)': 7, 'too long': 3} ; dropped: {'roads': 41, 'car park': 1}
+2026-11-21 12:00 step routes done in 4 s
+2026-11-21 12:00 parks: 4795 car parks -> 0 pass -> 0 after 2 km spacing; out: {'fee not no': 3499, 'too flat': 415, 'access': 494, 'honeypot at start': 370, 'customers only': 17}
+2026-11-21 12:00 step parks done in 1 s
+2026-11-21 12:07 loops: 0 car parks tried, 0 ok
+2026-11-21 12:07 step loops done in 1 s
+2026-11-21 12:21 loops: 0 car parks tried, 0 ok
+2026-11-21 12:21 step loops done in 5 s
+2026-11-21 12:21 merge: 5 walks ( 5 routes, 0 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 2, 'none': 3}
+2026-11-21 12:21 step merge done in 3 s
+2026-11-21 12:54 build: 5 built, 0 failed this run
+2026-11-21 12:54 step build done in 21 s
+2026-11-21 12:55 pack: 1 kept, 4 failed the gates 0.3 MB
+2026-11-21 12:55   failed nfk-1-fir-trail 15.1 km vs 11.0, 39 of 15094 m off a path
+2026-11-21 12:55   failed nfk-3-circular 13.1 km vs 9.0, 1276 of 13111 m off a path
+2026-11-21 12:55   failed nfk-4-multi-use-trail 10.3 km vs 6.9, 373 of 10284 m off a path
+2026-11-21 12:55   failed nfk-5-cley-spy-circular-bird 5.4 km vs 5.4, 512 of 5351 m off a path
+2026-11-21 12:55 step pack done in 0 s

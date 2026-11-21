@@ -1,0 +1,29 @@
+[
+ {
+  "source": "osm route",
+  "id": 19361346,
+  "name": "Cemlyn and Llanrhwydrus Circular Walk, Anglesey",
+  "km": 4.2,
+  "climb": 102,
+  "top_m": 26,
+  "walk_min": 60,
+  "car_park": [
+   53.412087,
+   -4.515397
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 2219,
+  "road_m": 1949,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.9 km on roads"
+  ],
+  "roads": {
+   "unclassified": 1857,
+   "service": 92
+  }
+ }
+]

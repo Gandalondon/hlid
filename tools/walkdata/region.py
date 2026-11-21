@@ -256,6 +256,7 @@ def loops(r):
                         walk_min=round(L / 1000 / 5 * 60 + climb / 10), gap_m=round(gap), loop=" ".join(f"{x:.5f},{y:.5f}" for x, y in pts))
         print(i, ("ok " if ok else "-- ") + f"{L / 1000:.1f} km +{climb:.0f} m rep {rep:.0f} wm {wm:.0%} gap {gap:.0f}", c.get("name") or "", flush=True)
         json.dump(res, open(OUT, "w"))
+    json.dump(res, open(OUT, "w"))
     log(D, "loops:", len(res), "car parks tried,", sum(v.get("ok", False) for v in res.values()), "ok")
 
 # ---------- merge (sw_merge.py + name_loops.py + loop_honeypot.py) ----------
@@ -351,16 +352,18 @@ def wid(C, w): return slug(f"{C['prefix']}-{w['rank']}-{w.get('name_auto') or w[
 def walks_ok(C, D):
     return [w for w in json.load(open(f"{D}/walks.json")) if not w.get("dropped") and w.get("busy") != "always"]
 def areas(r):
+    """r can be several regions, comma-separated: one read of the GB file for all their walks (21 Nov)."""
     import osmium, pick
-    C, D = cfg(r); WS = walks_ok(C, D); F = load_foot(D); t0 = time.time()
-    AR = {}
-    for w in WS:
-        if "loop" in w: pts = [tuple(map(float, p.split(","))) for p in w["loop"].split()]
-        else:
-            rel = [x for x in F["rels"] if x["id"] == w["osm_relation"]][0]
-            pts = [tuple(p) for typ, ref, role in rel["m"] if str(ref) in F["ways"] for p in F["ways"][str(ref)]["p"]]
-        lat, lon = w["car_park"]; xs = [p[0] for p in pts] + [lon]; ys = [p[1] for p in pts] + [lat]
-        AR[wid(C, w)] = (min(ys) - 0.025, min(xs) - 0.04, max(ys) + 0.025, max(xs) + 0.04)
+    t0 = time.time(); AR = {}
+    for rr in r.split(","):
+      C, D = cfg(rr); WS = walks_ok(C, D); F = load_foot(D)
+      for w in WS:
+          if "loop" in w: pts = [tuple(map(float, p.split(","))) for p in w["loop"].split()]
+          else:
+              rel = [x for x in F["rels"] if x["id"] == w["osm_relation"]][0]
+              pts = [tuple(p) for typ, ref, role in rel["m"] if str(ref) in F["ways"] for p in F["ways"][str(ref)]["p"]]
+          lat, lon = w["car_park"]; xs = [p[0] for p in pts] + [lon]; ys = [p[1] for p in pts] + [lat]
+          AR[wid(C, w)] = (min(ys) - 0.025, min(xs) - 0.04, max(ys) + 0.025, max(xs) + 0.04)
     todo = {k: v for k, v in AR.items() if not os.path.exists(f"{ROOT}/data/areas/{k}.json")}
     # terrain tiles (OS Terrain 50) for every box
     Z = zipfile.ZipFile(f"{ROOT}/data/terr50_gagg_gb.zip"); NAMES = {n.split("/")[-1][:4].upper(): n for n in Z.namelist() if n.endswith(".zip")}
@@ -379,7 +382,7 @@ def areas(r):
     KEYS = ("highway", "landuse", "natural", "leisure", "amenity", "waterway", "building", "railway", "designation", "access", "foot", "name", "fee", "parking", "route", "type",
             "surface", "sac_scale", "barrier", "prow_ref", "ref", "informal", "footway", "trail_visibility", "tracktype", "water", "wetland")
     S = min(a[0] for a in todo.values()); Wb = min(a[1] for a in todo.values()); N = max(a[2] for a in todo.values()); E = max(a[3] for a in todo.values())
-    nodes = {}; nodetags = {}; pbf = srcpbf(C, r)
+    nodes = {}; nodetags = {}; pbf = srcpbf(C, r.split(",")[0])
     class NH(osmium.SimpleHandler):
         def node(self, n):
             l = n.location
@@ -457,5 +460,5 @@ STEPS = {"extract": extract, "routes": routes, "parks": parks, "loops": loops, "
 if __name__ == "__main__":
     step, r = sys.argv[1], sys.argv[2]
     for s in (list(STEPS) if step == "all" else [step]):
-        for rr in ([r] if s == "extract" else r.split(",")):
+        for rr in ([r] if s in ("extract", "areas") else r.split(",")):
             t = time.time(); STEPS[s](rr); log(cfg(rr.split(",")[0])[1], f"step {s} done in {round(time.time() - t)} s")

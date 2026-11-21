@@ -1,0 +1,133 @@
+[
+ {
+  "source": "osm route",
+  "name": "Fir Trail",
+  "km": 11.0,
+  "climb": 68,
+  "top_m": 52,
+  "walk_min": 139,
+  "drive_min": 41,
+  "car_park": [
+   52.423976,
+   0.706839
+  ],
+  "car_park_check": "free",
+  "road_m": 44,
+  "waymarked": 1.0,
+  "honeypot": [],
+  "osm_relation": 1577585,
+  "score": 61.7,
+  "name_auto": "Fir Trail",
+  "honeypot_loop": [],
+  "busy": "none",
+  "rank": 1,
+  "region": "norfolk"
+ },
+ {
+  "source": "osm route",
+  "name": "Marble Hill Walk, Felbrigg",
+  "km": 7.1,
+  "climb": 71,
+  "top_m": 92,
+  "walk_min": 92,
+  "drive_min": 34,
+  "car_park": [
+   52.911323,
+   1.25311
+  ],
+  "car_park_check": "free",
+  "road_m": 153,
+  "waymarked": 1.0,
+  "honeypot": [],
+  "osm_relation": 16202082,
+  "score": 61.5,
+  "name_auto": "Marble Hill",
+  "honeypot_loop": [
+   "cafe 59 m, by a big car park",
+   "cafe 56 m, by a big car park"
+  ],
+  "busy": "busy_days",
+  "rank": 2,
+  "region": "norfolk"
+ },
+ {
+  "source": "osm route",
+  "name": "Circular Walk from Morston Quay to Cockthorpe, Blakeney",
+  "km": 9.0,
+  "climb": 106,
+  "top_m": 38,
+  "walk_min": 119,
+  "drive_min": 32,
+  "car_park": [
+   52.956689,
+   0.98273
+  ],
+  "car_park_check": "unknown",
+  "road_m": 762,
+  "waymarked": 1.0,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "osm_relation": 17994828,
+  "score": 43.1,
+  "name_auto": "Circular",
+  "honeypot_loop": [
+   "Moreton Habour Cafe 10 m, by a big car park"
+  ],
+  "busy": "busy_days",
+  "rank": 3,
+  "region": "norfolk"
+ },
+ {
+  "source": "osm route",
+  "name": "Multi-Use Trail, Blickling Estate",
+  "km": 6.9,
+  "climb": 88,
+  "top_m": 47,
+  "walk_min": 91,
+  "drive_min": 22,
+  "car_park": [
+   52.811545,
+   1.225267
+  ],
+  "car_park_check": "unknown",
+  "road_m": 179,
+  "waymarked": 1.0,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "osm_relation": 14734805,
+  "score": 43.0,
+  "name_auto": "Multi-Use Trail",
+  "honeypot_loop": [],
+  "busy": "none",
+  "rank": 4,
+  "region": "norfolk"
+ },
+ {
+  "source": "osm route",
+  "name": "Cley Spy Circular Bird Walk",
+  "km": 5.4,
+  "climb": 101,
+  "top_m": 56,
+  "walk_min": 74,
+  "drive_min": 27,
+  "car_park": [
+   52.930984,
+   1.035892
+  ],
+  "car_park_check": "free",
+  "road_m": 532,
+  "waymarked": 1.0,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "osm_relation": 6417400,
+  "score": 39.1,
+  "name_auto": "Cley Spy Circular Bird",
+  "honeypot_loop": [],
+  "busy": "none",
+  "rank": 5,
+  "region": "norfolk"
+ }
+]

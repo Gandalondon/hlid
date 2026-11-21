@@ -1,0 +1,80 @@
+[
+ {
+  "lon": -1.320289,
+  "lat": 52.761058,
+  "name": null,
+  "operator": "",
+  "capacity": "",
+  "straight_km": 11.6,
+  "h": 88,
+  "top": 182,
+  "relief": 94,
+  "foot_density": 803,
+  "score": 105.8
+ },
+ {
+  "lon": -1.234945,
+  "lat": 52.752879,
+  "name": null,
+  "operator": "",
+  "capacity": "",
+  "straight_km": 6.9,
+  "h": 62,
+  "top": 148,
+  "relief": 85,
+  "foot_density": 2830,
+  "score": 99.0
+ },
+ {
+  "lon": -1.287881,
+  "lat": 52.767695,
+  "name": "Forest House Surgery Car Park",
+  "operator": "",
+  "capacity": "",
+  "straight_km": 10.5,
+  "h": 80,
+  "top": 152,
+  "relief": 72,
+  "foot_density": 1143,
+  "score": 93.9
+ },
+ {
+  "lon": -1.316282,
+  "lat": 52.726695,
+  "name": null,
+  "operator": "",
+  "capacity": "",
+  "straight_km": 9.7,
+  "h": 228,
+  "top": 248,
+  "relief": 20,
+  "foot_density": 1242,
+  "score": 79.8
+ },
+ {
+  "lon": -1.34467,
+  "lat": 52.747623,
+  "name": null,
+  "operator": "",
+  "capacity": "",
+  "straight_km": 12.3,
+  "h": 178,
+  "top": 196,
+  "relief": 17,
+  "foot_density": 1563,
+  "score": 76.5
+ },
+ {
+  "lon": -1.373363,
+  "lat": 52.679749,
+  "name": null,
+  "operator": "",
+  "capacity": "",
+  "straight_km": 13.2,
+  "h": 155,
+  "top": 171,
+  "relief": 16,
+  "foot_density": 681,
+  "score": 73.7
+ }
+]

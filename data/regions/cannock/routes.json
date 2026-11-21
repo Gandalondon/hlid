@@ -1,0 +1,57 @@
+[
+ {
+  "source": "osm route",
+  "id": 18625688,
+  "name": "5km walk: Sutton Park",
+  "km": 4.9,
+  "climb": 61,
+  "top_m": 153,
+  "walk_min": 64,
+  "car_park": [
+   52.562289,
+   -1.848811
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4393,
+  "road_m": 472,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 472
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18651939,
+  "name": "Forest of Mercia Timberland Trail (Long Route)",
+  "km": 15.3,
+  "climb": 89,
+  "top_m": 150,
+  "walk_min": 193,
+  "car_park": [
+   52.634905,
+   -1.978868
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 11912,
+  "road_m": 3422,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "3.4 km on roads"
+  ],
+  "roads": {
+   "footway": 1620,
+   "Grove Lane": 462,
+   "Jacobs Hall Lane": 403,
+   "Fishley Lane": 326
+  }
+ }
+]

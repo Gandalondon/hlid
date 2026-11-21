@@ -1,0 +1,327 @@
+[
+ {
+  "source": "osm route",
+  "id": 11480253,
+  "name": "St Ninians Circular",
+  "km": 6.9,
+  "climb": 272,
+  "top_m": 59,
+  "walk_min": 110,
+  "car_park": [
+   59.971395,
+   -1.330259
+  ],
+  "car_park_name": "St Ninians Isle Car Park",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5964,
+  "road_m": 914,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "St Ninians Isle Track": 914
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 11498087,
+  "name": "Meal Beach and Hamnavoe Circular",
+  "km": 4.4,
+  "climb": 140,
+  "top_m": 29,
+  "walk_min": 66,
+  "car_park": [
+   60.102172,
+   -1.323435
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 3219,
+  "road_m": 1140,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.1 km on roads"
+  ],
+  "roads": {
+   "secondary": 447,
+   "unclassified": 361,
+   "Roadside": 216,
+   "Duke Street": 116
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 11505623,
+  "name": "Bressay",
+  "km": 7.5,
+  "climb": 181,
+  "top_m": 61,
+  "walk_min": 108,
+  "car_park": [
+   60.150833,
+   -1.078973
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7523,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 11505649,
+  "name": "Burwick",
+  "km": 11.2,
+  "climb": 268,
+  "top_m": 91,
+  "walk_min": 161,
+  "car_park": [
+   60.141542,
+   -1.277692
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 11156,
+  "road_m": 0,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 11505715,
+  "name": "Binna Ness",
+  "km": 12.2,
+  "climb": 161,
+  "top_m": 68,
+  "walk_min": 162,
+  "car_park": [
+   60.21507,
+   -1.298548
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 12182,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 11505716,
+  "name": "Burn of Tactigill to Scord",
+  "km": 5.2,
+  "climb": 151,
+  "top_m": 251,
+  "walk_min": 78,
+  "car_park": [
+   60.237708,
+   -1.312452
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5230,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 11506927,
+  "name": "Little Ayre to Hams circular",
+  "km": 11.0,
+  "climb": 588,
+  "top_m": 78,
+  "walk_min": 191,
+  "car_park": [
+   60.349121,
+   -1.417875
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 11038,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 11507206,
+  "name": "Fethaland East",
+  "km": 12.8,
+  "climb": 455,
+  "top_m": 117,
+  "walk_min": 199,
+  "car_park": [
+   60.588274,
+   -1.333433
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 10019,
+  "road_m": 2744,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.7 km on roads"
+  ],
+  "roads": {
+   "unclassified": 2744
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 11507215,
+  "name": "Ness of Hillswick",
+  "km": 7.2,
+  "climb": 291,
+  "top_m": 67,
+  "walk_min": 116,
+  "car_park": [
+   60.475869,
+   -1.488473
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7203,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 11507379,
+  "name": "Loch Funzie, Da Snap and Aith",
+  "km": 8.8,
+  "climb": 259,
+  "top_m": 64,
+  "walk_min": 132,
+  "car_park": [
+   60.587842,
+   -0.810451
+  ],
+  "car_park_name": "RSPB Mires of Funzie",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 8826,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 11507435,
+  "name": "South Hill",
+  "km": 6.2,
+  "climb": 205,
+  "top_m": 28,
+  "walk_min": 95,
+  "car_park": [
+   60.421296,
+   -0.757113
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6183,
+  "road_m": 0,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 11507437,
+  "name": "North Hill",
+  "km": 4.2,
+  "climb": 197,
+  "top_m": 31,
+  "walk_min": 70,
+  "car_park": [
+   60.424016,
+   -0.768668
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4199,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 11507507,
+  "name": "Underhoull Cirular",
+  "km": 5.4,
+  "climb": 135,
+  "top_m": 57,
+  "walk_min": 79,
+  "car_park": [
+   60.715361,
+   -0.962965
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5429,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 11507589,
+  "name": "Gloup Coastal",
+  "km": 4.5,
+  "climb": 126,
+  "top_m": 56,
+  "walk_min": 66,
+  "car_park": [
+   60.720849,
+   -1.073601
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4466,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ }
+]

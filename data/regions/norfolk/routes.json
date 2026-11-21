@@ -1,0 +1,1394 @@
+[
+ {
+  "source": "osm route",
+  "id": 1577585,
+  "name": "Fir Trail",
+  "km": 11.0,
+  "climb": 68,
+  "top_m": 52,
+  "walk_min": 139,
+  "car_park": [
+   52.423976,
+   0.706839
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 10962,
+  "road_m": 44,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Fire Road 10": 44
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 6417400,
+  "name": "Cley Spy Circular Bird Walk",
+  "km": 5.4,
+  "climb": 101,
+  "top_m": 56,
+  "walk_min": 74,
+  "car_park": [
+   52.930984,
+   1.035892
+  ],
+  "car_park_name": "Cley Spy Bird Walk Parking",
+  "car_park_check": "free",
+  "car_park_operator": "Cley Spy",
+  "foot_m": 4819,
+  "road_m": 532,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Hurdle Lane": 347,
+   "service": 132,
+   "Blakeney Road": 35,
+   "Dragway": 19
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 9632859,
+  "name": "Costessey Circular",
+  "km": 8.6,
+  "climb": 97,
+  "top_m": 38,
+  "walk_min": 113,
+  "car_park": [
+   52.646619,
+   1.243381
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 6987,
+  "road_m": 1621,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.6 km on roads"
+  ],
+  "roads": {
+   "The Street": 872,
+   "Townhouse Road": 317,
+   "Hellesdon Road": 196,
+   "The Croft": 161
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 11141056,
+  "name": "Ringstead Circular Walk",
+  "km": 11.3,
+  "climb": 104,
+  "top_m": 50,
+  "walk_min": 146,
+  "car_park": [
+   52.935925,
+   0.537502
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8381,
+  "road_m": 2882,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "2.9 km on roads"
+  ],
+  "roads": {
+   "Peddars Way North": 860,
+   "High Street": 818,
+   "Thornham Road": 584,
+   "Docking Road": 383
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 11246379,
+  "name": "Santon Downham Circular",
+  "km": 7.9,
+  "climb": 61,
+  "top_m": 40,
+  "walk_min": 101,
+  "car_park": [
+   52.455722,
+   0.664604
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6562,
+  "road_m": 1349,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.3 km on roads"
+  ],
+  "roads": {
+   "Santon Road": 478,
+   "service": 321,
+   "tertiary": 309,
+   "unclassified": 217
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 11542840,
+  "name": "Sheringham Circular",
+  "km": 10.9,
+  "climb": 316,
+  "top_m": 98,
+  "walk_min": 163,
+  "car_park": [
+   52.945338,
+   1.207659
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8460,
+  "road_m": 2475,
+  "honeypot": [
+   "at the car park: cafe, ice_cream, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "2.5 km on roads"
+  ],
+  "roads": {
+   "Cranfield Road": 963,
+   "Beeston Common": 298,
+   "Beeston Road": 212,
+   "The Street": 187
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 11621876,
+  "name": "Bacton Circular",
+  "km": 7.6,
+  "climb": 78,
+  "top_m": 30,
+  "walk_min": 99,
+  "car_park": [
+   52.849679,
+   1.466867
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3882,
+  "road_m": 3716,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "3.7 km on roads"
+  ],
+  "roads": {
+   "Rectory Road": 1010,
+   "Church Road": 904,
+   "Sandy Lane": 727,
+   "Bacton Road": 466
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 11630291,
+  "name": "Brancaster Staithe Circular",
+  "km": 7.5,
+  "climb": 91,
+  "top_m": 54,
+  "walk_min": 100,
+  "car_park": [
+   52.965444,
+   0.669462
+  ],
+  "car_park_name": "Jolly Sailors Car Park",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4465,
+  "road_m": 3076,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "3.1 km on roads"
+  ],
+  "roads": {
+   "Common Lane": 1603,
+   "Main Road": 646,
+   "footway": 627,
+   "Stocking Lane": 176
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 11771194,
+  "name": "Bigod's Way",
+  "km": 8.6,
+  "climb": 98,
+  "top_m": 31,
+  "walk_min": 113,
+  "car_park": [
+   52.464101,
+   1.438897
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5119,
+  "road_m": 3472,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "3.5 km on roads"
+  ],
+  "roads": {
+   "Bath Hills Road": 1611,
+   "Ditchingham Dam": 582,
+   "Church Road": 249,
+   "Earsham Dam": 220
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 11787554,
+  "name": "Castle Acre Circular (Long)",
+  "km": 10.3,
+  "climb": 142,
+  "top_m": 69,
+  "walk_min": 137,
+  "car_park": [
+   52.703556,
+   0.68798
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7869,
+  "road_m": 2391,
+  "honeypot": [
+   "at the car park: cafe, playground"
+  ],
+  "keep": false,
+  "drop": [
+   "2.4 km on roads"
+  ],
+  "roads": {
+   "South Acre Road": 778,
+   "Big Wood Lane": 529,
+   "High Street": 316,
+   "Blind Lane": 310
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 11920062,
+  "name": "Pulham Market Workhouse Walk",
+  "km": 9.1,
+  "climb": 65,
+  "top_m": 54,
+  "walk_min": 116,
+  "car_park": [
+   52.429645,
+   1.230565
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6754,
+  "road_m": 2378,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.4 km on roads"
+  ],
+  "roads": {
+   "Star Lane": 709,
+   "Guildhall Lane": 589,
+   "Station Road": 389,
+   "Dunning's Lane": 280
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 12814155,
+  "name": "Burlingham Wood Circular Walk",
+  "km": 10.5,
+  "climb": 65,
+  "top_m": 26,
+  "walk_min": 132,
+  "car_park": [
+   52.637341,
+   1.493805
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 6528,
+  "road_m": 3948,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "3.9 km on roads"
+  ],
+  "roads": {
+   "Burlingham Road": 999,
+   "The Street": 604,
+   "Church Lane": 530,
+   "Hemblington Road": 514
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 13266984,
+  "name": "Beccles and Geldeston circular walk",
+  "km": 11.3,
+  "climb": 99,
+  "top_m": 15,
+  "walk_min": 146,
+  "car_park": [
+   52.458015,
+   1.560974
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7599,
+  "road_m": 3739,
+  "honeypot": [
+   "at the car park: cafe, ice_cream, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "3.7 km on roads"
+  ],
+  "roads": {
+   "The Street": 1106,
+   "Dunburgh Road": 680,
+   "Puddingmoor": 660,
+   "Northgate": 477
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 13433705,
+  "name": "Blakeney Circular Walk",
+  "km": 12.1,
+  "climb": 149,
+  "top_m": 47,
+  "walk_min": 160,
+  "car_park": [
+   52.952765,
+   1.039441
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 8322,
+  "road_m": 3799,
+  "honeypot": [
+   "at the car park: cafe"
+  ],
+  "keep": false,
+  "drop": [
+   "3.8 km on roads"
+  ],
+  "roads": {
+   "Langham Road": 1629,
+   "Glandford Road": 531,
+   "Church Lane": 460,
+   "Bridgefoot Lane": 457
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 14734805,
+  "name": "Multi-Use Trail, Blickling Estate",
+  "km": 6.9,
+  "climb": 88,
+  "top_m": 47,
+  "walk_min": 91,
+  "car_park": [
+   52.811545,
+   1.225267
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6672,
+  "road_m": 179,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Hall Lane": 107,
+   "Bucks Arms": 72
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 16067944,
+  "name": "Bittern Line Walk 1",
+  "km": 4.9,
+  "climb": 82,
+  "top_m": 46,
+  "walk_min": 67,
+  "car_park": [
+   52.633874,
+   1.305951
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 2483,
+  "road_m": 2393,
+  "honeypot": [
+   "at the car park: playground, restaurant"
+  ],
+  "keep": false,
+  "drop": [
+   "2.4 km on roads"
+  ],
+  "roads": {
+   "Bishopgate": 533,
+   "Thorpe Road": 388,
+   "Ketts Hill": 376,
+   "Wolfe Road": 323
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 16107970,
+  "name": "Bittern Line Walk 9",
+  "km": 7.8,
+  "climb": 142,
+  "top_m": 103,
+  "walk_min": 108,
+  "car_park": [
+   52.925486,
+   1.247437
+  ],
+  "car_park_name": "Roman Camp Car Park",
+  "car_park_check": "probably paid (National Trust)",
+  "car_park_operator": "National Trust",
+  "foot_m": 7056,
+  "road_m": 728,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "car park probably paid (National Trust)"
+  ],
+  "roads": {
+   "Sandy Lane": 341,
+   "Green's Lane": 221,
+   "Top Common": 166
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 16109309,
+  "name": "Cringleford\u2019s River Crossings Trail",
+  "km": 5.9,
+  "climb": 74,
+  "top_m": 27,
+  "walk_min": 78,
+  "car_park": [
+   52.602606,
+   1.244733
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 2042,
+  "road_m": 3834,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "3.8 km on roads"
+  ],
+  "roads": {
+   "footway": 774,
+   "Mill Lane": 710,
+   "Intwood Road": 621,
+   "Keswick Road": 471
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 16133571,
+  "name": "Bittern Line Walk 10",
+  "km": 12.1,
+  "climb": 298,
+  "top_m": 78,
+  "walk_min": 175,
+  "car_park": [
+   52.936784,
+   1.221993
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 10702,
+  "road_m": 1409,
+  "honeypot": [
+   "at the car park: cafe"
+  ],
+  "keep": false,
+  "drop": [
+   "1.4 km on roads"
+  ],
+  "roads": {
+   "Holway Road": 383,
+   "service": 237,
+   "The Street": 187,
+   "Park Road": 163
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 16202082,
+  "name": "Marble Hill Walk, Felbrigg",
+  "km": 7.1,
+  "climb": 71,
+  "top_m": 92,
+  "walk_min": 92,
+  "car_park": [
+   52.911323,
+   1.25311
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "National Trust",
+  "foot_m": 6921,
+  "road_m": 153,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "untagged": 153
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 16242037,
+  "name": "Wherry Lines Walk 2",
+  "km": 7.3,
+  "climb": 72,
+  "top_m": 20,
+  "walk_min": 95,
+  "car_park": [
+   52.578505,
+   1.513721
+  ],
+  "car_park_name": "Cantley Station Parking",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 2488,
+  "road_m": 4839,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "4.8 km on roads"
+  ],
+  "roads": {
+   "Norwich Road": 1074,
+   "Station Road": 1039,
+   "Hall Road": 808,
+   "Hassingham Road": 522
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 16242528,
+  "name": "Wherry Lines Walk 4",
+  "km": 6.5,
+  "climb": 72,
+  "top_m": 12,
+  "walk_min": 85,
+  "car_park": [
+   52.559366,
+   1.568447
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 2267,
+  "road_m": 4233,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "4.2 km on roads"
+  ],
+  "roads": {
+   "Ferry Road": 982,
+   "Riverside": 781,
+   "Low Common": 715,
+   "Holly Farm Road": 549
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 16244970,
+  "name": "Wherry Lines Walk 5",
+  "km": 12.5,
+  "climb": 79,
+  "top_m": 21,
+  "walk_min": 157,
+  "car_park": [
+   52.528913,
+   1.563337
+  ],
+  "car_park_name": "Thurlton Bowls Club",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 8235,
+  "road_m": 4219,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "4.2 km on roads"
+  ],
+  "roads": {
+   "Low Road": 1331,
+   "Church Road": 1209,
+   "Mill Road": 813,
+   "Beccles Road": 593
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 16253499,
+  "name": "Wherry Lines Walk 6",
+  "km": 12.4,
+  "climb": 84,
+  "top_m": 21,
+  "walk_min": 157,
+  "car_park": [
+   52.530526,
+   1.692589
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 8168,
+  "road_m": 4234,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "4.2 km on roads"
+  ],
+  "roads": {
+   "Green Lane": 1623,
+   "The Street": 1338,
+   "Market Lane": 603,
+   "Station Road": 469
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17282986,
+  "name": "Long walk",
+  "km": 9.7,
+  "climb": 99,
+  "top_m": 58,
+  "walk_min": 127,
+  "car_park": [
+   52.934375,
+   0.560699
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 8416,
+  "road_m": 1306,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.3 km on roads"
+  ],
+  "roads": {
+   "Thornham Road": 1299,
+   "Burnham Road": 7
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17686347,
+  "name": "Happisburgh Circular Walk",
+  "km": 12.1,
+  "climb": 100,
+  "top_m": 20,
+  "walk_min": 155,
+  "car_park": [
+   52.837168,
+   1.510641
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7916,
+  "road_m": 4154,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "4.2 km on roads"
+  ],
+  "roads": {
+   "Mill Common Road": 732,
+   "Walcott Green": 710,
+   "Ostend Gap": 367,
+   "Stalham Road": 317
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17749410,
+  "name": "Overstrand Circular Walk",
+  "km": 13.6,
+  "climb": 123,
+  "top_m": 67,
+  "walk_min": 175,
+  "car_park": [
+   52.904395,
+   1.335028
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 9756,
+  "road_m": 3806,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "3.8 km on roads"
+  ],
+  "roads": {
+   "Whitegates Road": 747,
+   "Pauls Lane": 428,
+   "Clipped Hedge Lane": 352,
+   "Bull's Row": 348
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17778041,
+  "name": "Mundesley Circular Walk",
+  "km": 10.6,
+  "climb": 135,
+  "top_m": 48,
+  "walk_min": 140,
+  "car_park": [
+   52.862498,
+   1.397188
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 4082,
+  "road_m": 6497,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "6.5 km on roads"
+  ],
+  "roads": {
+   "Brick Kiln Road": 1556,
+   "Trunch Road": 1393,
+   "Heath Lane": 874,
+   "Links Road": 855
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17794641,
+  "name": "Felmingham Circular Walk",
+  "km": 9.8,
+  "climb": 65,
+  "top_m": 43,
+  "walk_min": 124,
+  "car_park": [
+   52.819708,
+   1.375078
+  ],
+  "car_park_name": "Station Road Carpark",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 7827,
+  "road_m": 2004,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "2.0 km on roads"
+  ],
+  "roads": {
+   "Norwich Road": 629,
+   "Cross Road": 510,
+   "Station Road": 294,
+   "Millfield Road": 287
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17795178,
+  "name": "Blickling, Calthorpe and Great Wood walk",
+  "km": 11.7,
+  "climb": 131,
+  "top_m": 43,
+  "walk_min": 154,
+  "car_park": [
+   52.811545,
+   1.225267
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6135,
+  "road_m": 5589,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "5.6 km on roads"
+  ],
+  "roads": {
+   "Lowlands": 982,
+   "School Road": 937,
+   "The Street": 902,
+   "The Common": 786
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17863814,
+  "name": "Walcott Circular Walk",
+  "km": 8.1,
+  "climb": 90,
+  "top_m": 18,
+  "walk_min": 106,
+  "car_park": [
+   52.83192,
+   1.502599
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5158,
+  "road_m": 2901,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.9 km on roads"
+  ],
+  "roads": {
+   "Ostend Road": 528,
+   "Walcott Green": 499,
+   "Ostend Gap": 367,
+   "Beach Road": 295
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17962042,
+  "name": "Trunch Circular Walk",
+  "km": 9.4,
+  "climb": 85,
+  "top_m": 46,
+  "walk_min": 122,
+  "car_park": [
+   52.862498,
+   1.397188
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 6088,
+  "road_m": 3332,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "3.3 km on roads"
+  ],
+  "roads": {
+   "Brewery Road": 897,
+   "Trunch Road": 583,
+   "Wedge Wood Road": 544,
+   "Mundesley Road": 366
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17994828,
+  "name": "Circular Walk from Morston Quay to Cockthorpe, Blakeney",
+  "km": 9.0,
+  "climb": 106,
+  "top_m": 38,
+  "walk_min": 119,
+  "car_park": [
+   52.956689,
+   0.98273
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8280,
+  "road_m": 762,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "Morston Chase": 307,
+   "Airfield Road": 205,
+   "untagged": 117,
+   "Stiffkey Road": 68
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18168755,
+  "name": "Salthouse Circular",
+  "km": 8.2,
+  "climb": 117,
+  "top_m": 62,
+  "walk_min": 110,
+  "car_park": [
+   52.954606,
+   1.066769
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 6469,
+  "road_m": 1739,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.7 km on roads"
+  ],
+  "roads": {
+   "Bloomstile Lane": 506,
+   "Bridgefoot Lane": 418,
+   "Bard Hill": 262,
+   "Coast Road": 210
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18168983,
+  "name": "Aldborough Circular",
+  "km": 7.6,
+  "climb": 61,
+  "top_m": 41,
+  "walk_min": 98,
+  "car_park": [
+   52.862572,
+   1.245288
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 5059,
+  "road_m": 2581,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "2.6 km on roads"
+  ],
+  "roads": {
+   "Thwaite Common": 625,
+   "Middle Hill": 603,
+   "The Green": 384,
+   "School Road": 383
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18173107,
+  "name": "Weybourne Circular",
+  "km": 6.9,
+  "climb": 78,
+  "top_m": 69,
+  "walk_min": 91,
+  "car_park": [
+   52.931773,
+   1.121572
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4543,
+  "road_m": 2383,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.4 km on roads"
+  ],
+  "roads": {
+   "Holgate Hill": 1101,
+   "Holt Road": 645,
+   "Weybourne Road": 217,
+   "service": 162
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18173365,
+  "name": "Burnhams Circular",
+  "km": 7.3,
+  "climb": 87,
+  "top_m": 28,
+  "walk_min": 96,
+  "car_park": [
+   52.964591,
+   0.743346
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3946,
+  "road_m": 3308,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "3.3 km on roads"
+  ],
+  "roads": {
+   "Mill Road": 854,
+   "Norton Street": 672,
+   "Gong Lane": 522,
+   "Tower Road": 357
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18180158,
+  "name": "Waveney Valley Walks - Somerleyton",
+  "km": 11.3,
+  "climb": 68,
+  "top_m": 19,
+  "walk_min": 143,
+  "car_park": [
+   52.515231,
+   1.656373
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 6748,
+  "road_m": 4567,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "4.6 km on roads"
+  ],
+  "roads": {
+   "Green Lane": 1781,
+   "The Street": 1342,
+   "Market Lane": 603,
+   "Station Road": 469
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18183619,
+  "name": "South Quay/West Lynn (via West Lynn Ferry)",
+  "km": 4.6,
+  "climb": 64,
+  "top_m": 6,
+  "walk_min": 62,
+  "car_park": [
+   52.753068,
+   0.392637
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3173,
+  "road_m": 1454,
+  "honeypot": [
+   "at the car park: cafe, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.5 km on roads"
+  ],
+  "roads": {
+   "South Quay": 223,
+   "Cut Bridge": 176,
+   "King Street": 173,
+   "footway": 173
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18186800,
+  "name": "Holkham Circular",
+  "km": 10.8,
+  "climb": 74,
+  "top_m": 19,
+  "walk_min": 137,
+  "car_park": [
+   52.956678,
+   0.851774
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6438,
+  "road_m": 4349,
+  "honeypot": [
+   "at the car park: cafe, ice_cream, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "4.3 km on roads"
+  ],
+  "roads": {
+   "service": 1381,
+   "Holkham Park": 568,
+   "Park Road": 513,
+   "Golden Gates Drive": 437
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18186988,
+  "name": "Norfolk Coast Path, Sheringham Circular",
+  "km": 15.4,
+  "climb": 318,
+  "top_m": 103,
+  "walk_min": 217,
+  "car_park": [
+   52.923236,
+   1.20702
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 13068,
+  "road_m": 2351,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.4 km on roads"
+  ],
+  "roads": {
+   "Gibbet Lane": 1079,
+   "Beeston Common": 298,
+   "Sheringham Road": 293,
+   "Beeston Road": 212
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18208928,
+  "name": "Rockland St Mary Circular",
+  "km": 10.5,
+  "climb": 77,
+  "top_m": 26,
+  "walk_min": 134,
+  "car_park": [
+   52.591567,
+   1.432845
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 6396,
+  "road_m": 4129,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "4.1 km on roads"
+  ],
+  "roads": {
+   "The Street": 1368,
+   "Cross Lane": 858,
+   "The Common": 642,
+   "The Covey": 590
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18212625,
+  "name": "Hunstanton Circular",
+  "km": 5.6,
+  "climb": 142,
+  "top_m": 30,
+  "walk_min": 82,
+  "car_park": [
+   52.94082,
+   0.486364
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3357,
+  "road_m": 2291,
+  "honeypot": [
+   "at the car park: cafe, ice_cream, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "2.3 km on roads"
+  ],
+  "roads": {
+   "Chapel Bank": 809,
+   "Lighthouse Lane": 347,
+   "Sea Lane": 289,
+   "Old Hunstanton Road": 216
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19587845,
+  "name": "Woodland and Coastal Walk, Sheringham Park",
+  "km": 10.9,
+  "climb": 219,
+  "top_m": 83,
+  "walk_min": 153,
+  "car_park": [
+   52.933411,
+   1.148897
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 9867,
+  "road_m": 1080,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.1 km on roads"
+  ],
+  "roads": {
+   "Station Road": 508,
+   "service": 162,
+   "The Street": 92,
+   "Beach Lane": 85
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19697591,
+  "name": "Blakeney Freshes Coastal Wildlife Walk, Blakeney",
+  "km": 5.6,
+  "climb": 107,
+  "top_m": 32,
+  "walk_min": 78,
+  "car_park": [
+   52.952765,
+   1.039441
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 3984,
+  "road_m": 1660,
+  "honeypot": [
+   "at the car park: cafe"
+  ],
+  "keep": false,
+  "drop": [
+   "1.7 km on roads"
+  ],
+  "roads": {
+   "Coast Road": 821,
+   "High Street": 589,
+   "Cley Road": 171,
+   "The Quay": 67
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19697605,
+  "name": "Gramborough Hill and Salthouse Circular Walk, Blakeney",
+  "km": 8.4,
+  "climb": 98,
+  "top_m": 62,
+  "walk_min": 110,
+  "car_park": [
+   52.943394,
+   1.083008
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5985,
+  "road_m": 2390,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.4 km on roads"
+  ],
+  "roads": {
+   "Bloomstile Lane": 506,
+   "Beach Road": 467,
+   "Cross Street": 435,
+   "Bridgefoot Lane": 418
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19718689,
+  "name": "Brancaster Staithe Wildlife Walk, Brancaster",
+  "km": 7.1,
+  "climb": 73,
+  "top_m": 54,
+  "walk_min": 93,
+  "car_park": [
+   52.966671,
+   0.667013
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4852,
+  "road_m": 2271,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "2.3 km on roads"
+  ],
+  "roads": {
+   "Dalegate Lane": 2077,
+   "footway": 114,
+   "Main Road": 33,
+   "Common Lane": 27
+  }
+ }
+]

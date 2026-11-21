@@ -1,0 +1,15 @@
+2026-11-21 11:50 extract: 3702 ways 543 car parks 151 pois 159 routes 791 named places 2277 s
+2026-11-21 12:00 routes: 159 relations -> 14 checked, 12 kept; out: {'too short': 54, 'not a loop': 84, 'too flat': 1, 'no free car park within 400 m': 5, 'too long': 1} ; dropped: {'roads': 2, 'car park': 0}
+2026-11-21 12:00 step routes done in 0 s
+2026-11-21 12:00 parks: 543 car parks -> 13 pass -> 13 after 2 km spacing; out: {'fee not no': 467, 'too flat': 8, 'honeypot at start': 16, 'access': 38, 'thin path network': 1}
+2026-11-21 12:00 step parks done in 0 s
+2026-11-21 12:07 loops: 13 car parks tried, 0 ok
+2026-11-21 12:07 step loops done in 2 s
+2026-11-21 12:09 merge: 10 walks ( 10 routes, 0 car park loops ), 2 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 10}
+2026-11-21 12:09 step merge done in 2 s
+2026-11-21 12:53 build: 10 built, 0 failed this run
+2026-11-21 12:53 step build done in 39 s
+2026-11-21 12:55 pack: 8 kept, 2 failed the gates 1.5 MB
+2026-11-21 12:55   failed shl-3-st-ninians-circular 9.6 km vs 6.9, 910 of 9641 m off a path
+2026-11-21 12:55   failed shl-10-north-hill 4.4 km vs 4.2, 179 of 4386 m off a path
+2026-11-21 12:55 step pack done in 0 s

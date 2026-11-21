@@ -1,0 +1,28 @@
+[
+ {
+  "source": "osm route",
+  "name": "Lews Castle Parkrun",
+  "km": 5.1,
+  "climb": 384,
+  "top_m": 40,
+  "walk_min": 99,
+  "drive_min": 69,
+  "car_park": [
+   58.208671,
+   -6.396026
+  ],
+  "car_park_check": "unknown",
+  "road_m": 0,
+  "waymarked": 1.0,
+  "honeypot": [
+   "at the car park: restaurant"
+  ],
+  "osm_relation": 18003040,
+  "score": 62.0,
+  "name_auto": "Lews Castle Parkrun",
+  "honeypot_loop": [],
+  "busy": "none",
+  "rank": 1,
+  "region": "hebrides"
+ }
+]

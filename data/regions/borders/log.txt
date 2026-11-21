@@ -1,0 +1,14 @@
+2026-11-21 11:50 extract: 28971 ways 1666 car parks 605 pois 32 routes 5324 named places 2267 s
+2026-11-21 12:00 routes: 32 relations -> 1 checked, 1 kept; out: {'not a loop': 27, 'too short': 3, 'no free car park within 400 m': 1} ; dropped: {'roads': 0, 'car park': 0}
+2026-11-21 12:00 step routes done in 1 s
+2026-11-21 12:00 parks: 1666 car parks -> 81 pass -> 52 after 2 km spacing; out: {'fee not no': 1173, 'access': 277, 'too flat': 10, 'honeypot at start': 120, 'customers only': 5}
+2026-11-21 12:00 step parks done in 1 s
+2026-11-21 12:02 loops: 52 car parks tried, 9 ok
+2026-11-21 12:02 step loops done in 44 s
+2026-11-21 12:08 merge: 10 walks ( 1 routes, 9 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 10}
+2026-11-21 12:08 step merge done in 4 s
+2026-11-21 12:50 build: 10 built, 0 failed this run
+2026-11-21 12:50 step build done in 51 s
+2026-11-21 12:55 pack: 9 kept, 1 failed the gates 3.5 MB
+2026-11-21 12:55   failed brd-7-eildon-hills-trail 9.1 km vs 9.1, 607 of 9139 m off a path
+2026-11-21 12:55 step pack done in 0 s

@@ -1,0 +1,351 @@
+[
+ {
+  "source": "osm route",
+  "id": 3719207,
+  "name": "Two Forts Trail",
+  "km": 4.2,
+  "climb": 236,
+  "top_m": 196,
+  "walk_min": 74,
+  "car_park": [
+   56.373249,
+   -3.396723
+  ],
+  "car_park_name": "Tay Car Park",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4236,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 16071667,
+  "name": "Bertha Loch Loop from Pitcairngreen",
+  "km": 4.8,
+  "climb": 74,
+  "top_m": 72,
+  "walk_min": 65,
+  "car_park": [
+   56.426057,
+   -3.516399
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4785,
+  "road_m": 0,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 16146010,
+  "name": "Drumain Dander",
+  "km": 4.1,
+  "climb": 114,
+  "top_m": 248,
+  "walk_min": 61,
+  "car_park": [
+   56.217799,
+   -3.252574
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 2700,
+  "road_m": 1427,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.4 km on roads"
+  ],
+  "roads": {
+   "service": 1067,
+   "Strathenry Avenue": 360
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 16146011,
+  "name": "East Feal Stroll",
+  "km": 7.2,
+  "climb": 176,
+  "top_m": 324,
+  "walk_min": 105,
+  "car_park": [
+   56.217799,
+   -3.252574
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 6205,
+  "road_m": 1037,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.0 km on roads"
+  ],
+  "roads": {
+   "service": 688,
+   "Strathenry Avenue": 349
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17174130,
+  "name": "Michael Bruce Way",
+  "km": 5.0,
+  "climb": 184,
+  "top_m": 227,
+  "walk_min": 78,
+  "car_park": [
+   56.19905,
+   -3.316765
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 3448,
+  "road_m": 1537,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "1.5 km on roads"
+  ],
+  "roads": {
+   "Main Street": 612,
+   "service": 403,
+   "The Cobbles": 267,
+   "The Causeway": 137
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17737949,
+  "name": "Bishop Hill and Glenvale",
+  "km": 8.8,
+  "climb": 496,
+  "top_m": 459,
+  "walk_min": 155,
+  "car_park": [
+   56.211873,
+   -3.327683
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 7409,
+  "road_m": 1342,
+  "honeypot": [
+   "at the car park: playground"
+  ],
+  "keep": false,
+  "drop": [
+   "1.3 km on roads"
+  ],
+  "roads": {
+   "primary": 671,
+   "Main Street": 286,
+   "Bruce Road": 123,
+   "Bishop Terrace": 120
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18327140,
+  "name": "Fir Long Loop",
+  "km": 7.5,
+  "climb": 377,
+  "top_m": 196,
+  "walk_min": 128,
+  "car_park": [
+   56.373249,
+   -3.396723
+  ],
+  "car_park_name": "Tay Car Park",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7516,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 19854096,
+  "name": "Aaron's Walk",
+  "km": 9.8,
+  "climb": 313,
+  "top_m": 248,
+  "walk_min": 149,
+  "car_park": [
+   56.332897,
+   -3.315459
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5149,
+  "road_m": 4661,
+  "honeypot": [
+   "at the car park: cafe"
+  ],
+  "keep": false,
+  "drop": [
+   "4.7 km on roads"
+  ],
+  "roads": {
+   "service": 2100,
+   "unclassified": 1262,
+   "Kirk Wynd": 517,
+   "tertiary": 240
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20109752,
+  "name": "Deuchny Trail",
+  "km": 5.5,
+  "climb": 253,
+  "top_m": 217,
+  "walk_min": 91,
+  "car_park": [
+   56.396834,
+   -3.387277
+  ],
+  "car_park_name": "Jubilee Car Park",
+  "car_park_check": "free",
+  "car_park_operator": "Forestry Commission Scotland",
+  "foot_m": 5446,
+  "road_m": 66,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "service": 66
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20304307,
+  "name": "Ruchill Walk",
+  "km": 6.3,
+  "climb": 125,
+  "top_m": 89,
+  "walk_min": 88,
+  "car_park": [
+   56.373034,
+   -3.987886
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3774,
+  "road_m": 2538,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "2.5 km on roads"
+  ],
+  "roads": {
+   "Strowan Road": 1018,
+   "Langside Road": 629,
+   "tertiary": 605,
+   "Field of Refuge": 173
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20304308,
+  "name": "Bogton Braes Walk",
+  "km": 9.2,
+  "climb": 123,
+  "top_m": 117,
+  "walk_min": 123,
+  "car_park": [
+   56.373655,
+   -3.98521
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5830,
+  "road_m": 3418,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "3.4 km on roads"
+  ],
+  "roads": {
+   "service": 889,
+   "Dalginross": 737,
+   "Glascorrie Road": 451,
+   "construction": 425
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 21209692,
+  "name": "Ben Shee loop",
+  "km": 9.7,
+  "climb": 314,
+  "top_m": 433,
+  "walk_min": 147,
+  "car_park": [
+   56.227875,
+   -3.659889
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "Forest and Land Scotland",
+  "foot_m": 9673,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 21209693,
+  "name": "Castlehill upper loop",
+  "km": 4.3,
+  "climb": 233,
+  "top_m": 328,
+  "walk_min": 74,
+  "car_park": [
+   56.211704,
+   -3.619261
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 2804,
+  "road_m": 1457,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.5 km on roads"
+  ],
+  "roads": {
+   "service": 1457
+  }
+ }
+]

@@ -1,0 +1,17 @@
+2026-11-21 11:50 extract: 18647 ways 1033 car parks 494 pois 110 routes 1742 named places 2269 s
+2026-11-21 12:00 routes: 110 relations -> 28 checked, 12 kept; out: {'not a loop': 54, 'too flat': 2, 'too short': 22, 'no free car park within 400 m': 2, 'too long': 2} ; dropped: {'roads': 15, 'car park': 1}
+2026-11-21 12:00 step routes done in 1 s
+2026-11-21 12:00 parks: 1033 car parks -> 79 pass -> 37 after 2 km spacing; out: {'access': 124, 'fee not no': 775, 'too flat': 17, 'honeypot at start': 37, 'customers only': 1}
+2026-11-21 12:00 step parks done in 0 s
+2026-11-21 12:03 loops: 37 car parks tried, 6 ok
+2026-11-21 12:03 step loops done in 28 s
+2026-11-21 12:08 merge: 16 walks ( 10 routes, 6 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 1, 'none': 15}
+2026-11-21 12:08 step merge done in 3 s
+2026-11-21 12:51 build: 16 built, 0 failed this run
+2026-11-21 12:51 step build done in 62 s
+2026-11-21 12:55 pack: 12 kept, 4 failed the gates 4.3 MB
+2026-11-21 12:55   failed per-4-birnam-hill-path 7.3 km vs 6.2, 364 of 7323 m off a path
+2026-11-21 12:55   failed per-10-craigower-viewpoint 5.9 km vs 5.9, 264 of 5897 m off a path
+2026-11-21 12:55   failed per-11-dunkeld-christmas-grotto 6.2 km vs 6.2, 724 of 6222 m off a path
+2026-11-21 12:55   failed per-14-buffalo-hut 4.5 km vs 4.5, 168 of 4499 m off a path
+2026-11-21 12:55 step pack done in 1 s

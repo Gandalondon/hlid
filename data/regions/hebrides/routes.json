@@ -1,0 +1,75 @@
+[
+ {
+  "source": "osm route",
+  "id": 7748236,
+  "name": "Berneray Circular Walk",
+  "km": 11.1,
+  "climb": 226,
+  "top_m": 90,
+  "walk_min": 155,
+  "car_park": [
+   57.715564,
+   -7.172233
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6441,
+  "road_m": 4631,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "4.6 km on roads"
+  ],
+  "roads": {
+   "unclassified": 4569,
+   "service": 63
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 14594960,
+  "name": "Bealach Bhreatail",
+  "km": 15.2,
+  "climb": 365,
+  "top_m": 231,
+  "walk_min": 219,
+  "car_park": [
+   57.255358,
+   -6.275234
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 15210,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 18003040,
+  "name": "Lews Castle Parkrun",
+  "km": 5.1,
+  "climb": 384,
+  "top_m": 40,
+  "walk_min": 99,
+  "car_park": [
+   58.208671,
+   -6.396026
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5067,
+  "road_m": 0,
+  "honeypot": [
+   "at the car park: restaurant"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ }
+]

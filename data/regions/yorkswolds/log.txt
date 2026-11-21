@@ -1,0 +1,15 @@
+2026-11-21 11:50 extract: 12102 ways 814 car parks 470 pois 12 routes 1973 named places 2284 s
+2026-11-21 12:00 routes: 12 relations -> 0 checked, 0 kept; out: {'not a loop': 11, 'too long': 1} ; dropped: {'roads': 0, 'car park': 0}
+2026-11-21 12:00 step routes done in 0 s
+2026-11-21 12:00 parks: 814 car parks -> 16 pass -> 12 after 2 km spacing; out: {'fee not no': 679, 'too flat': 33, 'honeypot at start': 30, 'access': 52, 'customers only': 4}
+2026-11-21 12:00 step parks done in 0 s
+2026-11-21 12:07 loops: 12 car parks tried, 0 ok
+2026-11-21 12:07 step loops done in 6 s
+2026-11-21 12:21 loops: 12 car parks tried, 0 ok
+2026-11-21 12:21 step loops done in 0 s
+2026-11-21 12:21 merge: 0 walks ( 0 routes, 0 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 0}
+2026-11-21 12:21 step merge done in 0 s
+2026-11-21 12:54 build: 0 built, 0 failed this run
+2026-11-21 12:54 step build done in 0 s
+2026-11-21 12:55 pack: 0 kept, 0 failed the gates 0.0 MB
+2026-11-21 12:55 step pack done in 0 s

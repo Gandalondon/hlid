@@ -1,0 +1,14 @@
+2026-11-21 11:50 extract: 42798 ways 4683 car parks 1643 pois 57 routes 1468 named places 2265 s
+2026-11-21 12:00 routes: 57 relations -> 2 checked, 1 kept; out: {'not a loop': 37, 'too short': 15, 'not a country walk (name)': 1, 'no ways': 2} ; dropped: {'roads': 1, 'car park': 0}
+2026-11-21 12:00 step routes done in 1 s
+2026-11-21 12:00 parks: 4683 car parks -> 21 pass -> 9 after 2 km spacing; out: {'fee not no': 4154, 'too flat': 48, 'honeypot at start': 133, 'access': 318, 'customers only': 9}
+2026-11-21 12:00 step parks done in 1 s
+2026-11-21 12:02 loops: 9 car parks tried, 6 ok
+2026-11-21 12:02 step loops done in 43 s
+2026-11-21 12:08 merge: 6 walks ( 1 routes, 5 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 6}
+2026-11-21 12:08 step merge done in 4 s
+2026-11-21 12:49 build: 6 built, 0 failed this run
+2026-11-21 12:49 step build done in 29 s
+2026-11-21 12:55 pack: 5 kept, 1 failed the gates 2.0 MB
+2026-11-21 12:55   failed cnk-6-5km 4.9 km vs 4.9, 457 of 4866 m off a path
+2026-11-21 12:55 step pack done in 0 s

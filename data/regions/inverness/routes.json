@@ -1,0 +1,33 @@
+[
+ {
+  "source": "osm route",
+  "id": 13635494,
+  "name": "Aviemore Orbital",
+  "km": 6.8,
+  "climb": 86,
+  "top_m": 234,
+  "walk_min": 90,
+  "car_park": [
+   57.188044,
+   -3.829347
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3645,
+  "road_m": 3110,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "3.1 km on roads"
+  ],
+  "roads": {
+   "Dalnabay": 738,
+   "unclassified": 492,
+   "Dalfaber Road": 482,
+   "secondary": 466
+  }
+ }
+]

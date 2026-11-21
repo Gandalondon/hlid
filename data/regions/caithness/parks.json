@@ -1,0 +1,41 @@
+[
+ {
+  "lon": -3.858066,
+  "lat": 58.554951,
+  "name": null,
+  "operator": "",
+  "capacity": "3",
+  "straight_km": 14.9,
+  "h": 96,
+  "top": 184,
+  "relief": 88,
+  "foot_density": 185,
+  "score": 76.7
+ },
+ {
+  "lon": -3.163512,
+  "lat": 58.346351,
+  "name": null,
+  "operator": "",
+  "capacity": "",
+  "straight_km": 33.3,
+  "h": 72,
+  "top": 153,
+  "relief": 81,
+  "foot_density": 184,
+  "score": 70.7
+ },
+ {
+  "lon": -3.929348,
+  "lat": 58.569929,
+  "name": null,
+  "operator": "",
+  "capacity": "",
+  "straight_km": 18.9,
+  "h": 12,
+  "top": 122,
+  "relief": 110,
+  "foot_density": 115,
+  "score": 70.7
+ }
+]

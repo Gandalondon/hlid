@@ -1,0 +1,18 @@
+2026-11-21 11:50 extract: 19755 ways 1646 car parks 781 pois 31 routes 1050 named places 2287 s
+2026-11-21 12:00 routes: 31 relations -> 0 checked, 0 kept; out: {'not a loop': 22, 'not a country walk (name)': 1, 'no free car park within 400 m': 3, 'too short': 5} ; dropped: {'roads': 0, 'car park': 0}
+2026-11-21 12:00 step routes done in 0 s
+2026-11-21 12:00 parks: 1646 car parks -> 44 pass -> 30 after 2 km spacing; out: {'fee not no': 1353, 'honeypot at start': 62, 'too flat': 8, 'access': 176, 'customers only': 3}
+2026-11-21 12:00 step parks done in 0 s
+2026-11-21 12:08 loops: 30 car parks tried, 6 ok
+2026-11-21 12:08 step loops done in 33 s
+2026-11-21 12:21 loops: 30 car parks tried, 6 ok
+2026-11-21 12:21 step loops done in 0 s
+2026-11-21 12:21 merge: 6 walks ( 0 routes, 6 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 6}
+2026-11-21 12:21 step merge done in 2 s
+2026-11-21 12:21 areas: 87 walks, 87 to extract, 111 new terrain tiles
+2026-11-21 12:38 areas: nodes 4097470 1058 s
+2026-11-21 12:48 areas: extracted 87 1628 s
+2026-11-21 12:55 build: 6 built, 0 failed this run
+2026-11-21 12:55 step build done in 27 s
+2026-11-21 12:55 pack: 6 kept, 0 failed the gates 2.0 MB
+2026-11-21 12:55 step pack done in 0 s

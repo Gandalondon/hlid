@@ -1,0 +1,31 @@
+[
+ {
+  "source": "osm route",
+  "id": 7111804,
+  "name": "Gorebridge Circular Walk",
+  "km": 12.1,
+  "climb": 302,
+  "top_m": 248,
+  "walk_min": 176,
+  "car_park": [
+   55.846311,
+   -3.070045
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7399,
+  "road_m": 4730,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "4.7 km on roads"
+  ],
+  "roads": {
+   "unclassified": 2319,
+   "Barleyknowe Road": 734,
+   "Hunterfield Road": 524,
+   "primary": 309
+  }
+ }
+]
