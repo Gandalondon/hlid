@@ -36,6 +36,11 @@ if os.path.exists(PUBS):
     PB = json.load(open(PUBS))
     for w in W:
         if w["id"] in PB: w.setdefault("meta", {})["pubs"] = PB[w["id"]]
+DR = f"{ROOT}/data/gb/walk-drain.json"   # how well each walk drains (tools/mud/drain.py), for the mud check
+if os.path.exists(DR):
+    DD = json.load(open(DR))
+    for w in W:
+        if w["id"] in DD: w.setdefault("meta", {})["drain"] = DD[w["id"]]
 data["walks"] = W
 s = s[:mm.start(2)] + json.dumps(data, separators=(",", ":")) + s[mm.end(2):]
 open(P, "w").write(s)
