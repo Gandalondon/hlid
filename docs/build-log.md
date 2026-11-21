@@ -36,3 +36,4 @@
 - 21 Nov 17:15: build 83. In-app How it works: Pay once replaced by All included (no payment talk inside the paid app).
 - 21 Nov 17:20: build 84. How it works copy: All included (option A: offline maps, one short vibration if you stray off the path); One nudge, then quiet.
 - 21 Nov 17:25: build 85. Info icon is now the standard (i) as in Forn; Your walks icon scaled to the same 20px height.
+- 21 Nov 17:35: build 87. Info icon back to the notes page; Your walks card redrawn to the same 14 x 17. Fixed: back from Your walks went to the old prototype home (no info icon); it now returns to the live home.
