@@ -1,0 +1,262 @@
+[
+ {
+  "source": "osm route",
+  "id": 3287554,
+  "name": "Spurlswood Walk",
+  "km": 6.4,
+  "climb": 218,
+  "top_m": 274,
+  "walk_min": 98,
+  "car_park": [
+   54.642612,
+   -1.919682
+  ],
+  "car_park_name": "Blackling Hole car park",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 3801,
+  "road_m": 2570,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.6 km on roads"
+  ],
+  "roads": {
+   "Forest Drive": 1869,
+   "service": 623,
+   "unclassified": 78
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 10684601,
+  "name": "Slitt Wood and West Rigg Geotrail",
+  "km": 5.0,
+  "climb": 318,
+  "top_m": 406,
+  "walk_min": 92,
+  "car_park": [
+   54.737219,
+   -2.147217
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 2391,
+  "road_m": 2655,
+  "honeypot": [
+   "at the car park: playground, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "2.7 km on roads"
+  ],
+  "roads": {
+   "unclassified": 1858,
+   "Scutterthill Bank": 591,
+   "primary": 206
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 10731417,
+  "name": "Blanchland Geotrail",
+  "km": 5.4,
+  "climb": 147,
+  "top_m": 358,
+  "walk_min": 79,
+  "car_park": [
+   54.84459,
+   -2.06742
+  ],
+  "car_park_name": "Baybridge",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5108,
+  "road_m": 257,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "secondary": 98,
+   "unclassified": 93,
+   "Bale Hill": 67
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 10731495,
+  "name": "High Force Geotrail",
+  "km": 5.4,
+  "climb": 135,
+  "top_m": 337,
+  "walk_min": 79,
+  "car_park": [
+   54.647949,
+   -2.147573
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 4296,
+  "road_m": 1125,
+  "honeypot": [
+   "at the car park: cafe, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "1.1 km on roads"
+  ],
+  "roads": {
+   "unclassified": 1045,
+   "secondary": 80
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 11288430,
+  "name": "Three Becks Walk",
+  "km": 7.7,
+  "climb": 230,
+  "top_m": 260,
+  "walk_min": 115,
+  "car_park": [
+   54.675524,
+   -1.861903
+  ],
+  "car_park_name": "Windy Bank",
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 7158,
+  "road_m": 544,
+  "honeypot": [
+   "at the car park: cafe, playground, toilets"
+  ],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "path": 209,
+   "service": 198,
+   "Forest Drive": 123,
+   "Grove Road": 14
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 11501531,
+  "name": "Stanhope Burn Geotrail",
+  "km": 5.5,
+  "climb": 158,
+  "top_m": 301,
+  "walk_min": 82,
+  "car_park": [
+   54.748116,
+   -2.017967
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3053,
+  "road_m": 2427,
+  "honeypot": [
+   "at the car park: playground, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "2.4 km on roads"
+  ],
+  "roads": {
+   "unclassified": 1956,
+   "primary": 238,
+   "Crawleyside Bank": 209,
+   "Allerton Bridge": 24
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 16947235,
+  "name": "Consett Steel and Swords",
+  "km": 9.9,
+  "climb": 308,
+  "top_m": 241,
+  "walk_min": 150,
+  "car_park": [
+   54.853028,
+   -1.859311
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 9212,
+  "road_m": 687,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {
+   "St Aidan's Street": 322,
+   "unclassified": 230,
+   "service": 70,
+   "Consett Road": 52
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 17962989,
+  "name": "Tow Law",
+  "km": 6.1,
+  "climb": 108,
+  "top_m": 314,
+  "walk_min": 84,
+  "car_park": [
+   54.745454,
+   -1.812342
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4897,
+  "road_m": 1162,
+  "honeypot": [
+   "at the car park: cafe, playground"
+  ],
+  "keep": false,
+  "drop": [
+   "1.2 km on roads"
+  ],
+  "roads": {
+   "Ironworks Road": 307,
+   "Church Lane": 249,
+   "Smith Street": 138,
+   "service": 136
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 18051160,
+  "name": "Hudeshope from Middleton Geotrail",
+  "km": 8.7,
+  "climb": 464,
+  "top_m": 393,
+  "walk_min": 151,
+  "car_park": [
+   54.631438,
+   -2.083831
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5772,
+  "road_m": 2943,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.9 km on roads"
+  ],
+  "roads": {
+   "Town Head": 1544,
+   "King's Walk": 1171,
+   "Hude": 211,
+   "Hude Bridge": 13
+  }
+ }
+]
