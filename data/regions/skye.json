@@ -1,0 +1,1 @@
+{"id": "skye", "label": "Skye", "prefix": "sky", "home": [-6.2, 57.35], "box": [57.0, -6.6, 57.75, -5.6], "geofabrik": ["europe/great-britain"], "straight_km": [0, 100], "route_km_min": 0, "route_km": 100, "drive_min": 0, "drive_max": 120, "score_drive": false, "veto": null}
