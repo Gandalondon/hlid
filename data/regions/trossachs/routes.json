@@ -1,0 +1,237 @@
+[
+ {
+  "source": "osm route",
+  "id": 2866086,
+  "name": "Loch Ard Sculpture Trail",
+  "km": 6.8,
+  "climb": 211,
+  "top_m": 89,
+  "walk_min": 102,
+  "car_park": [
+   56.178553,
+   -4.422104
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 6784,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 3200915,
+  "name": "Up the Hill To Banton",
+  "km": 6.9,
+  "climb": 95,
+  "top_m": 93,
+  "walk_min": 92,
+  "car_park": [
+   55.984113,
+   -3.9947
+  ],
+  "car_park_name": null,
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 3160,
+  "road_m": 3697,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "3.7 km on roads"
+  ],
+  "roads": {
+   "Banton Road": 1278,
+   "Kelvinhead Road": 838,
+   "unclassified": 439,
+   "Mill Road": 377
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 12620312,
+  "name": "8 mile loop",
+  "km": 13.9,
+  "climb": 455,
+  "top_m": 106,
+  "walk_min": 212,
+  "car_park": [
+   56.178553,
+   -4.422104
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 13866,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 16124656,
+  "name": "Ben Lomond Trail",
+  "km": 11.9,
+  "climb": 1821,
+  "top_m": 963,
+  "walk_min": 325,
+  "car_park": [
+   56.149063,
+   -4.641433
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 11893,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 16124738,
+  "name": "Ben Ledi Trail",
+  "km": 10.2,
+  "climb": 334,
+  "top_m": 870,
+  "walk_min": 155,
+  "car_park": [
+   56.254348,
+   -4.2833
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 8808,
+  "road_m": 1355,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.4 km on roads"
+  ],
+  "roads": {
+   "Rob Roy Way": 1164,
+   "unclassified": 191
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 19882953,
+  "name": "Doon Hill Trail",
+  "km": 4.2,
+  "climb": 104,
+  "top_m": 75,
+  "walk_min": 61,
+  "car_park": [
+   56.162657,
+   -4.369565
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 4230,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ },
+ {
+  "source": "osm route",
+  "id": 20304305,
+  "name": "Maam Road Walk",
+  "km": 8.0,
+  "climb": 471,
+  "top_m": 222,
+  "walk_min": 143,
+  "car_park": [
+   56.389548,
+   -3.998182
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5746,
+  "road_m": 2208,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "2.2 km on roads"
+  ],
+  "roads": {
+   "Monument Road": 1973,
+   "Dundas Street": 159,
+   "steps": 41,
+   "path": 36
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20304307,
+  "name": "Ruchill Walk",
+  "km": 6.3,
+  "climb": 125,
+  "top_m": 89,
+  "walk_min": 88,
+  "car_park": [
+   56.373034,
+   -3.987886
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 3774,
+  "road_m": 2538,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "2.5 km on roads"
+  ],
+  "roads": {
+   "Strowan Road": 1018,
+   "Langside Road": 629,
+   "tertiary": 605,
+   "Field of Refuge": 173
+  }
+ },
+ {
+  "source": "osm route",
+  "id": 20304308,
+  "name": "Bogton Braes Walk",
+  "km": 9.1,
+  "climb": 117,
+  "top_m": 117,
+  "walk_min": 121,
+  "car_park": [
+   56.373655,
+   -3.98521
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 5723,
+  "road_m": 3418,
+  "honeypot": [
+   "at the car park: cafe, playground, restaurant, toilets"
+  ],
+  "keep": false,
+  "drop": [
+   "3.4 km on roads"
+  ],
+  "roads": {
+   "service": 889,
+   "Dalginross": 737,
+   "Glascorrie Road": 451,
+   "construction": 425
+  }
+ }
+]
