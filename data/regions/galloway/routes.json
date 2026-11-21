@@ -1,0 +1,28 @@
+[
+ {
+  "source": "osm route",
+  "id": 9726946,
+  "name": "Cornish Hill Trail",
+  "km": 5.6,
+  "climb": 210,
+  "top_m": 454,
+  "walk_min": 88,
+  "car_park": [
+   55.227306,
+   -4.52372
+  ],
+  "car_park_name": "Stinchar Bridge",
+  "car_park_check": "free",
+  "car_park_operator": "",
+  "foot_m": 4489,
+  "road_m": 1063,
+  "honeypot": [],
+  "keep": false,
+  "drop": [
+   "1.1 km on roads"
+  ],
+  "roads": {
+   "unclassified": 1063
+  }
+ }
+]
