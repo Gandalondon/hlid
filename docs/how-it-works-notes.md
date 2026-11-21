@@ -28,3 +28,9 @@ Core story: not a curated list, but every walk has passed the same rules, and th
 ## To build before the page claims it
 - Mud check (agreed 17 Nov, not built): past few days' rain at the walk plus the day's weather; "may be muddy" note when wet everywhere.
 - Weather and rain sources need fallbacks we control (Open-Meteo is non-commercial only).
+
+## In the app too (Tony, 21 Nov)
+- An info (i) button top right on the home screen opens an information page: what Hlid does and how it works, word for word the same as the site's How it works (like Sniff and Forn). So someone wondering "why so few results?" gets the answer there (only loops, only free car parks, only paths, finish before dark...).
+- No settings icon: rules, not options (no "show walks without a car park").
+- Check the (i) fits beside the postcode, drive and walk chips without crowding them.
+- Copy matters most: write the How it works once, use it in both places.

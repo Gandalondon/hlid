@@ -16,3 +16,4 @@ data/regions/*/maps/
 __pycache__/
 data/testwalk/relief8-*
 data/regions/*/allwalks.json
+data/gb/pubs.json
