@@ -32,5 +32,5 @@ Core story: not a curated list, but every walk has passed the same rules, and th
 ## In the app too (Tony, 21 Nov)
 - An info (i) button top right on the home screen opens an information page: what Hlid does and how it works, word for word the same as the site's How it works (like Sniff and Forn). So someone wondering "why so few results?" gets the answer there (only loops, only free car parks, only paths, finish before dark...).
 - No settings icon: rules, not options (no "show walks without a car park").
-- Check the (i) fits beside the postcode, drive and walk chips without crowding them.
+- Icon (Tony, 21 Nov): leaning to an outlined notes page (option E: a page with lines), stroke style to match Hlid's stroke-only icons (13 Nov rule). Solid book is the fallback. Sniff keeps its existing icon. Check it fits beside the postcode, drive and walk chips without crowding them.
 - Copy matters most: write the How it works once, use it in both places.
