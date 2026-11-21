@@ -1,0 +1,1 @@
+{"id": "arran", "label": "Arran and Ayrshire", "prefix": "arr", "home": [-5.0, 55.55], "box": [55.3, -5.45, 55.8, -4.45], "geofabrik": ["europe/great-britain"], "straight_km": [0, 100], "route_km_min": 0, "route_km": 100, "drive_min": 0, "drive_max": 120, "score_drive": false, "veto": null}

@@ -1,0 +1,1 @@
+{"id": "npennines", "label": "North Pennines", "prefix": "npn", "home": [-2.25, 54.7], "box": [54.45, -2.75, 55.0, -1.8], "geofabrik": ["europe/great-britain"], "straight_km": [0, 100], "route_km_min": 0, "route_km": 100, "drive_min": 0, "drive_max": 120, "score_drive": false, "veto": null}
