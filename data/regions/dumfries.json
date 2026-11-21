@@ -1,0 +1,1 @@
+{"id": "dumfries", "label": "Dumfries and the Lowther Hills", "prefix": "dmf", "home": [-3.58, 55.25], "box": [55.0, -3.95, 55.5, -3.2], "geofabrik": ["europe/great-britain"], "straight_km": [0, 100], "route_km_min": 0, "route_km": 100, "drive_min": 0, "drive_max": 120, "score_drive": false, "veto": null}

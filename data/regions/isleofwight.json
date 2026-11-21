@@ -1,0 +1,1 @@
+{"id": "isleofwight", "label": "Isle of Wight", "prefix": "iow", "home": [-1.33, 50.67], "box": [50.57, -1.6, 50.77, -1.07], "geofabrik": ["europe/great-britain"], "straight_km": [0, 100], "route_km_min": 0, "route_km": 100, "drive_min": 0, "drive_max": 120, "score_drive": false, "veto": null}

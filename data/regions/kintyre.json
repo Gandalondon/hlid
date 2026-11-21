@@ -1,0 +1,1 @@
+{"id": "kintyre", "label": "Kintyre", "prefix": "kin", "home": [-5.57, 55.62], "box": [55.3, -5.85, 55.95, -5.3], "geofabrik": ["europe/great-britain"], "straight_km": [0, 100], "route_km_min": 0, "route_km": 100, "drive_min": 0, "drive_max": 120, "score_drive": false, "veto": null}
