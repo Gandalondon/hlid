@@ -3,7 +3,8 @@ park, from OpenStreetMap, no ratings. Worked out once here, so the app needs no 
 
   python3 tools/walkdata/pubs.py extract   GB OSM file -> data/gb/pubs.json  ([lon, lat, name] for every named amenity=pub)
   python3 tools/walkdata/pubs.py walks     every walk in the app -> data/gb/walk-pubs.json  ({walk id: [{n, lat, lon, min}, ...]})
-                                           nearest 3 within 10 km of the car park, drive minutes from the public OSRM router
+                                           the 3 closest by drive within 30 min of the car park (21 Nov: was 10 km straight line):
+                                           nearest 10 named pubs within 40 km, drive minutes from the public OSRM router
                                            (straight line x 1.35 at 45 km/h if it can't be reached)
 tools/walkdata/inject.py then copies them into each walk's meta.pubs."""
 import json, math, os, re, sys, time, urllib.request
@@ -40,21 +41,25 @@ if sys.argv[1] == "walks":
     for w in W:
         if w["id"] in res: continue
         lat, lon = w["meta"]["car_park"]; cp = (lon, lat)
-        near = [p for a in range(-1, 2) for b in range(-2, 3) for p in grid.get((int(lat * 10) + a, int(lon * 10) + b), [])]
-        near = sorted((p for p in near if m(cp, p) <= 10000), key=lambda p: m(cp, p))
-        seen = set(); pick = []
+        near = [p for a in range(-4, 5) for b in range(-7, 8) for p in grid.get((int(lat * 10) + a, int(lon * 10) + b), [])]
+        near = sorted((p for p in near if m(cp, p) <= 40000), key=lambda p: m(cp, p))
+        seen = set(); cand = []
         for p in near:   # one per name (chains and duplicates in OSM)
             if p[2].lower() in seen: continue
-            seen.add(p[2].lower()); pick.append(p)
-            if len(pick) == 3: break
-        mins = [None] * len(pick)
-        if pick:
-            u = "https://router.project-osrm.org/table/v1/driving/" + ";".join(f"{x:.5f},{y:.5f}" for x, y in [cp] + [(p[0], p[1]) for p in pick]) + "?sources=0"
-            try:
-                d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Hlid/0.1 (hello@gethlid.app)"}), timeout=30))["durations"][0][1:]
-                mins = [round(x / 60) if x is not None else None for x in d]
-            except Exception: pass
+            seen.add(p[2].lower()); cand.append(p)
+            if len(cand) == 10: break
+        mins = [max(1, round(m(cp, p) * 1.35 / 750)) for p in cand]
+        if cand:
+            u = "https://router.project-osrm.org/table/v1/driving/" + ";".join(f"{x:.5f},{y:.5f}" for x, y in [cp] + [(p[0], p[1]) for p in cand]) + "?sources=0"
+            for k in range(3):
+                try:
+                    d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Hlid/0.1 (hello@gethlid.app)"}), timeout=30))["durations"][0][1:]
+                    # router minutes, unless the car park snaps to a track the router can't link to the road (Loch Ard: 81 min for 2 km)
+                    mins = [round(x / 60) if x is not None and x / 60 <= 3 * mm else mm for x, mm in zip(d, mins)]; break
+                except Exception: time.sleep(5)
             time.sleep(1)
-        res[w["id"]] = [{"n": p[2], "lat": p[1], "lon": p[0], "min": mm if mm is not None else max(1, round(m(cp, p) * 1.35 / 750))} for p, mm in zip(pick, mins)]
+        best = sorted([(mm, p) for mm, p in zip(mins, cand) if mm <= 30], key=lambda x: x[0])[:3]
+        pick = [p for _, p in best]; mins = [mm for mm, _ in best]
+        res[w["id"]] = [{"n": p[2], "lat": p[1], "lon": p[0], "min": mm} for p, mm in zip(pick, mins)]
         json.dump(res, open(OUT, "w"))
-    print(len(res), "walks,", sum(1 for v in res.values() if v), "with a pub within 10 km")
+    print(len(res), "walks,", sum(1 for v in res.values() if v), "with a pub within a 30 min drive")
