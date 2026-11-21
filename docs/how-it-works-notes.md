@@ -35,5 +35,6 @@ Core story: not a curated list, but every walk has passed the same rules, and th
 - Icon (Tony, 21 Nov): leaning to an outlined notes page (option E: a page with lines), stroke style to match Hlid's stroke-only icons (13 Nov rule). Solid book is the fallback. Sniff keeps its existing icon. Check it fits beside the postcode, drive and walk chips without crowding them.
 - Copy matters most: write the How it works once, use it in both places.
 
-- Built 21 Nov: notes-page icon (24px, 2px stroke, same as Your walks) left of Your walks; opens How it works with the site's six sections word for word (site/how-it-works.html). Change one, change both.
+- Built 21 Nov: notes-page icon (24px, 2px stroke, same as Your walks) left of Your walks; opens How it works with the site's six sections word for word.
+- Master copy (Tony, 21 Nov): the app's How it works page (the t-info screen in app/src/main/assets/index.html) is the master. Write and change copy there first; site/how-it-works.html follows it.
 - The site's last section names the sources (OpenStreetMap, Ordnance Survey) and says it can't see mud: both go when the page is rewritten (recipe, and the mud check).
