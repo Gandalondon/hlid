@@ -1,0 +1,24 @@
+[
+ {
+  "source": "osm route",
+  "id": 16155652,
+  "name": "Bein Alligin Trail",
+  "km": 10.6,
+  "climb": 1328,
+  "top_m": 986,
+  "walk_min": 260,
+  "car_park": [
+   57.558493,
+   -5.563901
+  ],
+  "car_park_name": null,
+  "car_park_check": "unknown",
+  "car_park_operator": "",
+  "foot_m": 10558,
+  "road_m": 0,
+  "honeypot": [],
+  "keep": true,
+  "drop": [],
+  "roads": {}
+ }
+]

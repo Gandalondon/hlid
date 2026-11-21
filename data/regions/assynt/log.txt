@@ -1,0 +1,2 @@
+2026-11-21 11:07 extract: pass 1 5137 walking routes 18 s
+2026-11-21 11:13 extract: pass 1 5137 walking routes 18 s
