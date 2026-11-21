@@ -517,6 +517,19 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
     var c=[o].concat(near.map(function(x){ return ALL[x.i].meta.car_park; })).map(function(p){ return p[1].toFixed(5)+","+p[0].toFixed(5); }).join(";");
     return getJ("https://router.project-osrm.org/table/v1/driving/"+c+"?sources=0",10000).then(function(j){
       near.forEach(function(x,k){ var d=j&&j.durations&&j.durations[0][k+1]; out[x.i]= d!=null? d/60 : x.d*1.35/1000; }); return out; }); }
+  /* 21 Nov: Leave by. Sunrise and sunset worked out on the phone (SunCalc formulas), no service needed */
+  function sunTimes(lat,lon,d){ var R=Math.PI/180, J0=2440588, J2=2451545, DAY=864e5, E=R*23.4397;
+    var ds=d.valueOf()/DAY-0.5+J0-J2, lw=R*-lon, ph=R*lat, n=Math.round(ds-0.0009-lw/(2*Math.PI)), a0=0.0009+lw/(2*Math.PI)+n;
+    var M=R*(357.5291+0.98560028*a0), L=M+R*(1.9148*Math.sin(M)+0.02*Math.sin(2*M)+0.0003*Math.sin(3*M))+R*102.9372+Math.PI;
+    var dec=Math.asin(Math.sin(L)*Math.sin(E)), noon=J2+a0+0.0053*Math.sin(M)-0.0069*Math.sin(2*L);
+    var w=Math.acos((Math.sin(-0.833*R)-Math.sin(ph)*Math.sin(dec))/(Math.cos(ph)*Math.cos(dec)));
+    if(isNaN(w)) return null;
+    var set=J2+0.0009+(w+lw)/(2*Math.PI)+n+0.0053*Math.sin(M)-0.0069*Math.sin(2*L), rise=noon-(set-noon);
+    function dt(j){ return new Date((j+0.5-J0)*DAY); } return {rise:dt(rise),set:dt(set)}; }
+  /* finish = now + drive + walk + 15 min to park and set off. Only while it's light: in the evening or at night you're
+     planning for tomorrow, so nothing is ruled out */
+  function beforeDark(w,dm,now){ var cp=w.meta.car_park, t=sunTimes(cp[0],cp[1],now); if(!t||now<t.rise||now>t.set) return true;
+    return now.valueOf()+(dm+w.meta.walk_min+15)*60000<=t.set.valueOf(); }
   var SHOWN=0;
   window.hlidPick=function(){ var CV=window.hlidCV; if(window.hlidPaint) hlidPaint(); var my=++busyQ; setTimeout(function(){ if(my===busyQ&&SHOWN!==my) tq("Finding a walk…",900); },1000);   /* build 31: only when the pick is slow */
     (CV.from===ORIGQ&&ORIGIN? Promise.resolve(ORIGIN) : geocode(CV.from)).then(function(o){ if(my!==busyQ) return;
@@ -526,8 +539,11 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
       if(near>150000){ showT("x-outside"); SHOWN=busyQ; ready(); return; }
       driveMins(o).then(function(dm){ if(my!==busyQ) return;
         var lim=DRV[CV.drive]||90, win=WLK[CV.walk]||[70,150], bz=busyDay(new Date());
-        PICK=ALL.map(function(w,i){ return {i:i,dm:dm[i],w:w}; }).filter(function(x){ var m=x.w.meta;
+        var now=new Date(), fit=ALL.map(function(w,i){ return {i:i,dm:dm[i],w:w}; }).filter(function(x){ var m=x.w.meta;
           return m.busy!=="always" && x.dm<=lim && m.walk_min>=win[0] && m.walk_min<=win[1]; });
+        PICK=fit.filter(function(x){ return beforeDark(x.w,x.dm,now); });
+        el("x-nofit").querySelector(".nfh").innerHTML= !PICK.length&&fit.length? "Not enough<br>light left" : "No walk fits<br>that yet";
+        if(!PICK.length&&fit.length){ el("x-nofit").querySelector(".nfp").textContent="It’ll be dark before you could finish a "+CV.walk.replace("h"," hour")+" walk today. Try a shorter walk, or plan it for tomorrow."; showT("x-nofit"); SHOWN=busyQ; ready(); return; }
         PICK.sort(function(a,b){ var pa=bz&&a.w.meta.busy==="busy_days"?1:0, pb=bz&&b.w.meta.busy==="busy_days"?1:0;
           return pa-pb || (b.w.meta.score||0)-(a.w.meta.score||0) || a.dm-b.dm; });
         if(!PICK.length){ el("x-nofit").querySelector(".nfp").textContent="Hlid doesn’t have a "+CV.walk.replace("h"," hour")+" walk within a "+(CV.drive==="30 min"?"30 minute":CV.drive.replace(" "," "))+" drive yet. Try a shorter walk or a longer drive."; showT("x-nofit"); SHOWN=busyQ; ready(); return; }
@@ -565,7 +581,7 @@ html,body{background:#FFFFFF!important;overflow:hidden;height:100%}
   sec("x-outside",'<div style="'+ROOT+'">'+CHIPS+RING+'<div style="'+COL+'; padding-top: 24px"><h1 style="'+H1+'; font-size: 44px">No walks near<br>you yet</h1>'+
     '<p style="'+P+'; text-wrap: pretty; margin-top: 12px">Hlid only has walks in south-east England for now. More areas are coming.</p>'+
     '<button type="button" data-t="notify" style="'+BTN+'; margin-top: 28px">Tell me when it’s near me</button><button type="button" data-t="from" style="'+TBTN+'">Change location</button></div></div>');
-  sec("x-nofit",'<div style="'+ROOT+'">'+CHIPS+RING+'<div style="'+COL+'; padding-top: 24px"><h1 style="'+H1+'; font-size: 44px">No walk fits<br>that yet</h1>'+
+  sec("x-nofit",'<div style="'+ROOT+'">'+CHIPS+RING+'<div style="'+COL+'; padding-top: 24px"><h1 style="'+H1+'; font-size: 44px" class="nfh">No walk fits<br>that yet</h1>'+
     '<p style="'+P+'; text-wrap: pretty; margin-top: 12px" class="nfp"></p>'+
     '<button type="button" data-t="drive" style="'+BTN+'; margin-top: 28px">Change the drive</button><button type="button" data-t="walk" style="'+TBTN+'">Change the walk</button></div></div>');
   var cur=null;

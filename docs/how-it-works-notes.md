@@ -10,7 +10,7 @@ Core story: not a curated list, but every walk has passed the same rules, and th
 - Hills and views. Flat walks don't make it in.
 - Quiet: busy spots are pushed down at weekends and in school holidays, not dropped.
 - Mud: Hlid checks the weather on the day and the last few days of rain at the walk, and steers you away from walks that are likely to be muddy. If it's wet everywhere, it tells you. (Possible homepage USP.)
-- Finish before dark: only walks you can finish in daylight.
+- Finish before dark: only walks you can finish in daylight (built 21 Nov, build 80).
 - A pub nearby: at the end, Find a pub shows one close by, within about half an hour's drive. No ratings, no lists, like it used to be.
 - Works offline once you've picked a walk (the map is saved on your phone).
 - Drive and walk time chosen on the day, not set up once.
@@ -22,9 +22,9 @@ Core story: not a curated list, but every walk has passed the same rules, and th
 - The score: climb, length, drive time, waymarking, road share, honeypots, free parking, and their weights.
 - Busy rules: visitor centre or cafe by a big or National Trust car park, 200+ spaces = always out.
 - Pub rule: 3 closest by drive within 30 min of the car park, one per name, router sanity check.
+- Leave by: now + drive + walk + 15 min must be before sunset at the car park (worked out on the phone); not applied before sunrise or after sunset (you're planning for tomorrow).
 - Region pipeline and tools (tools/walkdata/region.py, inject.py, pubs.py, fixnames.py).
 
 ## To build before the page claims it
 - Mud check (agreed 17 Nov, not built): past few days' rain at the walk plus the day's weather; "may be muddy" note when wet everywhere.
-- Finish before dark (agreed 17 Nov, not built).
 - Weather and rain sources need fallbacks we control (Open-Meteo is non-commercial only).
