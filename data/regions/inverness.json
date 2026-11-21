@@ -1,0 +1,1 @@
+{"id": "inverness", "label": "Inverness and Loch Ness", "prefix": "inv", "home": [-4.3, 57.4], "box": [57.15, -4.95, 57.7, -3.8], "geofabrik": ["europe/great-britain"], "straight_km": [0, 100], "route_km_min": 0, "route_km": 100, "drive_min": 0, "drive_max": 120, "score_drive": false, "veto": null}
