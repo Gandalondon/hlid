@@ -1,1 +1,28 @@
 2026-11-21 03:28 extract: pass 1 5137 walking routes 15 s
+2026-11-21 03:43 extract: 17162 ways 1304 car parks 725 pois 14 routes 783 named places 913 s
+2026-11-21 03:43 step extract done in 914 s
+2026-11-21 03:43 routes: 14 relations -> 0 checked, 0 kept; out: {'not a loop': 13, 'too long': 1} ; dropped: {'roads': 0, 'car park': 0}
+2026-11-21 03:43 step routes done in 2 s
+2026-11-21 03:43 parks: 1304 car parks -> 14 pass -> 8 after 2 km spacing; out: {'fee not no': 1131, 'honeypot at start': 67, 'too flat': 16, 'access': 73, 'customers only': 3}
+2026-11-21 03:43 step parks done in 1 s
+2026-11-21 03:44 loops: 8 car parks tried, 1 ok
+2026-11-21 03:44 step loops done in 4 s
+2026-11-21 03:44 merge: 1 walks ( 0 routes, 1 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 1}
+2026-11-21 03:44 step merge done in 2 s
+2026-11-21 03:44 areas: 1 walks, 1 to extract, 4 new terrain tiles
+2026-11-21 08:18 routes: 14 relations -> 0 checked, 0 kept; out: {'not a loop': 13, 'too long': 1} ; dropped: {'roads': 0, 'car park': 0}
+2026-11-21 08:18 step routes done in 20 s
+2026-11-21 08:18 parks: 1304 car parks -> 14 pass -> 8 after 2 km spacing; out: {'fee not no': 1131, 'honeypot at start': 67, 'too flat': 16, 'access': 73, 'customers only': 3}
+2026-11-21 08:18 step parks done in 1 s
+2026-11-21 08:18 loops: 8 car parks tried, 1 ok
+2026-11-21 08:18 step loops done in 2 s
+2026-11-21 08:18 merge: 1 walks ( 0 routes, 1 car park loops ), 0 over 120 min drive (or under drive_min); busy: {'always': 0, 'busy_days': 0, 'none': 1}
+2026-11-21 08:18 step merge done in 2 s
+2026-11-21 08:18 areas: 1 walks, 1 to extract, 0 new terrain tiles
+2026-11-21 08:27 areas: nodes 16960 535 s
+2026-11-21 08:33 areas: extracted 1 905 s
+2026-11-21 08:33 step areas done in 905 s
+2026-11-21 08:33 build: 1 built, 0 failed this run
+2026-11-21 08:33 step build done in 5 s
+2026-11-21 08:33 pack: 1 kept, 0 failed the gates 0.1 MB
+2026-11-21 08:33 step pack done in 0 s
